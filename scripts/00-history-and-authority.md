@@ -8,8 +8,8 @@
 | **Paired doc**    | `docs/00-history-and-authority.md`          |
 | **Format**        | Explainer (series opener)                   |
 | **Series**        | LLM Methodology in Creative Writing — Ep. 0 |
-| **Target length** | ~5:20 (spoken)                              |
-| **Word count**    | ~835                                        |
+| **Target length** | ~5:45 (spoken)                              |
+| **Word count**    | ~920                                        |
 | **Status**        | **ready**                                   |
 | **YouTube URL**   | *(when live)*                               |
 
@@ -48,6 +48,7 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 | **RAG / hidden AI** | Stuff you already use — autocomplete, camera, captions, checks — **is** AI. | `Already using AI`       |
 | **Governance**      | **You** approve before text hits the page.                                  | `You choose`             |
 | **Generative / statistical AI** | Creates or scores content using probability — includes cameras, captions, checks, not just chat. | `Hidden AI` |
+| **Foundation ASR**      | Speech-to-text model many apps embed — **Whisper** (OpenAI stack), **Chirp** (Gemini stack). | `Same vendor family` |
 | **Domain**          | One **kind** of AI use (word help, critique, continuity, etc.) — Beat 4 preview. | `Which domain?` |
 | **Human prose mass**| The bulk of **final wording is yours** after you choose and revise.           | `Your words`             |
 | **Level zero**      | "Write me a bestseller" — ghostwriting; what this series is **not**.          | `Not level 0`            |
@@ -153,7 +154,7 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 ---
 
-### BEAT 3 — Hidden AI montage `[CAM]` intro + B-roll `[VO]` (2:20–3:50)
+### BEAT 3 — Hidden AI montage `[CAM]` intro + B-roll `[VO]` (2:20–4:05)
 
 **Say (camera for first sentence, then voiceover over montage):**
 
@@ -163,7 +164,11 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 >
 > Your phone camera is a real-time inference stack — autofocus, face tracking, auto white balance, HDR, night-mode noise reduction that **invents detail** where the sensor had almost no light. Portrait mode segments you from the background. Some phones **generate** pixels when you zoom. That's generative AI. You call it the camera app.
 >
-> On video calls, Zoom and Teams strip background noise with neural models. Hearing aids classify speech versus clutter. Dictation and live captions run on foundation speech models — **Whisper** from the GPT ecosystem, **Chirp** from the Gemini stack — embedded in tools you've used without ever opening a chat product.
+> On video calls, Zoom and Teams strip background noise with neural models. Hearing aids classify speech versus clutter — classification and reconstruction, not novel-writing. Fair. Your camera doesn't draft your chapter either.
+>
+> But dictation and live captions often run on **Whisper** — OpenAI's transformer speech model, same **vendor stack** as ChatGPT, not a different species of software — and **Chirp** in Google's Gemini stack. You may have fed your words through that infrastructure without ever opening a chat product.
+>
+> The argument isn't that every app is ChatGPT. It's that you already **trust or reject probabilistic machine outputs** every day — and twenty-twenty-two made that visible for **text**.
 >
 > Paper checks feel analog. **Essentially all commercial check processing is automated** — machine reading, routing, fraud scoring. Deposit a check by phone and computer vision validates the image. No human retyped your payee line.
 >
@@ -174,9 +179,10 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 1. `Phone camera = generative pipeline`
 2. `Night mode = synthetic detail`
 3. `Video calls = neural noise removal`
-4. `Whisper · Chirp · transcription`
-5. `Check deposit = machine vision`
-6. `Autocomplete = you already choose`
+4. `Whisper · OpenAI stack · Chirp · Gemini`
+5. `Reconstruction ≠ chat — same vendor stack`
+6. `Check deposit = machine vision`
+7. `Autocomplete = you already choose`
 
 **B-roll shot list (min. 2 sec each):**
 
@@ -186,7 +192,7 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 | 1   | Night-mode phone photo             | Before/after if possible |
 | 2   | Portrait mode / depth effect       |                          |
 | 3   | Video call UI, speaking            |                          |
-| 4   | Live captions / dictation on phone |                          |
+| 4   | Live captions / dictation on phone | Label: OpenAI / Google stack |
 | 5   | Mobile banking check deposit       | Blur account numbers     |
 | 6   | Autocomplete tap on keyboard       |                          |
 
@@ -195,7 +201,7 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 ---
 
-### BEAT 4 — Not the first craft panic `[CAM]` (3:50–4:20)
+### BEAT 4 — Not the first craft panic `[CAM]` (4:05–4:35)
 
 **Say:**
 
@@ -208,17 +214,17 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 | Time | Text                                                    |
 | ---- | ------------------------------------------------------- |
-| 3:52 | Rapid list: `press · typewriter · spell-check · search` |
-| 4:08 | `Not "AI yes/no" — which domain? what governance?`      |
+| 4:07 | Rapid list: `press · typewriter · spell-check · search` |
+| 4:23 | `Not "AI yes/no" — which domain? what governance?`      |
 
 
 **Visual:** `[CAM]` — steady, no B-roll required.
 
-**Chapter marker:** `3:50` — Craft panic
+**Chapter marker:** `4:05` — Craft panic
 
 ---
 
-### BEAT 5 — Why this series / authority `[CAM]` (4:20–4:55)
+### BEAT 5 — Why this series / authority `[CAM]` (4:35–5:10)
 
 **Say:**
 
@@ -231,19 +237,19 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 | Time | Text                                         |
 | ---- | -------------------------------------------- |
-| 4:22 | `David Johnson`                              |
-| 4:28 | `Calgary · knowledge engineering · 1980s`    |
-| 4:38 | `Enterprise LLM systems + long-form fiction` |
-| 4:48 | `Prosthetic ≠ ghostwriter`                   |
+| 4:37 | `David Johnson`                              |
+| 4:43 | `Calgary · knowledge engineering · 1980s`    |
+| 4:53 | `Enterprise LLM systems + long-form fiction` |
+| 5:03 | `Prosthetic ≠ ghostwriter`                   |
 
 
 **Visual:** `[CAM]`. Optional: repo folder structure blur in background (out of focus).
 
-**Chapter marker:** `4:20` — Why listen
+**Chapter marker:** `4:35` — Why listen
 
 ---
 
-### CLOSE + CTA `[CAM]` (4:55–5:15)
+### CLOSE + CTA `[CAM]` (5:10–5:30)
 
 **Say:**
 
@@ -256,14 +262,14 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 | Time | Text                                             |
 | ---- | ------------------------------------------------ |
-| 4:58 | `NEXT → Ep. 1: The Spectrum`                     |
-| 5:05 | `github.com/pojoguy/novelist-methodology-class`  |
-| 5:10 | End card: Subscribe · Playlist · Ep. 1 thumbnail |
+| 5:13 | `NEXT → Ep. 1: The Spectrum`                     |
+| 5:20 | `github.com/pojoguy/novelist-methodology-class`  |
+| 5:25 | End card: Subscribe · Playlist · Ep. 1 thumbnail |
 
 
 **Visual:** End card 8 seconds. Hold repo URL readable.
 
-**Chapter marker:** `4:55` — What's next
+**Chapter marker:** `5:10` — What's next
 
 ---
 
@@ -303,7 +309,11 @@ Here's what skeptics often miss: you already depend on generative and statistica
 
 Your phone camera is a real-time inference stack — autofocus, face tracking, auto white balance, HDR, night-mode noise reduction that invents detail where the sensor had almost no light. Portrait mode segments you from the background. Some phones generate pixels when you zoom. That's generative AI. You call it the camera app.
 
-On video calls, Zoom and Teams strip background noise with neural models. Hearing aids classify speech versus clutter. Dictation and live captions run on foundation speech models — Whisper from the GPT ecosystem, Chirp from the Gemini stack — embedded in tools you've used without ever opening a chat product.
+On video calls, Zoom and Teams strip background noise with neural models. Hearing aids classify speech versus clutter — classification and reconstruction, not novel-writing. Fair. Your camera doesn't draft your chapter either.
+
+But dictation and live captions often run on Whisper — OpenAI's transformer speech model, same vendor stack as ChatGPT, not a different species of software — and Chirp in Google's Gemini stack. You may have fed your words through that infrastructure without ever opening a chat product.
+
+The argument isn't that every app is ChatGPT. It's that you already trust or reject probabilistic machine outputs every day — and twenty-twenty-two made that visible for text.
 
 Paper checks feel analog. Essentially all commercial check processing is automated — machine reading, routing, fraud scoring. Deposit a check by phone and computer vision validates the image. No human retyped your payee line.
 
@@ -333,11 +343,11 @@ Subscribe for the series. Episode one is next.
 
 - [ ] **Title** = `AI Didn't Arrive in 2022` (not thumbnail line — Package A)
 - [ ] **Thumbnail** = `YOU ALREADY USE AI` + `Ep. 0`
-- [ ] **Chapter markers** uploaded: `0:00` Hook · `0:08` 2022 myth · `0:55` Stochastic · `2:20` Hidden AI · `3:50` Craft panic · `4:20` Why listen · `4:55` What's next
+- [ ] **Chapter markers** uploaded: `0:00` Hook · `0:08` 2022 myth · `0:55` Stochastic · `2:20` Hidden AI · `4:05` Craft panic · `4:35` Why listen · `5:10` What's next
 - [ ] Captions generated and reviewed (`stochastic`, `Erlang`, `Gaines`, `Whisper`, `Chirp` spelled correctly)
 - [ ] Repo URL in description ✓ `https://github.com/pojoguy/novelist-methodology-class`
 - [ ] End screen: Subscribe + playlist + Ep. 1
-- [ ] Cards at 4:55 → Ep. 1
+- [ ] Cards at 5:10 → Ep. 1
 - [ ] Audio: normalize −14 LUFS (YouTube standard)
 - [ ] Blur/redact any banking PII in check-deposit B-roll
 
@@ -354,7 +364,8 @@ In this episode:
 • Why 2022 was a UI event, not the birth of AI
 • What "stochastic" means — and why LLMs roll weighted dice, not retrieve facts
 • The lineage from Erlang's telephone traffic (1909) to British TXE exchanges and Brian Gaines's stochastic computing (1960s) to ChatGPT
-• Hidden AI you already use: phone cameras, video-call noise removal, Whisper/Chirp transcription, automated check processing, autocomplete
+• Hidden AI you already use: phone cameras, video-call noise removal, Whisper/Chirp (OpenAI/Gemini vendor stacks), automated check processing, autocomplete
+• Fair pushback: reconstruction ≠ chat — and why that still matters for the writing debate
 • Why craft panic is not new — and what serious writers actually do differently
 
 I'm David Johnson — knowledge-systems practitioner; integrates enterprise LLM agent systems in production; long-form fiction writer. This series documents craft-first methodology: prosthetic tools, apply gates, human prose mass — not "write me a bestseller."
@@ -385,6 +396,7 @@ creative writing, writing process, LLM, AI writing, authors, ChatGPT, stochastic
 | Checks are AI-processed              | Beat 3 check section | ~40s      | "Paper checks feel analog."   |
 | What stochastic means                | Beat 2               | ~55s      | "The model rolls weighted dice." |
 | I don't use AI / I don't use ChatGPT | Beat 1               | ~35s      | Opening of Beat 1             |
+| Whisper isn't ChatGPT — same OpenAI stack | Beat 3 pivot       | ~40s      | "Same vendor stack as ChatGPT." |
 
 
 ---
@@ -394,6 +406,7 @@ creative writing, writing process, LLM, AI writing, authors, ChatGPT, stochastic
 
 | Date       | Change                                                             |
 | ---------- | ------------------------------------------------------------------ |
+| 2026-08-02 | Beat 3: concession + Whisper/OpenAI vendor-stack pivot; retimed beats |
 | 2026-08-02 | Consistency pass: teleprompter ↔ beats, Terms, chapter markers, description |
 | 2026-08-02 | Locked **Publish package A**: title vs thumbnail vs hook alignment |
 | 2026-08-02 | GitHub URLs in description and README                              |

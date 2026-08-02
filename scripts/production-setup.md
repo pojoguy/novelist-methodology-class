@@ -333,9 +333,9 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 0:08 The 2022 myth
 0:55 What stochastic means
 2:20 AI you already use
-3:50 Craft panic
-4:20 Why this series
-4:55 What's next
+4:05 Craft panic
+4:35 Why this series
+5:10 What's next
 ```
 
 ---
