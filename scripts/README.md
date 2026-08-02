@@ -15,6 +15,7 @@ Short-form video scripts paired **one-to-one** with [`docs/`](../docs/). Same nu
 | [`01c-level-01-brainstorm.md`](01c-level-01-brainstorm.md) … [`01c-level-07-agentic.md`](01c-level-07-agentic.md) | `docs/01-spectrum-of-use.md` | **~2:30–3:30 each** — per-level screen demos |
 | [`02-prosthetic-model.md`](02-prosthetic-model.md) | `docs/02-prosthetic-model.md` | 3–5 min — core thesis video |
 | [`03-five-domains.md`](03-five-domains.md) | `docs/03-five-domains.md` | 3–5 min or 5× Short series |
+| [`03b-scenario-simulation.md`](03b-scenario-simulation.md) | `docs/03-five-domains.md` (Domain 4b / L5b) | **~3:30** — grounding vs play-pretend |
 | [`04-audit-and-governance.md`](04-audit-and-governance.md) | `docs/04-audit-and-governance.md` | 3–5 min |
 | [`05-workflow-patterns.md`](05-workflow-patterns.md) | `docs/05-workflow-patterns.md` | 3–5 min |
 | [`06-failure-modes.md`](06-failure-modes.md) | `docs/06-failure-modes.md` | 60–90s Short (high share potential) |
@@ -45,7 +46,7 @@ Each script includes:
 
 - **Shorts (≤60s):** One idea per video; hook in frame 1; text on screen for silent viewers
 - **Explainers (3–5 min):** Hook → problem → framework → one example → CTA
-- **Series order:** `00` → `01` → `01b` (L0 demo) → `01c` (L1–L7 demos) → `02` for skeptics; `06` and `02` work as standalone hooks
+- **Series order:** `00` → `01` → `01b` (L0) → `01c` (L1–L7 demos; **5a+5b** separate) → `02` → `03` → `03b` (maps vs pretend); `06` and `02` work as standalone hooks
 - **Repo link for description:** https://github.com/pojoguy/novelist-methodology-class — point to the paired `docs/` file for depth
 
 ---

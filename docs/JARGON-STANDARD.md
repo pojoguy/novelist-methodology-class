@@ -63,3 +63,18 @@ Master reference. Docs and scripts link here; they do not replace per-document t
 - [ ] New doc/script has Terms section at top
 - [ ] No undefined acronym in first section
 - [ ] Paired doc ↔ script: script Terms ⊆ doc Terms (or script re-defines for new viewers)
+
+---
+
+## Voice — user documents only
+
+**Audience:** Working **authors** — not tool builders, not agent configurators.
+
+| Do | Don't |
+|----|-------|
+| Second person (**you**): what to keep, ask, file, refuse | Imperatives to the model ("do not generate", "agent default") |
+| Plain outcomes: search, continuity check, route lookup | MCP tool names, API identifiers, plugin references |
+| "Tell your editor…" / "Ask…" / "Hold the tool to…" | "Agent rules", "Skill pattern", "Model does" |
+| What **you** experience when files are wired | How to implement tiers, hosts, or protocols |
+
+**Tooling** (editors, plugins, hosts) lives outside this repo. These docs describe **your workflow and judgment** — the same notes you'd keep in a binder, made queryable.

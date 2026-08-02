@@ -47,7 +47,7 @@ One-line definition (≤12 words)
 | **Thin solution space** | Bias function must return; emits triads, negation, comma-lists |
 | **Theta bias function** | 1980s framework; theoretical root of why six, not one |
 | **Stochastic system** | Outputs probability, not certainty |
-| **PGM** | Machine-readable canon slice — not chat memory |
+| **PGM** | Formalized **working notes** — queryable canon, not chat memory |
 | **Sparse-edge collapse** | Too many rules → generic "not A, not B, C" output |
 | **Ghostwrite drift** | "Fix" becomes substituted prose |
 | **Session anchor** | Persisted continuity file — Section A/B/C |

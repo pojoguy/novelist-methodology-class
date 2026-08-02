@@ -1,4 +1,6 @@
-# Grounding brief (synthetic) — Level 5 demo
+# Grounding brief (synthetic) — Level **5a** demo
+
+**Not scenario simulation** — see `demo-scenario-brief.md` (Level **5b**).
 
 **Record on:** This **Cursor** installation with **novelist-mcp** (`geography_query`).
 

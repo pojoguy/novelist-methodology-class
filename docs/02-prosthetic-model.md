@@ -14,6 +14,7 @@
 | **Priority fixes** | In this methodology, means **finish the audit and offer alternatives** — not "rewrite my chapter for me." |
 | **Retrieval bias** | Hidden scoring that pushes the tool toward certain words when it must output something. |
 | **Thin solution space** | Too many constraints; the tool cannot choose well and emits vague or "not A, not B, but C" lines. |
+| **Nexus (retrieval stall)** | The **constraint knot** where the model stalled — same beat, same locks, same near-miss rejections. Six alternatives branch here, not elsewhere. |
 | **Theta bias function** | Research term for how systems **rank choices** when preferences conflict — why six options beat one substitution. |
 | **Negation triangulation** | Failure pattern: *Not X, not Y. Z.* — sounds deep but means the tool stalled. |
 | **Two-step pipeline** | First pass: structure and facts only; second pass: **read-only check**; then you pick; then apply. |
@@ -21,6 +22,13 @@
 | **Sign** | A checklist flag for **generic or AI-sounding** prose patterns — cite, don't auto-fix. |
 | **Session anchor** | A **saved end-of-session file** with continuity notes so you can resume without relying on chat history. |
 | **PGM** | Structured **canon state file** for characters, world, or chapter facts. |
+| **Pick** | Author **selects** one numbered alternative (with or without light edit) and authorizes apply. |
+| **Cluster + author take** | Author names near-miss options, supplies **own draft**, asks for **orientation** — not applying the closest number by default. |
+| **Convergence round** | Follow-up set (often **three** alternatives) **anchored on a cluster**, still on the nexus. |
+| **Supersede** | You write a stronger line than any numbered option; use the six as orientation, then audit **your** line. |
+| **Malformed beat** | Beat order or situation is wrong — **especially** when six alternatives fail after multiple passes. Fix structure, not diction. |
+| **Span counterfactual** | *"What if X changed between L###–L###?"* — explore ripple effects before you rewrite. |
+| **POV-blind grounding** | You know where the scene is; the character doesn't — your notes hold the map, not the prose. |
 
 ---
 
@@ -54,7 +62,7 @@ When prose is flagged (weak word, Sign breach, imprecise phrase):
 
 1. **Diagnose** — name what's wrong and why it matters
 2. **Offer exactly six alternatives** — full replaceable options for the flagged beat
-3. **Wait** — author uses the set as inspiration: picks a number, blends, rejects all six, or supplies their own line
+3. **Wait** — you choose a **move type** (pick, blend, cluster+author take, reject, own line); the tool should not assume "pick a number" is the default
 4. **Apply** — only then edit the manuscript
 
 **Alternative type must match beat type:**
@@ -70,7 +78,7 @@ When prose is flagged (weak word, Sign breach, imprecise phrase):
 
 ### Why six — and why not one
 
-Six is not a magic number picked for symmetry. It is a **countermeasure** to a documented failure mode of **retrieval bias** under constraint — a problem first characterized in **theta bias function** research (1980s knowledge-representation work; see [`00-history-and-authority.md`](00-history-and-authority.md) Part 4).
+Six is not a magic number picked for symmetry. It is a **pragmatic default**: expand the answer space enough to break single-line collapse, without leaving the **nexus** where retrieval stalled. The failure mode — retrieval bias under constraint — was first characterized in **theta bias function** research (1980s knowledge-representation work; see [`00-history-and-authority.md`](00-history-and-authority.md) Part 4). Six is the countermeasure that survived contact with real sessions: repeatable, local, and bounded.
 
 #### The underlying failure: thin solution space
 
@@ -89,20 +97,82 @@ At that **thin edge** of the solution space, the system cannot discriminate betw
 
 This is especially devastating for **creatives** because the failure **looks like prose** — grammatical, plausible, finished — while carrying **no committed retrieval decision**. The author receives something to accept or reject, but not a **breadth of real options**.
 
-#### What six alternatives fix
+When retrieval stalls, the model is not stuck nowhere. It is stuck at a **nexus** — a tight knot of constraints, near-miss rejections, and forced emission. The collapsed line (*not A, not B. C.*) still sits on that nexus. It marks **where** bias failed, not a random bad phrase. Any prosthetic response must branch from that knot, not wander to unrelated high-probability prose.
 
-Offering **exactly six** full replaceable options is a deliberate **widening of the solution space**:
+#### What six alternatives fix — local expansion, not global drift
+
+Offering **exactly six** full replaceable options widens the solution space **locally** — around the nexus — not globally across the manuscript.
 
 | Mechanism | Effect |
 |-----------|--------|
-| **Breadth** | Forces the model to populate multiple distinct regions of the retrieval set, not collapse to the highest-probability generic token |
+| **Local expansion** | Forces multiple distinct escape paths from the same constraint knot — same beat type, speaker, situation, PGM locks |
+| **Nexus tether** | Six is enough to branch without the bias function drifting to genre-default or unrelated completions (leaving the nexus) |
 | **Decisiveness** | Each alternative is a **complete candidate**, not a rejected list — the author compares six commitments, not one comma-separated hedge |
-| **Human selection** | The author's pick **is** the bias resolution step the automated function could not complete under thin constraints |
-| **Working-memory bound** | Fewer than six tends to collapse back to the model's first guess (single-point failure). More than six overwhelms the author under load |
+| **Human selection** | The author's pick **is** the bias-resolution step the automated function could not complete under thin constraints |
+| **Working-memory bound** | Fewer than six tends to collapse back to the model's first guess. More than six overwhelms the author and invites off-nexus drift |
 
-**One substitution** is the failure mode wearing a helpful mask: the model still had to return one element from a thin space — you get *not A, not B, but C* dressed as a rewrite.
+**One substitution** stays inside the collapse — same nexus, no branches.
 
-**Six alternatives** move the contract: the machine **must not** pretend to have chosen. It **must** branch. The author applies the final bias function — which only a human with creative intent can legitimately apply.
+**Many more than six** often leave the nexus: alternatives solve a different problem, reconstruct plot when you needed a phrase, or revert to statistical-average diction. Same failure, wider menu.
+
+**Six alternatives** move the contract: the machine **must not** pretend to have chosen. It **must** branch on the nexus. The author applies the final bias function — which only a human with creative intent can legitimately apply.
+
+**Design intent (one line):** Six is the smallest branch count that breaks single-line collapse while keeping every alternative tethered to the constraint knot that caused the stall.
+
+#### Convergence rounds (when no single option wins)
+
+Round one is not always enough. When two or three options cluster near the target but none is final — e.g. "#3 and #4 are closest" — run a **convergence round**:
+
+1. **Name the cluster** (which numbers, what they share)
+2. **Offer three** (not six) full alternatives anchored on that sub-region of the nexus
+3. **Repeat** until the author picks, blends, or supplies an own line — then apply
+
+This is **refinement inside the nexus**, not a new search. Shrinking to three reduces noise at the edges without leaving the stall point. Stop when you have a line; do not iterate indefinitely.
+
+**Hold the line:** Convergence rounds stay on the same beat type, speaker, situation, and loaded locks. A partial match is not permission to rewrite the beat or blur domains.
+
+#### Pick vs cluster + author take — not the same game
+
+The six-alternative set supports **different moves**. Treat them as distinct — and tell the tool to do the same.
+
+| Move | You say (examples) | What should happen |
+|------|------------------------|--------------|
+| **Pick** | "Use 3." / "Apply option 3 with minor edit." | Named alternative → apply gate → manuscript |
+| **Blend** | "Lead with 3, steal the verb from 5." | You specify merge; tool drafts **only** the named splice |
+| **Cluster + author take** | "3 and 4 are closest. Here's my take: … Get me on the right track." | You supply **draft direction**; tool diagnoses, asks questions, or runs a **convergence round** — **does not** apply model option 3 or 4 |
+| **Reject** | "None of these." / "All off-nexus." | Re-diagnose or new six on the same nexus |
+| **Own line** | You write final line without picking a number | Audit only if requested |
+
+**Hold the line:** *"Here's my take"* is **not** permission to apply the closest numbered option. It is permission to **work on your line** — readonly audit, constraint check, or convergence from your draft — until you explicitly authorize apply.
+
+**Disclosure:** Pick and cluster+take are both honest prosthetic use; they are not the same labor or machine shape. See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) — *Pick vs cluster + author take*.
+
+#### Beyond line prosthetic — when six options stop working
+
+Six alternatives are the **default line-level** tool. In practice, authors rarely end on "pick option 3." More often you **supersede** the set with your own stronger line, or you discover the problem was never vocabulary.
+
+**When six alternatives fail — even after convergence rounds — that is often the signal that the beat is structured wrong.** Another pass of six wordings on the same beat shape usually makes things worse (thin solution space). Step back and ask whether order, situation, or missing context is broken — then rewrite the paragraph or reorder the beat.
+
+| What you notice | What to do |
+|-----------------|------------|
+| Six options orient you; **your line is stronger** | Write your line; ask for a **readonly audit** on it — don't default to the nearest numbered option |
+| **Two or more rounds** of six + convergence, still none land | Treat as **malformed beat** — restructure before more line shopping |
+| You need to see ripple effects | Ask a **span counterfactual**: *"What would changing X do between L111–L115?"* — think first, apply later |
+| Geography, period, or material fact was wrong | **Reload grounding** (map + Street View, route notes); keep alternate drafts until checks pass |
+
+**Typical flow:**
+
+```text
+Weak line → six options (often superseded, rarely picked)
+        ↓
+Still failing after convergence? → beat is probably malformed → rewrite paragraph(s) or reorder
+        ↓
+If place/tech was wrong → reload grounding; span counterfactual if needed
+        ↓
+You authorize apply when the beat earns the line
+```
+
+Cross-link: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Two-step pipeline*; [`06-failure-modes.md`](06-failure-modes.md) — *Six-alternative treadmill* and *Generic place hallucination*.
 
 #### Operational rule
 
@@ -112,7 +182,7 @@ When you see negation triangulation, triads, or comma-list recovery in model out
 2. **Do not** accept the single collapsed line
 3. **Do** diagnose the thin-space breach
 4. **Do** offer six full alternatives of the correct beat type
-5. **Wait** for author decision — pick, blend, reject all six, or supply own line — before apply
+5. **Wait** for author decision — pick, blend, name a cluster for convergence (typically three alternatives), reject all six, or supply own line — before apply
 
 See [`06-failure-modes.md`](06-failure-modes.md) — *Thin solution space / retrieval bias stall* and *Sparse-edge collapse*.
 
@@ -194,6 +264,8 @@ Anchors typically have:
 - **Section C** — post-session meta-analysis (what worked, what failed, per LLM product)
 
 Section C is methodology infrastructure — how you tune protocol across vendors and months.
+
+**Distinct from retrospective meta-analysis:** Section C is **what you felt** about the session. Your **registered notes** (grounding files, route maps, chapter anchors) support **looking back later** — see [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Retrospective meta-analysis*.
 
 See [`templates/session-close.md`](../templates/session-close.md).
 

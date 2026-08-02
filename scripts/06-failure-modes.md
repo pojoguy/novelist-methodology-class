@@ -45,7 +45,7 @@
 
 **Say:**
 
-> Priority fixes becomes substituted prose because models default to helpful continuation. Redefine fix in your agent rules: audit, alternatives, stop.
+> Priority fixes becomes substituted prose because the tool defaults to helpful continuation. Tell it: audit, alternatives, stop — unless you name a specific line fix.
 
 **On-screen:** Ghostwrite drift
 
@@ -55,7 +55,7 @@
 
 **Say:**
 
-> Proverb dialogue: six wise-worker lines, no speaker. Thesis taglines: "freedom versus duty, nature punishes." Wrong causal merge: two lore concepts collapsed. Quote gate before dialogue alternatives. Speaker and situation first.
+> Proverb dialogue: six wise-worker lines, no speaker. Thesis taglines: "freedom versus duty, nature punishes." Wrong causal merge: two lore concepts collapsed. Generic place hallucination: stock cemetery or main street — map only or no visual anchors loaded. Fix: register map plus Street View, load before the beat. Quote gate before dialogue alternatives. Speaker and situation first.
 
 **On-screen:** Trap examples (strikethrough style)
 
@@ -79,3 +79,4 @@
 | "Proverb dialogue trap" | Six alternatives, zero speakers |
 | "Priority fixes ≠ rewrite" | Ghostwrite drift |
 | "Don't add more Signs" | Sparse-edge collapse |
+| "Generic cemetery trap" | Map + Street View or template wins |

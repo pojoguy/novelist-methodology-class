@@ -14,7 +14,8 @@
 | **Developmental audit** | A structured editorial **critique** of your draft — not a rewrite unless you authorize it. |
 | **PGM** | A **project file** (often structured data) that records canon facts — character state, timeline, locks — not chat memory. |
 | **Canon** | What officially counts as **true in your story** for continuity purposes. |
-| **Grounding / simulation sandbox** | A **scratch space** to test real-world facts (routes, period detail) before you promote them to canon. |
+| **Grounding (Level 5a)** | **Spatial / material verify** — routes, period detail, biology — before facts enter canon. |
+| **Scenario simulation (Level 5b)** | **Play-pretend** off-page — run a character or institution through a beat; distill constraints, not manuscript prose. |
 | **Agentic workflow** | Multiple automated **steps with rules** (audit, then check, then wait for your pick) — not one "fix my chapter" prompt. |
 | **Apply gate** | Nothing changes in your manuscript until **you** explicitly say which option to use. |
 
@@ -76,19 +77,49 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 **Value:** Humans forget; graphs do not. Reduces "wait, didn't she lose that knife in chapter 4?" errors.
 
-**Tooling:** JSON lore files, MCP fact queries, session anchors with continuity blocks.
+**Tooling:** JSON lore files, structured fact lookup, session anchors with continuity blocks.
 
 **Key rule:** Canon lives in **registered state**, not in chat memory. Chat is ephemeral; PGMs persist.
 
 ---
 
-## Level 5 — Grounding and simulation sandboxes
+## Level 5 — Sandboxes (two kinds humans keep separate)
 
-**What it looks like:** Pressure-test beats against real-world constraints: highway routing, period medical practice, weather, biology, material culture. Exploration folders marked **non-canonical** until promoted.
+Level 5 is **not** one bucket. **Grounding** and **scenario simulation** share a promotion workflow (exploration → canon) but answer different questions.
 
-**Value:** Stops "movie logic" from becoming manuscript logic.
+### Level 5a — Grounding (spatial / material verify)
 
-**Key rule:** When grounding is unknown, **stop and ask** — do not let the model invent plausible-sounding facts.
+**Question:** *Is this place, route, period detail, or material claim true or registered?*
+
+**What it looks like:** Highway routing, bearings, weather windows, period medical practice, biology, material culture — checked against sources or registered lore **before** prose locks.
+
+**Value:** Stops movie logic from becoming manuscript logic.
+
+**Key rule:** When grounding is unknown, **stop and ask** — do not let the model invent plausible-sounding geography.
+
+**Demo:** [`01c-level-05-grounding.md`](../scripts/01c-level-05-grounding.md) — live `geography_query`.
+
+**Promotes to:** `lore/routes/`, grounding indexes, world PGMs.
+
+---
+
+### Level 5b — Scenario simulation (play-pretend)
+
+**Question:** *What would this character or institution do, say, or conclude in a scene that is not on the page?*
+
+**What it looks like:** Off-screen runs — caseworker probing a journal, institutional triage logic, "what does she know after three sessions?" Output is **constraints and knowledge state**, not chapter dialogue pasted from chat.
+
+**Value:** Discovers voice boundaries, procedural intelligence, and who-knows-what **before** you draft the on-page beat.
+
+**Key rule:** Sandbox dialogue is **not** manuscript prose. Distill → promote to character PGM → **you** write the scene.
+
+**Demo:** [`01c-level-05b-scenario-simulation.md`](../scripts/01c-level-05b-scenario-simulation.md) — synthetic fixture only.
+
+**Promotes to:** `lore/characters/*.json` (master + chapter slices), `what_*_knows_by_end_of_simulation` registers.
+
+**Do not confuse with:** Level 5a geography. Maps answer *where*; play-pretend answers *who under pressure*.
+
+See also: [`03-five-domains.md`](03-five-domains.md) (Domain 4a / 4b), [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 03B explainer).
 
 ---
 
@@ -112,7 +143,7 @@ Plus: session anchors (continuity re-entry), post-session meta-analysis (what wo
 
 **Value:** Repeatable craft infrastructure across months of work and multiple model vendors — with indexed state, not chat memory.
 
-**How this layer emerged:** Levels 2–3 (prosthetic + audit) were workable in **frontier chat** early on. Levels 4–7 became necessary when **conversational context** could no longer carry canon, relationships, and citation fidelity across a full manuscript — leading to PGMs, RAG, passage graphs, and orchestrated multi-step agents. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
+**How this layer emerged:** Levels 2–3 (prosthetic + audit) were workable in **frontier chat** early on. Levels 4–7 became necessary when **relationship fidelity in attention** could no longer be trusted — even though raw text might still fit in context — for canon, joins, and citation fidelity across a full manuscript — leading to PGMs, RAG, passage graphs, and orchestrated multi-step agents. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
 
 **This repository:** Primarily documents Levels 2–7.
 
@@ -127,7 +158,8 @@ Plus: session anchors (continuity re-entry), post-session meta-analysis (what wo
 | 2 Lexical prosthetic | High | Retrieval set | Author picks |
 | 3 Audit | High | Critic | Author authorizes |
 | 4 Continuity | High | Graph traversal | Author authorizes |
-| 5 Grounding | High | Simulation / verify | Author promotes canon |
+| 5a Grounding | High | Spatial / material verify | Author promotes canon |
+| 5b Scenario sim | High | Play-pretend off-page | Author promotes PGM; writes scene |
 | 6 Production | N/A | Blueprint | Human crew |
 | 7 Agentic | High | Bounded agents | Multi-gate |
 
@@ -150,7 +182,7 @@ When someone says "AI will replace authors," point to Levels 4–7: the human wo
 | Level | Demo script | Tool | Notes |
 |-------|-------------|------|-------|
 | **0** | [`01b-level-zero-demo.md`](../scripts/01b-level-zero-demo.md) | Blank **frontier** chat | ~5 min contrast; synthetic line only |
-| **1–7** | [`01c-spectrum-demos-index.md`](../scripts/01c-spectrum-demos-index.md) | Per-level (see index) | ~2:30–3:30 each; shared fixtures in [`examples/spectrum-demo-fixtures/`](../examples/spectrum-demo-fixtures/) |
+| **1–7** | [`01c-spectrum-demos-index.md`](../scripts/01c-spectrum-demos-index.md) | Per-level (see index) | Level **5a** + **5b** are separate demos |
 
 **Level 0:** blank frontier chat UI (ChatGPT, Claude, Gemini, etc.) with **no** custom instructions.
 

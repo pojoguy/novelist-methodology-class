@@ -6,25 +6,25 @@
 **Full glossary:** `[glossary.md](glossary.md)`.
 
 
-| Term                             | Plain language                                                                                                                                   |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **AI (artificial intelligence)** | Software that finds patterns, makes predictions, or generates text, images, or audio — not a thinking person.                                    |
-| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                                   |
-| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                         |
-| **Chat box / chat interface**    | A messaging-style screen (e.g. ChatGPT) where you type prompts and get replies — what made AI visible to the public in 2022.                     |
-| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                              |
-| **Transformer**                  | The common modern design inside most LLMs; good at keeping track of context across a long passage.                                               |
-| **Queueing theory / Erlang**     | Math invented for **telephone networks** to handle random call traffic — early industrial use of probability.                                    |
-| **Knowledge engineering**        | Encoding what an expert knows as **explicit rules and files** the computer must follow — not free-form chat.                                     |
-| **Theta bias function**          | Research framework for how a system **ranks and chooses** among options when preferences conflict — root of the six-alternative idea.            |
-| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                       |
+| Term                             | Plain language                                                                                                                                                                                 |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI (artificial intelligence)** | Software that finds patterns, makes predictions, or generates text, images, or audio — not a thinking person.                                                                                  |
+| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                                                                                 |
+| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                                                                       |
+| **Chat box / chat interface**    | A messaging-style screen (e.g. ChatGPT) where you type prompts and get replies — what made AI visible to the public in 2022.                                                                   |
+| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                                                                            |
+| **Transformer**                  | The common modern design inside most LLMs; good at keeping track of context across a long passage.                                                                                             |
+| **Queueing theory / Erlang**     | Math invented for **telephone networks** to handle random call traffic — early industrial use of probability.                                                                                  |
+| **Knowledge engineering**        | Encoding what an expert knows as **explicit rules and files** the computer must follow — not free-form chat.                                                                                   |
+| **Theta bias function**          | Research framework for how a system **ranks and chooses** among options when preferences conflict — root of the six-alternative idea.                                                          |
+| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                                                                     |
 | **Six-alternative protocol**     | When wording is stuck, the tool offers **exactly six** full options; **you** use them as **inspiration** — pick, blend, reject, or write your own — before anything changes in the manuscript. |
-| **Retrieval bias**               | The hidden scoring that pushes a system toward certain words or phrases when it must output something.                                           |
-| **Thin solution space**          | Too many rules at once; the system cannot find a good answer and emits vague or "not A, not B, but C" prose.                                     |
-| **Governance / apply gate**      | **You** must explicitly approve before any suggested text is pasted into your draft.                                                             |
-| **RAG**                          | **Search** over your manuscript or notes to find relevant passages — locates text; does not prove continuity.                                    |
-| **Whisper / Chirp**              | Widely used **speech-to-text** foundation models — OpenAI and Google **vendor stacks** (not the chat UI, same transformer-era infrastructure). |
-| **Foundation ASR**               | Automatic speech recognition model embedded in captioning, dictation, and meeting tools — e.g. Whisper, Chirp.                                      |
+| **Retrieval bias**               | The hidden scoring that pushes a system toward certain words or phrases when it must output something.                                                                                         |
+| **Thin solution space**          | Too many rules at once; the system cannot find a good answer and emits vague or "not A, not B, but C" prose.                                                                                   |
+| **Governance / apply gate**      | **You** must explicitly approve before any suggested text is pasted into your draft.                                                                                                           |
+| **RAG**                          | **Search** over your manuscript or notes to find relevant passages — locates text; does not prove continuity.                                                                                  |
+| **Whisper / Chirp**              | Widely used **speech-to-text** foundation models — OpenAI and Google **vendor stacks** (not the chat UI, same transformer-era infrastructure).                                                 |
+| **Foundation ASR**               | Automatic speech recognition model embedded in captioning, dictation, and meeting tools — e.g. Whisper, Chirp.                                                                                 |
 
 
 ---
@@ -39,11 +39,7 @@ This document gives skeptics and newcomers three things at once:
 
 ---
 
-
-
 ## Part 1: AI is not new
-
-
 
 ### Before the chat box
 
@@ -62,8 +58,6 @@ This document gives skeptics and newcomers three things at once:
 **Takeaway for authoring circles:** The 2022 moment was a **UI and access** event as much as a capability event. Writers who say "I don't use AI" often mean "I don't use ChatGPT." They may still use AI-mediated tools every hour.
 
 ---
-
-
 
 ### The stochastic lineage — what LLMs are actually built on
 
@@ -126,13 +120,13 @@ The model does not "retrieve a fact." It **rolls weighted dice** biased by every
 #### Why this matters for writers
 
 
-| Stochastic property                  | Craft consequence                                                                                                                                    |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Outputs are **likely**, not **true** | Hallucinated citations, dates, geography — plausible wrong                                                                                           |
-| Same prompt, different runs          | Non-reproducible "fixes" without locked state and author picks                                                                                       |
-| High-probability = **common**        | Cliché syntax, goldilocks words, proverb dialogue — the mode of the training distribution                                                            |
-| Famous-prefix prompts                | `Four score and seven years ago` → Gettysburg completion — **training frequency**, not your novel stolen ([`07-ethics-and-transparency.md`](07-ethics-and-transparency.md)) |
-| Constraint pile-up                   | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery) |
+| Stochastic property                  | Craft consequence                                                                                                                                                           |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Outputs are **likely**, not **true** | Hallucinated citations, dates, geography — plausible wrong                                                                                                                  |
+| Same prompt, different runs          | Non-reproducible "fixes" without locked state and author picks                                                                                                              |
+| High-probability = **common**        | Cliché syntax, goldilocks words, proverb dialogue — the mode of the training distribution                                                                                   |
+| Famous-prefix prompts                | `Four score and seven years ago` → Gettysburg completion — **training frequency**, not your novel stolen (`[07-ethics-and-transparency.md](07-ethics-and-transparency.md)`) |
+| Constraint pile-up                   | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery)                        |
 
 
 **The prosthetic model exists because the engine is stochastic** — and because **retrieval bias must return something** even when the solution space is too thin to support a good single answer. You do not "trust" the model; you **constrain** it, **audit** its output, **widen** the retrieval set with six alternatives when bias stalls, and **select** from that set — the same posture you already use when autocomplete offers three words and you tap one.
@@ -140,8 +134,6 @@ The model does not "retrieve a fact." It **rolls weighted dice** biased by every
 Expert systems (Part 1, 1970s–80s) tried **explicit rules**. Modern LLMs use **implicit statistics** at scale. Serious authoring methodology combines both instincts: **graph state and locks** (knowledge engineering) plus **governed sampling** (stochastic generation under gates).
 
 ---
-
-
 
 ### This is not the first craft panic
 
@@ -159,8 +151,6 @@ Some fears had merit (homogenization, over-reliance). None eliminated the craft.
 LLMs are the next layer. The relevant question is not "AI yes or no" but **which domain, under what governance, with what human mass remaining**.
 
 ---
-
-
 
 ## Part 2: AI you already use (and don't call AI)
 
@@ -228,11 +218,13 @@ If you have taken a video call, worn hearing aids in a restaurant, or shot a nig
 
 Skeptics often draw a sharp line:
 
-| Their claim | Fair? |
-|-------------|-------|
-| "Night mode **reconstructs** pixels; it doesn't **write**" | **Yes** — different task |
-| "Noise suppression **classifies** speech vs clutter" | **Yes** — not composition |
-| "Therefore I use **no AI** like ChatGPT" | **No** — category error |
+
+| Their claim                                                | Fair?                     |
+| ---------------------------------------------------------- | ------------------------- |
+| "Night mode **reconstructs** pixels; it doesn't **write**" | **Yes** — different task  |
+| "Noise suppression **classifies** speech vs clutter"       | **Yes** — not composition |
+| "Therefore I use **no AI** like ChatGPT"                   | **No** — category error   |
+
 
 **Camera and hearing-aid pipelines** are mostly reconstruction and classification. They do not draft your chapter. Grant that.
 
@@ -287,8 +279,6 @@ If yes to any of these, you already practice **human-in-the-loop selection** fro
 
 ---
 
-
-
 ## Part 3: Generative vs transformer — plain language
 
 See also **[The stochastic lineage](#the-stochastic-lineage--what-llms-are-actually-built-on)** in Part 1 — LLMs are stochastic systems before they are chat products.
@@ -305,8 +295,6 @@ See also **[The stochastic lineage](#the-stochastic-lineage--what-llms-are-actua
 
 ---
 
-
-
 ## Part 4: Why the maintainer is qualified to speak on this
 
 This repository is maintained by **David Johnson** — would-be author, knowledge-systems practitioner, and long-form fiction writer. The methodology here is not assembled from influencer threads. It is generalized from **decades of technical practice** and **years of governed LLM use on a real manuscript**.
@@ -319,7 +307,7 @@ This repository is maintained by **David Johnson** — would-be author, knowledg
 - **1970s:** Professorship at the University of **Essex** (electrical / computer engineering) — academic continuation of systems and human-factors research.
 - **1980s, Calgary:** **Izaak Walton Killam Chair**, founder of the **Knowledge Science Institute**; with **Mildred Shaw**, developed knowledge-acquisition tools and expert-system methods (repertory grids, KSS tools) that influenced the international **Banff** knowledge-engineering school.
 
-**David Johnson** worked directly with **Gaines**, **Joan Vickers**, and **Shaw** at the University of Calgary in the 1980s:
+**David Johnson** worked directly under **Gaines**, **Joan Vickers**, and **Shaw** at the University of Calgary in the 1980s:
 
 - **Rule-based and knowledge-based systems** — encoding expert reasoning as explicit state, constraints, and traversal rules (same structural instinct as PGMs, session anchors, and apply gates in this repo)
 - **Human factors** — how people actually use knowledge systems under load
@@ -330,7 +318,7 @@ That lineage predates ChatGPT by decades and spans **both** poles serious LLM me
 ### Enterprise practice (present)
 
 - Designs and integrates enterprise scaled **LLM-backed systems** in production using **LangGraph** and **LangGraph4j** — graph-orchestrated agents with state, checkpoints, and tool boundaries
-- Uses **Cursor** professionally — repo index, MCP, and agent editing in paying work — which informed the decision **not** to build a separate RAG + LLM editor shell for fiction; custom work went into **methodology and MCP tooling** (e.g. novelist-plugin) instead
+- Uses a governed writing environment professionally — repo-indexed notes and structured lookup in paying work — which informed keeping **methodology in this repo** and **implementation elsewhere**
 - Treats creative-writing workflow with the same seriousness: **graph state** (PGMs), **checkpoints** (session anchors), **constraints** (rubric Signs, prosthetic gates), **human authorization** before side effects (apply gate)
 
 Someone who builds agent graphs for data management is not guessing when they say unconstrained "fix my chapter" prompts fail. They have seen **sparse-edge collapse** in other domains.
@@ -338,12 +326,10 @@ Someone who builds agent graphs for data management is not guessing when they sa
 ### Creative practice (multi-year)
 
 - Author of a long-form speculative fiction project using LLMs across **five domains** (lexical prosthetic, developmental audit, continuity modeling, grounding simulation, production blueprinting) — see `[03-five-domains.md](03-five-domains.md)`
-- **Prototyped largely on frontier LLMs** in long chat threads before IDE rules and MCP tooling — prosthetic and audit patterns came first; **PGMs, RAG, and graph-backed queries** followed when conversational context overwhelmed relationship and canon fidelity
-- **Planned a custom RAG + LLM-backed editor**, then adopted **Cursor** as host after day-job use proved the plumbing (index, MCP, rules, diff-aware edit) was already there — effort shifted to gates, PGMs, and passage/verify tooling rather than a new IDE
+- **Prototyped largely on frontier LLMs** in long chat threads before indexed project files — prosthetic and audit patterns came first; **PGMs, search indexes, and structured lookup** followed when conversational context overwhelmed relationship and canon fidelity
+- **Planned a custom editor shell**, then adopted a governed IDE when day-job use proved indexed notes beside the manuscript were enough — effort stayed on **gates, PGMs, and continuity habits** rather than a new app
 - **Autistic** author using LLM as **vocabulary and continuity prosthetic** — external working memory for lexical retrieval under load, not voice replacement
 - Documented **failure modes** (ghostwrite drift, proverb dialogue, negation triangulation) and **countermeasures** (two-step pipeline, six-alternative protocol) from live sessions — see `[06-failure-modes.md](06-failure-modes.md)`
-
-
 
 ### What this qualification is — and is not
 
@@ -360,8 +346,6 @@ David is qualified to discuss **how to constrain LLMs in creative work** because
 
 ---
 
-
-
 ## Part 5: What skeptics should do with this
 
 1. **Separate UI from capability** — ChatGPT made models visible; it did not invent statistical assistance
@@ -372,8 +356,6 @@ David is qualified to discuss **how to constrain LLMs in creative work** because
 If after reading this you still reject all AI in fiction — that is a valid **values** position. This repository asks only that you argue against **what serious practitioners actually do**, not against a straw-man prompt.
 
 ---
-
-
 
 ## Next
 

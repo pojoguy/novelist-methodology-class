@@ -7,7 +7,7 @@
 | **Paired doc** | `docs/02-prosthetic-model.md` |
 | **Format** | Explainer (3–5 min) — flagship thesis video |
 | **Series** | LLM Methodology — Ep. 02 |
-| **Target length** | 4:00 |
+| **Target length** | 4:15 |
 | **Status** | draft |
 
 ---
@@ -19,8 +19,11 @@
 | **Prosthetic** | Like a thesaurus with rules — **six options**, you decide. | `Prosthetic ≠ ghostwriter` |
 | **Six alternatives** | Six full wordings for one problem — **inspiration**, not a menu order. | `6 options → you decide` |
 | **Thin solution space** | Too many rules; tool spits out "not A, not B, but C." | `Forced vague output` |
+| **Nexus** | The **knot** where retrieval stalled — six branches stay here. | `Branch on the nexus` |
 | **Apply gate** | **You** authorize every change. | `You approve` |
 | **Priority fixes** | Means **audit and options** — not "rewrite my chapter." | `Audit ≠ rewrite` |
+| **Pick** | You **choose** option three and apply. | `Pick → apply` |
+| **Cluster + author take** | "Three and four are close — **here's my line**, get me on track." Tool orients; **does not** apply option three. | `Your line ≠ pick 3` |
 
 ---
 
@@ -42,19 +45,27 @@
 
 ---
 
-## Beat 2 — Six alternatives (1:00–2:00)
+## Beat 2 — Six alternatives (1:00–2:15)
 
 **Say:**
 
-> When constraints bind tight, the retrieval bias function hits a thin solution space — it has to return something but can't choose between near-misses. You get "not A, not B, but C," comma lists, adjective triads. That's not voice — that's forced emission. Six alternatives deliberately widen the space — inspiration, not a menu order. You pick, blend, reject, or write your own. You apply the final bias. The model doesn't pretend it chose.
+> When constraints bind tight, retrieval stalls at a nexus — a knot of rules and near-miss rejections. The model still has to emit something: "not A, not B, but C," comma lists, adjective triads. That's forced emission, not voice. Six alternatives branch locally on that nexus — same beat, same locks — not drift across the manuscript. You pick, blend, reject, or write your own. If two options cluster close, name the cluster and run a convergence round: three more, still on the nexus. You apply the final bias. The model doesn't pretend it chose.
 
-**On-screen:** `Thin space → forced output` / `6 alternatives = widen space` / `You decide = final bias`
+**Say (pick vs cluster+take):**
 
-**Note for recording:** See `docs/02-prosthetic-model.md` — *Why six — theta bias rationale* for full technical depth.
+> Picking option three and saying "three and four are closest — here's my take, get me on track" are **not** the same move. Pick means you authorize that line. Cluster plus author take means **you** supply the draft; the tool orients, audits, or converges — it does **not** apply the nearest number by default.
+
+**Say (beyond six):**
+
+> Often you **supersede** the six with your own stronger line. And if six alternatives keep failing — even after convergence rounds — that's usually not a vocabulary problem. The **beat is structured wrong**. Stop shopping wordings; rewrite the paragraph or reorder the beat. Span counterfactuals help you see ripple effects before you commit. Reload grounding when geography or material fact was wrong.
+
+**On-screen:** `Nexus stall` / `6 = local branch` / `3 = convergence` / `Pick ≠ here's my take` / `Six fail → fix beat`
+
+**Note for recording:** See `docs/02-prosthetic-model.md` — *Why six — nexus and convergence* for full technical depth.
 
 ---
 
-## Beat 3 — Priority fixes gate (2:00–2:45)
+## Beat 3 — Priority fixes gate (2:15–2:45)
 
 **Say:**
 
@@ -74,7 +85,7 @@
 
 ---
 
-## Close + CTA (3:45–4:00)
+## Close + CTA (3:45–4:15)
 
 **Say:**
 

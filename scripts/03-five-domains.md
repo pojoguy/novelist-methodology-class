@@ -35,9 +35,9 @@
 
 **Say:**
 
-> One: lexical and continuity assistance — vocabulary prosthetic, session anchors. Two: manuscript audit — adversarial critique, no apply without instruction. Three: continuity modeling — timelines, who knows what when. Four: grounding simulation — real routes, period detail, non-canonical until promoted. Five: production blueprinting — trailer timing, foley, for human crews. Operate in the domain you invoked. Don't audit prose with sandbox output as canon.
+> One: lexical and continuity assistance — vocabulary prosthetic, session anchors. Two: manuscript audit — adversarial critique, no apply without instruction. Three: continuity modeling — timelines, who knows what when. Four splits two ways: **four-a grounding** — verify routes and spatial facts; capture **map and Street View together** during research — one plain-language add, tooling files and indexes; blocks generic fictional places. Example: Danish Cemetery near Coteau, ND — chapter three collapse corridor; may be POV-blind. **Four-b scenario simulation** — play-pretend off-page, distill to character files, don't paste sandbox dialogue into the chapter. Five: production blueprinting — trailer timing, foley, for human crews. Operate in the domain you invoked.
 
-**On-screen:** Numbered 1–5 with icons
+**On-screen:** `1–3` · `4a maps` · `4b pretend` · `5 production`
 
 ---
 
@@ -55,9 +55,9 @@
 
 **Say:**
 
-> Audit and governance — how domain two stays readonly. Episode four.
+> Audit and governance — how domain two stays readonly. Optional companion: **Ep. 03B** — maps versus play-pretend ([`03b-scenario-simulation.md`](03b-scenario-simulation.md)). Episode four.
 
-**On-screen:** Ep. 04 card
+**On-screen:** Ep. 04 card · `Ep. 03B: L5a vs L5b`
 
 ---
 
@@ -68,5 +68,6 @@
 | "Domain 1: Lexical prosthetic" | 1 |
 | "Domain 2: Audit only" | 2 |
 | "Domain 3: Continuity graphs" | 3 |
-| "Domain 4: Grounding sandboxes" | 4 |
+| "Domain 4a: Grounding (maps)" | 4a |
+| "Domain 4b: Play-pretend" | 4b |
 | "Domain 5: Production blueprints" | 5 |

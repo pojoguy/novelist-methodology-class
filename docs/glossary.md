@@ -53,11 +53,14 @@ Persistent rule overriding model prior; stored in rationale docs or PGMs.
 **Comparanda**  
 Quarantined unrelated reference excerpts for craft comparison (lens + pack). Never indexed into canon or passage FTS. Reports only — diagnosis, not voice target.
 
-**Continuity report / verify_run**  
-Structured check producing `event_id`, rule name, literals — proves or disproves claims; does not retrieve prose.
+**Continuity report**  
+Structured check producing a **reference ID**, rule name, and compared quotes — proves or disproves claims; does not retrieve prose. One report type in the editorial corpus.
+
+**Editorial report corpus**  
+Accumulated readonly diagnostics filed outside canon (e.g. `exploration/`) — trope/subversion ledger, tone audit, maturation read, developmental passes, comparanda reports, verify events. **Run, file, reload** on later audits; promote to PGM only on author instruction. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 **Domain (1–5)**  
-Scope of AI use: lexical, audit, continuity, simulation, production. See [`03-five-domains.md`](03-five-domains.md).
+Scope of AI use: lexical, audit, continuity, sandbox (grounding + scenario sim), production. Domain 4 splits into **4a grounding** and **4b scenario simulation**. See [`03-five-domains.md`](03-five-domains.md).
 
 **Domain collapse**  
 Treating simulation or exploration output as canon without promotion.
@@ -68,8 +71,11 @@ Model substitutes prose when author requested audit or fixes only.
 **Goldilocks words**  
 High-probability literary adjectives (shimmer, tapestry, luminous, etc.) common in LLM prose.
 
-**Grounding**  
-Real-world constraints (geography, period detail, biology) verified against sources or author samples.
+**Grounding (Domain 4a / Level 5a)**  
+Spatial and material verify — routes, period detail, biology — against sources or registered lore before prose locks. Distinct from scenario simulation.
+
+**Scenario simulation (Domain 4b / Level 5b)**  
+Off-page play-pretend — run a character or institution through a beat; output constraints and knowledge state, not paste-ready manuscript dialogue. Promotes to character PGMs after author review.
 
 **Human signal**  
 Intentional idiosyncratic prose the author protects; may conflict with generic rubric Signs.
@@ -84,7 +90,10 @@ Collapse pattern: *Not X, not Y. Z.* (or comma-delimited *not X, not Y, but Z*) 
 Exploration or chat content not yet promoted to lore/PGMs.
 
 **PGM (program guide / project graph module)**  
-Machine-readable canon slice — character, world, chapter state.
+Formalized **author working notes** — character, world, chapter state — registered for load/query (JSON, Cypher, Markdown, plain text, etc.). Not a separate species of thinking; organized canon the tooling can cite.
+
+**Relationship collapse (attention)**  
+Loss of stable joins (who knows what, arc, locks) in the model's active attention despite sufficient raw text in context; infrastructure unloads relationship state to PGMs, indexes, and verify.
 
 **Priority fixes gate**  
 "Fix" means audit + alternatives + stop — not chapter rewrite.
@@ -98,11 +107,11 @@ Generic wisdom lines without speaker/situation — structural failure mode.
 **Quote gate**  
 No full dialogue alternatives without speaker + situation in Step 1.
 
-**L1 / L2 / L3 locator**  
-Tiered retrieval: L1 fuzzy RAG (no metadata join); L2 structured passage/entity/fact/geography query; L3 verify (truth, not search). One locator per question.
+**Lookup kinds**  
+Quick search (fuzzy, no story tags) vs tagged passage / character / facts / route lookup vs continuity check (truth, not search). **One kind per question.**
 
 **Passage reanchor**  
-Re-segment chapter prose into stable `passage_id` rows after edits; prerequisite for accurate L2 search and verify.
+Re-segment chapter prose into stable passage IDs after edits; prerequisite for accurate tagged search and continuity checks.
 
 **RAG indexing**  
 Embed or FTS index of manuscript text for fuzzy locate (L1). Distinct from graph verify and from comparanda (excluded paths).
@@ -113,8 +122,41 @@ Selection/scoring layer ranking candidates in vector or knowledge space. Under c
 **Section A / B / C**  
 Anchor blocks: continuity entry, revision notes, meta-analysis.
 
+**Retrospective meta-analysis**  
+Looking back at your registered notes (grounding, routes, session anchors) to reconstruct what a span assumed — distinct from subjective Section C session notes.
+
 **Sign**  
-Rubric flag for AI textual degradation or protocol breach.
+Internal rubric flag for generic or model-typical prose; cite and branch, don't auto-fix. Independently built for fiction; convergent with [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Craft diagnosis, not a detector score.
+
+**Commercial AI detector**  
+Third-party product scoring text as "AI" or "human"; typically measures **training-material / pattern adherence**, not verified tool use. Underperformed explicit Signs rubric in maintainer adherence testing on project corpus.
+
+**Training-material adherence**  
+Closeness of prose to high-frequency patterns in model training data (cadence, diction, structure). What most detectors approximate; not the same as authorship or tool use.
+
+**Formula / franchise prose**  
+Fiction written to tight publisher or series rubric where structural conformity is intentional; can false-positive commercial detectors when work is fully human.
+
+**Pick (prosthetic move)**  
+Author selects one numbered alternative for apply; disclose honestly.
+
+**Cluster + author take**  
+Author names near-miss options and supplies own draft; AI orients or audits without applying closest number by default.
+
+**POV-blind grounding**  
+You file maps and photos for a place the character never names on the page — author coordinates without breaking POV.
+
+**Supersede (prosthetic move)**  
+You write a stronger line than any numbered option; the six oriented your thinking.
+
+**Malformed beat**  
+Beat order or situation is wrong — especially when six alternatives fail after multiple passes. Fix structure, not diction.
+
+**Span counterfactual**  
+*"What if X changed between L###–L###?"* — explore ripple effects before you rewrite.
+
+**Six-alternative treadmill**  
+Repeated six-option and convergence rounds that still don't land — often signals a malformed beat, not weak vocabulary.
 
 **Six-alternative protocol**  
 Exactly six full replaceable options for flagged prose. Widens thin solution space when retrieval bias cannot discriminate; author uses them as **inspiration** — pick, blend, reject, or write your own — before apply. Countermeasure to bias-function stall — see [`02-prosthetic-model.md`](02-prosthetic-model.md).
@@ -135,7 +177,13 @@ Compressed moral summary (*A vs B; nature punishes…*) unsuitable as on-page vo
 Knowledge-representation framework (1980s research lineage, Calgary) modeling how preference and bias select among candidates. Theoretical root of the six-alternative protocol: when bias stalls at thin edges, human author completes selection.
 
 **Thin solution space (retrieval bias stall)**  
-Feasible region too narrow for bias function to choose; forced emission as negation triangulation, comma-lists, or adjective/adverb triads. Six alternatives deliberately widen the space.
+Feasible region too narrow for bias function to choose; forced emission as negation triangulation, comma-lists, or adjective/adverb triads. Six alternatives widen the space locally at the **nexus**. See [`02-prosthetic-model.md`](02-prosthetic-model.md).
+
+**Nexus (retrieval stall)**  
+Constraint knot where retrieval stalled — same beat, locks, and near-miss rejections. Six alternatives and convergence rounds branch here, not elsewhere. See [`02-prosthetic-model.md`](02-prosthetic-model.md).
+
+**Convergence round**  
+When two or three of six alternatives cluster near the target, offer **three** full options anchored on that sub-region of the nexus — refinement, not a new search. See [`02-prosthetic-model.md`](02-prosthetic-model.md).
 
 **Training memorization (famous-prefix effect)**  
 When a prompt matches a highly quoted public passage (e.g. opening of the Gettysburg Address), the model often continues the canonical text — corpus frequency and a single dominant continuation path, not retrieval of your private file. See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md).

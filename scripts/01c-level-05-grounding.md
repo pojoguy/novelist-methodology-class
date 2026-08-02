@@ -1,16 +1,16 @@
-# Level 5: Grounding & Simulation Sandbox
+# Level 5a: Grounding (Spatial / Material Verify)
 
 ## Metadata
 
 | Field | Value |
 |-------|-------|
-| **Paired doc** | `docs/01-spectrum-of-use.md` — Level 5 |
-| **Series** | Ep. 01C — Level 5 |
+| **Paired doc** | `docs/01-spectrum-of-use.md` — Level **5a**; `docs/03-five-domains.md` — Domain **4a** |
+| **Series** | Ep. 01C — Level 5a |
 | **Target length** | ~3:00 |
 | **Tool** | **This Cursor installation** — novelist-mcp `geography_query` |
 | **Status** | draft |
 
-**Fixture:** [`../examples/spectrum-demo-fixtures/demo-route-brief.md`](../examples/spectrum-demo-fixtures/demo-route-brief.md)
+**Not this clip:** Scenario play-pretend — [`01c-level-05b-scenario-simulation.md`](01c-level-05b-scenario-simulation.md) (Level **5b**).
 
 ---
 
@@ -18,7 +18,7 @@
 
 | Role | Tool | Rule |
 |------|------|------|
-| **Level 5 (this recording)** | **Cursor** (this install) + **novelist-mcp** | Agent must call **`geography_query`** before any travel answer |
+| **Level 5 (this recording)** | **Level 5a** — **Cursor** (this install) + **novelist-mcp** | Agent must call **`geography_query`** before any travel answer |
 | **Not used** | Frontier chat, staged JSON answers, map invention from memory | No fallback |
 
 **Why this install:** Same governed stack as Levels 3–4 and 7 — rules, skills, and MCP are already loaded. The geography gate is **real**, not simulated in a script.
@@ -33,7 +33,7 @@
 
 | Term | Say this (plain language) | On-screen (Resolve lower third) |
 |------|---------------------------|--------------------------------|
-| **Level 5** | Verify real-world claims before you write them into the book. | `Level 5 · Grounding` |
+| **Level 5a** | Verify spatial and material claims before you write them into the book. | `Level 5a · Grounding` |
 | **Exploration** | Scratch findings — not official story facts until you promote. | `Not canon until promoted` |
 | **NO_ROUTE_CLAIM** | No verified route in canon files — **stop**, don't invent roads. | `STOP · no route claim` |
 | **geography_query** | The tool that looks up registered place/route facts. | `MCP · geography_query` |
@@ -54,9 +54,9 @@
 
 ### Hook (0:00–0:15) `[CAM]` optional
 
-> Movie logic fails on the page. Level five: **query the canon graph first** — then maybe write.
+> Movie logic fails on the page. Level five-**a**: **query spatial claims first** — then maybe write.
 
-**On-screen:** `Level 5 · Sandbox`
+**On-screen:** `Level 5a · Maps / verify`
 
 ---
 
@@ -111,9 +111,9 @@ Grounding demo only — show the OK path. Call geography_query: place_a "Lake Au
 
 ### Close (2:30–3:00) `[CAM]` optional
 
-> Level six is post-manuscript — trailers and production blueprints. Next clip.
+> Level five-**b** is play-pretend off-page — who under pressure, not where. Next clip.
 
-**On-screen:** `NEXT → Level 6`
+**On-screen:** `NEXT → Level 5b` · then `Level 6`
 
 ---
 
@@ -159,4 +159,4 @@ Ep. 01C suite. Not manuscript apply. Repo: https://github.com/pojoguy/novelist-m
 | Date | Change |
 |------|--------|
 | 2026-08-02 | Initial |
-| 2026-08-02 | Locked to this Cursor install + live geography_query; removed staged fallback; Beat 1 STOP + optional Beat 2 OK |
+| 2026-08-02 | Renamed Level 5a; cross-link L5b scenario simulation |

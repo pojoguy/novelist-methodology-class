@@ -9,19 +9,25 @@
 |------|----------------|
 | **Session anchor** | A **saved file** at end of session: where the story paused, open fixes, what worked or failed with the tool. |
 | **Section A / B / C** | Anchor parts: **A** = resume writing; **B** = revise one chapter; **C** = tune your process across tools. |
-| **PGM** | Structured **canon file** (character, world, chapter) the tool loads instead of guessing from chat. |
+| **PGM** | **Formalized working notes** — canon in JSON, Cypher, Markdown, or plain text; registered for load/query. |
+| **Author's notes** | Maps, timelines, character sheets, location photos — material authors **already** gather while drafting. |
+| **PGM / grounding doc** | Same notes **registered** so tooling can load, query, and cite — not a separate workflow. |
+| **Visual anchor pair** | **Map** (where, scale, names) + **ground-level image** (e.g. Street View) for the **same site**. |
+| **Grounding capture** | Plain-language ingest of anchors; tooling places, indexes, extracts fields, updates registries. |
 | **Exploration** | Scratch folder — **not official story truth** until you promote it. |
 | **Canon / promote** | Making a scratch fact **official** by moving it into registered lore files. |
 | **Two-step pipeline** | Structural pass → read-only audit pass → **you pick** → apply if authorized. |
-| **MCP** | A standard way for an editor (e.g. Cursor) to **call tools** on your project — search, verify, compare — without pasting your whole book into chat. |
+| **Plain-language lookup** | You ask in ordinary language; your project files answer — search, fact check, route lookup — without you naming technical tiers. |
 | **RAG** | **Search** that finds relevant passages in your manuscript — good for "where did I mention this?" |
 | **Passage reanchor** | After you edit a chapter, **re-index** it so line numbers and IDs still match the text. |
 | **Verify run** | Automated **continuity check** with named rules and citations — not a rewrite. |
-| **`event_id`** | A **tracking ID** on a continuity check so you can refer to the exact report later. |
+| **Report reference ID** | A **reference number** on a continuity check so you can cite the exact report later. |
+| **Retrospective meta-analysis** | Looking back at your registered notes (grounding, routes, anchors) to reconstruct what a span assumed — distinct from Section C session feelings. |
 | **Comparanda** | **Isolated reference excerpts** for craft comparison only — never indexed as your story. |
 | **Grounding** | Real-world **facts and sources** (maps, period detail) your story must respect. |
 | **Apply gate** | You authorize every change to the manuscript. |
-| **Conversation context** | What the **chat thread** retains about canon and relationships — unreliable at novel length; use files and indexes instead. |
+| **Attention / relationship collapse** | Text may fit in context; **joins** (who knows what, arc, locks) do not reliably survive in attention. |
+| **Conversation context** | What the **chat thread** retains about **relationships** — unreliable even when raw text fits; use registered notes and queries instead. |
 
 ---
 
@@ -31,9 +37,13 @@ Repeatable infrastructure matters more than clever one-off prompts. These patter
 
 Governance (prosthetic model, apply gates, six alternatives) was **developed and tested largely on frontier LLMs** in ordinary long chat sessions. That was enough to prove the **contract** — diagnose, branch, author decides.
 
-It was **not** enough to hold **relationship context** across months: who carries what, which calendar day, which facts are locked, where a line lives after rewrites. Conversational memory **overwhelms**; the model improvises continuity from recent tokens. Session anchors, PGMs, RAG/passage indexing, and structured graph queries are the **external memory** that replaced "the thread will remember."
+It was **not** enough to hold **relationship state** in live attention — even when the raw text of the project could fit in context. Models carry words more easily than **joins**: who knows what when, which arc owns a beat, which facts are locked. On dense pages where **multiple arcs resolve together**, relationship fidelity collapses in the attention layer before the author runs out of tokens. Across months, that becomes improvised continuity from recent chat.
 
-**Tool host:** The maintainer initially planned a **custom RAG + LLM editor**; professional **Cursor** use showed the host already provided indexing, MCP, and agent editing — so custom work focused on **methodology and MCP tools**, not a new shell. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Build vs adopt*.
+Session anchors, PGMs, RAG/passage indexing, and structured queries are **external relationship memory** — the same notes you would keep in Scrivener or a wiki, **registered** so tooling can load or query them without stuffing the whole graph into every turn.
+
+**How you work:** Ask in ordinary language (*"tell me about Dej"*). Your registered notes and indexes answer — you do not need to name search tiers or protocols. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Plain language — what you ask for*.
+
+**Why files, not chat:** The maintainer prototyped this methodology in long frontier chat sessions first; when relationship state outgrew what chat could hold, the same author's notes moved into **registered files** you can load and query. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
 
 ---
 
@@ -99,7 +109,13 @@ See [`templates/session-close.md`](../templates/session-close.md).
 
 ## Knowledge state (PGMs)
 
-**PGM** (program guide / project graph module): machine-readable slice of canon — character, world, chapter state.
+**PGM** (program guide / project graph module): a **formalized slice of author working notes** — character, world, chapter state — in whatever format you maintain (JSON, Cypher, Markdown, plain text). Examples in this repo often use JSON or graph query shapes; that is **maintainer preference**, not a requirement.
+
+#### Author's notes, formalized
+
+PGMs, grounding indexes, route briefs, and chapter slices are **organized author's notes** — what you would keep in Scrivener, a wiki, or a binder. JSON, Cypher, Markdown, and plain text are storage choices. The requirement is **registered state** the stack can address.
+
+With tooling, you **talk to the project**; the stack writes and indexes the same artifacts you would have kept anyway.
 
 **Practices:**
 
@@ -110,23 +126,104 @@ See [`templates/session-close.md`](../templates/session-close.md).
 
 **Promotion workflow:** Author reviews exploration → registers in lore → anchor notes promotion date.
 
+#### Grounding capture — map + Street View (example)
+
+**While researching a beat**, authors often gather **two** anchors for one place:
+
+1. **Map snip** — route, scale, place names (e.g. Google Maps).
+2. **Street View snip(s)** — ground appearance at the **specific site**.
+
+**Example (illustrative real site):** **Danish Cemetery near Coteau, ND** — map for approach and distances when scale allows; Street View for layout, terrain, markers, access road. Registered for **chapter 3** (`L62`–end): collapse and pickup on Hwy 15 beside the cemetery — see *POV-blind grounding* below.
+
+**Author act (seconds):**
+
+> *[map image] [Street View image(s)]*  
+> *"Add this map and these Street View images to the grounding documents for chapter 3 — Danish Cemetery near Coteau."*
+
+**What gets filed when you ask** (you send the images and one sentence; your project handles the rest):
+
+| Step | What happens |
+|------|--------|
+| Place | Files under grounding / lore path for the chapter; labeled with place name |
+| Index | Search index updated so you can find them later |
+| Vision — map | Place names; distances **when scale is reliable** |
+| Vision — Street View | Layout, structures, sightlines — **documented** appearance, not invented |
+| Structure | Grounding registry + provenance (documented source); route links as needed |
+
+**Why pair map + ground view**
+
+| Problem | Effect of pair |
+|---------|----------------|
+| Model pulls a **generic fictional cemetery** (stock headstones, iron gate, spooky branches, mood weather) | Anchors **overrule** training prior when loaded for the beat |
+| Prose drifts from the real site | You can **check your line** against what map and Street View actually show — not whether you typed the place name |
+
+**Documented site vs model prior (Danish Cemetery):**
+
+| Model pull (high-probability cemetery) | Street View / grounding |
+|----------------------------------------|-------------------------|
+| Dark walls, enclosure | **No walls** |
+| Spooky branches, shade trees | **No trees** |
+| Gothic mood default | **Bald prairie** |
+| Cemetery as set piece | **Mowed patch in grain fields** — easy to miss |
+
+**What you say (plain language):**
+
+- *"Load grounding for chapter 3 before we revise the collapse pickup."*
+- *"Does this roadside beat match what we documented at Coteau — no walls, no trees?"*
+
+**Honest limits**
+
+- Street View is **dated** — note capture date if era or site matters.
+- Missing angles → **STOP and ask**; do not invent unseen detail.
+- Anchors **constrain**; they do not replace voice, drama, or promotion to canon.
+
+Cross-link: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md); [`03-five-domains.md`](03-five-domains.md) Domain 4a.
+
+#### POV-blind grounding
+
+**Your research notes can name a place the character never knows.**
+
+When POV ignorance is intentional, you keep maps and Street View in your grounding files **without** putting the place name in the scene. That is not sloppy research — it is matching **what you know** to **what the character can perceive**.
+
+**Example:** Danish Cemetery near Coteau, ND — chapter 3, lines 62–end. The collapse and pickup happen roadside **beside** the cemetery on Hwy 15. The boy is barely conscious; **no cemetery in the prose** — correct POV. Your grounding photos pin the geography for **you** and stop the model from inventing a generic Gothic cemetery (walls, trees) while the scene stays true to what he feels: prairie, gravel, the red Ford.
+
+| Who | What they know |
+|-----|----------------|
+| **You (grounding + route notes)** | Danish Cemetery; Bowbells-**area** prairie — not a detour into Bowbells town |
+| **The character (on the page)** | Collapse, golden prairie, pickup — not "cemetery" |
+| **Your check** | Does the prose match the **documented site** (no walls, no trees, bald prairie)? — not "did I type the place name?" |
+
+**If the character doesn't know where they are, your grounding still does.**
+
+**Looking back later:** Grounding headers and route notes let you reconstruct *where* a span happened months after drafting — even when the prose never names it. See *Retrospective meta-analysis* below.
+
+**Common mistake:** Searching the manuscript for "cemetery," finding nothing, and assuming the grounding work was wasted.
+
+**What you're doing:** Keeping author coordinates in files the character doesn't need to share.
+
+Cross-link: [`06-failure-modes.md`](06-failure-modes.md) — *Generic place hallucination*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options stop working*.
+
+#### Governance overhead
+
+Once tooling is wired, capture and load are part of normal research — not a parallel knowledge-engineering project. Grounding capture (map + Street View, one instruction) is representative of **~zero marginal hours per 1,000 words** once tooling is in place — setup is front-loaded; capture is part of normal research.
+
 ---
 
 ## Grounding load protocol
 
-Before visual or geographic grounding:
+Before you revise a beat that uses real places:
 
-1. Read grounding directory index
-2. Load only images/tags for the beat under audit
-3. If sample missing → STOP and ask author
+1. Ask to **load grounding** for that chapter and site.
+2. Use only the map and images you filed for that beat.
+3. If something is missing → **stop and ask** — do not invent detail.
 
-Prevents model from inventing "plausible" geography or period detail.
+This keeps the tool from substituting a generic fictional location for what you documented.
 
 ---
 
-## Agent instruction files
+## Project expectations
 
-Tools like Cursor use `.cursorrules`, `AGENTS.md`, or project skills. Effective rules:
+Whether you use a governed editor or a long chat thread, **you** set the contract:
 
 - Persona: adversarial editor, not cheerleader
 - Default: diagnose, six alternatives, no apply
@@ -134,26 +231,26 @@ Tools like Cursor use `.cursorrules`, `AGENTS.md`, or project skills. Effective 
 - Load order: rationale → gates → rubric → chapter PGM
 - Explicit domain scope (do not collapse audit + simulation)
 
-See [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
+See [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md) for a starter checklist you can adapt.
 
 ---
 
-## MCP and fact-query layers
+## What you can ask your project
 
-Advanced setups expose manuscript state via MCP (Model Context Protocol) or equivalent:
+When your notes and manuscript are registered, ordinary questions work:
 
-- `passages_search` / `passages_resolve` — locate beats (L2)
-- `passages_reanchor` / `passages_ingest` — maintain RAG/FTS index after edits
-- `facts_query` / `entities_query` — who knows what, when
-- `geography_query` — travel corridor validation
-- `verify_run` — continuity reporting with `event_id`
-- `comparanda_compare` — quarantined craft comparison
+- **Locate a beat** — *"Where did I mention the peel?"* / *"Find the naming speech."*
+- **Refresh after edits** — re-index the chapter so line references stay true
+- **Who / what / when** — character state, locked facts, name changes across chapters
+- **Routes and places** — stops between towns; whether a corridor claim is on file
+- **Continuity check** — does this passage contradict registered canon? (report with reference ID)
+- **Craft compare** — how does my opening compare to quarantined reference excerpts?
 
-**Design lock:** RAG **locates**. Graphs **verify**. Author **applies**.
+**Design lock:** Search **locates**. Structured checks **verify**. **You** apply.
 
-**Rule:** NO_ROUTE_CLAIM or verify FAIL → stop prose changes until resolved. One locator per question — do not mix L1 fuzzy search and L2 structured query in the same turn.
+**Hold the line:** No route on file, or a failed continuity check → stop prose changes until resolved. **One kind of lookup per question** — do not mix a quick text search with a canon-sensitive check in the same breath.
 
-Full tier model: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+Full habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
 ---
 
@@ -171,6 +268,40 @@ Cross-session review of Section C entries is how methodology **evolves** without
 
 ---
 
+## Retrospective meta-analysis
+
+**Section C** of your session anchor is subjective — what worked, what failed, which product you used tonight.
+
+**Registered project notes** let you **look back objectively** months later: what place a span assumed, what photos and maps you filed, what the prose deliberately never says.
+
+Good workflow is not only **forward-looking** (load grounding before you revise). It is **backward-looking** — you can reconstruct your own project after the fact instead of relying on chat memory.
+
+| While drafting | Months later |
+|----------------|--------------|
+| Load map + Street View before a beat | *"What place was I using at chapter 3, line 62?"* |
+| File route notes before travel prose | *"Which stops did I register vs name on the page?"* |
+| Close with Section C | *"Turn what I learned into a case study or protocol tweak"* |
+
+**What to keep (beyond the manuscript):**
+
+- **Grounding files** — photos, maps, chapter headers listing what you captured
+- **Route notes** — stops, rejected paths, line references
+- **Session anchors** — especially Section C across months
+- **Continuity check reports** — named reports you can cite later
+- **Promoted lore** — places the narrative may never label
+
+**Example (POV-blind site):**
+
+You drafted collapse and pickup with no cemetery on the page — correct for POV. Months later you open your grounding folder and route notes and remember: roadside beside Danish Cemetery. That retrospective pass can feed teaching material, catch drift between notes and revised prose, or help a collaborator understand **your** coordinates without rereading every chat.
+
+**Common mistake:** "The place name isn't in the manuscript, so the research didn't count."
+
+**What you're doing:** Separating **what you know** from **what the character knows** — and keeping files that prove the first without breaking the second.
+
+Cross-link: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Other infrastructure patterns*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Session anchors*.
+
+---
+
 ## Multi-edit apply order
 
 When applying several line-keyed changes in one file:
@@ -182,13 +313,15 @@ When applying several line-keyed changes in one file:
 
 ## Exploration vs canon
 
-| Location | Status |
-|----------|--------|
-| `exploration/` or scratch chat | Non-canonical sandboxes |
-| `lore/`, PGMs, promoted grounding | Canon |
-| Anchor open elements | Deferred human decisions |
+| Location | Status | Typical content |
+|----------|--------|-----------------|
+| `exploration/` or scratch chat | Non-canonical sandboxes | **5a:** route/feasibility notes · **5b:** scenario distillates |
+| `lore/`, PGMs, promoted grounding | Canon | Routes, character masters, chapter slices |
+| Anchor open elements | Deferred human decisions | — |
 
 Never treat exploration as manuscript truth without promotion.
+
+**Do not confuse 5a and 5b:** geography verify and play-pretend share a promotion gate but answer different questions. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 5.
 
 ---
 

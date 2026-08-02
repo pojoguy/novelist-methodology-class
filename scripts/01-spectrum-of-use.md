@@ -21,7 +21,7 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 | **Level 0** | "Write my book for me" — ghostwriting. | `Ghostwriting` |
 | **Levels 2–7** | Serious help: word options, critique, continuity files, fact sandboxes, workflows with rules. | `Craft-first` |
 | **Prosthetic** | Tool helps; **you** write and choose. | `You choose` |
-| **PGM / canon file** | A saved file of **official story facts** — not chat memory. | `Story fact file` |
+| **PGM / canon file** | Your **working notes**, registered — not chat memory. | `Notes · queryable` |
 | **Apply gate** | Nothing changes until **you** say so. | `You approve` |
 
 ---
@@ -58,9 +58,9 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 
 **Say:**
 
-> Level three: adversarial editorial pass — no apply without your instruction. Level four: character sheets and timeline graphs the model must read before it speaks. Level five: pressure-test beats against real geography and period detail. Chat memory is not canon. Registered state is.
+> Level three: adversarial editorial pass — no apply without your instruction. Level four: character sheets and timeline graphs the model must read before it speaks. Level five splits: five-a verify geography and material facts; five-b play-pretend off-page — distill character constraints, don't paste sandbox dialogue. Chat memory is not canon. Registered state is.
 
-**On-screen:** Audit / PGM / Grounding icons
+**On-screen:** Audit / PGM / `5a maps` / `5b pretend`
 
 ---
 

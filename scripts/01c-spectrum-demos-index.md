@@ -19,11 +19,14 @@
 | **2** Lexical prosthetic | [`01c-level-02-lexical.md`](01c-level-02-lexical.md) | Frontier or Cursor | ~3:00 | Screen |
 | **3** Developmental audit | [`01c-level-03-audit.md`](01c-level-03-audit.md) | Cursor + template | ~3:00 | Screen |
 | **4** Continuity / PGM | [`01c-level-04-continuity.md`](01c-level-04-continuity.md) | Cursor + `demo-pgm.json` | ~3:00 | Screen |
-| **5** Grounding sandbox | [`01c-level-05-grounding.md`](01c-level-05-grounding.md) | **This Cursor** + `geography_query` | ~3:00 | Screen |
+| **5a** Grounding (spatial) | [`01c-level-05-grounding.md`](01c-level-05-grounding.md) | **This Cursor** + `geography_query` | ~3:00 | Screen |
+| **5b** Scenario sim | [`01c-level-05b-scenario-simulation.md`](01c-level-05b-scenario-simulation.md) | Cursor or frontier | ~3:00 | Screen |
 | **6** Production blueprint | [`01c-level-06-production.md`](01c-level-06-production.md) | Frontier chat | ~2:30 | Screen |
 | **7** Agentic workflow | [`01c-level-07-agentic.md`](01c-level-07-agentic.md) | Cursor + rules + two-step | ~3:30 | Screen |
 
-**Suggested record order:** 1 → 2 → 3 → 4 → 5 → 6 → 7 in one screen-capture session (frontier segments first, then switch to Cursor). Optional A-roll ladder intro from [`01-spectrum-of-use.md`](01-spectrum-of-use.md).
+**Suggested record order:** 1 → 2 → 3 → 4 → **5a → 5b** → 6 → 7 in one screen-capture session (frontier segments first, then switch to Cursor). Optional A-roll ladder intro from [`01-spectrum-of-use.md`](01-spectrum-of-use.md).
+
+**Level 5 split:** **5a** = geography / spatial verify · **5b** = play-pretend off-page. See [`03b-scenario-simulation.md`](03b-scenario-simulation.md).
 
 **Shared fixtures:** [`../examples/spectrum-demo-fixtures/`](../examples/spectrum-demo-fixtures/)
 
@@ -60,7 +63,7 @@ He felt afraid and looked for a way out.
 ## YOUTUBE DESCRIPTION — compilation (copy-paste)
 
 ```
-Levels 1–7 in practice: what each rung on the spectrum looks like on screen — brainstorm, six alternatives, read-only audit, PGM continuity, grounding sandbox, production blueprint, and agentic governance.
+Levels 1–7 in practice: brainstorm, six alternatives, read-only audit, PGM continuity, **grounding (5a)**, **scenario simulation (5b)**, production blueprint, and agentic governance.
 
 Companion to Episode 1 (The Spectrum). Staged on synthetic prose and demo fixtures only — not a real manuscript. Level 0 contrast is Ep. 01B (blank frontier chat).
 
@@ -81,7 +84,7 @@ Companion to Episode 1 (The Spectrum). Staged on synthetic prose and demo fixtur
 | 2 | ✓ (explicit six-alt prompt) | ✓ preferred for real workflow |
 | 3 | ✗ audit shape only with template | ✓ |
 | 4 | ✗ | ✓ |
-| 5 | ✗ | ✓ |
+| 5a, 5b | ✗ | ✓ |
 | 6 | ✓ | optional |
 | 7 | ✗ | ✓ required |
 
@@ -97,4 +100,4 @@ Single upload **"Spectrum in practice (Levels 1–7)"** — ~22 min with lower t
 
 | Date | Change |
 |------|--------|
-| 2026-08-02 | L5 locked to this Cursor install + live geography_query (`01c-level-05-grounding.md`) |
+| 2026-08-02 | Split L5 into 5a grounding + 5b scenario simulation |

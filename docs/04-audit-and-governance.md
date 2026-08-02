@@ -9,8 +9,9 @@
 |------|----------------|
 | **Audit** | A **diagnostic pass** on existing prose — what works, what fails, what to do — without substituting your voice. |
 | **Governance** | The **rules** that stop a helpful tool from rewriting your book by default. |
-| **Rubric / Sign** | A numbered **checklist item** for common AI-sounding or weak prose patterns — flag and explain, don't auto-fix. |
+| **Rubric / Sign** | **Internal craft checklist** for model-typical or weak-generic patterns — flag and explain, don't auto-fix. Independently built for fiction; convergent with [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Not a commercial AI detector. |
 | **Editorial recommendations format** | Standard report shape: verdict → what's working → numbered fixes (what's wrong / why / what to do). |
+| **Editorial report corpus** | **Accumulated readonly diagnostics** — trope ledger, tone pass, verify events, etc. — filed outside canon and **reloaded** on later audits. |
 | **Author lock** | A **permanent rule you set** (e.g. naming, calendar, voice) that overrides the tool's generic habits. |
 | **Apply gate** | No manuscript change until **you** pick an option or name a specific line fix. |
 | **Priority fixes** | Means **complete the audit and branch alternatives** — not permission to rewrite the chapter. |
@@ -44,6 +45,16 @@ Default posture:
 
 A practical rubric flags **AI textual degradation** — patterns that appear in unprompted model output and weak human imitation of it.
 
+#### Lineage — independent build, Wikipedia convergence
+
+- **Independent** development for fiction developmental audit under apply gates.
+- **Convergent** with [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) — same pattern-matching approach (linguistic tells, combined signal in context).
+- **Difference:** fiction adds POV, dialogue gates, genre voice, human-signal collision; Wikipedia adds wikitext, neutrality, verifiability.
+- **Shared stance:** pattern rubric over detector products.
+- **Do not claim** Wikipedia endorses this repository.
+
+Wikipedia's guide and Signs both treat **combined pattern signal in context** — neither proves tool use; both outperform relying on detector products alone for **judging text quality and provenance**.
+
 Common categories (adapt to your project):
 
 | Category | Examples |
@@ -60,7 +71,20 @@ Common categories (adapt to your project):
 
 **Use:** Flag and cite — do not auto-fix. Your project may add voice-specific protocols (POV leaks, gesture format, era-locked vocabulary).
 
-A starter list lives in mature fiction projects as ~18 Signs; fork and trim for your genre.
+#### Scope — craft, not forensics
+
+- **Primary:** flag craft degradation and model-typical habits in prose under author control.
+- **Signal class:** Signs flag **pattern / training-material adherence** and model-typical habits — the same broad signal commercial detectors approximate — but for **in-session craft**, not attribution claims.
+- **Secondary (reported):** in maintainer testing, Signs **outperformed commercial AI detectors** on the same corpus at separating high-adherence from organically built governed work — **not** the rubric's reason for existing.
+- **Not for:** authorship certificates, contest "proof," auto-rejecting peer work, detector immunity claims.
+- **Not for:** substituting detector scores for editorial judgment on **franchise-formula** or **publisher-rubric** organic work (high adherence ≠ AI use).
+- **Human signal:** when Sign conflicts with intentional voice — document both; author decides (existing protocol; keep).
+
+See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) — *Signs rubric vs commercial AI detectors*.
+
+A starter list lives in mature fiction projects as ~18 Signs; fork and trim for your genre. Public parallel catalog: [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) — adapt for fiction; **neither list is a single-strike accusation**.
+
+**Replication:** To compare Signs vs commercial detectors on your own corpus without authorship claims, see [`examples/signs-replication-protocol.md`](../examples/signs-replication-protocol.md).
 
 ---
 
@@ -83,6 +107,66 @@ See [`templates/editorial-recommendations.md`](../templates/editorial-recommenda
 
 ---
 
+## Editorial report corpus
+
+A single chapter audit is not enough for a long book. Serious projects **gather typed editorial reports over time** — each pass answers one class of question, files a readonly artifact, and becomes **loadable state** for the next session.
+
+**Not chat memory.** Chat compresses and contradicts. A filed report keeps the diagnosis you paid for.
+
+### Workflow
+
+```text
+Human prose + PGMs
+        │
+        ▼
+Periodic diagnostic pass (one report type per run)
+        │
+        ▼
+File under exploration/ or typed subfolder — span-labeled (e.g. ch1–15)
+        │
+        ▼
+Later audits LOAD the corpus — cite reports, don't re-derive from vibes
+        │
+        ▼
+Author promotes only what authorizes → PGM / grounding / manuscript
+```
+
+### Report properties
+
+| Property | Why |
+|----------|-----|
+| **Readonly** | Diagnose; apply gate still on prose |
+| **Typed** | One lens per report — don't merge trope + tone + verify in one blob |
+| **Span-labeled** | State which draft/chapters the pass covered |
+| **Non-canonical until promoted** | Exploration ≠ manuscript truth |
+| **Citable** | Later passes reference `CH## L##` and report sections |
+
+### Example report types
+
+| Type | Question | Prime example |
+|------|----------|----------------|
+| **Developmental pass** | What works / what fails on this chapter? | Editorial recommendations format |
+| **Trope / subversion ledger** | What genre beats did we set up, refuse, or pay — with cost? | SETUP · SUBVERT · PAY · DEFER · AVOID + subversion ledger |
+| **Tone audit** | Where does voice drift (maudlin, uplift, poster copy)? | Span-labeled tone read |
+| **Arc / maturation read** | Does character change read earned? | Character-development audit |
+| **Relationship audit** | Does a bond beat violate metanote or POV locks? | Targeted relationship pass |
+| **Timeline audit** | Does calendar hold across chapters? | Dated span check |
+| **Comparanda diagnosis** | How does our hook/scene compare to quarantined craft refs? | `comparanda/reports/` — external refs only |
+| **Continuity verify** | Does prose contradict registered facts? | Continuity check report with reference ID |
+
+You do not need every type on day one. You **do** need the habit: **run, file, reload** — not one-off chat that evaporates.
+
+### Working with your report corpus
+
+- Load relevant reports **before** you run another pass on the same span.
+- Cite report + locus (`CH## L##`) when a recommendation conflicts with or depends on a prior pass.
+- **Do not** treat exploration reports as PGM canon until you promote them.
+- **Do not** paste report prose into the manuscript — same apply gate as every audit.
+
+See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — comparanda quarantine, verify events, exploration index policy.
+
+---
+
 ## Author locks
 
 An **author lock** is an explicit, persistent rule that overrides model prior:
@@ -94,14 +178,14 @@ An **author lock** is an explicit, persistent rule that overrides model prior:
 
 **Storage:** Markdown rationale docs, JSON PGMs, inline `author lock YYYY-MM-DD` notes.
 
-**Agent rule:** When lock conflicts with rubric reflex, **document and offer alternatives** — do not collapse silently.
+**Hold the line:** When a lock conflicts with a generic rubric reflex, **document both and ask for alternatives** — do not let the tool collapse silently.
 
 ---
 
 ## Apply authorization
 
-| Author says | Model does |
-|-------------|------------|
+| You say | What should happen |
+|---------|---------------------|
 | "Review this passage" | Audit only |
 | "Priority fixes" | Audit + six-alternatives; no apply |
 | "Use option 3" | Apply option 3 to flagged beat only |
@@ -155,7 +239,7 @@ When multiple issues are flagged:
 4. **Prose / Sign** — line-level craft
 5. **Polish** — rhythm, word choice after structure holds
 
-End audits with **suggested order of work** so author does not fix lipstick on a collapsed scene.
+End audits with **suggested order of work** so you do not fix lipstick on a collapsed scene.
 
 ---
 

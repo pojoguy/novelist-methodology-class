@@ -68,7 +68,7 @@ Step 1 only — structural pass on synthetic demo line. No manuscript substituti
 
 **Say (VO):**
 
-> Prototyped on frontier chat; **outgrew** conversational context. Graph state, RAG, orchestration — same posture as my day-job stack.
+> Prototyped on frontier chat; **relationship joins outgrew attention** — even when raw text still fit. Graph state, RAG, PGMs — unload joins from the rolling window. Same posture as my day-job stack.
 
 **On-screen:** `Anchors · index · verify`
 
@@ -85,7 +85,7 @@ Step 1 only — structural pass on synthetic demo line. No manuscript substituti
 ## TELEPROMPTER — VO
 
 ```text
-Level seven is why Cursor can't demo level zero. Rules, skills, MCP, anchors — governance baked in. Two-step: structure, then readonly audit with PASS FAIL on quote and apply gates. Author picks before any file edit. Frontier chat outgrew conversational context; graph state and RAG are the serious stack.
+Level seven is why Cursor can't demo level zero. Rules, skills, MCP, anchors — governance baked in. Two-step: structure, then readonly audit with PASS FAIL on quote and apply gates. Author picks before any file edit. Frontier chat outgrew relationship attention — PGMs and queries hold the graph; you ask in plain language.
 ```
 
 ---

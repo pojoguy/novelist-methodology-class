@@ -7,7 +7,7 @@
 | **Paired doc** | `docs/04-audit-and-governance.md` |
 | **Format** | Explainer (3–5 min) |
 | **Series** | LLM Methodology — Ep. 04 |
-| **Target length** | 3:00 |
+| **Target length** | 4:00 |
 | **Status** | draft |
 
 ---
@@ -17,9 +17,10 @@
 | Term | Say this (plain language) | On-screen (optional) |
 |------|---------------------------|----------------------|
 | **Audit** | Critique your draft — **don't** auto-rewrite. | `Diagnose only` |
-| **Sign** | Checklist flag for generic AI-sounding prose. | `Pattern flag` |
+| **Sign** | **Craft checklist** — pattern adherence, not attribution. | `Adherence · craft` |
 | **Author lock** | **Your** permanent rule the tool must obey. | `Your rule wins` |
 | **Apply gate** | You pick before paste. | `You approve` |
+| **Report corpus** | **Filed diagnostics** you reload — not chat memory. | `Run · file · reload` |
 
 ---
 
@@ -35,13 +36,23 @@
 
 **Say:**
 
-> Load state. Diagnose human prose. Branch alternatives. Apply only after explicit instruction. Rubrics flag AI textual degradation — sterile cadence, goldilocks words, hedging. Flag and cite. Don't auto-fix.
+> Load state. Diagnose human prose. Branch alternatives. Apply only after explicit instruction. Signs flag model-typical patterns — sterile cadence, goldilocks words, hedging. Flag and cite. Don't auto-fix on Sign hit alone.
 
 **On-screen:** Load → Diagnose → Branch → Apply
 
 ---
 
-## Beat 2 — Author locks (1:00–1:45)
+## Beat 2 — Signs: adherence, not attribution (1:00–1:50)
+
+**Say:**
+
+> Signs flag pattern and training-material adherence — same broad signal commercial detectors approximate, but for in-session craft, not attribution. Built independently for fiction; convergent with Wikipedia's Signs of AI writing field guide. Neither endorses the other. Franchise formula prose — Franklin W. Dixon specs, purely human — can false-positive detectors because adherence is the product. In maintainer testing, Signs beat commercial detectors at separating high-adherence from organic governed work — adherence separation, not forensic superiority. Signs are for your genre's craft goals — not contest proof, not Turnitin, not authorship certificates. High adherence on publisher-rubric organic work is not AI use.
+
+**On-screen:** `Adherence ≠ tool use` · `Formula ≠ ghostwrite` · `Craft · not forensics`
+
+---
+
+## Beat 3 — Author locks (1:50–2:15)
 
 **Say:**
 
@@ -51,17 +62,27 @@
 
 ---
 
-## Beat 3 — Output-shape gates (1:45–2:30)
+## Beat 4 — Editorial report corpus (2:15–2:45)
 
 **Say:**
 
-> Proverb dialogue without a speaker. Thesis taglines masquerading as craft notes. Ghostwrite drift when you said priority fixes. Fix these with mechanical gates — not more rules that shrink the feasible region.
+> One audit is not enough for a novel. Gather typed reports — trope ledger, tone passes, verify events. File readonly in exploration. Reload next session. Chat forgets; the corpus doesn't.
+
+**On-screen:** `Run → file → reload`
+
+---
+
+## Beat 5 — Output-shape gates (2:45–3:30)
+
+**Say:**
+
+> Proverb dialogue without a speaker. Thesis taglines masquerading as craft notes. Ghostwrite drift when you said priority fixes. Fix these with mechanical gates — not more Signs that shrink the feasible region.
 
 **On-screen:** Quote gate / Tagline gate / Apply gate
 
 ---
 
-## Close + CTA (2:30–3:00)
+## Close + CTA (3:30–4:00)
 
 **Say:**
 

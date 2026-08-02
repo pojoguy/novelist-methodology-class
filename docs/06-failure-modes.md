@@ -19,7 +19,7 @@
 | **PGM** | Your **registered fact files** — when ignored, continuity answers drift. |
 | **Sign** | Rubric flag for AI-sounding prose — add more Signs to "fix" thin space and you often **worsen** collapse. |
 | **Six-alternative protocol** | Correct response to thin space: **widen options**; you use them as inspiration — pick, blend, reject, or write your own. |
-| **L1 / L2 locator** | **Fuzzy search** (L1) vs **structured search with story metadata** (L2) — don't mix in one answer. |
+| **Lookup kinds** | **Quick search** vs **tagged passage search** — don't mix in one answer. |
 | **Comparanda bleed** | Reference book excerpts **leaking into** continuity or voice — isolation failure. |
 | **Human signal** | Voice you protect on the page — do not let generic rubrics flatten it without your choice. |
 
@@ -76,11 +76,11 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 ## Ghostwrite drift
 
-**What happens:** Author says "priority fixes" or "improve this chapter." Agent substitutes prose.
+**What happens:** You say "priority fixes" or "improve this chapter." The tool substitutes prose.
 
 **Why:** Models default to helpful continuation. Without apply gate, "fix" reads as "rewrite."
 
-**Right fix:** Redefine "fix" in agent rules: audit + alternatives + stop. Exception only for named line mechanics.
+**Right fix:** Redefine "fix" in your project expectations: audit + alternatives + stop. Exception only for named line mechanics.
 
 ---
 
@@ -110,7 +110,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** No enforced graph traversal; model free-associates nearby lore.
 
-**Right fix:** PGM crosswalk table in Step 1; verify_run before apply.
+**Right fix:** PGM crosswalk table in Step 1; run a continuity check before apply.
 
 ---
 
@@ -124,13 +124,43 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 ---
 
-## L1/L2 locator collapse
+## Grounding vs scenario simulation conflation
 
-**What happens:** Agent runs fuzzy `@Codebase` / RAG and structured passage search in the same turn; merges hits into one answer. Flashback (`MEMORY`) treated as co-present with scene prose; exploration snippet treated as canon.
+**What happens:** A geography verify session is treated like play-pretend (or vice versa). Route query output shapes character interior; sandbox dialogue is filed as spatial canon.
 
-**Why:** One locator per question rule violated.
+**Why:** Both live in `exploration/` and share a promote-to-PGM gate — but they answer different questions (*where* vs *who under pressure*).
 
-**Right fix:** Pick tier for the question — L1 for fuzzy mention, L2 for canon/discourse join, L3 for verify. `session_reset_turn` between locator types if tooling supports it.
+**Right fix:** Label sessions 5a vs 5b (or Domain 4a vs 4b). Promote routes to `lore/routes/`; promote scenario distillates to `lore/characters/`. See [`03-five-domains.md`](03-five-domains.md).
+
+---
+
+## Six-alternative treadmill
+
+**What happens:** You run six alternatives, then convergence rounds, and **still** nothing lands. You keep asking for more wordings on the same beat.
+
+**Why:** The beat is often **structured wrong** — wrong order, missing situation, POV or grounding mismatch — not a vocabulary problem. More line-level options on a broken shape shrinks the solution space further.
+
+**Right fix:** Stop the treadmill. Rewrite the paragraph, reorder beats, or reload grounding. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options stop working*.
+
+---
+
+## Generic place hallucination
+
+**What happens:** Stock cemetery / main street / highway — not the site you researched. Often **genre gravity**: the model invents walls, trees, Gothic mood for a cemetery even when your map is roughly right.
+
+**Why:** Map only, or no ground-level photos loaded; or you search the manuscript for a place name the POV never receives.
+
+**Right fix:** File **map + Street View** together; load before you revise the beat; check prose against **what you documented** (no walls, no trees, bald prairie) — not whether the character said the place name. **POV-blind** sites are valid: your notes hold geography the narrative withholds. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Grounding capture — map + Street View* and *POV-blind grounding*.
+
+---
+
+## Mixed lookup collapse
+
+**What happens:** Quick search and tagged passage search run in the same answer; results merged. Flashback (`MEMORY`) treated as co-present with scene prose; exploration snippet treated as canon.
+
+**Why:** One lookup kind per question rule violated.
+
+**Right fix:** Pick the kind for the question — quick search for fuzzy mention, tagged search for canon/scene join, continuity check for truth. Start a fresh question if you need a different kind.
 
 ---
 
@@ -140,7 +170,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Skipped reanchor/ingest after manuscript change.
 
-**Right fix:** `passages_reanchor` + ingest before verify or L2 locate on edited chapters.
+**Right fix:** Re-index the chapter before continuity checks or structured lookup on edited chapters.
 
 ---
 
@@ -160,7 +190,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Default RLHF helpfulness; no adversarial persona.
 
-**Right fix:** Auditor persona in agent rules; verdict first; what's working is short, not flattery.
+**Right fix:** Ask for an adversarial auditor persona; verdict first; what's working is short, not flattery.
 
 ---
 
@@ -168,7 +198,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **What happens:** Model contradicts chapter 4 gear state in chapter 12.
 
-**Why:** Relying on **conversation context** (chat memory) instead of PGMs and anchors. Common after months in frontier chat — the thread compresses; relationship and canon detail drop out even when the model still sounds confident.
+**Why:** Relying on **live chat attention** for relationship state instead of PGMs, anchors, and queries. Common on dense pages (multiple arcs resolving) and after months in frontier chat — joins compress or merge; the model still sounds confident while canon detail drifts.
 
 **Right fix:** Section A load every session; fact-query before structural output; promote canon to **registered state** (PGMs, passage index, RAG) — see [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
@@ -196,14 +226,14 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 ## When to stop and ask
 
-STOP (do not generate) when:
+**You** should pause — and tell the tool not to invent prose — when:
 
 - Real-world grounding sample is missing
 - Speaker or calendar pin is unknown for dialogue prosthetic
-- Geography/route claim fails verification
+- Geography or route claim fails verification
 - PGM lock conflict unresolved
 
-Output: one clear question or six situation options — not fabricated prose.
+Ask for one clear question or six situation options — not fabricated prose.
 
 ---
 

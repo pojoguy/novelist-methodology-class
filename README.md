@@ -14,7 +14,6 @@ This repository documents a broader, craft-first methodology: how working writer
 
 - **Authors skeptical of AI** who have only seen ghostwriting demos and want to understand what serious practitioners actually do
 - **Authors already using AI** who want structure, governance, and language to explain their workflow to peers, editors, or readers
-- **Developers building writing tools** who need a model of author agency that goes deeper than "generate chapter"
 - **Editors and beta readers** evaluating how AI-assisted manuscripts are produced
 
 ## Who this is not for
@@ -52,11 +51,11 @@ Creative intent and final prose remain human. AI assists where human working mem
 | [`docs/05-workflow-patterns.md`](docs/05-workflow-patterns.md) | Session anchors, two-step pipelines, knowledge state |
 | [`docs/06-failure-modes.md`](docs/06-failure-modes.md) | Sparse-edge collapse, ghostwrite drift, structural traps |
 | [`docs/07-ethics-and-transparency.md`](docs/07-ethics-and-transparency.md) | Disclosure, authorship, what "AI-assisted" means |
-| [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) | RAG indexing, continuity reporting, comparanda, locator tiers |
+| [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) | Indexed notes, continuity checks, comparanda, lookup habits |
 | [`docs/glossary.md`](docs/glossary.md) | Master glossary (docs also define terms locally at top) |
 | [`docs/JARGON-STANDARD.md`](docs/JARGON-STANDARD.md) | Contributor rule: Terms table at start of every doc/script |
 | [`scripts/`](scripts/) | YouTube video scripts — one-to-one paired with `docs/`; see [`scripts/production-setup.md`](scripts/production-setup.md) for record/edit workflow |
-| [`templates/`](templates/) | Starter templates for sessions, editorial feedback, agent rules |
+| [`templates/`](templates/) | Starter templates for sessions and editorial feedback |
 | [`examples/`](examples/) | Walkthroughs of real workflow shapes (anonymized) |
 
 ---
@@ -67,14 +66,14 @@ Creative intent and final prose remain human. AI assists where human working mem
 1. Read [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) if you are skeptical that AI is new, novel, or relevant to your existing workflow.
 2. Read [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) if you want the landscape in ten minutes.
 3. Read [`docs/02-prosthetic-model.md`](docs/02-prosthetic-model.md) if you want the central operating model.
-4. Read [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) for RAG, continuity verify, comparanda, and locator tiers.
-5. Copy [`templates/agent-instructions-starter.md`](templates/agent-instructions-starter.md) into your own project if you use an agentic editor (Cursor, custom MCP, etc.).
+4. Read [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) for indexed notes, continuity checks, and comparanda habits.
+5. Copy [`templates/session-close.md`](templates/session-close.md) when you close a writing session.
 
 ---
 
 ## Origin
 
-This methodology grew out of a multi-year novel project where the maintainer is autistic, uses LLMs as vocabulary and continuity prosthetics, and treats agent behavior as **bounded search** under explicit constraints — closer to knowledge engineering than to "chat until it's good."
+This methodology grew out of a multi-year novel project where the maintainer is autistic, uses LLMs as vocabulary and continuity prosthetics, and treats tool output as **bounded search** under explicit constraints — closer to governed craft than to "chat until it's good."
 
 Research lineage runs to 1980s knowledge-based systems work at the University of Calgary; current practice includes enterprise LLM orchestration (LangGraph). See [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) for full context.
 

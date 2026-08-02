@@ -9,28 +9,28 @@
 |------|----------------|
 | **Infrastructure** | The **files, indexes, and checks** under your workflow — not the chat window itself. |
 | **RAG** | **Retrieval-augmented generation** — search your manuscript to find passages; **locates** text, does not prove it is consistent. |
-| **L0 / L1 / L2 / L3** | **Levels of lookup:** excluded scratch (L0), fuzzy search (L1), search **with story metadata** (L2), **fact-check** (L3). Use **one level per question**. |
+| **L0 / L1 / L2 / L3** | **Kinds of lookup** (see doc): scratch excluded, quick search, tagged passage, continuity check — **one kind per question**. |
 | **FTS** | **Full-text search** — keyword-style index of your prose, like a powerful Find across the book. |
 | **Passage / passage_id** | A **segment of your chapter** with a stable ID so edits do not break references. |
 | **Reanchor** | After you change a chapter, **rebuild** those segments and IDs from the new text. |
 | **Ingest** | **Refresh the search index** so lookups match the latest draft. |
 | **Canon status** | Label on a passage: official (**CANON**), draft, scratch (**EXPLORATORY**), or rejected. |
 | **Discourse layer** | Tag for **how** text works in the story: present scene, memory, dream, etc. — stops false "they can't be in two places" errors. |
-| **Verify / verify_run** | Automated **continuity report**: rule name, result, compared quotes — not a rewrite. |
-| **`event_id`** | **Reference number** on one continuity check for your records or editor letters. |
-| **Entities query** | Lookup **who someone is** and **name changes** across chapters. |
-| **Facts query** | Lookup **locked story facts** (PGMs) with source tags. |
-| **Geography query** | Lookup **routes and stops** between real places — blocks invented highways if no route exists. |
-| **`NO_ROUTE_CLAIM`** | System says **no verified route on file** — stop and register facts before writing travel prose. |
+| **Continuity check** | Automated **continuity report**: rule name, result, compared quotes — not a rewrite. |
+| **Report reference ID** | **Reference number** on one continuity check for your records or editor letters. |
+| **Character lookup** | Who someone is and **name changes** across chapters. |
+| **Facts lookup** | **Locked story facts** (PGMs) with source tags. |
+| **Route lookup** | **Routes and stops** between real places — blocks invented highways if no route exists. |
+| **No route on file** | Your project says **no verified route registered** — stop and file facts before writing travel prose. |
 | **Comparanda** | **Quarantined short excerpts** from other works to compare **opening technique** — never your canon, never pasted in. |
+| **Editorial report corpus** | **Accumulated readonly diagnostics** — trope ledger, tone pass, verify events, etc. — filed outside canon and **reloaded** on later audits. |
 | **Lens** | A **checklist of craft questions** (e.g. info dump? thin characterization?) for a comparanda run. |
 | **Pack** | A **folder of attributed excerpts** used only for craft comparison. |
-| **PGM** | Structured **official fact file** for characters, world, or chapter state. |
-| **MCP** | Plug-in protocol so your editor can **call project tools** (search, verify) safely. |
+| **PGM** | **Formalized author working notes** — canon state in whatever shape you already use (JSON, Cypher, Markdown, plain text). Not a new kind of thinking; a **registered** place for it. |
 | **Provenance** | Tag on a fact: **documented**, inferred, invented for story, or **unknown** — blocks blind trust. |
 | **Apply gate** | Verify and search **diagnose only**; you still authorize every manuscript change. |
-| **Conversation context** | What a **chat thread** still "remembers" about your story — compresses and contradicts at novel length; not a canon store. |
-| **Graph orchestration** | Multi-step agent workflow with **checkpoints and state** outside chat (e.g. LangGraph) — not the same as a PGM, but same design instinct. |
+| **Attention / relationship collapse** | The model may hold **pages of text** in context but **lose track of how facts relate** — who knows what, which arc, which lock — especially when multiple story lines resolve on one page. |
+| **Conversation context** | What the **chat thread** still "remembers" about **relationships** — unreliable even when raw text fits in the window; not a canon store. |
 
 ---
 
@@ -39,82 +39,106 @@ Episodes 0–7 and the prosthetic model cover **governance** — six alternative
 **Design lock (carry everywhere):**
 
 ```text
-RAG locates.  Graphs verify, frame, and attribute.  The system diagnoses.  You apply.
+Search locates.  Structured checks verify.  The tool diagnoses.  You apply.
 ```
 
 Chat memory is not canon. Indexed state + audit events are.
 
 ### Origin — prototyped on frontier chat, hardened in graph + RAG
 
-This methodology was **largely prototyped on frontier LLMs** — long threads in vanilla chat UIs before project rules, MCP tools, or IDE integration. Prosthetic gates, six-alternative retrieval, developmental audit shape, and apply discipline **emerged in that environment first**.
+This methodology was **largely prototyped on frontier LLMs** — long threads in ordinary chat before project files and indexed notes. Prosthetic gates, six-alternative retrieval, developmental audit shape, and apply discipline **emerged in that environment first**.
 
-**What broke:** **Conversational context** — the thread's fragile hold on canon, character relationships, calendar pins, and prior session decisions — **overwhelms easily** on novel-length work. Threads compress history, contradict chapter 4 in chapter 12, or free-associate from the last few thousand tokens. That is not author error; it is **context amnesia** as a system failure (see [`06-failure-modes.md`](06-failure-modes.md)).
+**What broke:** Not mainly **how much text** fits in the window. Most frontier models today can hold the **word count of several full novels** in a single context. What collapses is **relationship fidelity in attention** — who is bound to whom, what each character knows when, which arc a beat belongs to, which facts are locked. Even on a **single page**, when multiple story arcs resolve together, attention vector space **compresses**: the model sounds confident while merging, dropping, or free-associating relationships. Across months of chat, the same failure looks like **context amnesia** — chapter 4 gear in chapter 12, wrong co-presence, improvised canon from recent tokens. That is not author error; it is asking one live conversation to hold a **relationship graph** it was never built to retain.
 
 **What followed:** State and lookup **outside** the chat window:
 
 | Chat-only limit | Infrastructure response |
 |-----------------|-------------------------|
-| "Remember" gear / timeline / who knows what | **PGMs**, session anchors, facts/entities queries |
-| "Find where I said X" | **RAG** (L1) + structured **passage** index (L2) |
-| Co-presence / route / lock conflicts | **Verify** reports (L3), geography gate |
-| Multi-step audit without ghostwrite drift | **Graph-orchestrated** workflows (e.g. LangGraph-style agents with checkpoints) |
+| "Remember" gear / timeline / who knows what | **PGMs**, session anchors, character and fact lookup |
+| "Find where I said X" | **Manuscript search** + passage index with story tags |
+| Co-presence / route / lock conflicts | **Continuity check reports**, route lookup |
+| Multi-step audit without ghostwrite drift | **Two-step pipeline** — structure, then readonly audit |
 
-Frontier models remain the **sampling engine**. Graphs, indexes, and gates are how you stop asking one relationship to hold an entire novel in its head.
+Frontier models remain the **sampling engine**. Graphs, indexes, PGMs, and gates **unload relationship state from active conversation** while keeping it **queryable on demand** — so attention can focus on the beat in front of you without forgetting the graph behind it.
 
-### Build vs adopt — Cursor as host (not as methodology)
+#### Relationship state vs text in context
 
-The maintainer **initially set out to build a custom RAG + LLM-backed editor** for long-form fiction. Frontier prototyping and context limits defined **what** had to live outside chat (indexes, PGMs, verify, gates).
+| What fits in chat | What does not reliably fit |
+|-------------------|----------------------------|
+| Raw prose, recent paragraphs, pasted notes | **Stable joins** — identity epochs, who-knows-what, arc membership, lock polarity |
+| A character's name appearing in two scenes | Whether those appearances **contradict** under PGM rules |
+| "Tell me about this chapter" | "Tell me about Dej **across the book** without merging injuries, timelines, or sandboxes" |
 
-**What changed:** Professional **day-job use of Cursor** showed the **host** already shipped much of the plumbing — repo-grounded indexing, agent chat beside the manuscript, project rules, MCP tool integration, diff-aware edits. Rebuilding an IDE duplicated work already paid for elsewhere.
+Infrastructure does not exist because authors forgot to paste their bible into the prompt. It exists because **relationship vectors must live outside the rolling attention window** and be **loaded or queried** when a question needs them.
 
-**Where effort went instead:**
-
-| Build-from-scratch (de-emphasized) | Adopt + extend (actual path) |
-|-----------------------------------|------------------------------|
-| Custom editor shell | **Cursor** (or any agentic IDE with similar hooks) |
-| Generic embed search only | **Tiered locators** (L1–L3) + passage IDs |
-| Chat as canon store | **PGMs**, anchors, **novelist-plugin** MCP tools |
-| One-shot prompts | **Prosthetic gates**, Skills, `.cursorrules` / `AGENTS.md` |
-
-This repository documents **methodology** — portable whether you use Cursor, a custom MCP stack, or another agent host. Cursor is the maintainer's **reference host**, not a product endorsement. See [Reference implementation](#reference-implementation) and [`CONTRIBUTING.md`](../CONTRIBUTING.md) for honest tool comparisons.
+**PGM in one sentence:** A PGM is **organized author's notes** — character sheets, timelines, locks, chapter slices. JSON, Markdown, and plain text are all valid. The requirement is **registered state you can load and cite** — not a specific file format.
 
 ---
 
 ## Why infrastructure matters
 
-| Without infrastructure | With infrastructure |
-|------------------------|---------------------|
-| Agent greps the repo or hallucinates "where did I say that?" | **Passage index** returns cited loci with IDs |
-| Continuity argued from vibes in context window | **Verify reports** with rule names, literals, `event_id` |
+| Without registered files | With registered files |
+|--------------------------|------------------------|
+| Chat guesses "where did I say that?" | **Passage index** returns cited locations |
+| Continuity argued from vibes in the chat window | **Continuity reports** with rule names, quotes, reference IDs |
 | Reference novels poison voice or canon | **Comparanda** quarantine — craft diagnosis only |
-| Travel edits invent highways | **Geography gate** — `NO_ROUTE_CLAIM` stops prose |
-| Exploration chat becomes truth | **Promotion workflow** — EXPLORATORY → CANON explicit |
+| Travel edits invent highways | **Route lookup** — no route on file means stop |
+| Exploration chat becomes truth | **Promotion workflow** — scratch → canon only when you say so |
 
-Prosthetic gates govern *output shape*. Infrastructure governs *what the agent is allowed to know and cite*.
+Prosthetic gates govern *output shape*. Registered files govern *what your project can answer with evidence*.
 
 ---
 
-## Locator tiers — do not collapse
+#### Plain language — what you ask for
 
-Most authoring environments expose **one** retrieval mode (embed search / `@Codebase`). Mature methodology uses **tiered locators** — each tier has a job; mixing tiers in one turn causes false joins.
+You work in **plain language**. You say *"tell me about Dej"*, *"does this contradict chapter 8?"*, *"where did I mention the peel?"* — not protocol names or search tiers.
+
+| You say | Your project should |
+|---------|---------------------|
+| "Tell me about Dej" | Load character notes + relevant passages |
+| "Where did I say X?" | Run a quick text search or tagged passage search — **one kind per question** |
+| "Does this break canon?" | Run a **continuity check** — not search alone |
+| "What did we lock about the calendar?" | Read locked facts from your PGM files |
+
+**Design intent:** Complexity lives in **how you organize notes once** — not in every writing prompt. You should get **governed answers**, not a checklist of acronyms per question.
+
+#### Artifacts = author's notes; paired visuals
+
+- Infrastructure files = **notes you'd keep anyway**, made queryable.
+- **Map alone** fixes *where*; **Street View** fixes *what it looks like*.
+- Together they block **generic fictional** setting substitution (e.g. template cemetery).
+- **Example:** Danish Cemetery near Coteau, ND — map + Street View filed for **chapter 3** (collapse pickup, lines 62–end); you check prose against what you documented. Site may be **POV-blind** — not named on the page when the character is unaware.
+
+**One-line author capture:**
 
 ```text
-L0 — Index policy          exploration/ excluded from embed index
-L1 — Fuzzy RAG             fast "where mentioned?" — NO canon/discourse join
-L2 — Structured passage    canon + discourse + PGM join on passage IDs
-L3 — Verify                truth check — not retrieval
-AUDIT — Event log          literal rules + passages compared; event_id
+[map] [street view] → "Add to grounding for chapter 3 — Danish Cemetery near Coteau."
+→ place · index · vision extract · update backing structures
 ```
 
-| Tier | Tool class | Use when | Do not use for |
-|------|------------|----------|----------------|
-| **L1** | Vector / FTS fuzzy search | Quick grep-like locate; brainstorming | Canon-sensitive "who was present?" |
-| **L2** | Passage resolve / search + metadata | `CH## L##` on screen; identity epochs; filtered canon | Proving no spatial conflict |
-| **L2** | Entities / facts / geography query | Name changes, locks, route between towns | Craft hook diagnosis |
-| **L3** | Verify run | Co-presence, polarity, calendar, skill precedence | Finding a quote |
-| **Audit** | Continuity report | Developmental edit attachments; `event_id` on recommendations | Substituting prose |
+---
 
-**Rule:** **One locator per question.** Do not run fuzzy RAG and structured passage search in the same turn and merge results — you will double-count and mis-attribute discourse layer.
+## Kinds of lookup — do not collapse
+
+Most tools offer **one** search mode. Mature long-form work uses **different question types** — each has a job; mixing them in one breath causes false joins.
+
+```text
+Scratch folders     — excluded from manuscript search (exploration/, comparanda/)
+Quick search        — fast "where mentioned?" — no canon join
+Tagged passage      — search with scene/memory tags + PGM links
+Continuity check    — truth check — not retrieval
+Filed report        — prior audit you reload by reference ID
+```
+
+| Kind | Use when | Do not use for |
+|------|----------|----------------|
+| **Quick search** | Fast locate; brainstorming | "Who was present?" with canon stakes |
+| **Tagged passage** | `CH## L##` on screen; flashback vs scene | Proving no spatial conflict |
+| **Character / facts / route lookup** | Name changes, locks, stops between towns | Craft hook diagnosis |
+| **Continuity check** | Co-presence, calendar, lock conflicts | Finding a quote |
+| **Filed report** | Developmental edit attachments | Substituting prose |
+
+**Your rule:** **One kind of lookup per question.** Do not merge a quick text search with a tagged passage search in the same answer — you will double-count and mis-attribute flashback vs scene.
 
 ---
 
@@ -132,62 +156,67 @@ Long-form work needs a **passage index** — stable IDs joined to:
 
 **RAG (L1)** embeds or FTS-indexes **prose text** for fuzzy retrieval.
 
-**L2 search** joins that text to **metadata** — so "Thunder Butte" in a flashback does not co-present with a scene in Kansas.
+**Tagged passage search** joins text to **metadata** — so "Thunder Butte" in a flashback does not co-present with a scene in Kansas.
 
 ### Reanchor workflow
 
 When chapter prose changes:
 
-1. **Reanchor** — segment prose into passages; assign or confirm IDs
-2. **Ingest** — mirror into FTS / SQLite (or equivalent) for search
-3. **Verify preflight** — refuse or auto-reanchor if file mtime newer than index
+1. **Reanchor** — refresh passage segments and IDs from the new text
+2. **Re-index** — update search so lookups match the latest draft
+3. **Before a continuity check** — confirm the index is current (stale index = wrong citations)
 
-**Never hand-author passage UUIDs** in production workflows — generate from reanchor on real prose.
+Do not hand-assign passage IDs in normal workflow — generate them from your real prose when you reanchor.
 
 ### Index exclusion (L0)
 
 Paths under `exploration/`, `comparanda/`, scratch sandboxes:
 
-- **Excluded** from Cursor/codebase embed index (`.cursorindexingignore` or equivalent)
-- **Never** ingested into passage FTS
-- **Never** promoted to canon without explicit author workflow
+- **Excluded** from manuscript search indexes
+- **Never** mixed into passage search as canon
+- **Never** promoted to canon without your explicit workflow
 
-This is how comparanda and grounding sandboxes stay out of retrieval bias for continuity questions.
+This is how comparanda and grounding sandboxes stay out of continuity questions.
 
-### Minimum viable (no custom MCP)
+### Starting simple
 
 | Capability | Manual approach |
 |------------|-----------------|
-| Fuzzy locate | Editor search / `@Codebase` — accept no metadata join |
-| Stable loci | Author-maintained `CH## L##` + chapter files |
+| Quick locate | Editor Find / project search — accept no story-tag join |
+| Stable loci | You maintain `CH## L##` + chapter files |
 | Canon state | PGMs + markdown timeline |
-| Reanchor | Re-run line citations after edits; accept drift risk |
+| After edits | Re-run line citations; accept drift risk until you re-index |
 
-**Full stack** adds automated reanchor, ingest, and L2 MCP tools — reference implementation: **novelist-plugin** (franchise MCP server; companion to this methodology).
+As your project grows, automated re-index and structured lookup reduce drift — the **habits** (one question type per ask, re-index after edits) matter more than any particular product.
 
 ---
 
-## Structured queries (L2 graph access)
+## Structured lookup (beyond quick search)
 
-Beyond fuzzy RAG, continuity modeling needs **typed queries**:
+Beyond quick text search, continuity work needs **typed questions**:
 
-| Query type | Answers | Example question |
-|------------|---------|------------------|
-| **Passages resolve** | Catalog at `CH## L##` — discourse, PGM, arc | "What is the catalog status of this line?" |
-| **Passages search** | Fuzzy prose + filters | "Find the naming speech" |
-| **Entities query** | Identity epochs, aliases, who is whom when | "When does Dylan become Masti?" |
-| **Facts query** | PGM locks, provenance-tagged claims | "What is locked about peel color?" |
-| **Geography query** | Stops between places, corridor claims | "Where did he stop between A and B?" |
+| Question type | Answers | Example |
+|---------------|---------|---------|
+| **Passage at line** | Tags at `CH## L##` — scene vs memory, PGM, arc | "What tags does this line carry?" |
+| **Passage search** | Fuzzy prose + filters | "Find the naming speech" |
+| **Character lookup** | Identity epochs, aliases, who is whom when | "When does Dylan become Masti?" |
+| **Facts lookup** | PGM locks, provenance-tagged claims | "What is locked about peel color?" |
+| **Route lookup** | Stops between places, corridor claims | "Where did he stop between A and B?" |
 
 ### Geography gate (travel edits)
 
 For Earth-itinerary / corridor rewrites:
 
-1. Query geography **before** prose changes
-2. If `NO_ROUTE_CLAIM` — **stop**; author ingests route (DERIVED) then promotes — do not invent from map priors
-3. After manuscript change — reanchor affected chapter
+1. **Look up the route** before prose changes
+2. If **no route on file** — **stop**; file and promote route notes — do not invent from map memory
+3. After manuscript change — re-index the affected chapter
 
-Skill pattern: structural/grounding agent loads geography first; prosthetic audit second.
+**Workflow:** Load grounding and routes first; run readonly audit second.
+
+**Grounding indexes:**
+
+- File **visual anchor sets** (map + ground-level) per place and chapter.
+- **Before cemetery/town/corridor prose:** load the pair when registered; generic template description means grounding failed.
 
 ### Provenance on facts
 
@@ -198,44 +227,42 @@ Skill pattern: structural/grounding agent loads geography first; prosthetic audi
 | **INVENTED** | Author lock — not real-world fact |
 | **UNKNOWN** | Blocks auto-apply — ask first |
 
-Query with provenance filters when simulation (Domain 4) must not leak into audit (Domain 2).
+Use provenance tags when sandbox work (Domain 4) must not leak into audit (Domain 2).
 
 ---
 
-## Continuity reporting (verify + audit events)
+## Continuity reporting
 
-**Retrieval** answers "where is it mentioned?" **Verification** answers "does this contradict canon?"
+**Search** answers "where is it mentioned?" **Continuity check** answers "does this contradict canon?"
 
-### Verify run
+### What a continuity report includes
 
-Inputs: source files, explicit claims, co-presence pairs, optional auto-reanchor.
-
-Outputs per rule evaluated:
+Per rule evaluated:
 
 | Field | Purpose |
 |-------|---------|
-| `event_id` | Audit trail join key |
-| `rule` | e.g. `SPATIAL_COPRESENCE`, `POLARITY_CONFLICT`, `SKILL_PRECEDENCE` |
-| `result` | `NO_CONFLICT` \| `CONFLICT` \| `WARNING` \| `SKIPPED` |
-| **Literals** | Compared passage texts and claim polarity — not chat summary |
+| **Reference ID** | Cite this report later in editor letters or audits |
+| **Rule** | e.g. co-presence, polarity conflict, calendar |
+| **Result** | no conflict \| conflict \| warning \| skipped |
+| **Literals** | Compared passage texts — not chat summary |
 
 **Example — no conflict:**
 
 ```text
-event_id: ae-2026-07-10-003
-rule: SPATIAL_COPRESENCE
-result: NO_CONFLICT
-note: passage_b layer=MEMORY excluded from co-presence with SCENE passage_a
+reference_id: ae-2026-07-10-003
+rule: spatial_co_presence
+result: no_conflict
+note: passage_b tagged memory — excluded from co-presence with scene passage_a
 ```
 
 **Example — conflict:**
 
 ```text
-event_id: ae-2026-07-10-004
-rule: POLARITY_CONFLICT
-result: CONFLICT
-claim_new: DENY character was_at location (ch14)
-claim_canon: AFFIRM character was_at location (ch08)
+reference_id: ae-2026-07-10-004
+rule: polarity_conflict
+result: conflict
+claim_new: denies character was at location (ch14)
+claim_canon: affirms character was at location (ch08)
 ```
 
 ### Continuity reporting in developmental edits
@@ -245,11 +272,11 @@ Full-chapter developmental pass load order:
 1. Session anchor Section A
 2. Chapter PGMs + discourse sidecar
 3. Rubric + auditor persona
-4. **Chapter verify (readonly)** → attach `event_id` to structural recommendations
+4. **Chapter continuity check (readonly)** → attach reference IDs to structural recommendations
 
-Output shape unchanged: verdict → what's working → recommendations — but structural items cite **verify events**, not model memory.
+Output shape unchanged: verdict → what's working → recommendations — but structural items cite **continuity reports**, not chat memory.
 
-**Apply gate:** Verify flags do not auto-rewrite. Author decides from six-alternative set or named line fix.
+**Apply gate:** Continuity flags do not auto-rewrite. You decide from six-alternative set or named line fix.
 
 ### Discourse layer — why it matters
 
@@ -298,10 +325,10 @@ Typical packs:
 
 ### Compare workflow
 
-1. `comparanda_list` — confirm packs and lenses
-2. `comparanda_compare` — `lens_id`, `pack_id`, subject (`source_file` + line span or `passage_ids`)
-3. Agent fills report using **editorial recommendations format** — diagnosis only
-4. Prosthetic gate: six alternatives only if author asks; apply only after author decision
+1. Confirm packs and lenses are available
+2. Run compare — lens, pack, your chapter span
+3. Fill report using **editorial recommendations format** — diagnosis only
+4. Six alternatives only if you ask; apply only after you decide
 
 ### Lens: chapter_hook failure modes
 
@@ -324,17 +351,29 @@ Compare **technique** — what the reference excerpt *does* — not shared plot 
 
 ---
 
+## Editorial report corpus (Domain 2)
+
+Beyond one-shot chapter audits, mature projects **accumulate typed readonly reports** — trope/subversion ledger, tone pass, maturation read, comparanda diagnosis, verify events — filed under `exploration/` (or typed subfolders), span-labeled, and **reloaded** on later passes.
+
+**Design lock:** Same as comparanda and verify — diagnose only; apply gate on prose; promote to PGM on author instruction.
+
+Full pattern and example report types: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Editorial report corpus*.
+
+---
+
 ## Other infrastructure patterns
 
 | Technique | Role | Domain |
 |-----------|------|--------|
 | **Session anchors** | Re-entry state; Section C methodology tuning | 1, cross-cutting |
+| **Retrospective meta-analysis** | Looking back at registered notes to reconstruct what a span assumed | cross-cutting |
 | **PGMs / lore JSON** | Graph state for characters, world, chapter slices | 3 |
-| **Grounding indexes** | Visual anchors, route maps, period facts | 4 |
+| **Grounding indexes** | Visual anchor sets (map + ground-level per place), route maps, period facts | 4 |
 | **Author inline notes** | `CH## L##` keyed deferrals; promote to PGM | 1–2 |
-| **Audit log / `event_id`** | Literal continuity compare trail | 3 |
-| **Canon promotion** | EXPLORATORY → CANON explicit register | 3–4 |
-| **Methodology check** | Agent behavior vs protocol (optional MCP) | cross-cutting |
+| **Editorial report corpus** | Typed readonly diagnostics (trope ledger, tone, maturation, etc.) in `exploration/` | 2 |
+| **Audit log / reference ID** | Literal continuity compare trail | 3 |
+| **Canon promotion** | Scratch → canon only when you promote | 3–4 |
+| **Methodology check** | Does tonight's session match your stated contract? | cross-cutting |
 
 ---
 
@@ -343,9 +382,9 @@ Compare **technique** — what the reference excerpt *does* — not shared plot 
 | Domain | Infrastructure you add |
 |--------|------------------------|
 | **1 Lexical** | Passage resolve at live loci; six-alternatives at `CH## L##` |
-| **2 Audit** | Rubric + comparanda reports + verify-attached developmental edits |
-| **3 Continuity** | Reanchor/ingest, entities/facts query, verify_run, audit events |
-| **4 Grounding** | Geography query + promotion; provenance tags; grounding indexes |
+| **2 Audit** | Rubric + **editorial report corpus** + comparanda + verify-attached developmental edits |
+| **3 Continuity** | Re-index after edits, character/facts lookup, continuity reports |
+| **4 Grounding** | Route lookup + promotion; provenance tags; grounding indexes |
 | **5 Production** | Separate PGMs; do not index into prose passage store |
 
 **Collapse failures:**
@@ -355,8 +394,8 @@ Compare **technique** — what the reference excerpt *does* — not shared plot 
 | Comparanda in passage FTS | Reference voice bleeds retrieval |
 | RAG-only for co-presence | False spatial conflicts |
 | Verify result → auto-apply | Ghostwrite drift with audit lipstick |
-| Skip reanchor after edit | Stale `passage_id` joins |
-| L1 + L2 same turn | Double-counted, wrong discourse |
+| Skip re-index after edit | Stale passage joins |
+| Quick search + tagged search same breath | Double-counted, wrong scene vs memory |
 
 ---
 
@@ -365,30 +404,11 @@ Compare **technique** — what the reference excerpt *does* — not shared plot 
 | Stage | Infrastructure |
 |-------|----------------|
 | **Starter** | PGMs + anchors + manual search |
-| **Intermediate** | L1 RAG + structured lore files + verify checklist (manual) |
-| **Advanced** | Reanchor/ingest, L2 MCP, verify_run with `event_id`, geography gate |
+| **Intermediate** | Quick search + structured lore files + **filed editorial reports** + continuity checklist (manual) |
+| **Advanced** | Automated re-index, structured lookup, continuity reports with reference IDs, route gate |
 | **Craft depth** | Comparanda packs + lenses; readonly craft reports |
 
-You do not need the full stack on day one. You **do** need to know which tier answers which question — so you do not treat embed search as continuity truth.
-
----
-
-## Reference implementation
-
-The maintainer's production stack implements these patterns via **novelist-plugin** (MCP server) and franchise repo Skills:
-
-| Skill / tool | Technique |
-|--------------|-----------|
-| `fiction-locate` | L2 locators; one per turn |
-| `fiction-travel-edit` | Geography gate before travel prose |
-| `fiction-craft-compare` | Comparanda workflow |
-| `passages_reanchor` / `passages_ingest` | Index maintenance |
-| `verify_run` | Continuity reporting |
-| `comparanda_compare` | Craft lens comparison |
-
-This repository documents **methodology** — portable patterns. The plugin is one implementation; the tiers and isolation contracts are the portable part.
-
-**Host choice:** Patterns are not Cursor-exclusive. The maintainer adopted Cursor after building on frontier chat and scoping a custom editor — because **paying professional use** already exercised repo index, MCP, and governed agent edit. Your host may differ; the **locator tiers, gates, and apply contract** should not.
+You do not need the full habit stack on day one. You **do** need to know which **kind of question** you are asking — so you do not treat a quick search as continuity proof.
 
 ---
 
