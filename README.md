@@ -2,6 +2,8 @@
 
 **Beyond "write me a bestseller."**
 
+**Repository:** https://github.com/pojoguy/novelist-methodology-class
+
 Most public debate about AI and creative writing stops at the worst-case scenario: a novice types a prompt, accepts the output, and calls it a novel. That usage exists. It is also the **smallest** part of what serious authors are building with large language models.
 
 This repository documents a broader, craft-first methodology: how working writers use LLMs as **prosthetic tools** — external working memory, audit engines, continuity graphs, and grounding sandboxes — while keeping creative intent, voice, and final prose mass **human**.
@@ -30,8 +32,8 @@ This repository documents a broader, craft-first methodology: how working writer
 | LLM as author | LLM as **prosthetic** (retrieval, audit, modeling) |
 | Output = manuscript | Output = **diagnostics, alternatives, state** |
 | One-shot prompting | **Session anchors**, knowledge graphs, apply gates |
-| "Make it better" | **Flag → six alternatives → author selects → apply** |
-| Trust the model | **Constrain the model**; human picks |
+| "Make it better" | **Flag → six alternatives → author decides → apply** |
+| Trust the model | **Constrain the model**; human authorizes |
 
 Creative intent and final prose remain human. AI assists where human working memory, cross-reference, or statistical pattern-matching would otherwise fail — not where authorship lives.
 

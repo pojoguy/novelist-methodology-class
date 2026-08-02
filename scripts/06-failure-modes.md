@@ -19,7 +19,7 @@
 | **Failure mode** | A **named way the process breaks** — so you fix the workflow. | `Named breakdown` |
 | **Negation triangulation** | "Not A, not B. C." — tool **stalled**, not deep writing. | `Stall pattern` |
 | **Ghostwrite drift** | You asked for critique; it **rewrote** anyway. | `Audit ≠ rewrite` |
-| **Six alternatives** | Widen choices; **you** pick. | `6 → you pick` |
+| **Six alternatives** | Widen choices; **you** decide — pick, blend, reject, or own line. | `6 → you decide` |
 
 ---
 

@@ -16,8 +16,8 @@
 
 | Term | Say this (plain language) | On-screen (optional) |
 |------|---------------------------|----------------------|
-| **Prosthetic** | Like a thesaurus with rules — **six options**, you pick. | `Prosthetic ≠ ghostwriter` |
-| **Six alternatives** | Six full wordings for one problem — widens choices when the tool gets stuck. | `6 options → you pick` |
+| **Prosthetic** | Like a thesaurus with rules — **six options**, you decide. | `Prosthetic ≠ ghostwriter` |
+| **Six alternatives** | Six full wordings for one problem — **inspiration**, not a menu order. | `6 options → you decide` |
 | **Thin solution space** | Too many rules; tool spits out "not A, not B, but C." | `Forced vague output` |
 | **Apply gate** | **You** authorize every change. | `You approve` |
 | **Priority fixes** | Means **audit and options** — not "rewrite my chapter." | `Audit ≠ rewrite` |
@@ -46,9 +46,9 @@
 
 **Say:**
 
-> When constraints bind tight, the retrieval bias function hits a thin solution space — it has to return something but can't choose between near-misses. You get "not A, not B, but C," comma lists, adjective triads. That's not voice — that's forced emission. Six alternatives deliberately widen the space. You apply the final bias. The model doesn't pretend it chose.
+> When constraints bind tight, the retrieval bias function hits a thin solution space — it has to return something but can't choose between near-misses. You get "not A, not B, but C," comma lists, adjective triads. That's not voice — that's forced emission. Six alternatives deliberately widen the space — inspiration, not a menu order. You pick, blend, reject, or write your own. You apply the final bias. The model doesn't pretend it chose.
 
-**On-screen:** `Thin space → forced output` / `6 alternatives = widen space` / `You pick = final bias`
+**On-screen:** `Thin space → forced output` / `6 alternatives = widen space` / `You decide = final bias`
 
 **Note for recording:** See `docs/02-prosthetic-model.md` — *Why six — theta bias rationale* for full technical depth.
 

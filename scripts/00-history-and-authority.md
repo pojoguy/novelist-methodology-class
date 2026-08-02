@@ -2,25 +2,34 @@
 
 ## Metadata
 
-| Field | Value |
-|-------|-------|
-| **Paired doc** | `docs/00-history-and-authority.md` |
-| **Format** | Explainer (series opener) |
-| **Series** | LLM Methodology in Creative Writing — Ep. 0 |
-| **Target length** | ~5:15 (spoken) |
-| **Word count** | ~820 |
-| **Status** | **ready** |
-| **YouTube URL** | _(when live)_ |
 
-### Title options (pick one)
+| Field             | Value                                       |
+| ----------------- | ------------------------------------------- |
+| **Paired doc**    | `docs/00-history-and-authority.md`          |
+| **Format**        | Explainer (series opener)                   |
+| **Series**        | LLM Methodology in Creative Writing — Ep. 0 |
+| **Target length** | ~5:20 (spoken)                              |
+| **Word count**    | ~835                                        |
+| **Status**        | **ready**                                   |
+| **YouTube URL**   | *(when live)*                               |
 
-1. **AI Didn't Arrive in 2022** _(recommended)_
-2. You Already Use AI — You Just Don't Call It That
-3. Before ChatGPT: What Writers Need to Know About AI History
 
-### Thumbnail text
+### Publish package — **A (locked)**
 
-`YOU ALREADY USE AI` / `Ep. 0`
+**Strategy:** Thumbnail **interrupts**; title **frames the argument**; hook **delivers the thumbnail** then Beat 1 **delivers the title**.
+
+
+| Layer                | Copy                                                         | Job                                                          |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **YouTube title**    | **AI Didn't Arrive in 2022**                                 | Search + series thesis — history, not hype                   |
+| **Thumbnail**        | **YOU ALREADY USE AI** / `Ep. 0`                             | Pattern interrupt for skeptics — not the same words as title |
+| **Cold open (0:00)** | *You already use AI every day. You just don't call it that.* | Pay off thumbnail in first 3 seconds                         |
+| **Beat 1 (0:08)**    | *November 2022 did not invent artificial intelligence…*      | Pay off title — UI event, not birth of AI                    |
+
+
+Do **not** use the thumbnail line as the YouTube title — complementary, not duplicate.
+
+**Alternates considered (not used):** *You Already Use AI — You Just Don't Call It That* (title); *Before ChatGPT: What Writers Need to Know About AI History* (title).
 
 ---
 
@@ -28,25 +37,31 @@
 
 Define in the **first 30 seconds** or flash **on-screen** when each term first appears.
 
-| Term | Say this (plain language) | On-screen (optional) |
-|------|---------------------------|----------------------|
-| **AI** | Software that finds patterns or generates text — not a person. | `AI ≠ human` |
-| **LLM** | A program trained on huge amounts of text to guess what word comes next. | `Large language model` |
-| **2022 / chat box** | Same tech as before — just a **messaging screen** that made it visible. | `UI event` |
-| **Stochastic** | It works in **probabilities** — likely, not guaranteed true. | `Probability, not truth` |
-| **Prosthetic** | Like glasses — **helps you**; doesn't write the book for you. | `Tool, not author` |
-| **RAG / hidden AI** | Stuff you already use — autocomplete, camera, captions, checks — **is** AI. | `Already using AI` |
-| **Governance** | **You** approve before text hits the page. | `You choose` |
+
+| Term                | Say this (plain language)                                                   | On-screen (optional)     |
+| ------------------- | --------------------------------------------------------------------------- | ------------------------ |
+| **AI**              | Software that finds patterns or generates text — not a person.              | `AI ≠ human`             |
+| **LLM**             | A program trained on huge amounts of text to guess what word comes next.    | `Large language model`   |
+| **2022 / chat box** | Same tech as before — just a **messaging screen** that made it visible.     | `UI event`               |
+| **Stochastic**      | It works in **probabilities** — likely, not guaranteed true.                | `Probability, not truth` |
+| **Prosthetic**      | Like glasses — **helps you**; doesn't write the book for you.               | `Tool, not author`       |
+| **RAG / hidden AI** | Stuff you already use — autocomplete, camera, captions, checks — **is** AI. | `Already using AI`       |
+| **Governance**      | **You** approve before text hits the page.                                  | `You choose`             |
+| **Generative / statistical AI** | Creates or scores content using probability — includes cameras, captions, checks, not just chat. | `Hidden AI` |
+| **Domain**          | One **kind** of AI use (word help, critique, continuity, etc.) — Beat 4 preview. | `Which domain?` |
+| **Human prose mass**| The bulk of **final wording is yours** after you choose and revise.           | `Your words`             |
+| **Level zero**      | "Write me a bestseller" — ghostwriting; what this series is **not**.          | `Not level 0`            |
+
 
 ---
 
 ## Pre-roll note
 
-**Rig:** Canon HF G20 → Blackmagic DeckLink → OBS; Logitech G733 mic; edit in DaVinci Resolve. Full signal flow, OBS scenes, Resolve delivery, and session order: [`production-setup.md`](production-setup.md).
+**Rig:** Canon HF G20 → Blackmagic DeckLink → OBS; Logitech G733 mic; edit in DaVinci Resolve. Full signal flow, OBS scenes, Resolve delivery, and session order: `[production-setup.md](production-setup.md)`.
 
 Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source **B-roll** per shot list. On-screen text can be added in post — cues below.
 
-**Episode 0 session order:** (1) A-roll Beats 1, 2, 4, 5 + Close in one sitting → (2) Beat 3 VO → (3) phone/screen B-roll → (4) pickups.
+**Episode 0 session order:** (1) Cold open + A-roll Beats 1, 2, 4, 5 + Close in one sitting → (2) Beat 3 VO → (3) phone/screen B-roll → (4) pickups.
 
 ---
 
@@ -60,7 +75,7 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 
 **On-screen (0:00):**  
 `YOU ALREADY USE AI`  
-_(fade at 0:05)_  
+*(fade at 0:05)*  
 `LLM Methodology · Ep. 0`
 
 **Visual:** Tight face. No intro music under first line — hit music after "wrong target" or at 0:08.
@@ -79,11 +94,13 @@ _(fade at 0:05)_
 
 **On-screen:**
 
-| Time | Text |
-|------|------|
-| 0:12 | `2022 = UI event, not birth of AI` |
+
+| Time | Text                                         |
+| ---- | -------------------------------------------- |
+| 0:12 | `2022 = UI event, not birth of AI`           |
 | 0:28 | `"I don't use AI"` → `"I don't use ChatGPT"` |
-| 0:45 | Quick icons: keyboard · mail · maps · bank |
+| 0:45 | Quick icons: keyboard · mail · maps · bank   |
+
 
 **B-roll:**
 
@@ -100,7 +117,7 @@ _(fade at 0:05)_
 
 **Say:**
 
-> Large language models feel like oracles. They aren't. They're **stochastic systems** — machines that work in probabilities, not certainties.
+> Large language models feel like oracles. They aren't. They're **stochastic systems** — a fancy way of saying they're machines that work in probabilities, not certainties.
 >
 > **Stochastic** means: given the same input, you get a **distribution** of possible outputs, not one guaranteed answer. The model rolls weighted dice on what word probably comes next. Plausible. Not necessarily true.
 >
@@ -116,13 +133,15 @@ _(fade at 0:05)_
 
 **On-screen:**
 
-| Time | Text |
-|------|------|
-| 0:58 | `STOCHASTIC = probability, not certainty` |
+
+| Time | Text                                                                                                |
+| ---- | --------------------------------------------------------------------------------------------------- |
+| 0:58 | `STOCHASTIC = probability, not certainty`                                                           |
 | 1:15 | Timeline: `Erlang 1909` → `Shannon 1948` → `TXE / Gaines 1960s` → `Transformers 2017` → `Chat 2022` |
-| 1:45 | `Brian R. Gaines · Stochastic Computing · STL, Britain` |
-| 2:05 | `Plausible ≠ true` |
-| 2:12 | `Governance is not optional` |
+| 1:45 | `Brian R. Gaines · Stochastic Computing · STL, Britain`                                             |
+| 2:05 | `Plausible ≠ true`                                                                                  |
+| 2:12 | `Governance is not optional`                                                                        |
+
 
 **B-roll / graphics:**
 
@@ -140,7 +159,7 @@ _(fade at 0:05)_
 
 > Here's what skeptics often miss: you already depend on **generative and statistical AI** without naming it.
 >
-> _[VO continues over B-roll:]_
+> *[VO continues over B-roll:]*
 >
 > Your phone camera is a real-time inference stack — autofocus, face tracking, auto white balance, HDR, night-mode noise reduction that **invents detail** where the sensor had almost no light. Portrait mode segments you from the background. Some phones **generate** pixels when you zoom. That's generative AI. You call it the camera app.
 >
@@ -161,14 +180,16 @@ _(fade at 0:05)_
 
 **B-roll shot list (min. 2 sec each):**
 
-| # | Shot | Notes |
-|---|------|-------|
-| 1 | Night-mode phone photo | Before/after if possible |
-| 2 | Portrait mode / depth effect | |
-| 3 | Video call UI, speaking | |
-| 4 | Live captions / dictation on phone | |
-| 5 | Mobile banking check deposit | Blur account numbers |
-| 6 | Autocomplete tap on keyboard | |
+
+| #   | Shot                               | Notes                    |
+| --- | ---------------------------------- | ------------------------ |
+| 1   | Night-mode phone photo             | Before/after if possible |
+| 2   | Portrait mode / depth effect       |                          |
+| 3   | Video call UI, speaking            |                          |
+| 4   | Live captions / dictation on phone |                          |
+| 5   | Mobile banking check deposit       | Blur account numbers     |
+| 6   | Autocomplete tap on keyboard       |                          |
+
 
 **Chapter marker:** `2:20` — AI you already use
 
@@ -184,10 +205,12 @@ _(fade at 0:05)_
 
 **On-screen:**
 
-| Time | Text |
-|------|------|
+
+| Time | Text                                                    |
+| ---- | ------------------------------------------------------- |
 | 3:52 | Rapid list: `press · typewriter · spell-check · search` |
-| 4:08 | `Not "AI yes/no" — which domain? what governance?` |
+| 4:08 | `Not "AI yes/no" — which domain? what governance?`      |
+
 
 **Visual:** `[CAM]` — steady, no B-roll required.
 
@@ -199,18 +222,20 @@ _(fade at 0:05)_
 
 **Say:**
 
-> I'm **David Johnson**. In the nineteen-eighties I worked with **Brian Gaines**, **Joan Vickers**, and **Mildred Shaw** at the University of Calgary — knowledge-based systems and human factors before LLMs existed. Gaines's own lineage runs back to stochastic computing in nineteen-sixties British telecom. Today I build enterprise LLM agent systems in production. And I've spent years using governed AI on a real novel-length project — vocabulary prosthetic, developmental audit, continuity graphs — not ghostwriting.
+> I'm **David Johnson**. In the nineteen-eighties I worked with **Brian Gaines**, **Joan Vickers**, and **Mildred Shaw** at the University of Calgary — knowledge-based systems and human factors before LLMs existed. Gaines's own lineage runs back to stochastic computing in nineteen-sixties British telecom. Today I integrate enterprise scaled LLM agent systems in production. And I've spent years using governed AI on a real novel-length project — vocabulary prosthetic, developmental audit, continuity graphs — not ghostwriting.
 >
 > This series and the open repository document **craft-first methodology**: how to constrain models, not worship them. Prosthetic, not replacement. Human intent and final prose stay human.
 
 **On-screen:**
 
-| Time | Text |
-|------|------|
-| 4:22 | `David Johnson` |
-| 4:28 | `Calgary · knowledge engineering · 1980s` |
+
+| Time | Text                                         |
+| ---- | -------------------------------------------- |
+| 4:22 | `David Johnson`                              |
+| 4:28 | `Calgary · knowledge engineering · 1980s`    |
 | 4:38 | `Enterprise LLM systems + long-form fiction` |
-| 4:48 | `Prosthetic ≠ ghostwriter` |
+| 4:48 | `Prosthetic ≠ ghostwriter`                   |
+
 
 **Visual:** `[CAM]`. Optional: repo folder structure blur in background (out of focus).
 
@@ -228,11 +253,13 @@ _(fade at 0:05)_
 
 **On-screen:**
 
-| Time | Text |
-|------|------|
-| 4:58 | `NEXT → Ep. 1: The Spectrum` |
-| 5:05 | `github.com/…` _(repo URL when published)_ |
+
+| Time | Text                                             |
+| ---- | ------------------------------------------------ |
+| 4:58 | `NEXT → Ep. 1: The Spectrum`                     |
+| 5:05 | `github.com/pojoguy/novelist-methodology-class`  |
 | 5:10 | End card: Subscribe · Playlist · Ep. 1 thumbnail |
+
 
 **Visual:** End card 8 seconds. Hold repo URL readable.
 
@@ -242,7 +269,7 @@ _(fade at 0:05)_
 
 ## TELEPROMPTER — full continuous script
 
-_Copy block below for teleprompter apps. Pause at `[/]_ markers if needed._
+*Copy block below for teleprompter apps. Pause at `[/]` markers if needed.*
 
 ---
 
@@ -256,7 +283,7 @@ So when a writer says, "I don't use AI" — they usually mean, "I don't use Chat
 
 [/]
 
-Large language models feel like oracles. They aren't. They're stochastic systems — machines that work in probabilities, not certainties.
+Large language models feel like oracles. They aren't. They're stochastic systems — a fancy way of saying they're machines that work in probabilities, not certainties.
 
 Stochastic means: given the same input, you get a distribution of possible outputs, not one guaranteed answer. The model rolls weighted dice on what word probably comes next. Plausible. Not necessarily true.
 
@@ -290,7 +317,7 @@ The question for writers is not AI yes or no. It's which domain, under what gove
 
 [/]
 
-I'm David Johnson. In the nineteen-eighties I worked with Brian Gaines, Joan Vickers, and Mildred Shaw at the University of Calgary — knowledge-based systems and human factors before LLMs existed. Gaines's own lineage runs back to stochastic computing in nineteen-sixties British telecom. Today I build enterprise LLM agent systems in production. And I've spent years using governed AI on a real novel-length project — vocabulary prosthetic, developmental audit, continuity graphs — not ghostwriting.
+I'm David Johnson. In the nineteen-eighties I worked with Brian Gaines, Joan Vickers, and Mildred Shaw at the University of Calgary — knowledge-based systems and human factors before LLMs existed. Gaines's own lineage runs back to stochastic computing in nineteen-sixties British telecom. Today I integrate enterprise scaled LLM agent systems in production. And I've spent years using governed AI on a real novel-length project — vocabulary prosthetic, developmental audit, continuity graphs — not ghostwriting.
 
 This series and the open repository document craft-first methodology: how to constrain models, not worship them. Prosthetic, not replacement. Human intent and final prose stay human.
 
@@ -304,9 +331,11 @@ Subscribe for the series. Episode one is next.
 
 ## POST-PRODUCTION CHECKLIST
 
-- [ ] Chapter markers uploaded (6 chapters — see beats above)
+- [ ] **Title** = `AI Didn't Arrive in 2022` (not thumbnail line — Package A)
+- [ ] **Thumbnail** = `YOU ALREADY USE AI` + `Ep. 0`
+- [ ] **Chapter markers** uploaded: `0:00` Hook · `0:08` 2022 myth · `0:55` Stochastic · `2:20` Hidden AI · `3:50` Craft panic · `4:20` Why listen · `4:55` What's next
 - [ ] Captions generated and reviewed (`stochastic`, `Erlang`, `Gaines`, `Whisper`, `Chirp` spelled correctly)
-- [ ] Repo URL in description (update when GitHub live)
+- [ ] Repo URL in description ✓ `https://github.com/pojoguy/novelist-methodology-class`
 - [ ] End screen: Subscribe + playlist + Ep. 1
 - [ ] Cards at 4:55 → Ep. 1
 - [ ] Audio: normalize −14 LUFS (YouTube standard)
@@ -328,10 +357,10 @@ In this episode:
 • Hidden AI you already use: phone cameras, video-call noise removal, Whisper/Chirp transcription, automated check processing, autocomplete
 • Why craft panic is not new — and what serious writers actually do differently
 
-I'm David Johnson — knowledge-systems practitioner, enterprise LLM builder, and long-form fiction writer. This series documents craft-first methodology: prosthetic tools, apply gates, human prose mass — not "write me a bestseller."
+I'm David Johnson — knowledge-systems practitioner; integrates enterprise LLM agent systems in production; long-form fiction writer. This series documents craft-first methodology: prosthetic tools, apply gates, human prose mass — not "write me a bestseller."
 
-📄 Full write-up: [LINK TO docs/00-history-and-authority.md ON GITHUB]
-📁 Repository: [LINK TO REPO]
+📄 Full write-up: https://github.com/pojoguy/novelist-methodology-class/blob/main/docs/00-history-and-authority.md
+📁 Repository: https://github.com/pojoguy/novelist-methodology-class
 ▶️ Next: Episode 1 — The Spectrum (ghostwriting vs seven levels of serious use)
 
 #CreativeWriting #WritingProcess #LLM #AI #Authors #WritingCommunity #KnowledgeEngineering
@@ -349,18 +378,25 @@ creative writing, writing process, LLM, AI writing, authors, ChatGPT, stochastic
 
 ## SHORTS EXTRACTS (record same session or cut in post)
 
-| Short title | In-point | Out-point | Hook line |
-|-------------|----------|-----------|-----------|
-| Your phone camera is generative AI | Beat 3 VO | ~45s cut | "You call it the camera app." |
-| Checks are AI-processed | Beat 3 check section | ~40s | "Paper checks feel analog." |
-| What stochastic means | Beat 2 | ~55s | "They roll weighted dice." |
-| I don't use AI / I don't use ChatGPT | Beat 1 | ~35s | Opening of Beat 1 |
+
+| Short title                          | In-point             | Out-point | Hook line                     |
+| ------------------------------------ | -------------------- | --------- | ----------------------------- |
+| Your phone camera is generative AI   | Beat 3 VO            | ~45s cut  | "You call it the camera app." |
+| Checks are AI-processed              | Beat 3 check section | ~40s      | "Paper checks feel analog."   |
+| What stochastic means                | Beat 2               | ~55s      | "The model rolls weighted dice." |
+| I don't use AI / I don't use ChatGPT | Beat 1               | ~35s      | Opening of Beat 1             |
+
 
 ---
 
 ## Changelog
 
-| Date | Change |
-|------|--------|
-| 2026-08-02 | Expanded from outline to recording-ready: full script, teleprompter, shot list, YT metadata |
-| 2026-08-02 | Initial outline |
+
+| Date       | Change                                                             |
+| ---------- | ------------------------------------------------------------------ |
+| 2026-08-02 | Consistency pass: teleprompter ↔ beats, Terms, chapter markers, description |
+| 2026-08-02 | Locked **Publish package A**: title vs thumbnail vs hook alignment |
+| 2026-08-02 | GitHub URLs in description and README                              |
+| 2026-08-02 | Initial outline                                                    |
+
+

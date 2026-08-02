@@ -9,7 +9,7 @@
 |------|----------------|
 | **Prosthetic model** | AI as a **helper tool** (like glasses) — expands what you can reach; does not replace your voice or decisions. |
 | **Ghostwriting** | Letting the model **draft for you** and accepting the output as finished prose. |
-| **Six-alternative protocol** | Flag a problem → get **six complete wordings** → **you** pick, blend, or reject → only then apply. |
+| **Six-alternative protocol** | Flag a problem → get **six complete wordings** → **you** use them as **inspiration** (pick, blend, reject, or write your own) → only then apply. |
 | **Apply gate / apply authorization** | A hard rule: **no text enters your manuscript** without your explicit instruction. |
 | **Priority fixes** | In this methodology, means **finish the audit and offer alternatives** — not "rewrite my chapter for me." |
 | **Retrieval bias** | Hidden scoring that pushes the tool toward certain words when it must output something. |
@@ -54,7 +54,7 @@ When prose is flagged (weak word, Sign breach, imprecise phrase):
 
 1. **Diagnose** — name what's wrong and why it matters
 2. **Offer exactly six alternatives** — full replaceable options for the flagged beat
-3. **Wait** — author picks a number, blends, or supplies their own line
+3. **Wait** — author uses the set as inspiration: picks a number, blends, rejects all six, or supplies their own line
 4. **Apply** — only then edit the manuscript
 
 **Alternative type must match beat type:**
@@ -112,7 +112,7 @@ When you see negation triangulation, triads, or comma-list recovery in model out
 2. **Do not** accept the single collapsed line
 3. **Do** diagnose the thin-space breach
 4. **Do** offer six full alternatives of the correct beat type
-5. **Wait** for author pick before apply
+5. **Wait** for author decision — pick, blend, reject all six, or supply own line — before apply
 
 See [`06-failure-modes.md`](06-failure-modes.md) — *Thin solution space / retrieval bias stall* and *Sparse-edge collapse*.
 

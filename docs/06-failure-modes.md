@@ -18,7 +18,7 @@
 | **Domain collapse** | Treating **sandbox, reference, or chat** output as official story canon. |
 | **PGM** | Your **registered fact files** — when ignored, continuity answers drift. |
 | **Sign** | Rubric flag for AI-sounding prose — add more Signs to "fix" thin space and you often **worsen** collapse. |
-| **Six-alternative protocol** | Correct response to thin space: **widen options**, you choose. |
+| **Six-alternative protocol** | Correct response to thin space: **widen options**; you use them as inspiration — pick, blend, reject, or write your own. |
 | **L1 / L2 locator** | **Fuzzy search** (L1) vs **structured search with story metadata** (L2) — don't mix in one answer. |
 | **Comparanda bleed** | Reference book excerpts **leaking into** continuity or voice — isolation failure. |
 | **Human signal** | Voice you protect on the page — do not let generic rubrics flatten it without your choice. |
@@ -48,7 +48,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 1. Recognize thin-space stall (not "bad style" — structural retrieval failure)
 2. Offer **exactly six** full replaceable alternatives — widens solution space deliberately
-3. Author applies the final bias (pick, blend, reject) — human selection is the missing step
+3. Author applies the final bias (pick, blend, reject, or own line inspired by the set) — human decision is the missing step
 4. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Why six — theta bias rationale*
 
 **Research lineage:** Theta bias functions (1980s knowledge-representation work) model how bias and preference select among candidates; thin-solution-space collapse is the LLM-era expression of the same class of failure.

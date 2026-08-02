@@ -41,7 +41,7 @@ Author flags: emotion label + generic verb stack. Wants prosthetic, not rewrite.
 5. The room narrowed to angles — left aisle clear, right blocked by a cart.
 6. He breathed through his nose and tracked the clerk's line of sight to the door.
 
-**Author action:** Picks #3, edits to match voice: *Pulse in his ears. He fixed on the service hall, the gap beside the freezer.*
+**Author action:** Inspired by #3, edits into final line: *Pulse in his ears. He fixed on the service hall, the gap beside the freezer.*
 
 ---
 

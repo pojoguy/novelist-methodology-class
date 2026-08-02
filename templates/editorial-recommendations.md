@@ -64,7 +64,7 @@ Use for developmental feedback on manuscript passages. **Do not substitute prose
 
 No manuscript changes were made in this pass.
 
-To proceed: pick alternative #, paste your revision, or name a line fix (`CH## L##: …`).
+To proceed: use an alternative as inspiration — pick #, blend, paste your revision, or name a line fix (`CH## L##: …`).
 
 ---
 
@@ -83,4 +83,4 @@ To proceed: pick alternative #, paste your revision, or name a line fix (`CH## L
 5.
 6.
 
-Author selects before apply.
+Author uses as inspiration — picks #, blends, rejects all six, or supplies own line — before apply.

@@ -117,7 +117,7 @@ Anchor blocks: continuity entry, revision notes, meta-analysis.
 Rubric flag for AI textual degradation or protocol breach.
 
 **Six-alternative protocol**  
-Exactly six full replaceable options for flagged prose. Widens thin solution space when retrieval bias cannot discriminate; author applies final selection. Countermeasure to bias-function stall — see [`02-prosthetic-model.md`](02-prosthetic-model.md).
+Exactly six full replaceable options for flagged prose. Widens thin solution space when retrieval bias cannot discriminate; author uses them as **inspiration** — pick, blend, reject, or write your own — before apply. Countermeasure to bias-function stall — see [`02-prosthetic-model.md`](02-prosthetic-model.md).
 
 **Sparse-edge collapse**  
 Model output degrades when too many constraints bind; often manifests as thin-solution-space stall. Do not fix with more Signs.

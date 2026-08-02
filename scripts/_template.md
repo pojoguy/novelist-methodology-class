@@ -99,7 +99,7 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 ```
 [One-paragraph summary]
 
-Full write-up: [link to paired docs/ file when published on GitHub]
+Full write-up: https://github.com/pojoguy/novelist-methodology-class/blob/main/docs/XX-filename.md
 
 #CreativeWriting #LLM #WritingProcess
 ```

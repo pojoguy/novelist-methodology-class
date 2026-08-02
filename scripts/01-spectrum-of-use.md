@@ -48,9 +48,9 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 
 **Say:**
 
-> Level two: you know the beat, you can't retrieve the word. The model offers six alternatives. You pick, blend, or reject. That's not ghostwriting — that's external working memory. Same move as tapping an autocomplete suggestion.
+> Level two: you know the beat, you can't retrieve the word. The model offers six alternatives — inspiration, not a menu order. You pick, blend, reject, or write your own. That's not ghostwriting — that's external working memory. Same move as tapping an autocomplete suggestion.
 
-**On-screen:** "6 alternatives → you pick"
+**On-screen:** `6 alternatives → you decide`
 
 ---
 

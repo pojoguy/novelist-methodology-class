@@ -43,7 +43,7 @@ One-line definition (≤12 words)
 |------|----------------|
 | **Prosthetic model** | AI expands retrieval; author selects and owns prose |
 | **Apply gate** | No manuscript edit without explicit author instruction |
-| **Six-alternative protocol** | Exactly six options; widens thin solution space when bias stalls |
+| **Six-alternative protocol** | Six options as inspiration — pick, blend, reject, or own line |
 | **Thin solution space** | Bias function must return; emits triads, negation, comma-lists |
 | **Theta bias function** | 1980s framework; theoretical root of why six, not one |
 | **Stochastic system** | Outputs probability, not certainty |

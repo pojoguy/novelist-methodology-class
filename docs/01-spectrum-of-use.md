@@ -50,11 +50,11 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 ## Level 2 — Lexical prosthetic (vocabulary retrieval)
 
-**What it looks like:** You know the beat; you cannot retrieve the word, idiom, or sentence shape under load. The model offers **alternatives** — you pick, blend, or reject.
+**What it looks like:** You know the beat; you cannot retrieve the word, idiom, or sentence shape under load. The model offers **alternatives** — inspiration, not a menu order; you pick, blend, reject, or write your own.
 
 **Key rule:** Six alternatives, not one substitution. The model expands your retrieval set; it does not choose for you.
 
-**Example:** Flagged line: *"He felt afraid."* → six options that preserve somatic/tactical channel → author picks #4 and edits.
+**Example:** Flagged line: *"He felt afraid."* → six options that preserve somatic/tactical channel → author inspired by #4, edits into final line.
 
 **Why it matters:** This is how many neurodivergent authors use LLMs — external working memory for lexical access, not for plot or voice.
 

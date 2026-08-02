@@ -3,26 +3,28 @@
 ## Terms in this document
 
 **For non-technical readers:** plain-language definitions for jargon used below.  
-**Full glossary:** [`glossary.md`](glossary.md).
+**Full glossary:** `[glossary.md](glossary.md)`.
 
-| Term | Plain language |
-|------|----------------|
-| **AI (artificial intelligence)** | Software that finds patterns, makes predictions, or generates text, images, or audio — not a thinking person. |
-| **LLM (large language model)** | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools. |
-| **Generative AI** | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search. |
-| **Chat box / chat interface** | A messaging-style screen (e.g. ChatGPT) where you type prompts and get replies — what made AI visible to the public in 2022. |
-| **Stochastic** | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones. |
-| **Transformer** | The common modern design inside most LLMs; good at keeping track of context across a long passage. |
-| **Queueing theory / Erlang** | Math invented for **telephone networks** to handle random call traffic — early industrial use of probability. |
-| **Knowledge engineering** | Encoding what an expert knows as **explicit rules and files** the computer must follow — not free-form chat. |
-| **Theta bias function** | Research framework for how a system **ranks and chooses** among options when preferences conflict — root of the six-alternative idea. |
-| **Prosthetic model** | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose. |
-| **Six-alternative protocol** | When wording is stuck, the tool offers **exactly six** full options; **you** pick one before anything changes in the manuscript. |
-| **Retrieval bias** | The hidden scoring that pushes a system toward certain words or phrases when it must output something. |
-| **Thin solution space** | Too many rules at once; the system cannot find a good answer and emits vague or "not A, not B, but C" prose. |
-| **Governance / apply gate** | **You** must explicitly approve before any suggested text is pasted into your draft. |
-| **RAG** | **Search** over your manuscript or notes to find relevant passages — locates text; does not prove continuity. |
-| **Whisper / Chirp** | Widely used **speech-to-text** engines (OpenAI and Google families) behind captions and dictation. |
+
+| Term                             | Plain language                                                                                                                                   |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **AI (artificial intelligence)** | Software that finds patterns, makes predictions, or generates text, images, or audio — not a thinking person.                                    |
+| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                                   |
+| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                         |
+| **Chat box / chat interface**    | A messaging-style screen (e.g. ChatGPT) where you type prompts and get replies — what made AI visible to the public in 2022.                     |
+| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                              |
+| **Transformer**                  | The common modern design inside most LLMs; good at keeping track of context across a long passage.                                               |
+| **Queueing theory / Erlang**     | Math invented for **telephone networks** to handle random call traffic — early industrial use of probability.                                    |
+| **Knowledge engineering**        | Encoding what an expert knows as **explicit rules and files** the computer must follow — not free-form chat.                                     |
+| **Theta bias function**          | Research framework for how a system **ranks and chooses** among options when preferences conflict — root of the six-alternative idea.            |
+| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                       |
+| **Six-alternative protocol**     | When wording is stuck, the tool offers **exactly six** full options; **you** use them as **inspiration** — pick, blend, reject, or write your own — before anything changes in the manuscript. |
+| **Retrieval bias**               | The hidden scoring that pushes a system toward certain words or phrases when it must output something.                                           |
+| **Thin solution space**          | Too many rules at once; the system cannot find a good answer and emits vague or "not A, not B, but C" prose.                                     |
+| **Governance / apply gate**      | **You** must explicitly approve before any suggested text is pasted into your draft.                                                             |
+| **RAG**                          | **Search** over your manuscript or notes to find relevant passages — locates text; does not prove continuity.                                    |
+| **Whisper / Chirp**              | Widely used **speech-to-text** engines (OpenAI and Google families) behind captions and dictation.                                               |
+
 
 ---
 
@@ -36,7 +38,11 @@ This document gives skeptics and newcomers three things at once:
 
 ---
 
+
+
 ## Part 1: AI is not new
+
+
 
 ### Before the chat box
 
@@ -56,6 +62,8 @@ This document gives skeptics and newcomers three things at once:
 
 ---
 
+
+
 ### The stochastic lineage — what LLMs are actually built on
 
 LLMs feel like oracles. Under the hood they are **stochastic systems** — machines that reason in **probabilities**, not certainties. Understanding that lineage explains why they sound plausible, why they hallucinate, and why **governance** (human selection, apply gates, six alternatives) is not optional for craft.
@@ -64,21 +72,23 @@ LLMs feel like oracles. Under the hood they are **stochastic systems** — machi
 
 #### Where it started (centuries before ChatGPT)
 
-| Period | Development | Link to language models |
-|--------|-------------|-------------------------|
-| **17th–18th c.** | Probability theory (Pascal, Fermat, Laplace; later **Bayes**) | Framework for "how likely, given evidence?" — not "what is absolutely true?" |
-| **19th c.** | **Statistical mechanics** (Boltzmann, Gibbs) | Macro behavior from huge numbers of random micro-events — order from uncertainty at scale |
-| **Early 1900s** | **Markov chains** (Andrey Markov) | Next state depends only on current state, with **transition probabilities** — memory as a probability table |
-| **1909–1920s** | **Telephone switching and queueing theory** (Agner Krarup **Erlang**, Copenhagen Telephone Co.) | **First industrial-scale stochastic systems:** model call arrivals, trunk occupancy, and blocking as random processes; **Erlang formulas** still used in capacity planning. The phone network had to work under uncertainty before anyone said "AI." |
-| **1948** | **Information theory** (Claude Shannon, **Bell Labs**) | Language modeled as a **stochastic process** — symbols with statistical regularity, not fixed rules. Shannon's employer built the telephone infrastructure Erlang's math described. |
-| **1960s–80s** | **Hidden Markov Models (HMMs)** | Dominant speech-recognition paradigm: guess hidden word sequence from noisy audio via probability — direct descendant of telephone-era statistical signal work |
-| **1960s** | **British electronic telephone switching** (UK Post Office **TXE** family — e.g. **TXE4** 1963, **TXE2** 1966) | Parallel to Bell Labs ESS: stored-program and electronic switching replace Strowger electromechanics; national network engineered for uncertain call load on finite trunks — Erlang's math made operational at scale |
-| **1960s** | **Stochastic computing** (**Brian R. Gaines**, **Standard Telephones and Cables Ltd. / STL**, Britain) | Inside the same British telecom-industrial world: Gaines characterizes **stochastic computing** while developing processors capable of **learning** — probability-based computation as engineering, not metaphor |
-| **1960s–80s** | **Computerized telephone switching** (e.g. Bell Labs **ESS** — Electronic Switching System) | US parallel to TXE: routing and traffic management move to software |
-| **1990s–2000s** | **N-gram language models** | Direct ancestor of LLMs: probability of the next word given previous words, estimated from corpus counts |
-| **1980s–present** | **Stochastic gradient descent (SGD)** | How neural nets train: update weights from **random batches** of data — learning itself is a stochastic process |
-| **2010s** | Neural language models, word embeddings, RNNs/LSTMs | Same job as n-grams — predict next token — with learned distributed representations |
-| **2017–present** | **Transformers** (attention) at scale | Still output a **probability distribution over the vocabulary** for each next token; "generation" is **sampling** from that distribution |
+
+| Period            | Development                                                                                                    | Link to language models                                                                                                                                                                                                                              |
+| ----------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **17th–18th c.**  | Probability theory (Pascal, Fermat, Laplace; later **Bayes**)                                                  | Framework for "how likely, given evidence?" — not "what is absolutely true?"                                                                                                                                                                         |
+| **19th c.**       | **Statistical mechanics** (Boltzmann, Gibbs)                                                                   | Macro behavior from huge numbers of random micro-events — order from uncertainty at scale                                                                                                                                                            |
+| **Early 1900s**   | **Markov chains** (Andrey Markov)                                                                              | Next state depends only on current state, with **transition probabilities** — memory as a probability table                                                                                                                                          |
+| **1909–1920s**    | **Telephone switching and queueing theory** (Agner Krarup **Erlang**, Copenhagen Telephone Co.)                | **First industrial-scale stochastic systems:** model call arrivals, trunk occupancy, and blocking as random processes; **Erlang formulas** still used in capacity planning. The phone network had to work under uncertainty before anyone said "AI." |
+| **1948**          | **Information theory** (Claude Shannon, **Bell Labs**)                                                         | Language modeled as a **stochastic process** — symbols with statistical regularity, not fixed rules. Shannon's employer built the telephone infrastructure Erlang's math described.                                                                  |
+| **1960s–80s**     | **Hidden Markov Models (HMMs)**                                                                                | Dominant speech-recognition paradigm: guess hidden word sequence from noisy audio via probability — direct descendant of telephone-era statistical signal work                                                                                       |
+| **1960s**         | **British electronic telephone switching** (UK Post Office **TXE** family — e.g. **TXE4** 1963, **TXE2** 1966) | Parallel to Bell Labs ESS: stored-program and electronic switching replace Strowger electromechanics; national network engineered for uncertain call load on finite trunks — Erlang's math made operational at scale                                 |
+| **1960s**         | **Stochastic computing** (**Brian R. Gaines**, **Standard Telephones and Cables Ltd. / STL**, Britain)         | Inside the same British telecom-industrial world: Gaines characterizes **stochastic computing** while developing processors capable of **learning** — probability-based computation as engineering, not metaphor                                     |
+| **1960s–80s**     | **Computerized telephone switching** (e.g. Bell Labs **ESS** — Electronic Switching System)                    | US parallel to TXE: routing and traffic management move to software                                                                                                                                                                                  |
+| **1990s–2000s**   | **N-gram language models**                                                                                     | Direct ancestor of LLMs: probability of the next word given previous words, estimated from corpus counts                                                                                                                                             |
+| **1980s–present** | **Stochastic gradient descent (SGD)**                                                                          | How neural nets train: update weights from **random batches** of data — learning itself is a stochastic process                                                                                                                                      |
+| **2010s**         | Neural language models, word embeddings, RNNs/LSTMs                                                            | Same job as n-grams — predict next token — with learned distributed representations                                                                                                                                                                  |
+| **2017–present**  | **Transformers** (attention) at scale                                                                          | Still output a **probability distribution over the vocabulary** for each next token; "generation" is **sampling** from that distribution                                                                                                             |
+
 
 **Telephone switching — easy to miss, hard to overstate:** Long before chat interfaces, the public telephone network was one of the first infrastructures that **had** to be engineered with stochastic math. Calls arrive at random times. Trunks are finite. A switch must decide how to route traffic when demand is uncertain. Erlang treated that uncertainty formally; Shannon later treated **communication itself** as statistical.
 
@@ -88,13 +98,15 @@ At **Standard Telephones and Cables (STL)** — a major British telecom-equipmen
 
 **Where Gaines enters the picture for this repository:**
 
-| Period | Gaines | Link forward |
-|--------|--------|--------------|
-| **1960s** | STL, Britain — **stochastic computing**, learning processors | Foundations of probability-as-computation inside telecom industry |
-| **1967–1975** | University of **Essex** — electrical engineering / computer engineering | Bridges industrial R&D and academic systems research |
-| **1980s** | University of **Calgary** — **Knowledge Science Institute**; knowledge-based systems with **Mildred Shaw**; Banff knowledge-acquisition school | Expert systems, repertory grids, automated knowledge elicitation — **explicit rules and graph state** |
-| **1980s** | **David Johnson** studies under Gaines, **Joan Vickers**, and Shaw at Calgary | First-hand knowledge engineering; early **theta bias functions** research |
-| **Present** | Methodology generalized in this repo | PGMs + session anchors (graph state) + prosthetic gates (governed stochastic sampling) |
+
+| Period        | Gaines                                                                                                                                         | Link forward                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **1960s**     | STL, Britain — **stochastic computing**, learning processors                                                                                   | Foundations of probability-as-computation inside telecom industry                                     |
+| **1967–1975** | University of **Essex** — electrical engineering / computer engineering                                                                        | Bridges industrial R&D and academic systems research                                                  |
+| **1980s**     | University of **Calgary** — **Knowledge Science Institute**; knowledge-based systems with **Mildred Shaw**; Banff knowledge-acquisition school | Expert systems, repertory grids, automated knowledge elicitation — **explicit rules and graph state** |
+| **1980s**     | **David Johnson** studies under Gaines, **Joan Vickers**, and Shaw at Calgary                                                                  | First-hand knowledge engineering; early **theta bias functions** research                             |
+| **Present**   | Methodology generalized in this repo                                                                                                           | PGMs + session anchors (graph state) + prosthetic gates (governed stochastic sampling)                |
+
 
 Gaines is the **through-line** from 1960s British stochastic telecom R&D to 1980s knowledge engineering to today's governed LLM workflows. This repository is not namedropping a famous advisor — it is documenting methodology that inherits **both** sides of that arc: **explicit knowledge state** (expert-systems instinct) and **stochastic generation under constraint** (LLM reality).
 
@@ -105,27 +117,29 @@ None of this is a sidebar. It is the **continuous thread** from "what word proba
 #### What an LLM does, stripped of mystique
 
 1. **Training:** Ingest vast text. Adjust billions of parameters so the model assigns **high probability** to continuations that match patterns in the training corpus. Training uses SGD — stochastic by construction.
-
 2. **Inference:** Read your prompt. For each next token, output a ranked probability distribution over possible words/subwords.
-
 3. **Generation:** **Sample** from that distribution (temperature, top-*p*, top-*k* control how random). Append token. Repeat.
 
 The model does not "retrieve a fact." It **rolls weighted dice** biased by everything it has seen. Usually the highest-probability token is generic — that is why unprompted LLM prose converges on **statistical average** (the "18 Signs" problem in craft rubrics).
 
 #### Why this matters for writers
 
-| Stochastic property | Craft consequence |
-|---------------------|-------------------|
-| Outputs are **likely**, not **true** | Hallucinated citations, dates, geography — plausible wrong |
-| Same prompt, different runs | Non-reproducible "fixes" without locked state and author picks |
-| High-probability = **common** | Cliché syntax, goldilocks words, proverb dialogue — the mode of the training distribution |
-| Constraint pile-up | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery) |
+
+| Stochastic property                  | Craft consequence                                                                                                                                    |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Outputs are **likely**, not **true** | Hallucinated citations, dates, geography — plausible wrong                                                                                           |
+| Same prompt, different runs          | Non-reproducible "fixes" without locked state and author picks                                                                                       |
+| High-probability = **common**        | Cliché syntax, goldilocks words, proverb dialogue — the mode of the training distribution                                                            |
+| Constraint pile-up                   | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery) |
+
 
 **The prosthetic model exists because the engine is stochastic** — and because **retrieval bias must return something** even when the solution space is too thin to support a good single answer. You do not "trust" the model; you **constrain** it, **audit** its output, **widen** the retrieval set with six alternatives when bias stalls, and **select** from that set — the same posture you already use when autocomplete offers three words and you tap one.
 
 Expert systems (Part 1, 1970s–80s) tried **explicit rules**. Modern LLMs use **implicit statistics** at scale. Serious authoring methodology combines both instincts: **graph state and locks** (knowledge engineering) plus **governed sampling** (stochastic generation under gates).
 
 ---
+
+
 
 ### This is not the first craft panic
 
@@ -143,6 +157,8 @@ Some fears had merit (homogenization, over-reliance). None eliminated the craft.
 LLMs are the next layer. The relevant question is not "AI yes or no" but **which domain, under what governance, with what human mass remaining**.
 
 ---
+
+
 
 ## Part 2: AI you already use (and don't call AI)
 
@@ -249,9 +265,11 @@ If yes to any of these, you already practice **human-in-the-loop selection** fro
 
 ---
 
+
+
 ## Part 3: Generative vs transformer — plain language
 
-See also [**The stochastic lineage**](#the-stochastic-lineage--what-llms-are-actually-built-on) in Part 1 — LLMs are stochastic systems before they are chat products.
+See also **[The stochastic lineage](#the-stochastic-lineage--what-llms-are-actually-built-on)** in Part 1 — LLMs are stochastic systems before they are chat products.
 
 **Generative AI** — systems that **produce** new text, images, audio, or code from input. Not all generators are transformers. At inference time, most **sample** from a probability distribution — they do not look up a single correct answer.
 
@@ -264,6 +282,8 @@ See also [**The stochastic lineage**](#the-stochastic-lineage--what-llms-are-act
 **Why distinguish:** Critics often argue against "generative AI" as if it were one monolith. Practitioners argue about **governance** — retrieval vs substitution, audit vs ghostwrite — regardless of architecture. This repo is about **methodology**, not model worship. Methodology starts with accepting **plausible ≠ true**.
 
 ---
+
+
 
 ## Part 4: Why the maintainer is qualified to speak on this
 
@@ -298,6 +318,8 @@ Someone who builds agent graphs for data management is not guessing when they sa
 - **Autistic** author using LLM as **vocabulary and continuity prosthetic** — external working memory for lexical retrieval under load, not voice replacement
 - Documented **failure modes** (ghostwrite drift, proverb dialogue, negation triangulation) and **countermeasures** (two-step pipeline, six-alternative protocol) from live sessions — see `[06-failure-modes.md](06-failure-modes.md)`
 
+
+
 ### What this qualification is — and is not
 
 
@@ -313,6 +335,8 @@ David is qualified to discuss **how to constrain LLMs in creative work** because
 
 ---
 
+
+
 ## Part 5: What skeptics should do with this
 
 1. **Separate UI from capability** — ChatGPT made models visible; it did not invent statistical assistance
@@ -323,6 +347,8 @@ David is qualified to discuss **how to constrain LLMs in creative work** because
 If after reading this you still reject all AI in fiction — that is a valid **values** position. This repository asks only that you argue against **what serious practitioners actually do**, not against a straw-man prompt.
 
 ---
+
+
 
 ## Next
 

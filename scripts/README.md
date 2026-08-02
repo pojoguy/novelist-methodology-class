@@ -42,7 +42,7 @@ Each script includes:
 - **Shorts (≤60s):** One idea per video; hook in frame 1; text on screen for silent viewers
 - **Explainers (3–5 min):** Hook → problem → framework → one example → CTA
 - **Series order:** `00` → `01` → `02` for skeptics; `06` and `02` work as standalone hooks
-- **Repo link for description:** point to the paired `docs/` file for viewers who want depth
+- **Repo link for description:** https://github.com/pojoguy/novelist-methodology-class — point to the paired `docs/` file for depth
 
 ---
 

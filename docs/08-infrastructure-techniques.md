@@ -213,7 +213,7 @@ Full-chapter developmental pass load order:
 
 Output shape unchanged: verdict → what's working → recommendations — but structural items cite **verify events**, not model memory.
 
-**Apply gate:** Verify flags do not auto-rewrite. Author picks six-alternative or named line fix.
+**Apply gate:** Verify flags do not auto-rewrite. Author decides from six-alternative set or named line fix.
 
 ### Discourse layer — why it matters
 
@@ -265,7 +265,7 @@ Typical packs:
 1. `comparanda_list` — confirm packs and lenses
 2. `comparanda_compare` — `lens_id`, `pack_id`, subject (`source_file` + line span or `passage_ids`)
 3. Agent fills report using **editorial recommendations format** — diagnosis only
-4. Prosthetic gate: six alternatives only if author asks; apply only on pick
+4. Prosthetic gate: six alternatives only if author asks; apply only after author decision
 
 ### Lens: chapter_hook failure modes
 

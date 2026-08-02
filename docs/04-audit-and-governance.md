@@ -19,7 +19,7 @@
 | **Tagline gate** | Blocks poster-style summaries (*freedom vs duty*) masquerading as craft advice. |
 | **PGM lock** | A fact **frozen in your project files** — proposed edits must not contradict it. |
 | **`CH## L##`** | Citation form: **chapter number and line number** (e.g. CH07 L63) so fixes target the right text. |
-| **Six-alternative protocol** | Six complete options for a flagged phrase; you select before apply. |
+| **Six-alternative protocol** | Six complete options for a flagged phrase; you use them as inspiration — pick, blend, reject, or write your own — before apply. |
 
 ---
 
