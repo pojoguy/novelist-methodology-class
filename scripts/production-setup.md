@@ -39,7 +39,7 @@ Gear and workflow for the **LLM Methodology** YouTube series.
 | **Capture / record** | **OBS Studio** | Scene switching, recording, optional teleprompter monitor |
 | **Audio I/O** | **Logitech G733** headset | Mic + monitoring; wireless — mind latency and RF noise |
 | **Edit** | **DaVinci Resolve** | Cut, color, Fairlight audio, Fusion titles, deliver |
-| **Display** | **70" 4K monitor** (single) | Teleprompter + Slides as **windows** on same panel; OBS program = **camera via DeckLink ingest** unless compositing |
+| **Display** | **70" 4K monitor** (single) | Teleprompter (+ optional script cue window); **no** viewer-facing text burned in at record |
 
 ---
 
@@ -113,18 +113,19 @@ Logitech G733 (mic + headphones)
 
 | Scene | Contents |
 |-------|----------|
-| **A-Roll** | Camera via **DeckLink ingest** — full frame (default record) |
-| **A-Roll + Lower Third** | DeckLink ingest + blue-chroma Slides bar (optional — see § On-screen text) |
+| **A-Roll** | Camera via **DeckLink ingest** — full frame (only record scene for talking head) |
 | **B-Roll / Screen** | Display Capture or Window Capture for phone UI, maps, banking |
-| **End card** | Static PNG or Resolve-only (easier in Resolve) |
+| **End card** | Resolve lower third / title template (not OBS) |
 
-**Teleprompter + Slides:** One **70" 4K** panel — prompter and deck as separate windows (see § Single-monitor layout). OBS **A-Roll** records **camera via DeckLink ingest** only; the monitor is a separate GPU output and is not in the program feed unless you explicitly composite (blue-chroma lower third).
+**Record rule:** OBS captures **clean camera** only. All viewer-facing text = **lower thirds in Resolve** after jump cuts.
+
+**Teleprompter:** One **70" 4K** panel — prompter window (see § Single-monitor layout). OBS **A-Roll** = **DeckLink ingest** only; monitor is GPU display out and is never in the program feed.
 
 ---
 
 ## Single-monitor layout (70" 4K)
 
-Teleprompter and Google Slides / PowerPoint both run as **windows on the same display**. The Canon stays on its tripod; the monitor is your **read surface**, not a second camera.
+Teleprompter runs as a **window on the same display**. The Canon stays on its tripod; the monitor is your **read surface**, not a second camera. Optional second window: script **on-screen cue list** (private; not recorded) — mirrors `On-screen` tables in the episode script.
 
 ### Camera ↔ monitor placement
 
@@ -146,34 +147,23 @@ Teleprompter and Google Slides / PowerPoint both run as **windows on the same di
 │     (unused / dimmed desktop)               │
 │                                             │
 ├──────────────────────┬──────────────────────┤
-│  Slides presenter    │  OBS preview (small) │  ← slide clock; optional
-│  or next-card strip  │  not recorded        │
+│  Script on-screen    │  OBS preview (small) │  ← cue list optional; not recorded
+│  cues (optional)     │                      │
 └──────────────────────┴──────────────────────┘
 ```
 
 | Window | Role | Notes |
 |--------|------|--------|
 | **Teleprompter** | Scroll `00-history-and-authority.md` teleprompter block | High contrast; **large type** (70" rewards 48–72 pt+); auto-scroll or foot pedal / hotkey |
-| **Slides** | **Presenter clock** — current card, next cue | **Windowed** speaker view or narrow strip; avoid fullscreen deck over prompter mid-take |
+| **On-screen cues** | Optional private list — what lower thirds to add in post | Copy from script `On-screen` tables; **not** burned into OBS |
 | **OBS** | Preview + record control | Small corner; **do not** fullscreen OBS over prompter while rolling |
 
 **Record session:** Windows **Focus assist / Do not disturb** — no toast notifications over prompter.
 
 ### 4K / Windows scaling
 
-- OBS **Window Capture** crop coords follow **display scaling** (125%, 150%, etc.). After any scaling change, re-test chroma crop.
 - Teleprompter app font size is independent of OS scale — set by eye at your seated distance, not by resolution number.
-- Camera **HDMI out** → DeckLink **HDMI in** remains **1080p**; the 70" panel is **GPU display out** (4K UI only — teleprompter, Slides, OBS control).
-
-### Slides on same monitor + blue chroma
-
-Works if:
-
-1. **Prompter** = separate window (upper) — **not** inside the captured Slides region.
-2. **Slides** = resizable window; OBS **Window Capture** + crop to **lower-third bar only**; Chroma Key on blue.
-3. Or record **clean A-Roll** (DeckLink ingest only) and add lower thirds in Resolve — avoids fighting window layout on one panel.
-
-**Parallel safety:** Screen-record the Slides window (no key) while presenting — rescue sync in Resolve without re-shooting face.
+- Camera **HDMI out** → DeckLink **HDMI in** remains **1080p**; the 70" panel is **GPU display out** (4K UI only — teleprompter, cue list, OBS control).
 
 ### What does *not* go on this monitor
 
@@ -223,69 +213,40 @@ Record in this order to minimize setup churn:
 
 ---
 
-## On-screen text — hybrid workflow
+## On-screen text — lower thirds (Resolve)
 
-**Default:** Build lower thirds and labels in **DaVinci Resolve** (Edit → Titles or Fusion Text+). Reuse one template per series — retime on the **cut** timeline after jump cuts.
+**Locked for this series:** All viewer-facing text is **lower thirds (and full-frame titles) in DaVinci Resolve** — not live Slides, not OBS chroma key. Record **clean A-roll**; add text after jump cuts on the **cut** timeline.
 
-**Optional live path:** **Google Slides or PowerPoint** on a **blue** background, chroma-keyed in OBS — works well for this rig (less skin spill than green on talking-head footage).
+### Why post, not live
 
-### Why hybrid (not all-live)
+Jump-cut editing removes breaths and false starts **after** record. Text burned into the camera take is locked to **wall-clock time** — a 4 s cut makes any live overlay early or wrong. Resolve lower thirds sit on the edited timeline and retime in seconds.
 
-Jump-cut editing removes breaths and false starts **after** record. Text burned into the camera take is locked to **wall-clock time** — a 4 s cut makes the slide early or wrong. Resolve overlays sit on the edited timeline.
+| Text type | Resolve treatment |
+|-----------|-------------------|
+| Cold open (`YOU ALREADY USE AI`) | **Full-frame title** + fade (not a lower third) |
+| Beat 1–2 terms, Beat 4–5 authority lines | **Lower third** bar on A-roll |
+| Beat 2 timeline | **Graphic** (Fusion or imported PNG) — may use full width |
+| Beat 3 montage | **Lower third** or **burned label** on B-roll track only |
+| Close — repo URL, end card | **Title** + end-card template |
 
-| Text type | Where | Method |
-|-----------|--------|--------|
-| Cold open title (`YOU ALREADY USE AI`) | 0:00–0:08 | **Resolve** — full-frame title + fade |
-| Beat 1 timed cues + icons | Over cuts / B-roll | **Resolve** |
-| Beat 2 timeline + stochastic labels | Graphics + lower thirds | **Resolve** (timeline is not a live slide) |
-| Beat 3 montage labels | Full-screen B-roll | **Resolve** only |
-| Beat 4 craft-panic list | Steady cam | **Resolve** or **live blue chroma** |
-| Beat 5 authority cards | Steady cam | **Resolve** or **live blue chroma** |
-| Close — repo URL, end card | 4:55+ | **Resolve** |
+Episode script `On-screen` tables are the **cue sheet** for Resolve — place after picture lock; script timestamps are guides only (they shift after cuts).
 
-**Slides as presenter notes:** Window on the same 70" panel — advance to your voice; does not need to burn into the program feed (default: Resolve for on-screen text).
-
-### Blue chroma (preferred over green for this series)
-
-| | Blue screen | Green screen |
-|---|-------------|--------------|
-| **Skin spill** | Usually less on forehead/neck | Common on talking-head footage |
-| **This rig** | **Preferred** for live composite | Use only if blue wardrobe conflict |
-| **Avoid on camera** | Blue shirt, tie, cool LED-only key | Green clothing |
-
-**Slide deck setup (Slides or PowerPoint):**
-
-- Background: **one flat blue** — e.g. `#0047AB` or broadcast blue; no gradients.
-- Layout: **lower-third bar** only (text on blue bar; or full slide keyed with crop so only the bar composites).
-- Typography: high contrast (white on blue bar); test at 1080p before session.
-
-**OBS — A-Roll + Lower Third scene:**
-
-1. **Video Capture Device** — DeckLink **ingest** (bottom layer).
-2. **Window Capture** — Slides in presentation mode (top layer); crop to lower-third region if possible.
-3. **Filter on Slides source:** Chroma Key — key color = slide blue; **Similarity** low; **Smoothness** modest; **Spill Reduction** toward blue.
-4. **Key light:** Slight warm (amber) on face — separates skin from blue spill.
-5. **Wardrobe:** No blue on camera.
-
-**Parallel safety:** Screen-record the Slides window (no key) in a second OBS scene or separate track. If jump cuts break live timing, re-key or replace the bar in Resolve without re-shooting A-roll.
-
-### Resolve — reusable lower-third template
-
-Build once; duplicate per episode:
+### Lower-third template (build once per series)
 
 | Spec | Value |
 |------|-------|
-| **Safe area** | Bar within lower **15%** of frame; clear of face in standard framing |
-| **Font** | One sans-serif; **36–48 px** @ 1080p for terms; **56–72 px** for cold open |
-| **Duration** | Term cards **3–5 s**; montage labels **2–3 s** (per script) |
+| **Safe area** | Bar within lower **15%** of frame; clear of face in standard HF G20 framing |
+| **Font** | One sans-serif; **36–48 px** @ 1080p for terms; **56–72 px** for cold-open full-frame title |
+| **Style** | Dark bar or semi-transparent strip; white text; optional thin accent line |
+| **Duration** | Term lower thirds **3–5 s**; montage labels **2–3 s** (per script) |
 | **Transition** | **8–12 frame** fade in/out |
-| **Tracks** | Titles above A-roll; montage labels on B-roll track only |
+| **Tracks** | V2+ titles over A-roll; montage labels on B-roll video track |
 
-Episode 0 script on-screen tables are the cue sheet — place titles after picture lock, not from script timestamps alone (timestamps shift after cuts).
+**Resolve:** Edit → Titles, or Fusion **Text+** saved as a reusable macro/template. Duplicate per episode; edit text only.
 
-### B-roll: full frame, not PIP
+### B-roll: full frame + lower thirds
 
-Proof footage (phone UI, check deposit, night mode) stays **full-screen** on cuts. Lower thirds on face only during A-roll thesis lines — not over B-roll proof shots. See script shot lists per beat.
+Proof footage (phone UI, check deposit, night mode) stays **full-screen** on cuts. Lower thirds on **A-roll** thesis lines only — not over B-roll proof shots unless script specifies a short montage label. See episode shot lists.
 
 ---
 
@@ -305,7 +266,7 @@ Proof footage (phone UI, check deposit, night mode) stays **full-screen** on cut
 2. **A-roll base:** Place full take; blade on script beat timestamps (chapter markers in script).
 3. **Beat 3:** Lay VO on audio track 1; B-roll on V1, no camera.
 4. **Jump cuts:** Remove breaths and false starts; 2–4 frame cross-dissolve optional if jump feels harsh.
-5. **On-screen text:** Per § On-screen text — Resolve templates for most cues; optional blue-chroma bars only on steady-cam beats (4–5).
+5. **Lower thirds:** Per § On-screen text — apply template after picture lock; retime to cut audio.
 
 ### Fairlight — audio
 
@@ -349,11 +310,10 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 - [ ] HF G20 HDMI out live; focus / WB / exposure locked
 - [ ] OBS test record 10 s — play back audio + video
 - [ ] Teleprompter script loaded (`00-history-and-authority.md` → teleprompter block)
-- [ ] Teleprompter window upper-center; Slides clock windowed (not fullscreen over script)
+- [ ] Teleprompter window upper-center; optional on-screen **cue list** (private, not in OBS)
+- [ ] Resolve **lower-third template** ready (`Ep00_YYYY-MM-DD` project or shared series template)
 - [ ] Prompter font readable at seated distance on 70" panel
 - [ ] Focus assist / notifications off
-- [ ] Lower thirds: Resolve template ready **or** blue Slides window + OBS chroma test (10 s)
-- [ ] No blue clothing if using live chroma lower thirds
 - [ ] Room quiet — HVAC, notifications off
 - [ ] Water; script beats marked
 
@@ -366,7 +326,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 - [ ] Resolve project saved with date `Ep00_YYYY-MM-DD`
 - [ ] Captions: Resolve auto-caption or YouTube → correct `Erlang`, `Gaines`, `Whisper`, `Chirp`, `stochastic`
 - [ ] Blur banking PII in check-deposit shots
-- [ ] On-screen text retimed to **cut** timeline (not raw record timestamps)
+- [ ] Lower thirds applied and retimed to **cut** timeline (not raw record timestamps)
 - [ ] Description + tags from script file
 - [ ] End screen: Subscribe, playlist, Ep. 1
 
@@ -387,6 +347,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | **Locked:** lower thirds in Resolve only; removed live chroma/Slides burn-in |
 | 2026-08-02 | DeckLink = HDMI ingest (input), not display output; signal-flow diagram |
 | 2026-08-02 | Single 70" 4K monitor: teleprompter + Slides window layout; clarify phone B-roll |
 | 2026-08-02 | On-screen text: hybrid Resolve + optional blue-chroma Slides; B-roll full-frame rule |

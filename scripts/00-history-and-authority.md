@@ -60,7 +60,7 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 
 **Rig:** Canon HF G20 → Blackmagic DeckLink → OBS; Logitech G733 mic; edit in DaVinci Resolve. Full signal flow, OBS scenes, Resolve delivery, and session order: `[production-setup.md](production-setup.md)`.
 
-Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source **B-roll** per shot list. On-screen text can be added in post — cues below.
+Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source **B-roll** per shot list. **Lower thirds and titles in DaVinci Resolve** (post) — script `On-screen` tables are the cue sheet.
 
 **Episode 0 session order:** (1) Cold open + A-roll Beats 1, 2, 4, 5 + Close in one sitting → (2) Beat 3 VO → (3) phone/screen B-roll → (4) pickups.
 
