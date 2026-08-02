@@ -175,10 +175,10 @@ Teleprompter runs as a **window on the same display**. The Canon stays on its tr
 | Demo type | Capture | Tool |
 |-----------|---------|------|
 | **Level 0 contrast** | OBS window capture — browser chat UI | **Frontier LLM only** — no Cursor, no project rules |
-| **Levels 2–7** | OBS window capture — Cursor / repo | Governed stack per episode scripts |
+| **Levels 1–7** | OBS window capture — frontier and/or Cursor | [`01c-spectrum-demos-index.md`](01c-spectrum-demos-index.md) — per-level scripts + fixtures |
 | **Training bias demo** | Frontier chat — Gettysburg + Bible prompts | [`07b-training-bias-demo.md`](07b-training-bias-demo.md) |
 
-Level 0 script: [`01b-level-zero-demo.md`](01b-level-zero-demo.md). Use **synthetic** sample lines only on camera.
+Level 0: [`01b-level-zero-demo.md`](01b-level-zero-demo.md). Levels 1–7: [`01c-level-01-brainstorm.md`](01c-level-01-brainstorm.md) … [`01c-level-07-agentic.md`](01c-level-07-agentic.md). Fixtures: [`../examples/spectrum-demo-fixtures/`](../examples/spectrum-demo-fixtures/). Use **synthetic** sample lines only on camera.
 
 ---
 
@@ -358,6 +358,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 | Date | Change |
 |------|--------|
 | 2026-08-02 | Demo environments: frontier chat for L0; Cursor for L2+ (`01b-level-zero-demo.md`) |
+| 2026-08-02 | Ep. 01C suite: Levels 1–7 demos + fixtures (`01c-spectrum-demos-index.md`) |
 | 2026-08-02 | **Locked:** lower thirds in Resolve only; removed live chroma/Slides burn-in |
 | 2026-08-02 | DeckLink = HDMI ingest (input), not display output; signal-flow diagram |
 | 2026-08-02 | Single 70" 4K monitor: teleprompter + Slides window layout; clarify phone B-roll |

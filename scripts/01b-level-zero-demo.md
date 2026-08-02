@@ -16,6 +16,8 @@
 
 **Next in series:** Ep. 02 [`02-prosthetic-model.md`](02-prosthetic-model.md) — governed stack (Cursor + gates).
 
+**Companion suite:** Ep. 01C [`01c-spectrum-demos-index.md`](01c-spectrum-demos-index.md) — Levels 1–7 screen demos.
+
 ---
 
 ## Demo environment — locked

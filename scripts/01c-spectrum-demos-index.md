@@ -1,0 +1,100 @@
+# Spectrum Level Demos — Index (Levels 1–7)
+
+## Metadata
+
+| Field | Value |
+|-------|-------|
+| **Paired doc** | `docs/01-spectrum-of-use.md` |
+| **Series** | LLM Methodology — Ep. **01C** (companion suite) |
+| **Level 0 demo** | [`01b-level-zero-demo.md`](01b-level-zero-demo.md) — frontier chat only |
+| **Status** | draft |
+
+---
+
+## Suite map
+
+| Level | Script | Tool | ~Length | Record |
+|-------|--------|------|---------|--------|
+| **1** Brainstorm | [`01c-level-01-brainstorm.md`](01c-level-01-brainstorm.md) | Frontier chat | ~2:30 | Screen |
+| **2** Lexical prosthetic | [`01c-level-02-lexical.md`](01c-level-02-lexical.md) | Frontier or Cursor | ~3:00 | Screen |
+| **3** Developmental audit | [`01c-level-03-audit.md`](01c-level-03-audit.md) | Cursor + template | ~3:00 | Screen |
+| **4** Continuity / PGM | [`01c-level-04-continuity.md`](01c-level-04-continuity.md) | Cursor + `demo-pgm.json` | ~3:00 | Screen |
+| **5** Grounding sandbox | [`01c-level-05-grounding.md`](01c-level-05-grounding.md) | **This Cursor** + `geography_query` | ~3:00 | Screen |
+| **6** Production blueprint | [`01c-level-06-production.md`](01c-level-06-production.md) | Frontier chat | ~2:30 | Screen |
+| **7** Agentic workflow | [`01c-level-07-agentic.md`](01c-level-07-agentic.md) | Cursor + rules + two-step | ~3:30 | Screen |
+
+**Suggested record order:** 1 → 2 → 3 → 4 → 5 → 6 → 7 in one screen-capture session (frontier segments first, then switch to Cursor). Optional A-roll ladder intro from [`01-spectrum-of-use.md`](01-spectrum-of-use.md).
+
+**Shared fixtures:** [`../examples/spectrum-demo-fixtures/`](../examples/spectrum-demo-fixtures/)
+
+**Production:** [`production-setup.md`](production-setup.md) — lower thirds in Resolve; clean screen capture.
+
+**Disclosure (say once per session or compilation):** *"Staged demos on synthetic prose — not my manuscript workflow."*
+
+**Shared sample line (L0, L2–L3):**
+
+```text
+He felt afraid and looked for a way out.
+```
+
+---
+
+## Pre-roll (all levels)
+
+- [ ] Synthetic fixtures only — [`../examples/spectrum-demo-fixtures/`](../examples/spectrum-demo-fixtures/)
+- [ ] Frontier segments: new chat, no custom instructions
+- [ ] Cursor segments: governed project open; show file **unchanged** after audit/query beats
+- [ ] Browser zoom 100–125%; DND on; blur account PII in post
+
+---
+
+## POST-PRODUCTION (suite)
+
+- [ ] Lower third at each level: `Level N · [name]` (Resolve template)
+- [ ] End cards → Ep. 01 + Ep. 02 + playlist
+- [ ] Description: synthetic demos; tool split (frontier vs Cursor) per env matrix
+- [ ] Optional compilation chapter markers at each level boundary
+
+---
+
+## YOUTUBE DESCRIPTION — compilation (copy-paste)
+
+```
+Levels 1–7 in practice: what each rung on the spectrum looks like on screen — brainstorm, six alternatives, read-only audit, PGM continuity, grounding sandbox, production blueprint, and agentic governance.
+
+Companion to Episode 1 (The Spectrum). Staged on synthetic prose and demo fixtures only — not a real manuscript. Level 0 contrast is Ep. 01B (blank frontier chat).
+
+📄 Spectrum doc: https://github.com/pojoguy/novelist-methodology-class/blob/main/docs/01-spectrum-of-use.md
+📁 Fixtures: https://github.com/pojoguy/novelist-methodology-class/tree/main/examples/spectrum-demo-fixtures
+▶️ Ep. 01B: Level 0 · Ep. 02: Prosthetic Model
+
+#CreativeWriting #WritingProcess #LLM #AI #Authors
+```
+
+---
+
+## Environment matrix (locked)
+
+| Level | Frontier chat | Cursor + project rules |
+|-------|---------------|-------------------------|
+| 1 | ✓ primary | optional |
+| 2 | ✓ (explicit six-alt prompt) | ✓ preferred for real workflow |
+| 3 | ✗ audit shape only with template | ✓ |
+| 4 | ✗ | ✓ |
+| 5 | ✗ | ✓ |
+| 6 | ✓ | optional |
+| 7 | ✗ | ✓ required |
+
+---
+
+## Compilation edit (optional)
+
+Single upload **"Spectrum in practice (Levels 1–7)"** — ~22 min with lower thirds `Level N · [name]` at each chapter; or publish as playlist of Shorts.
+
+---
+
+## Changelog
+
+| Date | Change |
+|------|--------|
+| 2026-08-02 | L5 locked to this Cursor install + live geography_query (`01c-level-05-grounding.md`) |

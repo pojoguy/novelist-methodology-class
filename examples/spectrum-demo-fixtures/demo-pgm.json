@@ -1,0 +1,16 @@
+{
+  "project": "spectrum-demo-synthetic",
+  "character": "Mara",
+  "chapter": 4,
+  "locks": [
+    {
+      "id": "knife-river-camp",
+      "fact": "Mara left the folding knife at the river camp in CH04",
+      "status": "CANON"
+    }
+  ],
+  "calendar": {
+    "scene_date": "2026-03-15",
+    "note": "demo only"
+  }
+}
