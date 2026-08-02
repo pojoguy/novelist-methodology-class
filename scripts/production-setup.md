@@ -7,7 +7,7 @@
 | Term | Plain language |
 |------|----------------|
 | **HDMI** | Cable that carries **video** from the camera to the computer capture card. |
-| **DeckLink / capture card** | Hardware that lets the computer **receive live camera video**. |
+| **DeckLink / capture card** | **HDMI ingest (input)** — receives live signal from the camera into the PC; not a display output. |
 | **OBS** | Free software to **preview, record, and optionally stream** camera + microphone. |
 | **A-roll** | **You talking to camera** — main footage. |
 | **B-roll** | **Cutaway footage** (phone screen, stock clips) over your voice. |
@@ -39,22 +39,24 @@ Gear and workflow for the **LLM Methodology** YouTube series.
 | **Capture / record** | **OBS Studio** | Scene switching, recording, optional teleprompter monitor |
 | **Audio I/O** | **Logitech G733** headset | Mic + monitoring; wireless — mind latency and RF noise |
 | **Edit** | **DaVinci Resolve** | Cut, color, Fairlight audio, Fusion titles, deliver |
-| **Display** | **70" 4K monitor** (single) | Teleprompter + Slides as **windows** on same panel; OBS program = DeckLink only unless compositing |
+| **Display** | **70" 4K monitor** (single) | Teleprompter + Slides as **windows** on same panel; OBS program = **camera via DeckLink ingest** unless compositing |
 
 ---
 
 ## Signal flow
 
 ```text
-Canon HF G20 (mini HDMI out)
+Canon HF G20 (mini HDMI out — 1080p)
         │
         ▼
-Blackmagic DeckLink (HDMI in)
+Blackmagic DeckLink (HDMI in — capture input)
         │
         ▼
 OBS Studio ──► record (.mkv / .mp4) ──► DaVinci Resolve
         ▲
 Logitech G733 (mic + headphones)
+
+70" 4K monitor ◄── GPU display out (teleprompter / Slides — not through DeckLink)
 ```
 
 **Optional parallel path:** Record AVCHD to the G20's SD card as **backup**. If OBS or DeckLink fails mid-session, you still have camera-native footage (sync in Resolve by clap or waveform).
@@ -78,7 +80,7 @@ Logitech G733 (mic + headphones)
 
 ---
 
-## DeckLink + OBS
+## DeckLink capture (HDMI in) + OBS
 
 ### OBS — video
 
@@ -86,7 +88,7 @@ Logitech G733 (mic + headphones)
 |---------|-------|
 | **Base / output canvas** | 1920×1080 |
 | **FPS** | Match camera (24 or 30) |
-| **Source** | Video Capture Device → DeckLink input |
+| **Source** | Video Capture Device → **DeckLink** (select the card's **HDMI input** / ingest device) |
 | **Format** | UYVY or default; if banding, test alternatives in BM utilities |
 
 ### OBS — audio
@@ -111,12 +113,12 @@ Logitech G733 (mic + headphones)
 
 | Scene | Contents |
 |-------|----------|
-| **A-Roll** | DeckLink full frame (default record) |
-| **A-Roll + Lower Third** | DeckLink + blue-chroma Slides bar (optional — see § On-screen text) |
+| **A-Roll** | Camera via **DeckLink ingest** — full frame (default record) |
+| **A-Roll + Lower Third** | DeckLink ingest + blue-chroma Slides bar (optional — see § On-screen text) |
 | **B-Roll / Screen** | Display Capture or Window Capture for phone UI, maps, banking |
 | **End card** | Static PNG or Resolve-only (easier in Resolve) |
 
-**Teleprompter + Slides:** One **70" 4K** panel — prompter and deck as separate windows (see § Single-monitor layout). OBS **A-Roll** records **DeckLink only**; monitor content is not in the program feed unless you explicitly composite (blue-chroma lower third).
+**Teleprompter + Slides:** One **70" 4K** panel — prompter and deck as separate windows (see § Single-monitor layout). OBS **A-Roll** records **camera via DeckLink ingest** only; the monitor is a separate GPU output and is not in the program feed unless you explicitly composite (blue-chroma lower third).
 
 ---
 
@@ -161,7 +163,7 @@ Teleprompter and Google Slides / PowerPoint both run as **windows on the same di
 
 - OBS **Window Capture** crop coords follow **display scaling** (125%, 150%, etc.). After any scaling change, re-test chroma crop.
 - Teleprompter app font size is independent of OS scale — set by eye at your seated distance, not by resolution number.
-- DeckLink output remains **1080p**; 4K monitor is for comfort and window space only.
+- Camera **HDMI out** → DeckLink **HDMI in** remains **1080p**; the 70" panel is **GPU display out** (4K UI only — teleprompter, Slides, OBS control).
 
 ### Slides on same monitor + blue chroma
 
@@ -169,7 +171,7 @@ Works if:
 
 1. **Prompter** = separate window (upper) — **not** inside the captured Slides region.
 2. **Slides** = resizable window; OBS **Window Capture** + crop to **lower-third bar only**; Chroma Key on blue.
-3. Or record **clean A-Roll** (DeckLink only) and add lower thirds in Resolve — avoids fighting window layout on one panel.
+3. Or record **clean A-Roll** (DeckLink ingest only) and add lower thirds in Resolve — avoids fighting window layout on one panel.
 
 **Parallel safety:** Screen-record the Slides window (no key) while presenting — rescue sync in Resolve without re-shooting face.
 
@@ -259,7 +261,7 @@ Jump-cut editing removes breaths and false starts **after** record. Text burned 
 
 **OBS — A-Roll + Lower Third scene:**
 
-1. **Video Capture Device** — DeckLink (bottom layer).
+1. **Video Capture Device** — DeckLink **ingest** (bottom layer).
 2. **Window Capture** — Slides in presentation mode (top layer); crop to lower-third region if possible.
 3. **Filter on Slides source:** Chroma Key — key color = slide blue; **Similarity** low; **Smoothness** modest; **Spill Reduction** toward blue.
 4. **Key light:** Slight warm (amber) on face — separates skin from blue spill.
@@ -343,7 +345,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 ## Pre-flight checklist (day of record)
 
 - [ ] G733 charged; G HUB recognizes mic
-- [ ] DeckLink seen in OBS (preview live)
+- [ ] DeckLink **ingest** seen in OBS (preview live from camera HDMI)
 - [ ] HF G20 HDMI out live; focus / WB / exposure locked
 - [ ] OBS test record 10 s — play back audio + video
 - [ ] Teleprompter script loaded (`00-history-and-authority.md` → teleprompter block)
@@ -385,6 +387,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | DeckLink = HDMI ingest (input), not display output; signal-flow diagram |
 | 2026-08-02 | Single 70" 4K monitor: teleprompter + Slides window layout; clarify phone B-roll |
 | 2026-08-02 | On-screen text: hybrid Resolve + optional blue-chroma Slides; B-roll full-frame rule |
 | 2026-08-02 | Initial rig doc: HF G20, DeckLink, OBS, G733, Resolve |
