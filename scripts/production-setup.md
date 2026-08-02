@@ -39,6 +39,7 @@ Gear and workflow for the **LLM Methodology** YouTube series.
 | **Capture / record** | **OBS Studio** | Scene switching, recording, optional teleprompter monitor |
 | **Audio I/O** | **Logitech G733** headset | Mic + monitoring; wireless — mind latency and RF noise |
 | **Edit** | **DaVinci Resolve** | Cut, color, Fairlight audio, Fusion titles, deliver |
+| **Display** | **70" 4K monitor** (single) | Teleprompter + Slides as **windows** on same panel; OBS program = DeckLink only unless compositing |
 
 ---
 
@@ -115,9 +116,67 @@ Logitech G733 (mic + headphones)
 | **B-Roll / Screen** | Display Capture or Window Capture for phone UI, maps, banking |
 | **End card** | Static PNG or Resolve-only (easier in Resolve) |
 
-**Teleprompter:** Second monitor or tablet with teleprompter block from script file; OBS records camera only — prompter out of frame.
+**Teleprompter + Slides:** One **70" 4K** panel — prompter and deck as separate windows (see § Single-monitor layout). OBS **A-Roll** records **DeckLink only**; monitor content is not in the program feed unless you explicitly composite (blue-chroma lower third).
 
-**Slides on monitor 2 (no chroma):** Use as **presenter clock** — which card should be up — even when recording clean A-Roll only.
+---
+
+## Single-monitor layout (70" 4K)
+
+Teleprompter and Google Slides / PowerPoint both run as **windows on the same display**. The Canon stays on its tripod; the monitor is your **read surface**, not a second camera.
+
+### Camera ↔ monitor placement
+
+| Goal | Setup |
+|------|--------|
+| **Eye line** | Lens **centered on** or just below the monitor; prompter text in the **upper center** band (near lens height) |
+| **Distance** | At 70", sit far enough back that you see prompter + slide clock without scanning — typically **1.5–2.5 m**; increase prompter font if you are closer |
+| **Framing** | HF G20 on tripod — talking head; monitor is **behind or above** lens, not beside it (side placement reads as "looking off camera") |
+| **Glare** | Slight tilt or bias light so the panel does not reflect into the lens |
+
+### Recommended window zones (3840×2160)
+
+```text
+┌─────────────────────────────────────────────┐
+│         TELEPROMPTER (upper center)         │  ← scroll script; largest window
+│              near lens line                 │
+├─────────────────────────────────────────────┤
+│                                             │
+│     (unused / dimmed desktop)               │
+│                                             │
+├──────────────────────┬──────────────────────┤
+│  Slides presenter    │  OBS preview (small) │  ← slide clock; optional
+│  or next-card strip  │  not recorded        │
+└──────────────────────┴──────────────────────┘
+```
+
+| Window | Role | Notes |
+|--------|------|--------|
+| **Teleprompter** | Scroll `00-history-and-authority.md` teleprompter block | High contrast; **large type** (70" rewards 48–72 pt+); auto-scroll or foot pedal / hotkey |
+| **Slides** | **Presenter clock** — current card, next cue | **Windowed** speaker view or narrow strip; avoid fullscreen deck over prompter mid-take |
+| **OBS** | Preview + record control | Small corner; **do not** fullscreen OBS over prompter while rolling |
+
+**Record session:** Windows **Focus assist / Do not disturb** — no toast notifications over prompter.
+
+### 4K / Windows scaling
+
+- OBS **Window Capture** crop coords follow **display scaling** (125%, 150%, etc.). After any scaling change, re-test chroma crop.
+- Teleprompter app font size is independent of OS scale — set by eye at your seated distance, not by resolution number.
+- DeckLink output remains **1080p**; 4K monitor is for comfort and window space only.
+
+### Slides on same monitor + blue chroma
+
+Works if:
+
+1. **Prompter** = separate window (upper) — **not** inside the captured Slides region.
+2. **Slides** = resizable window; OBS **Window Capture** + crop to **lower-third bar only**; Chroma Key on blue.
+3. Or record **clean A-Roll** (DeckLink only) and add lower thirds in Resolve — avoids fighting window layout on one panel.
+
+**Parallel safety:** Screen-record the Slides window (no key) while presenting — rescue sync in Resolve without re-shooting face.
+
+### What does *not* go on this monitor
+
+- **Phone B-roll** — screen record or Canon shooting the phone; not the 70" display (see B-roll table below).
+- **Beat 3 montage labels** — added in Resolve on B-roll clips.
 
 ---
 
@@ -182,7 +241,7 @@ Jump-cut editing removes breaths and false starts **after** record. Text burned 
 | Beat 5 authority cards | Steady cam | **Resolve** or **live blue chroma** |
 | Close — repo URL, end card | 4:55+ | **Resolve** |
 
-**Slides as presenter notes:** Always OK on monitor 2 — advance to your voice; do not require burning into the program feed.
+**Slides as presenter notes:** Window on the same 70" panel — advance to your voice; does not need to burn into the program feed (default: Resolve for on-screen text).
 
 ### Blue chroma (preferred over green for this series)
 
@@ -288,7 +347,10 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 - [ ] HF G20 HDMI out live; focus / WB / exposure locked
 - [ ] OBS test record 10 s — play back audio + video
 - [ ] Teleprompter script loaded (`00-history-and-authority.md` → teleprompter block)
-- [ ] Lower thirds: Resolve template ready **or** blue Slides deck + OBS chroma test (10 s)
+- [ ] Teleprompter window upper-center; Slides clock windowed (not fullscreen over script)
+- [ ] Prompter font readable at seated distance on 70" panel
+- [ ] Focus assist / notifications off
+- [ ] Lower thirds: Resolve template ready **or** blue Slides window + OBS chroma test (10 s)
 - [ ] No blue clothing if using live chroma lower thirds
 - [ ] Room quiet — HVAC, notifications off
 - [ ] Water; script beats marked
@@ -315,7 +377,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 | Headset mic quality | USB condenser (e.g. Samson Q2U) or lav + interface | Medium |
 | Teleprompter | Pad + remote scroll app | Low |
 | Key light | LED panel | Medium — biggest visual lift for HF G20 |
-| B-roll only | Phone on tripod for consistent screen shots | Low |
+| B-roll phone UI | Screen record, or Canon on tripod filming phone on desk — not the 70" monitor |
 
 ---
 
@@ -323,5 +385,6 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | Single 70" 4K monitor: teleprompter + Slides window layout; clarify phone B-roll |
 | 2026-08-02 | On-screen text: hybrid Resolve + optional blue-chroma Slides; B-roll full-frame rule |
 | 2026-08-02 | Initial rig doc: HF G20, DeckLink, OBS, G733, Resolve |
