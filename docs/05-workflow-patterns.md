@@ -21,10 +21,17 @@
 | **Comparanda** | **Isolated reference excerpts** for craft comparison only — never indexed as your story. |
 | **Grounding** | Real-world **facts and sources** (maps, period detail) your story must respect. |
 | **Apply gate** | You authorize every change to the manuscript. |
+| **Conversation context** | What the **chat thread** retains about canon and relationships — unreliable at novel length; use files and indexes instead. |
 
 ---
 
 Repeatable infrastructure matters more than clever one-off prompts. These patterns appear across serious long-form AI-assisted projects.
+
+### Why files exist — frontier chat hit a ceiling
+
+Governance (prosthetic model, apply gates, six alternatives) was **developed and tested largely on frontier LLMs** in ordinary long chat sessions. That was enough to prove the **contract** — diagnose, branch, author decides.
+
+It was **not** enough to hold **relationship context** across months: who carries what, which calendar day, which facts are locked, where a line lives after rewrites. Conversational memory **overwhelms**; the model improvises continuity from recent tokens. Session anchors, PGMs, RAG/passage indexing, and structured graph queries are the **external memory** that replaced "the thread will remember." See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
 
 ---
 

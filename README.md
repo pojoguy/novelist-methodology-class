@@ -32,6 +32,7 @@ This repository documents a broader, craft-first methodology: how working writer
 | LLM as author | LLM as **prosthetic** (retrieval, audit, modeling) |
 | Output = manuscript | Output = **diagnostics, alternatives, state** |
 | One-shot prompting | **Session anchors**, knowledge graphs, apply gates |
+| "The thread remembers my novel" | **PGMs + RAG** — state outside chat |
 | "Make it better" | **Flag → six alternatives → author decides → apply** |
 | Trust the model | **Constrain the model**; human authorizes |
 

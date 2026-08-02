@@ -112,6 +112,8 @@ Plus: session anchors (continuity re-entry), post-session meta-analysis (what wo
 
 **Value:** Repeatable craft infrastructure across months of work and multiple model vendors — with indexed state, not chat memory.
 
+**How this layer emerged:** Levels 2–3 (prosthetic + audit) were workable in **frontier chat** early on. Levels 4–7 became necessary when **conversational context** could no longer carry canon, relationships, and citation fidelity across a full manuscript — leading to PGMs, RAG, passage graphs, and orchestrated multi-step agents. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
+
 **This repository:** Primarily documents Levels 2–7.
 
 ---

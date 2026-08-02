@@ -336,6 +336,7 @@ Someone who builds agent graphs for data management is not guessing when they sa
 ### Creative practice (multi-year)
 
 - Author of a long-form speculative fiction project using LLMs across **five domains** (lexical prosthetic, developmental audit, continuity modeling, grounding simulation, production blueprinting) — see `[03-five-domains.md](03-five-domains.md)`
+- **Prototyped largely on frontier LLMs** in long chat threads before IDE rules and MCP tooling — prosthetic and audit patterns came first; **PGMs, RAG, and graph-backed queries** followed when conversational context overwhelmed relationship and canon fidelity
 - **Autistic** author using LLM as **vocabulary and continuity prosthetic** — external working memory for lexical retrieval under load, not voice replacement
 - Documented **failure modes** (ghostwrite drift, proverb dialogue, negation triangulation) and **countermeasures** (two-step pipeline, six-alternative protocol) from live sessions — see `[06-failure-modes.md](06-failure-modes.md)`
 

@@ -168,9 +168,9 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **What happens:** Model contradicts chapter 4 gear state in chapter 12.
 
-**Why:** Relying on chat memory instead of PGMs and anchors.
+**Why:** Relying on **conversation context** (chat memory) instead of PGMs and anchors. Common after months in frontier chat — the thread compresses; relationship and canon detail drop out even when the model still sounds confident.
 
-**Right fix:** Section A load every session; fact-query before structural output.
+**Right fix:** Section A load every session; fact-query before structural output; promote canon to **registered state** (PGMs, passage index, RAG) — see [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
 ---
 

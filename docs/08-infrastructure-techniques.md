@@ -29,6 +29,8 @@
 | **MCP** | Plug-in protocol so your editor can **call project tools** (search, verify) safely. |
 | **Provenance** | Tag on a fact: **documented**, inferred, invented for story, or **unknown** — blocks blind trust. |
 | **Apply gate** | Verify and search **diagnose only**; you still authorize every manuscript change. |
+| **Conversation context** | What a **chat thread** still "remembers" about your story — compresses and contradicts at novel length; not a canon store. |
+| **Graph orchestration** | Multi-step agent workflow with **checkpoints and state** outside chat (e.g. LangGraph) — not the same as a PGM, but same design instinct. |
 
 ---
 
@@ -41,6 +43,23 @@ RAG locates.  Graphs verify, frame, and attribute.  The system diagnoses.  You a
 ```
 
 Chat memory is not canon. Indexed state + audit events are.
+
+### Origin — prototyped on frontier chat, hardened in graph + RAG
+
+This methodology was **largely prototyped on frontier LLMs** — long threads in vanilla chat UIs before project rules, MCP tools, or IDE integration. Prosthetic gates, six-alternative retrieval, developmental audit shape, and apply discipline **emerged in that environment first**.
+
+**What broke:** **Conversational context** — the thread's fragile hold on canon, character relationships, calendar pins, and prior session decisions — **overwhelms easily** on novel-length work. Threads compress history, contradict chapter 4 in chapter 12, or free-associate from the last few thousand tokens. That is not author error; it is **context amnesia** as a system failure (see [`06-failure-modes.md`](06-failure-modes.md)).
+
+**What followed:** State and lookup **outside** the chat window:
+
+| Chat-only limit | Infrastructure response |
+|-----------------|-------------------------|
+| "Remember" gear / timeline / who knows what | **PGMs**, session anchors, facts/entities queries |
+| "Find where I said X" | **RAG** (L1) + structured **passage** index (L2) |
+| Co-presence / route / lock conflicts | **Verify** reports (L3), geography gate |
+| Multi-step audit without ghostwrite drift | **Graph-orchestrated** workflows (e.g. LangGraph-style agents with checkpoints) |
+
+Frontier models remain the **sampling engine**. Graphs, indexes, and gates are how you stop asking one relationship to hold an entire novel in its head.
 
 ---
 
