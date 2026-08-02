@@ -17,6 +17,7 @@ Short-form video scripts paired **one-to-one** with [`docs/`](../docs/). Same nu
 | [`05-workflow-patterns.md`](05-workflow-patterns.md) | `docs/05-workflow-patterns.md` | 3–5 min |
 | [`06-failure-modes.md`](06-failure-modes.md) | `docs/06-failure-modes.md` | 60–90s Short (high share potential) |
 | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) | `docs/07-ethics-and-transparency.md` | 3–5 min |
+| [`07b-training-bias-demo.md`](07b-training-bias-demo.md) | `docs/07-ethics-and-transparency.md` (training bias) | **~3 min screen demo** — Gettysburg vs Bible prompts |
 | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) | `docs/08-infrastructure-techniques.md` | 3–5 min or 3-part mini-series |
 | [`glossary.md`](glossary.md) | `docs/glossary.md` | Overlay cards / end-screen term stack |
 | [`production-setup.md`](production-setup.md) | — | **HF G20 · DeckLink · OBS · G733 · Resolve** workflow |

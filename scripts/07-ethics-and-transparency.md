@@ -65,6 +65,6 @@
 
 **Say:**
 
-> Full methodology in the repo. Start with episode zero if you skipped the history.
+> Full methodology in the repo. Start with episode zero if you skipped the history. Companion screen demo: **Ep. 07B** — Gettysburg vs Bible prompts ([`07b-training-bias-demo.md`](07b-training-bias-demo.md)).
 
-**On-screen:** Repo + playlist
+**On-screen:** Repo + playlist · `Ep. 07B: training bias demo`

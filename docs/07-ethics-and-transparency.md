@@ -155,6 +155,8 @@ That is **mode collapse on a famous prefix**, not evidence that the model opened
 
 **For craft methodology:** Do not paste unpublished manuscript into untrusted third-party chats if your threat model includes ingestion. Use **local files, PGMs, and apply gates** — see [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
+**Screen demo script:** [`../scripts/07b-training-bias-demo.md`](../scripts/07b-training-bias-demo.md) — locked prompts, ~3 min, frontier chat only.
+
 ---
 
 ## What we refuse to normalize

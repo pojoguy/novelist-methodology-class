@@ -176,6 +176,7 @@ Teleprompter runs as a **window on the same display**. The Canon stays on its tr
 |-----------|---------|------|
 | **Level 0 contrast** | OBS window capture — browser chat UI | **Frontier LLM only** — no Cursor, no project rules |
 | **Levels 2–7** | OBS window capture — Cursor / repo | Governed stack per episode scripts |
+| **Training bias demo** | Frontier chat — Gettysburg + Bible prompts | [`07b-training-bias-demo.md`](07b-training-bias-demo.md) |
 
 Level 0 script: [`01b-level-zero-demo.md`](01b-level-zero-demo.md). Use **synthetic** sample lines only on camera.
 
