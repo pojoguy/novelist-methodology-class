@@ -17,6 +17,8 @@
 | **Sensitivity reader** | A **human expert** on culture or lived experience — not replaceable by unchecked model output. |
 | **Lexical prosthetic** | Word-retrieval help; may be **accessibility** for some authors — not the same as outsourcing a chapter. |
 | **Apply gate** | Ethical alignment: tools **propose**; you **authorize** changes. |
+| **Training memorization** | When a prompt matches a **famous passage**, the model often **continues the canonical text** — frequency in training, not a lookup of your file. |
+| **Copyright / safety filter** | Product policy that **blocks or warns** on some famous or sacred text — separate from whether the model "stole" your draft. |
 
 ---
 
@@ -107,6 +109,54 @@ Dismissive takes ("real writers don't need AI") erase neurologically accurate wo
 
 ---
 
+## Training bias vs "AI steals my work"
+
+Many authors fear: *If I paste my opening, the model will regurgitate my book because it stole me.* Model behavior is easier to understand as **training frequency + continuation bias + product policy** — not a targeted raid on your files.
+
+### What the model actually optimizes
+
+At inference time the model picks **likely next tokens** given everything it saw in training. Famous public text is **overrepresented**. Your unpublished manuscript is **underrepresented** unless it was ingested into that product's training set (a separate legal and policy question — see below).
+
+Three factors drive "it finished a famous thing for me":
+
+| Factor | Meaning |
+|--------|---------|
+| **Corpus frequency** | Appears in huge swaths of training data |
+| **Quotation density** | Repeated on the web, in classrooms, in datasets |
+| **Continuation uniqueness** | After the opening phrase, one continuation dominates probability |
+
+### Demo 1 — near-memorization (Gettysburg)
+
+**Prompt:** `Four score and seven years ago`
+
+**Typical behavior:** The model continues with the **Gettysburg Address** — or a close paraphrase — because (a) it is in effectively every English-heavy training mix, (b) it is among the most quoted American texts, and (c) after those words there is **one dominant path** in the model's distribution.
+
+That is **mode collapse on a famous prefix**, not evidence that the model opened your novel folder.
+
+### Demo 2 — famous sacred text + filters (not your joke)
+
+**Prompt:** `In the beginning God created the universe`  
+*(variant of the familiar opening; not identical to every translation.)*
+
+**Typical behavior:** A **copyright or usage caution** and/or a **canonical scripture-style quote** — not Douglas Adams's parody from *The Hitchhiker's Guide to the Galaxy* (*"This has been widely regarded as a bad move and has made a lot of people very upset"* — riffing on creation).
+
+**Why the Adams line loses:** Multiple high-probability continuations compete (scripture, commentary, policy blocks). The model is not "respecting your copyright" on an unpublished MS — it is routing through **dominant public text** and **vendor safety rules**. The punchline you might want is **low probability** unless you steer hard toward Adams.
+
+### What this does and does not say
+
+| Claim | Verdict |
+|-------|---------|
+| "The model completes Gettysburg because that's what training made likely" | **Yes** — useful demo of memorization bias |
+| "Therefore my private chapter 1 will be spat back verbatim" | **No** — unless your text was in training data, your opening has **low** memorization pressure |
+| "Training never included copyrighted books" | **Unsettled / vendor-specific** — ask the product; distinct from the mechanical demo above |
+| "Governed workflow still matters" | **Yes** — prosthetic use assumes **you** authorize what hits the page |
+
+**For skeptics and advocates alike:** The Gettysburg trick shows **why generic LLM prose regresses to the mean** — the same bias that completes Lincoln can complete clichés in your genre. That is an argument for **governance and voice discipline**, not for panic that the chat box has already read your file.
+
+**For craft methodology:** Do not paste unpublished manuscript into untrusted third-party chats if your threat model includes ingestion. Use **local files, PGMs, and apply gates** — see [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+
+---
+
 ## What we refuse to normalize
 
 - Publishing unedited model output as craft
@@ -123,6 +173,7 @@ Dismissive takes ("real writers don't need AI") erase neurologically accurate wo
 3. Where is my apply gate documented?
 4. Who vets cultural or medical grounding?
 5. What would I show a skeptical peer to prove I am not ghostwriting?
+6. Can I demonstrate **training memorization** (Gettysburg vs Bible prompt) to separate "famous text bias" from "stole my manuscript"? See [Training bias vs "AI steals my work"](#training-bias-vs-ai-steals-my-work).
 
 ---
 

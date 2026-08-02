@@ -131,6 +131,7 @@ The model does not "retrieve a fact." It **rolls weighted dice** biased by every
 | Outputs are **likely**, not **true** | Hallucinated citations, dates, geography — plausible wrong                                                                                           |
 | Same prompt, different runs          | Non-reproducible "fixes" without locked state and author picks                                                                                       |
 | High-probability = **common**        | Cliché syntax, goldilocks words, proverb dialogue — the mode of the training distribution                                                            |
+| Famous-prefix prompts                | `Four score and seven years ago` → Gettysburg completion — **training frequency**, not your novel stolen ([`07-ethics-and-transparency.md`](07-ethics-and-transparency.md)) |
 | Constraint pile-up                   | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery) |
 
 

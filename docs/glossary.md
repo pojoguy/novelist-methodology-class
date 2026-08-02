@@ -136,3 +136,6 @@ Knowledge-representation framework (1980s research lineage, Calgary) modeling ho
 
 **Thin solution space (retrieval bias stall)**  
 Feasible region too narrow for bias function to choose; forced emission as negation triangulation, comma-lists, or adjective/adverb triads. Six alternatives deliberately widen the space.
+
+**Training memorization (famous-prefix effect)**  
+When a prompt matches a highly quoted public passage (e.g. opening of the Gettysburg Address), the model often continues the canonical text — corpus frequency and a single dominant continuation path, not retrieval of your private file. See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md).
