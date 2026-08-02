@@ -141,6 +141,14 @@ When someone says "AI will replace authors," point to Levels 4–7: the human wo
 
 ---
 
+## Demonstrating Level 0 vs Levels 2–7
+
+**Do not** use a governed IDE session (e.g. Cursor with project rules loaded) to demonstrate Level 0 — apply gates and prosthetic protocol are already active. That stack documents **Levels 2–7**.
+
+For an honest Level 0 contrast, use a **blank frontier chat UI** (ChatGPT, Claude, Gemini, etc.) with **no** custom instructions, on **synthetic** sample prose only. Screen-record script: [`../scripts/01b-level-zero-demo.md`](../scripts/01b-level-zero-demo.md).
+
+---
+
 ## Next
 
 - [`02-prosthetic-model.md`](02-prosthetic-model.md) — the central operating model

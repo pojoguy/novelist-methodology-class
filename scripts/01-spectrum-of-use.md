@@ -78,6 +78,6 @@ Define in the **first 30 seconds** or flash **on-screen** when each term first a
 
 **Say:**
 
-> Next episode: the prosthetic model — why six alternatives and apply gates exist. Repo link below.
+> Next episode: the prosthetic model — why six alternatives and apply gates exist. Repo link below. Optional companion: **Ep. 01B** — Level 0 screen demo on a blank frontier chat (not Cursor).
 
-**On-screen:** Ep. 02 card
+**On-screen:** Ep. 02 card · `Ep. 01B: Level 0 demo`

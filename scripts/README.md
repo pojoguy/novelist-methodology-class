@@ -10,6 +10,7 @@ Short-form video scripts paired **one-to-one** with [`docs/`](../docs/). Same nu
 |--------|------------|------------------|
 | [`00-history-and-authority.md`](00-history-and-authority.md) | `docs/00-history-and-authority.md` | Series opener — **ready to record** (~5:15) |
 | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | `docs/01-spectrum-of-use.md` | 60–90s Short or 3–5 min explainer |
+| [`01b-level-zero-demo.md`](01b-level-zero-demo.md) | `docs/01-spectrum-of-use.md` (Level 0) | **~5 min screen demo** — frontier chat only, not Cursor |
 | [`02-prosthetic-model.md`](02-prosthetic-model.md) | `docs/02-prosthetic-model.md` | 3–5 min — core thesis video |
 | [`03-five-domains.md`](03-five-domains.md) | `docs/03-five-domains.md` | 3–5 min or 5× Short series |
 | [`04-audit-and-governance.md`](04-audit-and-governance.md) | `docs/04-audit-and-governance.md` | 3–5 min |
@@ -41,7 +42,7 @@ Each script includes:
 
 - **Shorts (≤60s):** One idea per video; hook in frame 1; text on screen for silent viewers
 - **Explainers (3–5 min):** Hook → problem → framework → one example → CTA
-- **Series order:** `00` → `01` → `02` for skeptics; `06` and `02` work as standalone hooks
+- **Series order:** `00` → `01` → `01b` (optional L0 screen demo) → `02` for skeptics; `06` and `02` work as standalone hooks
 - **Repo link for description:** https://github.com/pojoguy/novelist-methodology-class — point to the paired `docs/` file for depth
 
 ---

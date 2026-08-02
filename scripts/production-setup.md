@@ -170,6 +170,15 @@ Teleprompter runs as a **window on the same display**. The Canon stays on its tr
 - **Phone B-roll** — screen record or Canon shooting the phone; not the 70" display (see B-roll table below).
 - **Beat 3 montage labels** — added in Resolve on B-roll clips.
 
+### Demo recordings (Level 0 vs methodology)
+
+| Demo type | Capture | Tool |
+|-----------|---------|------|
+| **Level 0 contrast** | OBS window capture — browser chat UI | **Frontier LLM only** — no Cursor, no project rules |
+| **Levels 2–7** | OBS window capture — Cursor / repo | Governed stack per episode scripts |
+
+Level 0 script: [`01b-level-zero-demo.md`](01b-level-zero-demo.md). Use **synthetic** sample lines only on camera.
+
 ---
 
 ## Logitech G733 — audio notes
@@ -347,6 +356,7 @@ Paste from script into YouTube description (YouTube auto-chapters if timestamps 
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | Demo environments: frontier chat for L0; Cursor for L2+ (`01b-level-zero-demo.md`) |
 | 2026-08-02 | **Locked:** lower thirds in Resolve only; removed live chroma/Slides burn-in |
 | 2026-08-02 | DeckLink = HDMI ingest (input), not display output; signal-flow diagram |
 | 2026-08-02 | Single 70" 4K monitor: teleprompter + Slides window layout; clarify phone B-roll |
