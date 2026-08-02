@@ -61,6 +61,23 @@ This methodology was **largely prototyped on frontier LLMs** — long threads in
 
 Frontier models remain the **sampling engine**. Graphs, indexes, and gates are how you stop asking one relationship to hold an entire novel in its head.
 
+### Build vs adopt — Cursor as host (not as methodology)
+
+The maintainer **initially set out to build a custom RAG + LLM-backed editor** for long-form fiction. Frontier prototyping and context limits defined **what** had to live outside chat (indexes, PGMs, verify, gates).
+
+**What changed:** Professional **day-job use of Cursor** showed the **host** already shipped much of the plumbing — repo-grounded indexing, agent chat beside the manuscript, project rules, MCP tool integration, diff-aware edits. Rebuilding an IDE duplicated work already paid for elsewhere.
+
+**Where effort went instead:**
+
+| Build-from-scratch (de-emphasized) | Adopt + extend (actual path) |
+|-----------------------------------|------------------------------|
+| Custom editor shell | **Cursor** (or any agentic IDE with similar hooks) |
+| Generic embed search only | **Tiered locators** (L1–L3) + passage IDs |
+| Chat as canon store | **PGMs**, anchors, **novelist-plugin** MCP tools |
+| One-shot prompts | **Prosthetic gates**, Skills, `.cursorrules` / `AGENTS.md` |
+
+This repository documents **methodology** — portable whether you use Cursor, a custom MCP stack, or another agent host. Cursor is the maintainer's **reference host**, not a product endorsement. See [Reference implementation](#reference-implementation) and [`CONTRIBUTING.md`](../CONTRIBUTING.md) for honest tool comparisons.
+
 ---
 
 ## Why infrastructure matters
@@ -370,6 +387,8 @@ The maintainer's production stack implements these patterns via **novelist-plugi
 | `comparanda_compare` | Craft lens comparison |
 
 This repository documents **methodology** — portable patterns. The plugin is one implementation; the tiers and isolation contracts are the portable part.
+
+**Host choice:** Patterns are not Cursor-exclusive. The maintainer adopted Cursor after building on frontier chat and scoping a custom editor — because **paying professional use** already exercised repo index, MCP, and governed agent edit. Your host may differ; the **locator tiers, gates, and apply contract** should not.
 
 ---
 

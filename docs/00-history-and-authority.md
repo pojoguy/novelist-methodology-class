@@ -329,6 +329,7 @@ That lineage predates ChatGPT by decades and spans **both** poles serious LLM me
 ### Enterprise practice (present)
 
 - Designs and integrates enterprise scaled **LLM-backed systems** in production using **LangGraph** and **LangGraph4j** — graph-orchestrated agents with state, checkpoints, and tool boundaries
+- Uses **Cursor** professionally — repo index, MCP, and agent editing in paying work — which informed the decision **not** to build a separate RAG + LLM editor shell for fiction; custom work went into **methodology and MCP tooling** (e.g. novelist-plugin) instead
 - Treats creative-writing workflow with the same seriousness: **graph state** (PGMs), **checkpoints** (session anchors), **constraints** (rubric Signs, prosthetic gates), **human authorization** before side effects (apply gate)
 
 Someone who builds agent graphs for data management is not guessing when they say unconstrained "fix my chapter" prompts fail. They have seen **sparse-edge collapse** in other domains.
@@ -337,6 +338,7 @@ Someone who builds agent graphs for data management is not guessing when they sa
 
 - Author of a long-form speculative fiction project using LLMs across **five domains** (lexical prosthetic, developmental audit, continuity modeling, grounding simulation, production blueprinting) — see `[03-five-domains.md](03-five-domains.md)`
 - **Prototyped largely on frontier LLMs** in long chat threads before IDE rules and MCP tooling — prosthetic and audit patterns came first; **PGMs, RAG, and graph-backed queries** followed when conversational context overwhelmed relationship and canon fidelity
+- **Planned a custom RAG + LLM-backed editor**, then adopted **Cursor** as host after day-job use proved the plumbing (index, MCP, rules, diff-aware edit) was already there — effort shifted to gates, PGMs, and passage/verify tooling rather than a new IDE
 - **Autistic** author using LLM as **vocabulary and continuity prosthetic** — external working memory for lexical retrieval under load, not voice replacement
 - Documented **failure modes** (ghostwrite drift, proverb dialogue, negation triangulation) and **countermeasures** (two-step pipeline, six-alternative protocol) from live sessions — see `[06-failure-modes.md](06-failure-modes.md)`
 

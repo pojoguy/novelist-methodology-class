@@ -31,7 +31,9 @@ Repeatable infrastructure matters more than clever one-off prompts. These patter
 
 Governance (prosthetic model, apply gates, six alternatives) was **developed and tested largely on frontier LLMs** in ordinary long chat sessions. That was enough to prove the **contract** — diagnose, branch, author decides.
 
-It was **not** enough to hold **relationship context** across months: who carries what, which calendar day, which facts are locked, where a line lives after rewrites. Conversational memory **overwhelms**; the model improvises continuity from recent tokens. Session anchors, PGMs, RAG/passage indexing, and structured graph queries are the **external memory** that replaced "the thread will remember." See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
+It was **not** enough to hold **relationship context** across months: who carries what, which calendar day, which facts are locked, where a line lives after rewrites. Conversational memory **overwhelms**; the model improvises continuity from recent tokens. Session anchors, PGMs, RAG/passage indexing, and structured graph queries are the **external memory** that replaced "the thread will remember."
+
+**Tool host:** The maintainer initially planned a **custom RAG + LLM editor**; professional **Cursor** use showed the host already provided indexing, MCP, and agent editing — so custom work focused on **methodology and MCP tools**, not a new shell. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Build vs adopt*.
 
 ---
 
