@@ -237,6 +237,8 @@ Skeptics often draw a sharp line:
 
 **Transcription is the wedge:** dictation, live captions, and meeting transcripts often run on **Whisper** (OpenAI stack) or **Chirp** (Gemini stack) — foundation ASR from the same vendors that ship chat products, built on the same transformer-era infrastructure. You may have routed your speech through that stack without naming it AI.
 
+**Why it matters for authors:** Many writers speed first drafts with **speech-to-text** — phone dictation, Word, Dragon, Otter, voice notes pasted into Scrivener — and still say they never touch "generative AI." If the ASR layer is Whisper or Chirp, the distinction is **task and UI**, not vendor zero. You spoke; you revise; you own the file. That is **prosthetic capture** (external input → editable text → human edit mass), not ChatGPT ghostwriting — but it is not "no AI" either. The methodology question is **governance**: what you authorize after capture, not whether probability entered the pipeline.
+
 **The writing-relevant pivot:** The argument is not that every app is ChatGPT. It is that you already **trust or reject probabilistic machine outputs** daily — delete a bad night photo, dismiss a wrong caption, accept an autocomplete tap — and **2022 made the same posture visible for text**. Serious writing methodology asks **governance** questions (who selects, what is canon, what requires authorization), not whether probability entered your workflow.
 
 ### Banking — checks, deposits, and fraud

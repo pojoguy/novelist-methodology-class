@@ -9,7 +9,7 @@
 | **Format**        | Explainer (series opener)                   |
 | **Series**        | LLM Methodology in Creative Writing — Ep. 0 |
 | **Target length** | ~5:45 (spoken)                              |
-| **Word count**    | ~920                                        |
+| **Word count**    | ~970                                        |
 | **Status**        | **ready**                                   |
 | **YouTube URL**   | *(when live)*                               |
 
@@ -168,6 +168,8 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 >
 > But dictation and live captions often run on **Whisper** — OpenAI's transformer speech model, same **vendor stack** as ChatGPT, not a different species of software — and **Chirp** in Google's Gemini stack. You may have fed your words through that infrastructure without ever opening a chat product.
 >
+> A lot of authors speed their workflow with **speech-to-text** — phone dictation, Word, Dragon, Otter — and still insist they don't use generative AI. If that pipeline runs on Whisper or Chirp, your draft already crossed the same vendor families. You spoke; you revise; you own the file. That's capture and edit — not ChatGPT ghostwriting — but it's not zero AI either.
+>
 > The argument isn't that every app is ChatGPT. It's that you already **trust or reject probabilistic machine outputs** every day — and twenty-twenty-two made that visible for **text**.
 >
 > Paper checks feel analog. **Essentially all commercial check processing is automated** — machine reading, routing, fraud scoring. Deposit a check by phone and computer vision validates the image. No human retyped your payee line.
@@ -181,8 +183,9 @@ Record **A-roll** (direct to camera) for beats marked `[CAM]`. Record or source 
 3. `Video calls = neural noise removal`
 4. `Whisper · OpenAI stack · Chirp · Gemini`
 5. `Reconstruction ≠ chat — same vendor stack`
-6. `Check deposit = machine vision`
-7. `Autocomplete = you already choose`
+6. `Dictation ≠ "I don't use AI"`
+7. `Check deposit = machine vision`
+8. `Autocomplete = you already choose`
 
 **B-roll shot list (min. 2 sec each):**
 
@@ -313,6 +316,8 @@ On video calls, Zoom and Teams strip background noise with neural models. Hearin
 
 But dictation and live captions often run on Whisper — OpenAI's transformer speech model, same vendor stack as ChatGPT, not a different species of software — and Chirp in Google's Gemini stack. You may have fed your words through that infrastructure without ever opening a chat product.
 
+A lot of authors speed their workflow with speech-to-text — phone dictation, Word, Dragon, Otter — and still insist they don't use generative AI. If that pipeline runs on Whisper or Chirp, your draft already crossed the same vendor families. You spoke; you revise; you own the file. That's capture and edit — not ChatGPT ghostwriting — but it's not zero AI either.
+
 The argument isn't that every app is ChatGPT. It's that you already trust or reject probabilistic machine outputs every day — and twenty-twenty-two made that visible for text.
 
 Paper checks feel analog. Essentially all commercial check processing is automated — machine reading, routing, fraud scoring. Deposit a check by phone and computer vision validates the image. No human retyped your payee line.
@@ -365,7 +370,7 @@ In this episode:
 • What "stochastic" means — and why LLMs roll weighted dice, not retrieve facts
 • The lineage from Erlang's telephone traffic (1909) to British TXE exchanges and Brian Gaines's stochastic computing (1960s) to ChatGPT
 • Hidden AI you already use: phone cameras, video-call noise removal, Whisper/Chirp (OpenAI/Gemini vendor stacks), automated check processing, autocomplete
-• Fair pushback: reconstruction ≠ chat — and why that still matters for the writing debate
+• Fair pushback: reconstruction ≠ chat — and why dictation-using authors still cross OpenAI/Google stacks
 • Why craft panic is not new — and what serious writers actually do differently
 
 I'm David Johnson — knowledge-systems practitioner; integrates enterprise LLM agent systems in production; long-form fiction writer. This series documents craft-first methodology: prosthetic tools, apply gates, human prose mass — not "write me a bestseller."
@@ -397,6 +402,7 @@ creative writing, writing process, LLM, AI writing, authors, ChatGPT, stochastic
 | What stochastic means                | Beat 2               | ~55s      | "The model rolls weighted dice." |
 | I don't use AI / I don't use ChatGPT | Beat 1               | ~35s      | Opening of Beat 1             |
 | Whisper isn't ChatGPT — same OpenAI stack | Beat 3 pivot       | ~40s      | "Same vendor stack as ChatGPT." |
+| I dictate — I don't use AI            | Beat 3 dictation     | ~35s      | "It's not zero AI either."    |
 
 
 ---
@@ -406,6 +412,7 @@ creative writing, writing process, LLM, AI writing, authors, ChatGPT, stochastic
 
 | Date       | Change                                                             |
 | ---------- | ------------------------------------------------------------------ |
+| 2026-08-02 | Beat 3: speech-to-text authors / "I don't use AI" writer hook          |
 | 2026-08-02 | Beat 3: concession + Whisper/OpenAI vendor-stack pivot; retimed beats |
 | 2026-08-02 | Consistency pass: teleprompter ↔ beats, Terms, chapter markers, description |
 | 2026-08-02 | Locked **Publish package A**: title vs thumbnail vs hook alignment |
