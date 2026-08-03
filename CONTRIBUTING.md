@@ -18,6 +18,18 @@ Thank you for helping document serious LLM use in creative writing.
 - Vendor spam or affiliate funnels
 - Claims that AI replaces craft, revision, or authorial responsibility
 
+## Cursor + novelist-plugin (maintainers / optional stack)
+
+This repo documents methodology; **registered lookup** runs through [novelist-plugin](https://github.com/pojoguy/novelist-plugin) against a **franchise repo** (chapters, lore, grounding) — not against `docs/` alone.
+
+1. Install novelist-plugin: `pip install -e ".[dev]"` in your plugin clone.
+2. Copy [`.cursor/mcp.json.example`](.cursor/mcp.json.example) → `.cursor/mcp.json` (gitignored) or merge [`mcp-config.example.json`](mcp-config.example.json) into **Cursor Settings → MCP**.
+3. Set `NOVELIST_FRANCHISE_ROOT` to your novel repo (maintainer example: `Mark-of-The-Guardian`).
+4. **Restart MCP** in Cursor Settings after any plugin update (toggle off → on, or restart Cursor).
+5. Skills and commands ship under [`.cursor/`](.cursor/README.md) — `fiction-locate`, `fiction-travel-edit`, `fiction-prosthetic-audit`, `/verify`, `/geography-check`.
+
+When copying grounding into `examples/`, use MCP (`passages_search`, `grounding_check`, `methodology_check`) — not ad hoc filesystem search.
+
 ## How to contribute
 
 1. Fork the repository.

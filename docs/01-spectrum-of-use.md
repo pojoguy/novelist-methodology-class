@@ -234,13 +234,13 @@ Same ramp as [`README.md`](../README.md#where-to-start-by-week) — summarized h
 
 ### How this repo relates to tooling
 
-**Three layers, one practice.** Full map: [`README.md`](../README.md#how-this-fits-together) — methodology (this repo), optional [novelist-plugin](https://github.com/pojoguy/novelist-plugin) engine, optional [Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian) worked example. Summary:
+**Three layers, one practice.** Full map: [`README.md`](../README.md#how-this-fits-together) — methodology (this repo), optional [novelist-plugin](https://github.com/pojoguy/novelist-plugin) engine, optional worked example in [`examples/`](../examples/) (manuscript repo not public yet). Summary:
 
 | What | Role for learners |
 |------|-------------------|
 | **This repo** | Methodology docs, templates, examples — **start here** |
 | **[novelist-plugin](https://github.com/pojoguy/novelist-plugin)** | Optional engine — [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md), registered lookup, continuity checks — **Week 3+** when capture hurts |
-| **Worked example** ([Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian)) | Optional deep dive — walkthrough in [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md); **not required** for Week 1 Levels 2–3 |
+| **Worked example** ([`examples/`](../examples/)) | Optional deep dive — [`grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md); full novel repo **not public yet**; **not required** for Week 1 Levels 2–3 |
 
 You do **not** need novelist-plugin or a governed IDE to practice prosthetic + audit in any chat tool.
 

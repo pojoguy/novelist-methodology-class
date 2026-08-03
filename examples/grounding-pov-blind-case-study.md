@@ -12,9 +12,11 @@ A **real workflow arc** from a long-form project — not a synthetic demo fixtur
 
 | What you filed | Why |
 |----------------|-----|
-| Google Maps snip — approach, Hwy 15, cemetery label | *Where* and scale |
-| Street View — mowed patch, **no walls**, **no trees**, bald prairie | *What it looks like* — blocks generic Gothic cemetery |
+| [`flaxton-bowbells-coteau.jpg`](grounding-pov-blind-fixtures/flaxton-bowbells-coteau.jpg) — approach, Hwy 15, cemetery label | *Where* and scale |
+| [`danish-cemetery-dylan-collapse.jpg`](grounding-pov-blind-fixtures/danish-cemetery-dylan-collapse.jpg) — mowed patch, **no walls**, **no trees**, bald prairie | *What it looks like* — blocks generic Gothic cemetery |
 | Chapter header: `ch03 L62–end · collapse pickup · Danish Cemetery (POV-blind)` | Retrospective hook months later |
+
+**Grounding index:** [`grounding-pov-blind-fixtures/README.md`](grounding-pov-blind-fixtures/README.md) — map + Street View rows, constraint table.
 
 **One-line capture (representative):**  
 *"Add this map and these Street View images to grounding for chapter 3 — Danish Cemetery near Coteau."*
@@ -61,6 +63,7 @@ You open the grounding folder and chapter header — not chat history — and re
 
 ## Cross-links
 
+- [`grounding-pov-blind-fixtures/`](grounding-pov-blind-fixtures/) — map + Street View assets and index
 - [`docs/05-workflow-patterns.md`](../docs/05-workflow-patterns.md) — *Grounding capture*, *POV-blind grounding*, *Retrospective meta-analysis*
 - [`docs/06-failure-modes.md`](../docs/06-failure-modes.md) — *Generic place hallucination*
 - [`docs/03-five-domains.md`](../docs/03-five-domains.md) — Domain 4a

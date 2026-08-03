@@ -64,15 +64,17 @@ Creative intent and final prose remain human. AI assists where human working mem
 |-------|------------|-----------------|
 | **Methodology** | [This repo](https://github.com/pojoguy/novelist-methodology-class) | Docs, templates, examples — **start here** (Week 1–2, any chat tool) |
 | **Optional engine** | [novelist-plugin](https://github.com/pojoguy/novelist-plugin) | Registered lookup, continuity, grounding automation — **Week 3+** when filing hurts |
-| **Worked example** | [Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian) | Optional deep dive — anonymized walkthroughs in [`examples/grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md); **not required** to learn Levels 2–3 |
+| **Worked example** | [`examples/`](examples/) in this repo | Optional deep dive — [`grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md) (anonymized from the maintainer's long-form project). Full manuscript repo **not public yet**; **not required** for Levels 2–3 |
 
-Patterns here are **generalized** from long-form practice; the novel repo shows one author's filing habits — **prose stays there, methodology stays here.** You do **not** need the plugin or novel repo to learn prosthetic + audit in any chat tool.
+Patterns here are **generalized** from long-form practice; anonymized walkthroughs live in **`examples/`** — **methodology stays here, prose stays private until published.** You do **not** need the plugin or a separate novel repo to learn prosthetic + audit in any chat tool.
 
 ### Related repository (optional tooling)
 
 **This tree is methodology and templates only** — docs, examples, session templates. It does **not** contain the MCP server, prompt packs, or reference rubric files.
 
 The maintainer's **optional implementation** lives in **[novelist-plugin](https://github.com/pojoguy/novelist-plugin)** — [`prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (18 Signs), continuity tooling, and [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) for registered lookup.
+
+**Maintainers:** Cursor skills + MCP template ship in [`.cursor/`](.cursor/README.md) — copy `mcp.json.example`, point `NOVELIST_FRANCHISE_ROOT` at your franchise repo, **restart MCP** after plugin updates. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 You do **not** need novelist-plugin to learn Week 1 habits (prosthetic + audit) from these docs alone.
 

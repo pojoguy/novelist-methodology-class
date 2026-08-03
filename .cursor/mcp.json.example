@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "novelist-mcp": {
+      "command": "C:\\Path\\To\\python.exe",
+      "args": ["-m", "novelist_plugin"],
+      "cwd": "D:/books/novelist-plugin",
+      "env": {
+        "NOVELIST_FRANCHISE_ROOT": "D:/books/Mark-of-The-Guardian",
+        "PYTHONPATH": "D:/books/novelist-plugin"
+      }
+    }
+  }
+}

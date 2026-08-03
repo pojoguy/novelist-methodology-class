@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "novelist-mcp": {
+      "command": "python",
+      "args": ["-m", "novelist_plugin"],
+      "cwd": "/path/to/novelist-plugin",
+      "env": {
+        "NOVELIST_FRANCHISE_ROOT": "/path/to/your-franchise-repo",
+        "PYTHONPATH": "/path/to/novelist-plugin"
+      }
+    }
+  }
+}
