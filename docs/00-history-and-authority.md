@@ -3,7 +3,7 @@
 ## Terms in this document
 
 **For non-technical readers:** plain-language definitions for jargon used below.  
-**Full glossary:** `[glossary.md](glossary.md)`.
+**Full glossary:** [`glossary.md`](glossary.md).
 
 
 | Term                             | Plain language                                                                                                                                                                                 |
@@ -37,7 +37,9 @@ This document gives skeptics and newcomers three things at once:
 2. A **hidden-in-plain-sight map** — you already depend on generative and statistical AI daily, often without naming it
 3. **Author authority** — who maintains this repo and why their perspective is grounded in decades of practice, not a weekend prompt experiment
 
-**Reading path:** Parts 1–3 and 5 are the **main craft path**. Deep telephone-switching / Erlang / Gaines-at-STL lineage is **[optional](#appendix-optional-depth--telephone-switching-and-gaines)** — skip if you want straight to workflow docs.
+**Where this doc sits:** **Optional Ep. 0** — history, hidden AI, maintainer context. It does **not** teach the prosthetic protocol, five domains, or audit mechanics — those start at [`01-spectrum-of-use.md`](01-spectrum-of-use.md) → [`02-prosthetic-model.md`](02-prosthetic-model.md). The stochastic argument here **explains why** locked [`04-audit-and-governance.md`](04-audit-and-governance.md) governance (apply gate, word contracts) exists. **Skip to `01`** if you want craft immediately.
+
+**Reading path:** Parts 1–2 and 5 are the **main skeptic path**. Deep telephone-switching / Erlang / Gaines-at-STL lineage is **[optional](#appendix-optional-depth--telephone-switching-and-gaines)** — skip if you want straight to workflow docs.
 
 ---
 
@@ -67,26 +69,18 @@ LLMs feel like oracles. Under the hood they are **stochastic systems** — machi
 
 **Stochastic** means: given the same input, the system works over a **distribution of possible outputs**, not a single guaranteed answer. Randomness enters at training time, at sampling time, or both.
 
-#### Where it started (centuries before ChatGPT)
+#### Stochastic lineage — short map
 
+| Step | Idea | Why writers care |
+|------|------|------------------|
+| **Probability** | Likely, not guaranteed | Hallucination is sampling, not malice |
+| **Markov chains** | Next state from current state + odds | "Memory" as statistics |
+| **Shannon / language** | Text as stochastic process | Continuation = weighted dice |
+| **N-gram models** | Next word from prior words | Direct ancestor of LLMs |
+| **Transformers** | Context at scale; still a softmax per token | Chat hides the distribution |
+| **Sampling** | Temperature, top-*p* pick the token | Same prompt, different runs |
 
-| Period            | Development                                                                                                    | Link to language models                                                                                                                                                                                                                              |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **17th–18th c.**  | Probability theory (Pascal, Fermat, Laplace; later **Bayes**)                                                  | Framework for "how likely, given evidence?" — not "what is absolutely true?"                                                                                                                                                                         |
-| **19th c.**       | **Statistical mechanics** (Boltzmann, Gibbs)                                                                   | Macro behavior from huge numbers of random micro-events — order from uncertainty at scale                                                                                                                                                            |
-| **Early 1900s**   | **Markov chains** (Andrey Markov)                                                                              | Next state depends only on current state, with **transition probabilities** — memory as a probability table                                                                                                                                          |
-| **1909–1920s**    | **Telephone queueing theory** (Agner Krarup **Erlang**)                                                        | Industrial-scale stochastic systems before "AI" — [optional depth](#appendix-optional-depth--telephone-switching-and-gaines)                                                                                                                      |
-| **1948**          | **Information theory** (Claude Shannon, **Bell Labs**)                                                         | Language modeled as a **stochastic process** — symbols with statistical regularity, not fixed rules.                                                                                                                                                 |
-| **1960s–80s**     | **Hidden Markov Models (HMMs)**                                                                                | Speech recognition via probability — telecom lineage in [appendix](#appendix-optional-depth--telephone-switching-and-gaines)                                                                                                                       |
-| **1990s–2000s**   | **N-gram language models**                                                                                     | Direct ancestor of LLMs: probability of the next word given previous words, estimated from corpus counts                                                                                                                                             |
-| **1980s–present** | **Stochastic gradient descent (SGD)**                                                                          | How neural nets train: update weights from **random batches** of data — learning itself is a stochastic process                                                                                                                                      |
-| **2010s**         | Neural language models, word embeddings, RNNs/LSTMs                                                            | Same job as n-grams — predict next token — with learned distributed representations                                                                                                                                                                  |
-| **2017–present**  | **Transformers** (attention) at scale                                                                          | Still output a **probability distribution over the vocabulary** for each next token; "generation" is **sampling** from that distribution                                                                                                             |
-
-
-**Why governance matters:** Long before chat interfaces, engineers had to route uncertain demand through finite capacity — the same *plausible ≠ true* posture writers need at the keyboard. **Optional depth:** Erlang, TXE switching, Gaines at STL — [appendix](#appendix-optional-depth--telephone-switching-and-gaines).
-
-**Gaines → Calgary → this repo (short):** Brian R. Gaines bridged stochastic telecom R&D and 1980s knowledge engineering at Calgary; David Johnson studied under Gaines, Vickers, and Shaw — **explicit graph state + governed sampling** is the through-line to PGMs, anchors, and prosthetic gates today.
+**Plausible ≠ true** — the posture locked governance assumes. Century-by-century detail (Erlang, HMMs, SGD, telecom): **[appendix](#appendix-optional-depth--telephone-switching-and-gaines)**.
 
 #### What an LLM does, stripped of mystique
 
@@ -94,7 +88,7 @@ LLMs feel like oracles. Under the hood they are **stochastic systems** — machi
 2. **Inference:** Read your prompt. For each next token, output a ranked probability distribution over possible words/subwords.
 3. **Generation:** **Sample** from that distribution (temperature, top-*p*, top-*k* control how random). Append token. Repeat.
 
-The model does not "retrieve a fact." It **rolls weighted dice** biased by everything it has seen. Usually the highest-probability token is generic — that is why unprompted LLM prose converges on **statistical average** (the "18 Signs" problem in craft rubrics).
+The model does not "retrieve a fact." It **rolls weighted dice** biased by everything it has seen. Usually the highest-probability token is generic — that is why unprompted LLM prose converges on **statistical average** (the [**Signs**](04-audit-and-governance.md) problem in craft rubrics).
 
 #### Why this matters for writers
 
@@ -108,7 +102,7 @@ The model does not "retrieve a fact." It **rolls weighted dice** biased by every
 | Constraint pile-up                   | Too many rules shrink the feasible region → **sparse-edge collapse** / **thin solution space** (negation triangulation, triads, comma-list recovery)                        |
 
 
-**The prosthetic model exists because the engine is stochastic** — and because **retrieval bias must return something** even when the solution space is too thin to support a good single answer. You do not "trust" the model; you **constrain** it, **audit** its output, **widen** the retrieval set with six alternatives when bias stalls, and **select** from that set — the same posture you already use when autocomplete offers three words and you tap one.
+**The prosthetic model exists because the engine is stochastic** — and because **retrieval bias must return something** even when the solution space is too thin to support a good single answer. You do not "trust" the model; you **constrain** it, **audit** its output, **widen** the retrieval set with six alternatives when bias stalls, and **select** from that set — the same posture you already use when autocomplete offers three words and you tap one. Locked governance: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Audit vs governance*, *Apply gate in practice*.
 
 Expert systems (Part 1, 1970s–80s) tried **explicit rules**. Modern LLMs use **implicit statistics** at scale. Serious authoring methodology combines both instincts: **graph state and locks** (knowledge engineering) plus **governed sampling** (stochastic generation under gates).
 
@@ -260,17 +254,15 @@ If yes to any of these, you already practice **human-in-the-loop selection** fro
 
 ## Part 3: Generative vs transformer — plain language
 
-See also **[The stochastic lineage](#the-stochastic-lineage--what-llms-are-actually-built-on)** in Part 1 — LLMs are stochastic systems before they are chat products.
+Three definitions skeptics ask for — full stochastic timeline in **[appendix](#appendix-optional-depth--telephone-switching-and-gaines)** and [Part 1](#stochastic-lineage--short-map):
 
-**Generative AI** — systems that **produce** new text, images, audio, or code from input. Not all generators are transformers. At inference time, most **sample** from a probability distribution — they do not look up a single correct answer.
+| Term | One line |
+|------|----------|
+| **Generative AI** | Produces new text, images, audio, or code — samples from a distribution; not a lookup table |
+| **Transformer** | Common LLM architecture (2017); each step ends in a **probability vector** over the next token |
+| **LLM** | Transformer (usually) trained for **likely** continuations; chat wraps sampling in conversation |
 
-**Transformer** — a specific neural architecture (2017) excelling at **context over long sequences**. GPT, Claude, Llama, and most modern writing assistants are transformer-based language models. Each forward pass still ends in a **softmax over the vocabulary** — a probability vector for the next token.
-
-**Large Language Model (LLM)** — a transformer (usually) trained on vast text to predict **likely** continuations. "Chat" wraps an LLM in conversation and often hides the sampling step.
-
-**Stochastic system** — any system whose behavior is defined over probability distributions. LLMs inherit this from n-gram language models, HMMs, and statistical mechanics — not from the 2022 product launch.
-
-**Why distinguish:** Critics often argue against "generative AI" as if it were one monolith. Practitioners argue about **governance** — retrieval vs substitution, audit vs ghostwrite — regardless of architecture. This repo is about **methodology**, not model worship. Methodology starts with accepting **plausible ≠ true**.
+**Stochastic system** — behavior defined over probabilities (n-grams, HMMs, LLMs share this). This repo is about **governance** — retrieval vs substitution, audit vs ghostwrite — not model worship. Craft ladder: [`01-spectrum-of-use.md`](01-spectrum-of-use.md).
 
 ---
 
@@ -280,7 +272,7 @@ This repository is maintained by **David Johnson** — would-be author, knowledg
 
 ### Research lineage — Gaines, Calgary, and before
 
-**Brian R. Gaines** is not a footnote in this story. He is the bridge between the [stochastic lineage](#the-stochastic-lineage--what-llms-are-actually-built-on) above and the methodology in this repository.
+**Brian R. Gaines** is not a footnote in this story. He is the bridge between the [stochastic lineage](#stochastic-lineage--short-map) (and [appendix](#appendix-optional-depth--telephone-switching-and-gaines)) and the methodology in this repository.
 
 - **1960s, Britain:** At **STL** — stochastic computing inside the UK telecom ecosystem. [Optional depth](#appendix-optional-depth--telephone-switching-and-gaines).
 - **1970s:** Professorship at the University of **Essex** (electrical / computer engineering) — academic continuation of systems and human-factors research.
@@ -296,11 +288,11 @@ That lineage predates ChatGPT by decades and spans **both** poles serious LLM me
 
 ### Enterprise practice (present)
 
-- Designs and integrates enterprise scaled **LLM-backed systems** in production using **LangGraph** and **LangGraph4j** — graph-orchestrated agents with state, checkpoints, and tool boundaries
+- Designs **governed LLM systems in production** — explicit state, checkpoints, tool boundaries, **human authorization before side effects** *(implementation uses graph-orchestrated agents; details in [novelist-plugin](https://github.com/pojoguy/novelist-plugin), not required for authors)*
 - Uses a governed writing environment professionally — repo-indexed notes and structured lookup in paying work — which informed keeping **methodology in this repo** and **implementation elsewhere**
 - Treats creative-writing workflow with the same seriousness: **graph state** (PGMs), **checkpoints** (session anchors), **constraints** (rubric Signs, prosthetic gates), **human authorization** before side effects (apply gate)
 
-Someone who builds agent graphs for data management is not guessing when they say unconstrained "fix my chapter" prompts fail. They have seen **sparse-edge collapse** in other domains.
+Someone who builds governed data systems for a living is not guessing when they say unconstrained "fix my chapter" prompts fail. They have seen **sparse-edge collapse** in other domains.
 
 ### Creative practice (multi-year)
 
@@ -344,6 +336,23 @@ Skip this section if you are here for **workflow docs** only.
 
 **Britain in the 1960s:** UK **General Post Office** deployed electronic exchanges (**TXE4** 1963, **TXE2** 1966). At **Standard Telephones and Cables (STL)**, **Brian R. Gaines** pioneered **stochastic computing** (*Stochastic Computing Systems*, 1969) — probability as a computational primitive inside the same telecom-industrial world.
 
+#### Century-by-century stochastic lineage (optional)
+
+| Period | Development | Link to language models |
+|--------|-------------|-------------------------|
+| **17th–18th c.** | Probability theory (Pascal, Fermat, Laplace; Bayes) | "How likely?" not "what is true?" |
+| **19th c.** | Statistical mechanics (Boltzmann, Gibbs) | Order from uncertainty at scale |
+| **Early 1900s** | Markov chains | Memory as transition probabilities |
+| **1909–1920s** | Telephone queueing (Erlang) | Industrial stochastic systems before "AI" |
+| **1948** | Information theory (Shannon, Bell Labs) | Language as stochastic process |
+| **1960s–80s** | Hidden Markov Models | Speech recognition via probability |
+| **1990s–2000s** | N-gram language models | Next-word counts → LLM ancestor |
+| **1980s–present** | Stochastic gradient descent | Training is stochastic |
+| **2010s** | RNNs, embeddings | Same job as n-grams, learned vectors |
+| **2017–present** | Transformers at scale | Still sample from a distribution each token |
+
+**Gaines → Calgary → this repo:** Gaines bridged stochastic telecom R&D and 1980s knowledge engineering at Calgary; David Johnson studied under Gaines, Vickers, and Shaw — **explicit graph state + governed sampling** is the through-line to PGMs, anchors, and prosthetic gates today.
+
 | Period        | Gaines | Link forward |
 | ------------- | ------ | ------------ |
 | **1960s**     | STL — stochastic computing, learning processors | Probability-as-computation in telecom R&D |
@@ -358,7 +367,12 @@ Speech recognition (HMMs), codecs, and VoIP routing share this family tree with 
 
 ## Next
 
-- `[01-spectrum-of-use.md](01-spectrum-of-use.md)` — where governed practice sits on the novice-to-sophisticated map
-- `[02-prosthetic-model.md](02-prosthetic-model.md)` — the operating model in detail
-- `[07-ethics-and-transparency.md](07-ethics-and-transparency.md)` — disclosure and authorship
+| Topic | Document |
+|-------|----------|
+| Level ladder — where governed practice sits | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) |
+| Prosthetic model — operating detail | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Why governance follows stochastic tools | [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Audit vs governance* |
+| When plausibility breaks — failure catalog | [`06-failure-modes.md`](06-failure-modes.md) |
+| Disclosure, detectors, human prose mass | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) |
+| Optional worked grounding arc (POV-blind) | [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md) |
 

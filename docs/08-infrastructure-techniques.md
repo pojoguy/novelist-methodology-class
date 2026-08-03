@@ -9,7 +9,9 @@
 |------|----------------|
 | **Infrastructure** | The **files, indexes, and checks** under your workflow — not the chat window itself. |
 | **RAG** | **Retrieval-augmented generation** — search your manuscript to find passages; **locates** text, does not prove it is consistent. |
-| **L0 / L1 / L2 / L3** | **Kinds of lookup** (see doc): scratch excluded, quick search, tagged passage, continuity check — **one kind per question**. |
+| **Lookup kinds (L0–L3)** | Optional shorthand in tooling docs: **L0** scratch excluded · **L1** quick search · **L2** tagged passage · **L3** continuity check — **one kind per question**. Plain names below. |
+| **POV-blind grounding** | **You** hold place coordinates in files; the **character** may never name the site on the page. |
+| **Scenario simulation (5b / Domain 4b)** | Off-page play-pretend runs; distill **constraints and knowledge state** — not manuscript dialogue for indexing. |
 | **FTS** | **Full-text search** — keyword-style index of your prose, like a powerful Find across the book. |
 | **Passage / passage_id** | A **segment of your chapter** with a stable ID so edits do not break references. |
 | **Reanchor** | After you change a chapter, **rebuild** those segments and IDs from the new text. |
@@ -36,6 +38,10 @@
 
 Episodes 0–7 and the prosthetic model cover **governance** — six alternatives, apply gates, domains, failure modes. This document covers the **infrastructure** serious long-form projects add underneath: indexed retrieval, continuity verification, quarantined craft comparison, and structured graph queries.
 
+**Where this doc sits:** **Lookup mechanics** — indexing tiers, continuity-check habits, comparanda isolation, route and grounding gates. **Levels 4–7** context → [`01-spectrum-of-use.md`](01-spectrum-of-use.md); **domains 1–5** (incl. **4a** grounding / **4b** scenario simulation) → [`03-five-domains.md`](03-five-domains.md); prosthetic **contract** → [`02-prosthetic-model.md`](02-prosthetic-model.md); **audit vs continuity report types** → [`04-audit-and-governance.md`](04-audit-and-governance.md); **filing and reload habits** → [`05-workflow-patterns.md`](05-workflow-patterns.md); **named collapse failures** → [`06-failure-modes.md`](06-failure-modes.md). This doc does **not** re-teach session anchors or two-step workflow — it answers *what kind of question you are asking* and *what infrastructure answers it*.
+
+**This doc vs `05`:** **`05`** = **habits** — anchors, map + Street View capture, load grounding, run scenario sandboxes, promote to canon, reanchor after edits. **`08`** = **mechanics** — lookup kinds, passage index, continuity reports, comparanda quarantine. Start in `05` for workflow; open `08` when you need how indexed search and verify reports work.
+
 **Design lock (carry everywhere):**
 
 ```text
@@ -57,7 +63,7 @@ This methodology was **largely prototyped on frontier LLMs** — long threads in
 | "Remember" gear / timeline / who knows what | **PGMs**, session anchors, character and fact lookup |
 | "Find where I said X" | **Manuscript search** + passage index with story tags |
 | Co-presence / route / lock conflicts | **Continuity check reports**, route lookup |
-| Multi-step audit without ghostwrite drift | **Two-step pipeline** — structure, then readonly audit |
+| Multi-step audit without ghostwrite drift | **Two-step pipeline** — structure, then readonly audit — [`05-workflow-patterns.md`](05-workflow-patterns.md) · [`02-prosthetic-model.md`](02-prosthetic-model.md) |
 
 Frontier models remain the **sampling engine**. Graphs, indexes, PGMs, and gates **unload relationship state from active conversation** while keeping it **queryable on demand** — so attention can focus on the beat in front of you without forgetting the graph behind it.
 
@@ -69,7 +75,7 @@ Frontier models remain the **sampling engine**. Graphs, indexes, PGMs, and gates
 | A character's name appearing in two scenes | Whether those appearances **contradict** under PGM rules |
 | "Tell me about this chapter" | "Tell me about Dej **across the book** without merging injuries, timelines, or sandboxes" |
 
-Infrastructure does not exist because authors forgot to paste their bible into the prompt. It exists because **relationship vectors must live outside the rolling attention window** and be **loaded or queried** when a question needs them.
+Infrastructure does not exist because authors forgot to paste their bible into the prompt. It exists because **relationship vectors must live outside the rolling attention window** and be **loaded or queried** when a question needs them. Failure name when you skip this: [`06-failure-modes.md`](06-failure-modes.md) — *Context amnesia*.
 
 **PGM in one sentence:** A PGM is **organized author's notes** — character sheets, timelines, locks, chapter slices. JSON, Markdown, and plain text are all valid. The requirement is **registered state you can load and cite** — not a specific file format.
 
@@ -113,12 +119,14 @@ You work in **plain language**. You say *"tell me about Dej"*, *"does this contr
 
 ```text
 [map] [street view] → "Add to grounding for chapter 3 — Danish Cemetery near Coteau."
-→ place · index · vision extract · update backing structures
+→ file in grounding notes · register for chapter load
 ```
 
 ---
 
 ## Kinds of lookup — do not collapse
+
+**For video / skim readers:** **Quick search** locates mentions; **tagged passage** joins canon/scene tags; **continuity check** proves or disproves conflicts — **one kind per question**. Never merge quick search + tagged search in one answer. Scratch (`exploration/`, comparanda) stays **out** of manuscript indexes. Failure when collapsed: [`06-failure-modes.md`](06-failure-modes.md) — *Mixed lookup collapse*.
 
 Most tools offer **one** search mode. Mature long-form work uses **different question types** — each has a job; mixing them in one breath causes false joins.
 
@@ -136,9 +144,9 @@ Filed report        — prior audit you reload by reference ID
 | **Tagged passage** | `CH## L##` on screen; flashback vs scene | Proving no spatial conflict |
 | **Character / facts / route lookup** | Name changes, locks, stops between towns | Craft hook diagnosis |
 | **Continuity check** | Co-presence, calendar, lock conflicts | Finding a quote |
-| **Filed report** | Developmental edit attachments | Substituting prose |
+| **Filed report** | Developmental edit attachments; **reload** prior readonly diagnostics | Substituting prose; **fresh** continuity truth (use continuity check) |
 
-**Your rule:** **One kind of lookup per question.** Do not merge a quick text search with a tagged passage search in the same answer — you will double-count and mis-attribute flashback vs scene.
+**Your rule:** **One kind of lookup per question.** Do not merge a quick text search with a tagged passage search in the same answer — you will double-count and mis-attribute flashback vs scene. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *What you can ask your project*.
 
 ---
 
@@ -154,7 +162,7 @@ Long-form work needs a **passage index** — stable IDs joined to:
 - Discourse layer: `SCENE` | `MEMORY` | `DREAM` | `FORESHADOW` | `UNRELIABLE`
 - PGM / arc catalog tags when reanchored
 
-**RAG (L1)** embeds or FTS-indexes **prose text** for fuzzy retrieval.
+**RAG (quick search / L1)** embeds or FTS-indexes **prose text** for fuzzy retrieval.
 
 **Tagged passage search** joins text to **metadata** — so "Thunder Butte" in a flashback does not co-present with a scene in Kansas.
 
@@ -166,9 +174,9 @@ When chapter prose changes:
 2. **Re-index** — update search so lookups match the latest draft
 3. **Before a continuity check** — confirm the index is current (stale index = wrong citations)
 
-Do not hand-assign passage IDs in normal workflow — generate them from your real prose when you reanchor.
+Do not hand-assign passage IDs in normal workflow — generate them from your real prose when you reanchor. Workflow habits: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Passage reanchor*; failure when skipped: [`06-failure-modes.md`](06-failure-modes.md) — *Stale passage index*.
 
-### Index exclusion (L0)
+### Index exclusion (scratch / L0)
 
 Paths under `exploration/`, `comparanda/`, scratch sandboxes:
 
@@ -176,7 +184,7 @@ Paths under `exploration/`, `comparanda/`, scratch sandboxes:
 - **Never** mixed into passage search as canon
 - **Never** promoted to canon without your explicit workflow
 
-This is how comparanda and grounding sandboxes stay out of continuity questions.
+This is how comparanda, grounding sandboxes, and **scenario simulation** scratch (`exploration/`) stay out of continuity questions. **5a** route notes and **5b** scenario distillates share the promotion gate — different questions; do not collapse. See [`03-five-domains.md`](03-five-domains.md) — *Domain 4 — Sandboxes*; workflow: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Exploration vs canon*.
 
 ### Starting simple
 
@@ -216,7 +224,19 @@ For Earth-itinerary / corridor rewrites:
 **Grounding indexes:**
 
 - File **visual anchor sets** (map + ground-level) per place and chapter.
-- **Before cemetery/town/corridor prose:** load the pair when registered; generic template description means grounding failed.
+- **Before cemetery/town/corridor prose:** load the pair when registered; generic template description means grounding failed. POV-blind sites: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *POV-blind grounding*; walkthrough: [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
+
+### Scenario simulation gate (5b / Domain 4b)
+
+Off-page **play-pretend** runs answer *who under pressure* — not *where on the map* (that is **4a**).
+
+| Do | Do not |
+|----|--------|
+| File distillates in `exploration/` | Index sandbox dialogue into manuscript FTS |
+| Promote **constraints and knowledge state** to character PGMs after review | Treat chat output as canon without promotion |
+| **You** write the on-page scene | Paste scenario transcript into the chapter |
+
+Same **promotion gate** as grounding sandboxes; different question type. Do not conflate map sessions with play-pretend — [`06-failure-modes.md`](06-failure-modes.md) — *Grounding vs scenario simulation conflation*. Workflow: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Scenario simulation — what you do (Level 5b)*; scope: [`03-five-domains.md`](03-five-domains.md) Domain 4b.
 
 ### Provenance on facts
 
@@ -227,13 +247,13 @@ For Earth-itinerary / corridor rewrites:
 | **INVENTED** | Author lock — not real-world fact |
 | **UNKNOWN** | Blocks auto-apply — ask first |
 
-Use provenance tags when sandbox work (Domain 4) must not leak into audit (Domain 2).
+Use provenance tags when sandbox work (**Domain 4a** grounding or **4b** scenario simulation) must not leak into audit (Domain 2).
 
 ---
 
 ## Continuity reporting
 
-**Search** answers "where is it mentioned?" **Continuity check** answers "does this contradict canon?"
+**Search** answers "where is it mentioned?" **Continuity check** answers "does this contradict canon?" **Developmental** reports are letters you act on — different job, same apply gate. Report types: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Report types you might accumulate*.
 
 ### What a continuity report includes
 
@@ -299,7 +319,7 @@ Without discourse metadata, RAG retrieves "character at place A" and "character 
 | Surface | Policy |
 |---------|--------|
 | Storage | `exploration/comparanda/` only |
-| L0 index | Excluded (parent exploration path ignored) |
+| Scratch index (L0) | Excluded (parent exploration path ignored) |
 | Passage FTS | **Never** ingest reference excerpts |
 | Promote | Refused for comparanda paths |
 | Subject | Manuscript chapters **read-only** |
@@ -345,7 +365,7 @@ Compare **technique** — what the reference excerpt *does* — not shared plot 
 
 ### Do not
 
-- Load comparanda into continuity verify or co-presence checks
+- Load comparanda into continuity verify or co-presence checks — [`06-failure-modes.md`](06-failure-modes.md) — *Comparanda bleed*
 - Treat reference prose as PGM truth
 - Commit full copyrighted books to the repo
 
@@ -366,13 +386,14 @@ Full pattern and example report types: [`04-audit-and-governance.md`](04-audit-a
 | Technique | Role | Domain |
 |-----------|------|--------|
 | **Session anchors** | Re-entry state; Section C methodology tuning | 1, cross-cutting |
-| **Looking back at your notes** | Reconstruct what a span assumed from grounding files, route notes, anchors — not chat memory | cross-cutting |
+| **Looking back at your notes** | Reconstruct what a span assumed from grounding files, route notes, anchors — not chat memory | cross-cutting — [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Retrospective meta-analysis* |
 | **PGMs / lore JSON** | Graph state for characters, world, chapter slices | 3 |
-| **Grounding indexes** | Visual anchor sets (map + ground-level per place), route maps, period facts | 4 |
+| **Grounding indexes (4a)** | Visual anchor sets (map + ground-level per place), route maps, period facts | 4a |
+| **Scenario distillates (4b)** | Off-page runs filed in `exploration/`; promote to character PGMs — **not** manuscript FTS | 4b |
 | **Author inline notes** | `CH## L##` keyed deferrals; promote to PGM | 1–2 |
 | **Editorial report corpus** | Typed readonly diagnostics (trope ledger, tone, maturation, etc.) in `exploration/` | 2 |
 | **Audit log / reference ID** | Literal continuity compare trail | 3 |
-| **Canon promotion** | Scratch → canon only when you promote | 3–4 |
+| **Canon promotion** | Scratch → canon only when you promote | 3, 4a, 4b |
 | **Methodology check** | Does tonight's session match your stated contract? | cross-cutting |
 
 ---
@@ -384,18 +405,20 @@ Full pattern and example report types: [`04-audit-and-governance.md`](04-audit-a
 | **1 Lexical** | Passage resolve at live loci; six-alternatives at `CH## L##` |
 | **2 Audit** | Rubric + **editorial report corpus** + comparanda + verify-attached developmental edits |
 | **3 Continuity** | Re-index after edits, character/facts lookup, continuity reports |
-| **4 Grounding** | Route lookup + promotion; provenance tags; grounding indexes |
-| **5 Production** | Separate PGMs; do not index into prose passage store |
+| **4a Grounding** | Route lookup + visual anchors; provenance tags; promote to `lore/routes/` |
+| **4b Scenario sim** | Off-page runs in `exploration/`; distill to character PGMs — **not** passage FTS |
+| **5 Production** | Separate PGMs and asset registries; **do not** index trailer/storyboard notes into prose passage store — scope bleed: [`06`](06-failure-modes.md) Domain 5 row; [`03`](03-five-domains.md) — *Scope rules* |
 
 **Collapse failures:**
 
-| Mistake | Consequence |
-|---------|-------------|
-| Comparanda in passage FTS | Reference voice bleeds retrieval |
-| RAG-only for co-presence | False spatial conflicts |
-| Verify result → auto-apply | Ghostwrite drift with audit lipstick |
-| Skip re-index after edit | Stale passage joins |
-| Quick search + tagged search same breath | Double-counted, wrong scene vs memory |
+| Mistake | Consequence | Failure mode |
+|---------|-------------|--------------|
+| Comparanda in passage FTS | Reference voice bleeds retrieval | [`06`](06-failure-modes.md) — *Comparanda bleed* |
+| RAG-only for co-presence | False spatial conflicts | [`06`](06-failure-modes.md) — *Mixed lookup collapse* |
+| Verify result → auto-apply | Ghostwrite drift with audit lipstick | [`06`](06-failure-modes.md) — *Ghostwrite drift* |
+| Skip re-index after edit | Stale passage joins | [`06`](06-failure-modes.md) — *Stale passage index* |
+| Quick search + tagged search same breath | Double-counted, wrong scene vs memory | [`06`](06-failure-modes.md) — *Mixed lookup collapse* |
+| Sandbox or comparanda as canon | Domain collapse | [`06`](06-failure-modes.md) — *Domain collapse*; scope: [`03`](03-five-domains.md) — *Scope rules* |
 
 ---
 
@@ -414,7 +437,14 @@ You do not need the full habit stack on day one. You **do** need to know which *
 
 ## Next
 
-- [`05-workflow-patterns.md`](05-workflow-patterns.md) — anchors, two-step pipeline
-- [`03-five-domains.md`](03-five-domains.md) — domain scope rules
-- [`06-failure-modes.md`](06-failure-modes.md) — domain collapse, context amnesia
-- [`02-prosthetic-model.md`](02-prosthetic-model.md) — six alternatives, apply gates
+| Topic | Document |
+|-------|----------|
+| Level ladder + domains (5a / 5b) | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) |
+| Six alternatives, apply gate | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Five domains + scope rules | [`03-five-domains.md`](03-five-domains.md) |
+| Audit vs continuity reports, editorial corpus | [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| Anchors, reanchor, exploration vs canon | [`05-workflow-patterns.md`](05-workflow-patterns.md) |
+| Mixed lookup, domain collapse, stale index | [`06-failure-modes.md`](06-failure-modes.md) |
+| Disclosure, detector debate | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) |
+| POV-blind grounding walkthrough | [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md) |
+| Shared vocabulary | [`glossary.md`](glossary.md) |

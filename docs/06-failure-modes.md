@@ -22,10 +22,48 @@
 | **Lookup kinds** | **Quick search** vs **tagged passage search** — don't mix in one answer. |
 | **Comparanda bleed** | Reference book excerpts **leaking into** continuity or voice — isolation failure. |
 | **Human signal** | Voice you protect on the page — do not let generic rubrics flatten it without your choice. |
+| **Quote gate** | Dialogue help waits until **speaker + situation** are set. |
+| **Tagline gate** | Craft feedback stays specific — not poster morals passed off as direction. |
+| **Apply gate** | Nothing touches the manuscript until **you** authorize a specific change. |
+| **Malformed beat** | Scene **structure** wrong — six options and convergence still won't land; fix order or situation, not diction. |
 
 ---
 
 Sophisticated methodology still fails. Naming failures helps skeptics see that practitioners **debug the system** — they do not blindly trust output.
+
+**Where this doc sits:** **Symptom catalog** — what broke, why, what to do instead. **Recognition layer** for locked [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Failure shapes — quick recognition*. **Fixes** live in peers: level straw man → [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 0; domain scope → [`03-five-domains.md`](03-five-domains.md) — *Scope rules*; prosthetic protocol → [`02-prosthetic-model.md`](02-prosthetic-model.md); authorization → [`04`](04-audit-and-governance.md); filing habits → [`05-workflow-patterns.md`](05-workflow-patterns.md); lookup mechanics → [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+
+### Quick index (common traps)
+
+| What you notice | Section |
+|-----------------|---------|
+| *Not A, not B. C.* / comma-list "answers" | [*Thin solution space*](#thin-solution-space-retrieval-bias-stall) · [*Sparse-edge collapse*](#sparse-edge-collapse) |
+| Critique became a rewrite | [*Ghostwrite drift*](#ghostwrite-drift) |
+| Six "wise" lines, no speaker | [*Proverb dialogue*](#proverb-dialogue) |
+| Poster moral as craft note | [*Thesis tagline compression*](#thesis-tagline-compression) |
+| Six options still won't land | [*Six-alternative treadmill*](#six-alternative-treadmill) |
+| Generic cemetery / wrong place | [*Generic place hallucination*](#generic-place-hallucination) |
+| Sandbox or reference text in canon | [*Domain collapse*](#domain-collapse) · [*Comparanda bleed*](#comparanda-bleed) |
+| Map session mixed with play-pretend | [*Grounding vs scenario simulation conflation*](#grounding-vs-scenario-simulation-conflation) |
+| `CH## L##` wrong after edits | [*Stale passage index*](#stale-passage-index) |
+| Lore facts merged | [*Wrong causal merge*](#wrong-causal-merge) |
+| Flattery audit, misses Signs | [*Sycophantic audit*](#sycophantic-audit) |
+| Contradicts earlier chapter state | [*Context amnesia*](#context-amnesia) |
+| Rubric flattens intentional voice | [*Over-smoothing voice*](#over-smoothing-voice) |
+| Search + fact-check merged in one answer | [*Mixed lookup collapse*](#mixed-lookup-collapse) |
+| Works on Vendor A, breaks on Vendor B | [*Product variance*](#product-variance) |
+
+### Failures by domain (where to look first)
+
+| Domain | Typical failures in this catalog | Scope |
+|--------|----------------------------------|-------|
+| **1** Lexical / light state | Thin solution space, sparse-edge, six-alternative treadmill | [`03-five-domains.md`](03-five-domains.md) Domain 1 |
+| **2** Audit | Ghostwrite drift, sycophantic audit, thesis tagline | Domain 2 · [`04`](04-audit-and-governance.md) |
+| **3** Continuity | Context amnesia, wrong causal merge, stale passage index | Domain 3 |
+| **4a** Grounding | Generic place hallucination | Domain 4a · [`05`](05-workflow-patterns.md) |
+| **4b** Scenario sim | Domain collapse, grounding vs 5b conflation | Domain 4b |
+| **5** Production | Production noise during live chapter edit (scope bleed) | Domain 5 · [`03`](03-five-domains.md) — *Scope rules* (trailer blueprints during chapter edit) |
+| **Cross-cutting** | Mixed lookup collapse, comparanda bleed, product variance | [`03`](03-five-domains.md) — *Scope rules* |
 
 ---
 
@@ -57,7 +95,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 ## Sparse-edge collapse
 
-**What happens:** Many constraints bind at once (continuity locks + rubric Signs + implicit rewrite pressure). Often the same underlying condition as **thin solution space** (below). Model output collapses to:
+**What happens:** Many constraints bind at once (continuity locks + rubric Signs + implicit rewrite pressure). Same family as [**thin solution space**](#thin-solution-space-retrieval-bias-stall) — but the lead signal here is **constraint pile-up** (locks + Signs + rewrite pressure), not a single nexus stall on one line. Model output collapses to:
 
 - **Negation triangulation:** *Not A, not B. C.*
 - Generic recovery abstractions at corners of the solution space
@@ -70,17 +108,17 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 1. Diagnose which constraints conflict
 2. Protect on-page human signal density
 3. Offer six alternatives to expand author retrieval set
-4. Use prosthetic gates (two-step pipeline) — not more Signs
+4. Use prosthetic gates — two-step pipeline, quote/tagline/apply gates — not more Signs. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*; [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 ---
 
 ## Ghostwrite drift
 
-**What happens:** You say "priority fixes" or "improve this chapter." The tool substitutes prose.
+**What happens:** You say "priority fixes" or "improve this chapter" — the tool substitutes prose. Same **apply-gate** violation when you said *"here's my take…"* and the tool applied the **nearest numbered option** instead of working on **your** line.
 
-**Why:** Models default to helpful continuation. Without apply gate, "fix" reads as "rewrite."
+**Why:** Models default to helpful continuation. Without apply gate, "fix" reads as "rewrite"; cluster + author take is misread as "pick the closest number."
 
-**Right fix:** Redefine "fix" in your project expectations: audit + alternatives + stop. Exception only for named line mechanics.
+**Right fix:** Redefine "fix" in your project — audit + alternatives + stop ([`04-audit-and-governance.md`](04-audit-and-governance.md) — *What your words mean*, *Apply gate in practice*). **Pick ≠ cluster + author take:** [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Pick vs cluster + author take*. Exception only for named line mechanics.
 
 ---
 
@@ -90,7 +128,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Dialogue alternatives requested before `speaker:` and `situation:` are set.
 
-**Right fix:** Quote gate — Step 1 outputs situation options or AskQuestion; dialogue alternatives only after speaker + situation locked.
+**Right fix:** **Quote gate** — set speaker and situation in Step 1; dialogue alternatives only after both are locked. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — beat-type table; [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 ---
 
@@ -100,7 +138,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Chat-summary compression labeled as craft feedback.
 
-**Right fix:** Tagline gate — mark `NON-PROSE — not for manuscript`; rewrite recommendation as concrete *what to do* for author.
+**Right fix:** **Tagline gate** — mark summary as *not craft direction*; ask for concrete *what to do* on named lines. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *What good developmental feedback looks like*.
 
 ---
 
@@ -110,7 +148,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** No enforced graph traversal; model free-associates nearby lore.
 
-**Right fix:** PGM crosswalk table in Step 1; run a continuity check before apply.
+**Right fix:** PGM crosswalk in Step 1; then a **continuity check** — readonly report with rule names, cited lines, and a **reference ID** you can file — not free-association in chat. Developmental letters and continuity compares are different jobs: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Report types*; habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Continuity reporting*.
 
 ---
 
@@ -120,7 +158,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Domains 2 and 4 run in same turn without promotion gate.
 
-**Right fix:** Explicit NON-CANONICAL labels; promotion workflow; separate session modes.
+**Right fix:** Explicit NON-CANONICAL labels; promotion workflow; separate session modes. Habits: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Exploration vs canon*, *Scenario simulation — what you do*.
 
 ---
 
@@ -130,15 +168,13 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Both live in `exploration/` and share a promote-to-PGM gate — but they answer different questions (*where* vs *who under pressure*).
 
-**Right fix:** Label sessions 5a vs 5b (or Domain 4a vs 4b). Promote routes to `lore/routes/`; promote scenario distillates to `lore/characters/`. See [`03-five-domains.md`](03-five-domains.md).
+**Right fix:** Label sessions **5a vs 5b** (or Domain 4a vs 4b). Promote routes to `lore/routes/`; promote scenario distillates to `lore/characters/`. See [`03-five-domains.md`](03-five-domains.md); [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Scenario simulation — what you do*.
 
 ---
 
 ## Six-alternative treadmill
 
 **Lead signal:** Six alternatives plus convergence rounds **still** do not land — stop asking for more wordings on the same beat. That pattern usually means a **malformed beat**, not weak vocabulary.
-
-**What happens:** You run six alternatives, then convergence rounds, and **still** nothing lands. You keep asking for more wordings on the same beat.
 
 **Why:** The beat is **structured wrong** — wrong order, missing situation, POV or grounding mismatch. More line-level options on a broken shape shrinks the solution space further.
 
@@ -162,17 +198,17 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** One lookup kind per question rule violated.
 
-**Right fix:** Pick the kind for the question — quick search for fuzzy mention, tagged search for canon/scene join, continuity check for truth. Start a fresh question if you need a different kind.
+**Right fix:** Pick **one lookup kind** per question — quick search for fuzzy mention, tagged passage search for canon/scene join, continuity check for truth. Start a fresh question if you need a different kind. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Kinds of lookup — do not collapse*; [`05-workflow-patterns.md`](05-workflow-patterns.md) — *What you can ask your project*.
 
 ---
 
 ## Stale passage index
 
-**What happens:** Prose edited; passage IDs and FTS rows outdated. Verify cites wrong spans; `CH## L##` resolve returns stale catalog.
+**What happens:** Prose edited; passage IDs and search index rows outdated. Continuity checks cite wrong spans; `CH## L##` resolve to stale text.
 
-**Why:** Skipped reanchor/ingest after manuscript change.
+**Why:** Skipped **reanchor** after manuscript change.
 
-**Right fix:** Re-index the chapter before continuity checks or structured lookup on edited chapters.
+**Right fix:** Re-index the chapter before continuity checks or structured lookup on edited chapters. [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Passage reanchor*; [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Pointing at lines in revision*.
 
 ---
 
@@ -180,9 +216,9 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **What happens:** Reference excerpts from craft packs appear in continuity answers or voice drift toward compared authors.
 
-**Why:** Comparanda ingested into passage FTS or loaded into verify/co-presence workflow.
+**Why:** Comparanda mixed into manuscript search or continuity workflow.
 
-**Right fix:** Keep comparanda under `exploration/` with L0 exclusion; reports only under `comparanda/reports/`; never promote. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+**Right fix:** Keep comparanda **quarantined** — craft comparison only; reports under a separate path; never promote to canon. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Comparanda*.
 
 ---
 
@@ -190,9 +226,9 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **What happens:** "Beautiful prose!" then three minor nits. Misses Sign breaches and continuity holes.
 
-**Why:** Default RLHF helpfulness; no adversarial persona.
+**Why:** Default chat flattery; no readonly audit contract.
 
-**Right fix:** Ask for an adversarial auditor persona; verdict first; what's working is short, not flattery.
+**Right fix:** Ask for a **developmental letter** — verdict first, what's working brief, numbered line-tied notes. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *What good developmental feedback looks like*.
 
 ---
 
@@ -202,7 +238,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Relying on **live chat attention** for relationship state instead of PGMs, anchors, and queries. Common on dense pages (multiple arcs resolving) and after months in frontier chat — joins compress or merge; the model still sounds confident while canon detail drifts.
 
-**Right fix:** Section A load every session; fact-query before structural output; promote canon to **registered state** (PGMs, passage index, RAG) — see [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+**Right fix:** Load **Section A** every session; query registered facts before structural work; promote canon to **registered files** (PGMs, passage index). [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Session anchors*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
 ---
 
@@ -210,9 +246,9 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **What happens:** Model "fixes" autistic tactical interiority or flat affect toward neurotypical emotional exposition.
 
-**Why:** Rubric Sign 4 (show don't tell) applied without human-signal check.
+**Why:** Generic "show don't tell" rubric applied without **human signal** check.
 
-**Right fix:** Author rationale doc; Sign vs human signal collision protocol; six alternatives, not substitution.
+**Right fix:** Author rationale doc; Sign vs human signal collision — document both, six alternatives, you choose. [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Human Signals vs rubric Signs*.
 
 ---
 
@@ -222,7 +258,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 **Why:** Different system prompts, tool use, context limits.
 
-**Right fix:** Section C meta-analysis per product; adjust load order; consider readonly audit skill as separate step.
+**Right fix:** **Section C** meta-analysis per product ([`05-workflow-patterns.md`](05-workflow-patterns.md)); adjust load order; separate readonly audit step when a vendor ignores gates.
 
 ---
 
@@ -241,6 +277,12 @@ Ask for one clear question or six situation options — not fabricated prose.
 
 ## Next
 
-- [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md)
-- [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)
-- [`02-prosthetic-model.md`](02-prosthetic-model.md) — governance that prevents drift
+| Topic | Document |
+|-------|----------|
+| Failure shapes (recognition only) | [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Failure shapes — quick recognition* |
+| Six alternatives, malformed beat, gates | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Anchors, grounding, 5a/5b, reanchor | [`05-workflow-patterns.md`](05-workflow-patterns.md) |
+| Domains, promotion, comparanda scope | [`03-five-domains.md`](03-five-domains.md) |
+| Lookup kinds, comparanda mechanics | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |
+| Disclosure, pick vs cluster | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) |
+| Level 0 straw man → ghostwrite drift | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 0 |

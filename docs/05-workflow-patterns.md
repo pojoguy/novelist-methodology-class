@@ -13,18 +13,20 @@
 | **Author's notes** | Maps, timelines, character sheets, location photos — material authors **already** gather while drafting. |
 | **PGM / grounding doc** | Same notes **registered** so tooling can load, query, and cite — not a separate workflow. |
 | **Visual anchor pair** | **Map** (where, scale, names) + **ground-level image** (e.g. Street View) for the **same site**. |
-| **Grounding capture** | Plain-language ingest of anchors; tooling places, indexes, extracts fields, updates registries. |
+| **Grounding capture** | File **map + Street View** (or equivalent) for one site in your project notes — one plain-language instruction per place. |
 | **Exploration** | Scratch folder — **not official story truth** until you promote it. |
 | **Canon / promote** | Making a scratch fact **official** by moving it into registered lore files. |
 | **Two-step pipeline** | Structural pass → read-only audit pass → **you pick** → apply if authorized. |
 | **Plain-language lookup** | You ask in ordinary language; your project files answer — search, fact check, route lookup — without you naming technical tiers. |
 | **RAG** | **Search** that finds relevant passages in your manuscript — good for "where did I mention this?" |
 | **Passage reanchor** | After you edit a chapter, **re-index** it so line numbers and IDs still match the text. |
-| **Verify run** | Automated **continuity check** with named rules and citations — not a rewrite. |
+| **Continuity check** | Readonly compare of prose against **registered** facts — named rules and citations; you decide fixes. Same habit as *verify run* in tooling docs. |
 | **Report reference ID** | A **reference number** on a continuity check so you can cite the exact report later. |
 | **Retrospective meta-analysis** | Looking back at your registered notes (grounding, routes, anchors) to reconstruct what a span assumed — distinct from Section C session feelings. |
 | **Comparanda** | **Isolated reference excerpts** for craft comparison only — never indexed as your story. |
 | **Grounding** | Real-world **facts and sources** (maps, period detail) your story must respect. |
+| **POV-blind grounding** | **You** hold place coordinates in files; the **character** may never name the site on the page. |
+| **Scenario simulation (Level 5b)** | **Off-page play-pretend** — run a character or institution through a beat; distill **constraints and knowledge state**, not manuscript dialogue. |
 | **Apply gate** | You authorize every change to the manuscript. |
 | **Attention / relationship collapse** | Text may fit in context; **joins** (who knows what, arc, locks) do not reliably survive in attention. |
 | **Conversation context** | What the **chat thread** retains about **relationships** — unreliable even when raw text fits; use registered notes and queries instead. |
@@ -32,6 +34,8 @@
 ---
 
 Repeatable infrastructure matters more than clever one-off prompts. These patterns appear across serious long-form AI-assisted projects.
+
+**Where this doc sits:** [`01-spectrum-of-use.md`](01-spectrum-of-use.md) **Levels 4–7** (continuity, **5a** grounding, **5b** scenario simulation, agentic habits) and [`03-five-domains.md`](03-five-domains.md) **Domains 1, 3, 4a, 4b** (notes, continuity modeling, grounding, scenario simulation). The prosthetic **contract** (six alternatives, two-step, apply gate) lives in [`02-prosthetic-model.md`](02-prosthetic-model.md); **authorization language** and filed reports in [`04-audit-and-governance.md`](04-audit-and-governance.md). This doc is **how you file and reload state** across months.
 
 ### Why files exist — frontier chat hit a ceiling
 
@@ -45,13 +49,15 @@ Session anchors, PGMs, RAG/passage indexing, and structured queries are **extern
 
 **Why files, not chat:** The maintainer prototyped this methodology in long frontier chat sessions first; when relationship state outgrew what chat could hold, the same author's notes moved into **registered files** you can load and query. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
 
+**This doc vs `08`:** **`05`** = **habits** — session anchors, file map + Street View, load grounding, run scenario sandboxes, promote to canon, reanchor after edits. **`08`** = **lookup mechanics** — indexing tiers, continuity-check habits, comparanda depth, infrastructure patterns. Start here for workflow; open `08` when you need how indexed search and verify reports work.
+
 ---
 
 ## Session anchors (continuity re-entry)
 
 **Problem:** You return after days or weeks. You forget calendar pin, gear state, deferred fixes, which LLM product behaved last time.
 
-**Solution:** Close every session with a **persisted anchor file** — not chat-only.
+**Solution:** Close every session with a **persisted anchor file** — not chat-only. Full anchor habits (Section C vs retrospective meta-analysis): [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Session anchors*.
 
 ### Typical sections
 
@@ -72,12 +78,14 @@ See [`templates/session-close.md`](../templates/session-close.md).
 
 ---
 
-## Two-step prosthetic pipeline
+## Two-step pipeline (structural → audit)
+
+Same contract as [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*; phrase contracts and gates in [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 ```text
 ┌─────────────────────┐
-│ Step 1: Structural  │
-│ - Load PGMs/anchor  │
+│ Step 1: Structure   │
+│ - Load notes/anchor │
 │ - Beat sequence     │
 │ - Questions if stuck│
 └──────────┬──────────┘
@@ -85,25 +93,28 @@ See [`templates/session-close.md`](../templates/session-close.md).
            ▼
 ┌─────────────────────┐
 │ Step 2: Audit       │
-│ - Readonly          │
-│ - Gate checklist    │
-│ - PASS / FAIL       │
+│ - Readonly letter   │
+│ - Quote/tagline/    │
+│   apply gates named │
+│ - Six options if    │
+│   needed            │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
-│ Author pick / line  │
-│ fix authorization   │
+│ You pick, cluster + │
+│ author take, or     │
+│ name a line fix     │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
 │ Apply to manuscript │
-│ (if authorized)     │
+│ (if you authorized) │
 └─────────────────────┘
 ```
 
-**Waive Step 2** only when author picks a number or names a line fix — that is apply authorization, not blanket rewrite license.
+**Waive Step 2** only when you pick a numbered option or name a line fix — that is apply authorization, not blanket rewrite license.
 
 ---
 
@@ -227,6 +238,23 @@ Before you revise a beat that uses real places:
 
 ---
 
+## Scenario simulation — what you do (Level 5b)
+
+**Question:** *Who would this character or institution be under pressure in a beat that is not on the page yet?*
+
+**What you do:**
+
+1. Run an **off-page** session — play-pretend, institutional logic, "what do they know after three visits?"
+2. **Distill** — constraints, refusals, knowledge state — **not** dialogue to paste into the chapter.
+3. **File** in `exploration/` (or equivalent scratch) until you review.
+4. **Promote** to character PGM / chapter slices when ready — then **you** write the on-page scene.
+
+**Common mistake:** Pasting sandbox chat into the manuscript — that is [**domain collapse**](06-failure-modes.md#domain-collapse), not prosthetic use.
+
+**Do not confuse with 5a:** **Grounding** answers *where* and *what it looks like*; **scenario simulation** answers *who under pressure* and *what they would conclude*. Same promotion gate (`exploration/` → canon); different question. Detail: [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 5b; [`03-five-domains.md`](03-five-domains.md) Domain 4b; explainer: [`scripts/03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md).
+
+---
+
 ## Project expectations
 
 Whether you use a governed editor or a long chat thread, **you** set the contract — adversarial audit, six alternatives, apply only when you say so. Starter checklist: [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
@@ -241,8 +269,8 @@ When your notes and manuscript are registered, ordinary questions work:
 - **Refresh after edits** — re-index the chapter so line references stay true
 - **Who / what / when** — character state, locked facts, name changes across chapters
 - **Routes and places** — stops between towns; whether a corridor claim is on file
-- **Continuity check** — does this passage contradict registered canon? (report with reference ID)
-- **Craft compare** — how does my opening compare to quarantined reference excerpts?
+- **Continuity check** — does this passage contradict registered canon? (readonly report with reference ID; you revise — see [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Report types*)
+- **Craft compare** — how does my opening compare to **quarantined** reference excerpts? Never promote comparanda into canon — treating reference or sandbox text as story truth is [**domain collapse**](06-failure-modes.md#domain-collapse) or [**comparanda bleed**](06-failure-modes.md#comparanda-bleed). Scope: [`03-five-domains.md`](03-five-domains.md).
 
 **Design lock:** Search **locates**. Structured checks **verify**. **You** apply.
 
@@ -254,23 +282,19 @@ Full habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md
 
 ## Post-session meta-analysis (Section C)
 
-Three required questions every session close:
+Three required questions every session close (Section C of your anchor — **how the session felt**, not what place the chapter used):
 
 1. What worked well tonight?
 2. What could be improved?
 3. What did not work?
 
-**Use:** Switch LLM vendors, adjust load order, add gate — not endless new rubric Signs.
-
-Cross-session review of Section C entries is how methodology **evolves** without bloating constraints.
+**Use:** Switch LLM vendors, adjust load order, add gate — not endless new rubric Signs. Cross-session review of Section C is how methodology **evolves** without bloating constraints. For **looking back at filed notes** months later (grounding, routes, POV-blind sites), see *Retrospective meta-analysis* below.
 
 ---
 
 ## Retrospective meta-analysis
 
-**Section C** of your session anchor records **how the session felt** — what worked, what failed, which product you used.
-
-**Registered notes** let you **reconstruct a span months later** without chat memory: what place you assumed, what photos you filed, what the prose deliberately never says.
+**Registered notes** let you **reconstruct a span months later** without chat memory: what place you assumed, what photos you filed, what the prose deliberately never says. Distinct from Section C above — retrospective work uses **grounding files, route notes, and anchors**, not session feelings alone.
 
 | Forward (while drafting) | Backward (months later) |
 |--------------------------|-------------------------|
@@ -295,6 +319,16 @@ Cross-session review of Section C entries is how methodology **evolves** without
 Full walkthrough: [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
 
 Cross-link: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Session anchors*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Looking back at your notes*.
+
+---
+
+## Passage reanchor
+
+**Problem:** You edit a chapter; `CH07 L63` from last month's audit now points at the wrong line.
+
+**What you do:** After substantive chapter edits, **re-index** (reanchor) that chapter so locators and passage IDs match the current text. Until then, cite a **short quoted snippet** with any stale `CH## L##` reference.
+
+**When:** After rewrites, cuts, or merges — not after every typo. Skipping reanchor → stale locators and wrong citations: [`06-failure-modes.md`](06-failure-modes.md) — *Stale passage index*. Line-pointer habits: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Pointing at lines in revision*.
 
 ---
 
@@ -323,6 +357,14 @@ Never treat exploration as manuscript truth without promotion.
 
 ## Next
 
-- [`06-failure-modes.md`](06-failure-modes.md)
-- [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)
-- [`examples/vocabulary-prosthetic-workflow.md`](../examples/vocabulary-prosthetic-workflow.md)
+| Topic | Document |
+|-------|----------|
+| Level ladder, Week 2 map + Street View | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) |
+| Five domains (1, 3, 4a, 4b) | [`03-five-domains.md`](03-five-domains.md) |
+| Level 5b scenario simulation | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 5b · [`scripts/03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) |
+| Apply gate, filed reports, `CH## L##` | [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| Six alternatives, two-step detail | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Failure catalog (place hallucination, …) | [`06-failure-modes.md`](06-failure-modes.md) |
+| Lookup tiers, comparanda, infra detail | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |
+| POV-blind grounding walkthrough | [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md) |
+| Vocabulary prosthetic example | [`examples/vocabulary-prosthetic-workflow.md`](../examples/vocabulary-prosthetic-workflow.md) |

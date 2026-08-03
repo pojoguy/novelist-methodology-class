@@ -21,6 +21,8 @@
 | **Prosthetic** | You choose; the tool proposes within rules. |
 | **Comparanda** | **Quarantined excerpts** from other books used only to compare **craft technique** — never pasted into your draft. |
 | **Verify / continuity report** | An automated **fact-check** with rule names and citations — not a fuzzy search. |
+| **POV-blind grounding** | **You** hold place coordinates in files; the **character** may never name the site on the page. |
+| **Apply gate** | Nothing changes in your manuscript until **you** explicitly authorize a specific change. |
 
 ---
 
@@ -28,17 +30,35 @@ Long-form creative projects rarely use AI in only one way. This framework separa
 
 **Rule:** Creative intent and final prose mass remain human. AI assists retrieval, audit, modeling, simulation, and production blueprinting.
 
+**Where this doc sits:** [`01-spectrum-of-use.md`](01-spectrum-of-use.md) names **levels** (how much structure you add); this doc names **domains** (which craft job you are doing). The prosthetic **contract** (six alternatives, move types, two-step) lives in [`02-prosthetic-model.md`](02-prosthetic-model.md); **Domain 2 governance** (apply gate, Signs, phrase contracts) in [`04-audit-and-governance.md`](04-audit-and-governance.md); **file and reload habits** in [`05-workflow-patterns.md`](05-workflow-patterns.md).
+
+### Domains ↔ levels (do not assume Domain N = Level N)
+
+**Level 1** (brainstorming) is **pre-domain** — discovery before you are protecting draft prose under audit. Full table: [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — [*Levels and domains*](01-spectrum-of-use.md#levels-and-domains).
+
+| Domain | Rough level map | Note |
+|--------|-----------------|------|
+| — | **Level 1** | Ideation; not rubric policing |
+| **1** Lexical / light state | **Level 2** (+ light Domain 1 PGMs at higher levels) | Word-finding; anchors and small PGMs |
+| **2** Audit | **Level 3** | Readonly critique → [`04`](04-audit-and-governance.md) |
+| **3** Continuity modeling | **Level 4** | Graph-scale timeline / who-knows-what |
+| **4a / 4b** | **Level 5a / 5b** | Grounding vs scenario simulation |
+| **5** Production | **Level 6** | Post-manuscript blueprints |
+| Cross-cutting | **Level 7** | Orchestration — [`05`](05-workflow-patterns.md), [`08`](08-infrastructure-techniques.md) |
+
 ---
 
 ## Domain 1 — Lexical and continuity assistance
 
 **Intent:** External working memory and vocabulary retrieval; bridge processing gaps **without altering creative intent**.
 
+**Domain 1 vs Domain 3:** Domain 1 covers lexical help **and** light chapter state (session anchors, small PGMs). **Domain 3** is when **graph-scale** continuity — timeline, who-knows-what, multi-era arcs — becomes the main job. Same split as [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — Level 4 vs Domain 1. Filing habits: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Knowledge state (PGMs)*.
+
 **Typical tools:** Six-alternative protocol, session anchors, chapter-level character/world state files.
 
 **Status in mature projects:** Often the first domain implemented — small PGMs per chapter, anchor persistence.
 
-**What you do:** Flag a weak line → ask for six full alternatives → pick, blend, write your own, or reject — then authorize apply.
+**What you do:** Flag a weak line → ask for six full alternatives → **pick**, **blend**, **cluster + author take**, reject, **supersede** with your own line, or write your own — then authorize apply. When six options still will not land after convergence rounds, the beat is often **malformed** (structure, not diction) — stop line-shopping. Move types and exits: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Pick vs cluster + author take*, *When six options fail — the beat is often malformed*.
 
 **Common mistake:** Accepting one substituted line because it "sounds fine."
 
@@ -60,6 +80,8 @@ Long-form creative projects rarely use AI in only one way. This framework separa
 
 **What you're doing instead:** Treating audit as a **letter from an editor**, not a paste buffer.
 
+**Governance (Domain 2 playbook):** Apply gate, Signs, word contracts, *When not to audit*, *Failure shapes — quick recognition* — [`04-audit-and-governance.md`](04-audit-and-governance.md). Named trap when critique becomes rewrite: [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*.
+
 See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Comparanda*.
 
 ---
@@ -77,6 +99,10 @@ See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Co
 **What you're doing instead:** External relationship memory — the same notes you'd keep in a bible, made loadable.
 
 **Value:** Prevents drift across 80k+ words and months of sessions.
+
+**Reanchor after edits:** Substantive chapter changes shift `CH## L##` — re-index the chapter or cite a quoted snippet until locators match. [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Passage reanchor*; failure when skipped: [`06-failure-modes.md`](06-failure-modes.md) — *Stale passage index*.
+
+**Continuity check vs developmental audit:** A **continuity check** is a readonly **fact compare** against registered canon (reference ID, you decide fixes). A **developmental pass** is a letter you act on — different job, same apply gate. Report types: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Editorial report corpus*.
 
 See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
@@ -124,7 +150,7 @@ Authors capture **map and Street View together** during research (e.g. Danish Ce
 
 **Do not confuse with:** Domain 4a geography. **Maps answer where; play-pretend answers who under pressure.**
 
-See: [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 03B).
+**Workflow:** Off-page run → distill → file in `exploration/` → promote to character PGM when ready → **you** write the scene. [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Scenario simulation — what you do (Level 5b)*. Explainer: [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 03B).
 
 ---
 
@@ -183,6 +209,7 @@ See: [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 
 | Generate trailer blueprints during chapter edit | Domain 5 noise pollutes Domain 1–2 |
 | Let chat memory substitute for PGMs | Sessions reset; graph state does not |
 | Ghostwrite during "priority fixes" | Domain 2 is diagnostic, not generative |
+| Treat **comparanda** (craft reference excerpts) as canon | [**Comparanda bleed**](06-failure-modes.md#comparanda-bleed) / [**domain collapse**](06-failure-modes.md#domain-collapse) — quarantine references; never paste into manuscript |
 
 **Operate inside the domain you invoked.** Bridge domains only when you explicitly connect them.
 
@@ -190,13 +217,13 @@ See: [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 
 
 ## Cross-cutting: methodology tuning
 
-Post-session meta-analysis (Section C of session anchors) tunes **all domains** across LLM products:
+**Section C** of your session anchor (post-session meta-analysis) tunes **all domains** across LLM products — **how the session felt**, not what place a chapter used:
 
 1. What worked well this session?
 2. What could be improved?
 3. What did not work?
 
-This feedback loop updates **operating procedure** — not by adding endless rubric rules, but by adjusting load order, gates, and tool choice.
+This feedback loop updates **operating procedure** — not by adding endless rubric rules, but by adjusting load order, gates, and tool choice. For **looking back months later** at grounding files, route notes, and POV-blind sites (reconstructing what a span assumed), see [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Retrospective meta-analysis* — distinct from Section C.
 
 ---
 
@@ -205,7 +232,7 @@ This feedback loop updates **operating procedure** — not by adding endless rub
 | Domain | Begun | Mature |
 |--------|-------|--------|
 | 1 Lexical | Six-alternatives on flagged lines | PGMs + anchors per chapter |
-| 2 Audit | Ad-hoc "is this AI-sounding?" | Full rubric + editorial format + **report corpus** + comparanda + apply gate |
+| 2 Audit | Ad-hoc "is this AI-sounding?" | Full rubric + editorial format + **report corpus** + comparanda + apply gate + **when not to audit** discipline ([`04`](04-audit-and-governance.md)) |
 | 3 Continuity | Character notes | Timeline + structured lookup + re-index + continuity reports |
 | 4a Grounding | Ad-hoc fact checks | Registered anchors + promote-to-canon workflow |
 | 4b Scenario sim | Off-page character chat | Distilled character PGMs + knowledge-state registers |
@@ -217,5 +244,12 @@ You do not need all five to be "valid." Most serious projects start at 1–2 and
 
 ## Next
 
-- [`04-audit-and-governance.md`](04-audit-and-governance.md) — how Domain 2 stays readonly
-- [`05-workflow-patterns.md`](05-workflow-patterns.md) — anchors and pipelines
+| Topic | Document |
+|-------|----------|
+| Level ladder, Levels ↔ domains | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — [*Levels and domains*](01-spectrum-of-use.md#levels-and-domains) |
+| Prosthetic contract, Domains 1–2 moves | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Domain 2 governance, Signs, reports | [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| Anchors, grounding, 5b workflow, reanchor | [`05-workflow-patterns.md`](05-workflow-patterns.md) |
+| Domain collapse, comparanda bleed, … | [`06-failure-modes.md`](06-failure-modes.md) |
+| Comparanda, lookup tiers, infra detail | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |
+| POV-blind grounding walkthrough | [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md) |

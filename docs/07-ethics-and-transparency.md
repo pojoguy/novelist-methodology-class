@@ -11,7 +11,7 @@
 | **Human prose mass** | The bulk of **final wording is yours** — selected, revised, and owned by you. |
 | **Prosthetic use** | AI expanded **options or audit**; you wrote and chose the lines on the page. |
 | **Ghostwriting** | Substantial **drafting by the tool** with little author revision — disclose honestly if true. |
-| **Domain (1–5)** | Categories of help: lexical, audit, continuity, grounding, production — see [`03-five-domains.md`](03-five-domains.md). |
+| **Domain (1–5)** | Categories of help — lexical, audit, continuity, **grounding (4a)**, **scenario simulation (4b)**, production. Domain 4 **splits** into 4a and 4b; do not collapse them. See [`03-five-domains.md`](03-five-domains.md). |
 | **Disclosure** | Telling readers, editors, or contest organizers **how** you used AI — vague labels help no one. |
 | **Authorship** | **You** own creative intent, voice, and responsibility — regardless of tools used. |
 | **Sensitivity reader** | A **human expert** on culture or lived experience — not replaceable by unchecked model output. |
@@ -21,7 +21,7 @@
 | **Copyright / safety filter** | Product policy that **blocks or warns** on some famous or sacred text — separate from whether the model "stole" your draft. |
 | **Training-material adherence** | How closely prose matches **high-frequency patterns** in model training data — cadence, diction, structure — not whether a human or tool wrote it. |
 | **Formula / franchise prose** | Writing to a **tight publisher or genre rubric** where structural and diction conformity is **the product** (e.g. licensed series fiction). |
-| **Signs rubric** | **Internal craft checklist** for generic or model-typical prose in **your** workflow — flag, cite, branch; not a commercial AI detector. Independently built; convergent with [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Explicit craft checklist for pattern adherence in **your** workflow — same **signal class** detectors approximate, but labeled for craft, not authorship. |
+| **Signs rubric** | **Craft checklist** for generic or model-typical patterns in **your** workflow — flag, cite, branch; not a commercial AI detector. Convergent with [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Craft home: [`04-audit-and-governance.md`](04-audit-and-governance.md); detector debate: *Signs rubric vs commercial AI detectors* below. |
 | **Commercial AI detector** | Product that scores text as "AI" or "human" — under the hood, typically **statistical + pattern rubric** measuring training-material adherence, **not** verified tool use. |
 | **Pick** | Author **selects** one numbered alternative and authorizes apply. |
 | **Cluster + author take** | Author names near-miss options, supplies **own draft**, asks for orientation — **not** applying the closest number by default. |
@@ -29,6 +29,8 @@
 ---
 
 Methodology docs mean little without a stance on **authorship**, **disclosure**, and **reader trust**.
+
+**Where this doc sits:** **Ethics and disclosure** — how you describe practice honestly. **Levels** map to labels → [`01-spectrum-of-use.md`](01-spectrum-of-use.md); **domains** → [`03-five-domains.md`](03-five-domains.md); **move types** (pick vs cluster + author take) → [`02-prosthetic-model.md`](02-prosthetic-model.md); **Signs craft** → locked [`04-audit-and-governance.md`](04-audit-and-governance.md); **process artifacts** (anchors, filing) → [`05-workflow-patterns.md`](05-workflow-patterns.md); **named failures** (ghostwrite drift, …) → [`06-failure-modes.md`](06-failure-modes.md). This doc does **not** re-teach audit mechanics — it answers *what you owe readers and peers*.
 
 **Design lock:**
 
@@ -49,11 +51,21 @@ Be specific. Vague disclosure helps no one.
 | Lexical prosthetic | "AI offered word alternatives; author selected and revised all lines" |
 | Developmental audit | "AI used for editorial-style critique; revisions author-written" |
 | Continuity tooling | "AI queried project database for fact-checking; prose human-written" |
+| Grounding verify (5a / Domain 4a) | "AI checked routes/maps against registered files; prose human-written" |
+| POV-blind grounding | "I filed map/ground research for constraint checks; some coordinates never appear on the page — disclose **process**, not every place name in prose" — see [`05-workflow-patterns.md`](05-workflow-patterns.md) — *POV-blind grounding*; walkthrough: [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md) |
+| Scenario simulation (5b / Domain 4b) | "Off-page scenario runs distilled to constraints; on-page scene author-written" |
+| Production blueprinting (Domain 5) | "AI assisted trailer/storyboard planning; prose human-written" |
 | Pick from alternatives | "AI offered six wordings; I selected option N and edited." |
+| Blend | "I merged pieces from named options per my specification; I authorized apply." |
 | Cluster + author take | "AI offered options; none fit; I drafted my own line with AI used for orientation or audit only." |
+| Supersede | "AI options oriented me; final line is mine; optional readonly audit on my line." |
 | Ghostwriting | "Substantial prose generated by AI" — if true, say so |
 
+Move types (behavior): [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Pick vs cluster + author take*.
+
 This repository advocates **high human prose mass** with **bounded AI assistance** — not hidden ghostwriting.
+
+Level-by-level map: [`01-spectrum-of-use.md`](01-spectrum-of-use.md). Ghostwriting as failure mode: [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*; Level 0 straw man: `01` Level 0.
 
 ---
 
@@ -78,7 +90,7 @@ This repository advocates **high human prose mass** — creative intent, selecti
 
 **No tracking system fixes this** — copy/paste from a separate chat tab bypasses any in-repo tooling. Methodology is **craft and governance**, not forensic enforcement.
 
-**Honest disclosure** describes **how you work** (domains, gates, move type), not a certified score. Offer process artifacts if useful (anchors, audits, verify events) — not a detector badge.
+**Honest disclosure** describes **how you work** (domains, gates, move type), not a certified score. Offer process artifacts if useful (anchors, audits, continuity-check reports) — not a detector badge. Apply gate walkthrough: [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 ---
 
@@ -98,6 +110,8 @@ Not the same labor or machine shape:
 ---
 
 #### Signs rubric vs commercial AI detectors
+
+**For video / skim readers:** Detectors ≈ **training-pattern adherence**, not authorship. **Signs** = same signal class, **craft** purpose. Franchise formula can false-positive detectors. **Do not** use Signs or detectors as proof either way. Full argument below; craft checklist in [`04`](04-audit-and-governance.md).
 
 **Primary role:** developmental audit inside governed workflow — flag AI-typical / statistically average patterns; cite; branch; **never** auto-rewrite on Sign hit alone.
 
@@ -136,7 +150,7 @@ Services that help produce franchise-shaped prose profit in part because **adher
 
 That is **not** a claim that Signs detect "AI use." Both Signs and detectors read **adherence-shaped** signal; Signs do it **explicitly for craft**; detectors **mislabel** it as authorship. On the maintainer corpus, explicit rubric beat implicit product.
 
-Report as **n=1 practitioner evidence**; invite replication via [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+Report as **n=1 practitioner evidence**; invite replication via [`examples/signs-replication-protocol.md`](../examples/signs-replication-protocol.md) and [`CONTRIBUTING.md`](../CONTRIBUTING.md).
 
 | Claim | Status |
 |-------|--------|
@@ -159,7 +173,7 @@ Report as **n=1 practitioner evidence**; invite replication via [`CONTRIBUTING.m
 - Using commercial detector scores as proof of cheating without asking **how** the manuscript was produced
 - Treating Signs like Turnitin — they **invalidate detector culture** by measuring the **same adherence class** honestly for **craft**, while detectors mislabel it as **authorship**
 
-Cross-link: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Prose rubric (Signs)*.
+Cross-link: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Signs — craft vocabulary*; optional numbered list: [novelist-plugin `prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (separate tooling repo).
 
 ---
 
@@ -198,6 +212,8 @@ Publisher decisions vary:
 
 **Separation:** *Placement* is publisher/production; *accuracy* is author ethics. This repo does not mandate placement — it mandates **honesty** when asked.
 
+**POV-blind grounding:** Disclose that you filed maps and constraint checks — not that every researched coordinate appears in the narrative. See disclosure table above; [`05-workflow-patterns.md`](05-workflow-patterns.md) — *POV-blind grounding*.
+
 ---
 
 ## Cultural and indigenous material
@@ -217,6 +233,8 @@ Methodology gates do not replace **human cultural review**. STOP and ask living 
 For some authors, lexical prosthetic use is **accessibility** — analogous to assistive tech.
 
 Dismissive takes ("real writers don't need AI") erase neurologically accurate workflows. Advocates can explain prosthetic use without conflating it with Level 0 ghostwriting.
+
+Pressure to **flatten intentional voice** toward generic rubric prose is a craft failure mode, not a moral virtue — [`06-failure-modes.md`](06-failure-modes.md) — *Over-smoothing voice*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Human Signals vs rubric Signs*.
 
 ---
 
@@ -276,6 +294,7 @@ That is **mode collapse on a famous prefix**, not evidence that the model opened
 - Hiding AI use when venue or readers require disclosure
 - Using AI to imitate marginalized voices without lived expertise
 - Replacing paid human editors, sensitivity readers, or translators with unchecked model output
+- Treating sandbox, comparanda, or chat output as **canon** without promotion — [`06-failure-modes.md`](06-failure-modes.md) — *Domain collapse* / *Comparanda bleed*; scope: [`03-five-domains.md`](03-five-domains.md) — *Scope rules*
 
 ---
 
@@ -283,7 +302,7 @@ That is **mode collapse on a famous prefix**, not evidence that the model opened
 
 1. What is the minimum disclosure my audience deserves?
 2. Which domains do I use (see five-domains doc)?
-3. Where is my apply gate documented?
+3. Where is my apply gate documented? → [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Apply gate in practice*, *What your words mean*
 4. Who vets cultural or medical grounding?
 5. What would I show a skeptical peer to prove I am not ghostwriting?
 6. Can I demonstrate **training memorization** (Gettysburg vs Bible prompt) to separate "famous text bias" from "stole my manuscript"? See [Training bias vs "AI steals my work"](#training-bias-vs-ai-steals-my-work).
@@ -294,5 +313,15 @@ That is **mode collapse on a famous prefix**, not evidence that the model opened
 
 ## Next
 
-- [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — map your practice to a level
-- [`glossary.md`](glossary.md) — shared vocabulary
+| Topic | Document |
+|-------|----------|
+| Level ladder + honest labels | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) |
+| Pick vs cluster + author take (behavior) | [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| Five domains + scope rules | [`03-five-domains.md`](03-five-domains.md) |
+| Signs craft, apply gate, failure shapes | [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| Anchors, filing habits | [`05-workflow-patterns.md`](05-workflow-patterns.md) |
+| Ghostwrite drift, domain collapse | [`06-failure-modes.md`](06-failure-modes.md) |
+| Local files, continuity checks | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |
+| Gettysburg / Bible screen demo | [`scripts/07b-training-bias-demo.md`](../scripts/07b-training-bias-demo.md) |
+| Signs replication protocol | [`examples/signs-replication-protocol.md`](../examples/signs-replication-protocol.md) |
+| Shared vocabulary | [`glossary.md`](glossary.md) |

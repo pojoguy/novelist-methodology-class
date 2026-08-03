@@ -70,9 +70,11 @@
 
 **Say:**
 
-> Structural agent then readonly audit agent then author pick then apply. Bottom-up line edits when applying multiple fixes — highest line number first. Once tooling is wired, grounding capture is ~zero marginal hours per thousand words — setup is front-loaded; capture is normal research.
+> Step one: structure and grounding — beats, questions, speaker and situation set. Step two: readonly audit — quote gate, tagline gate, apply gate; developmental letter, not a paste-in rewrite. You pick, cluster plus author take, or name a line fix — then apply only if you authorized. Bottom-up line edits when applying several fixes — highest line number first. Grounding capture is low marginal cost once the habit is wired; setup is front-loaded.
 
-**On-screen:** Pipeline flowchart
+**On-screen:** Pipeline flowchart · `Readonly audit` · `You authorize apply`
+
+**Note for recording:** See `docs/05-workflow-patterns.md` — *Two-step pipeline (structural → audit)*; `docs/02-prosthetic-model.md` — gates and move types.
 
 ---
 

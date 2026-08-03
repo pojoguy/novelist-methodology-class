@@ -31,7 +31,7 @@
 
 > Governance is procedural honesty, not a score. Signs name pattern adherence for craft; detectors measure a similar signal and mislabel it as authorship.
 
-**On-screen:** `Honesty ≠ detector %`
+**Note for recording:** Skim: `docs/07-ethics-and-transparency.md` — *Signs rubric vs commercial AI detectors*; in-session traps: `docs/04-audit-and-governance.md` — *Failure shapes — quick recognition*.
 
 ---
 
@@ -39,9 +39,9 @@
 
 **Say:**
 
-> Ideation only. Lexical prosthetic — AI offered words, I selected all lines. Developmental audit — AI critiqued, I revised. Pick from alternatives — I chose option three and edited. Cluster plus author take — none fit; I drafted my own line; AI oriented only. Ghostwriting — say so if it's true. Pick and cluster-plus-take are **not** the same disclosure.
+> Ideation only. Lexical prosthetic — AI offered words, I selected all lines. Developmental audit — AI critiqued, I revised. Continuity tooling — fact-check against registered files. Grounding verify — maps and routes checked; prose mine. Scenario simulation — off-page runs distilled to constraints; scene mine. Production blueprinting — trailer or storyboard planning only. Pick — I chose option three and edited. Blend — I merged named options per my spec. Cluster plus author take — I drafted my own line; AI oriented only. Supersede — options were compass; final line is mine. Ghostwriting — say so if it's true. Pick and cluster-plus-take are **not** the same disclosure.
 
-**On-screen:** Label list · `Pick ≠ cluster+take`
+**On-screen:** Label list · `Pick ≠ cluster+take` · `5a ≠ 5b`
 
 ---
 
@@ -69,7 +69,7 @@
 
 **Say:**
 
-> We don't normalize unedited model output, hiding AI when required, or replacing paid sensitivity readers. Don't use Signs as pretend all-human proof. Don't use detector scores without asking how the manuscript was produced. Signs invalidate detector culture by measuring the same adherence class honestly for craft — while detectors mislabel it as authorship.
+> We don't normalize unedited model output, hiding AI when required, replacing paid sensitivity readers, or treating sandbox or comparanda text as canon without promotion. Don't use Signs as pretend all-human proof. Don't use detector scores without asking how the manuscript was produced. Signs invalidate detector culture by measuring the same adherence class honestly for craft — while detectors mislabel it as authorship.
 
 **On-screen:** Red lines list
 

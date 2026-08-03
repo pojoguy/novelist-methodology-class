@@ -41,13 +41,15 @@
 
 ---
 
-## Beat 2 — Maturity (2:00–2:45)
+## Beat 2 — Maturity + levels bridge (2:00–2:45)
 
 **Say:**
 
-> You don't need all five to be valid. Most projects start at one and two and grow. Domain one begun looks like six-alternatives on flagged lines. Mature looks like PGMs and anchors per chapter.
+> You don't need all five to be valid. Most projects start at one and two and grow. Domain one begun looks like six-alternatives on flagged lines. Mature looks like PGMs and anchors per chapter. Domains are not the same as levels — level one brainstorming is pre-domain; level two maps to domain one; level three to domain two; five-a and five-b split domain four. Full bridge table in episode one and the paired doc.
 
-**On-screen:** Begun → Mature checklist
+**On-screen:** Begun → Mature checklist · `Domains ≠ levels` · `See Ep. 01`
+
+**Note for recording:** See `docs/03-five-domains.md` — *Domains ↔ levels*; `docs/01-spectrum-of-use.md` — *Levels and domains*.
 
 ---
 
@@ -57,7 +59,7 @@
 
 > Audit and governance — how domain two stays readonly. Optional companion: **Ep. 03B** — maps versus play-pretend ([`03b-scenario-simulation.md`](03b-scenario-simulation.md)). Episode four.
 
-**On-screen:** Ep. 04 card · `Ep. 03B: L5a vs L5b`
+**On-screen:** Ep. 04 card · `Ep. 03B: L5a vs L5b` · `Ep. 01: levels`
 
 ---
 

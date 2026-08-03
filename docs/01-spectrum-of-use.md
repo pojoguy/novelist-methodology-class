@@ -234,13 +234,13 @@ Same ramp as [`README.md`](../README.md#where-to-start-by-week) — summarized h
 
 ### How this repo relates to tooling
 
-**Two trees, one practice.** This repository (`novelist-methodology-class`) is **methodology** — how you work. [novelist-plugin](https://github.com/pojoguy/novelist-plugin) is **optional tooling** — MCP server, prompts, rubrics, continuity helpers. They are separate repositories; nothing in this tree is required to run novelist-plugin, and novelist-plugin is not required to learn Week 1 habits here.
+**Three layers, one practice.** Full map: [`README.md`](../README.md#how-this-fits-together) — methodology (this repo), optional [novelist-plugin](https://github.com/pojoguy/novelist-plugin) engine, optional [Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian) worked example. Summary:
 
 | What | Role for learners |
 |------|-------------------|
 | **This repo** | Methodology docs, templates, examples — **start here** |
 | **[novelist-plugin](https://github.com/pojoguy/novelist-plugin)** | Optional engine — [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md), registered lookup, continuity checks — **Week 3+** when capture hurts |
-| **Your manuscript repo** (e.g. maintainer's live novel via MCP) | Where prose and canon live — **not required** to learn Week 1 Levels 2–3 |
+| **Worked example** ([Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian)) | Optional deep dive — walkthrough in [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md); **not required** for Week 1 Levels 2–3 |
 
 You do **not** need novelist-plugin or a governed IDE to practice prosthetic + audit in any chat tool.
 

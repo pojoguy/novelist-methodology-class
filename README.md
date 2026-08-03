@@ -31,7 +31,7 @@ This repository documents a broader, craft-first methodology: how working writer
 | LLM as author | LLM as **prosthetic** (retrieval, audit, modeling) |
 | Output = manuscript | Output = **diagnostics, alternatives, state** |
 | One-shot prompting | **Session anchors**, knowledge graphs, apply gates |
-| "The thread remembers my novel" | **PGMs + RAG** — state outside chat |
+| "The thread remembers my novel" | **Registered notes + lookup** — state outside chat (see [`08`](docs/08-infrastructure-techniques.md) when filing starts to matter) |
 | "Make it better" | **Flag → six alternatives → author decides → apply** |
 | Trust the model | **Constrain the model**; human authorizes |
 
@@ -56,13 +56,23 @@ Creative intent and final prose remain human. AI assists where human working mem
 | [`docs/JARGON-STANDARD.md`](docs/JARGON-STANDARD.md) | Contributor rule: Terms table at start of every doc/script |
 | [`scripts/`](scripts/) | YouTube video scripts — one-to-one paired with `docs/`; see [`scripts/production-setup.md`](scripts/production-setup.md) for record/edit workflow |
 | [`templates/`](templates/) | Starter templates for sessions and editorial feedback |
-| [`examples/`](examples/) | Walkthroughs and case studies (anonymized) — see [`grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md) |
+| [`examples/`](examples/) | **Start:** [`grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md) (POV-blind grounding walkthrough). Also: vocabulary prosthetic workflow, Signs replication protocol, spectrum demo fixtures (**synthetic / demo-only** — not a live manuscript) |
+
+### How this fits together
+
+| Layer | Repository | You use it for… |
+|-------|------------|-----------------|
+| **Methodology** | [This repo](https://github.com/pojoguy/novelist-methodology-class) | Docs, templates, examples — **start here** (Week 1–2, any chat tool) |
+| **Optional engine** | [novelist-plugin](https://github.com/pojoguy/novelist-plugin) | Registered lookup, continuity, grounding automation — **Week 3+** when filing hurts |
+| **Worked example** | [Mark-of-The-Guardian](https://github.com/pojoguy/Mark-of-The-Guardian) | Optional deep dive — anonymized walkthroughs in [`examples/grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md); **not required** to learn Levels 2–3 |
+
+Patterns here are **generalized** from long-form practice; the novel repo shows one author's filing habits — **prose stays there, methodology stays here.** You do **not** need the plugin or novel repo to learn prosthetic + audit in any chat tool.
 
 ### Related repository (optional tooling)
 
 **This tree is methodology and templates only** — docs, examples, session templates. It does **not** contain the MCP server, prompt packs, or reference rubric files.
 
-The maintainer's **optional implementation** lives in a **separate repository**: [novelist-plugin](https://github.com/pojoguy/novelist-plugin). There you will find [`prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (18 Signs), continuity tooling, and [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) for registered lookup.
+The maintainer's **optional implementation** lives in **[novelist-plugin](https://github.com/pojoguy/novelist-plugin)** — [`prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (18 Signs), continuity tooling, and [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) for registered lookup.
 
 You do **not** need novelist-plugin to learn Week 1 habits (prosthetic + audit) from these docs alone.
 
@@ -75,7 +85,7 @@ You do **not** need novelist-plugin to learn Week 1 habits (prosthetic + audit) 
 2. Read [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — the landscape in ten minutes.
 3. Read [`docs/02-prosthetic-model.md`](docs/02-prosthetic-model.md) — the central operating model.
 4. Copy [`templates/session-close.md`](templates/session-close.md) when you close a writing session.
-5. Add indexed notes and continuity habits when your project outgrows chat — [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md).
+5. When the book outgrows chat, add filing habits — [`docs/05-workflow-patterns.md`](docs/05-workflow-patterns.md) first; [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) when registered lookup starts to matter (not Week 1).
 
 ### Where to start (by week)
 
@@ -89,7 +99,7 @@ You do **not** need a governed IDE on day one. The path is **manual habits first
 
 **Week 1 goal:** More than *"make me a story"* — diagnose, six alternatives, you pick, you apply. No lookup tiers, no plugin required.
 
-Cross-link: [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — *Where to start (by week)*.
+**Reading order (docs):** [`01`](docs/01-spectrum-of-use.md) → [`02`](docs/02-prosthetic-model.md) → [`05`](docs/05-workflow-patterns.md) / [`06`](docs/06-failure-modes.md) for habits and failure modes; [`03`](docs/03-five-domains.md) + [`04`](docs/04-audit-and-governance.md) + [`07`](docs/07-ethics-and-transparency.md) for scope, audit, and ethics; **[`08`](docs/08-infrastructure-techniques.md) when registered lookup starts to matter** — not Week 1. Full three-repo map: [How this fits together](#how-this-fits-together) above; short pointer in [`01`](docs/01-spectrum-of-use.md) — *How this repo relates to tooling*.
 
 ---
 
@@ -97,7 +107,7 @@ Cross-link: [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — *Wher
 
 This methodology grew out of a multi-year novel project where the maintainer is autistic, uses LLMs as vocabulary and continuity prosthetics, and treats tool output as **bounded search** under explicit constraints — closer to governed craft than to "chat until it's good."
 
-Research lineage runs to 1980s knowledge-based systems work at the University of Calgary; current practice includes enterprise LLM orchestration (LangGraph). See [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) for full context.
+Research lineage runs to 1980s knowledge-based systems work at the University of Calgary; current practice includes **production knowledge-systems work** — governed LLM systems with explicit state, checkpoints, and human authorization before side effects. See [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) Part 4 for maintainer context.
 
 The patterns here are **generalized** from that practice. They are not tied to one genre, one tool, or one manuscript.
 

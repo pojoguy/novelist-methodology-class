@@ -8,7 +8,7 @@
 | **Format** | Explainer (3–5 min) or 3-part mini-series |
 | **Series** | LLM Methodology — Ep. 08 |
 | **Target length** | 4:30 (overview) |
-| **Status** | outline |
+| **Status** | draft |
 
 ---
 
@@ -16,14 +16,18 @@
 
 | Term | Say this (plain language) | On-screen (optional) |
 |------|---------------------------|----------------------|
-| **RAG** | **Search** your book — "where did I say that?" | `Manuscript search` |
+| **RAG / quick search** | **Search** your book — "where did I say that?" — does not prove continuity. | `Locate · not verify` |
+| **Tagged passage** | Search **with** scene/memory tags and PGM links. | `Canon join` |
 | **PGM** | Your **working notes**, formalized — any format; tooling queries them. | `Notes → queryable` |
 | **Plain-language lookup** | You ask; your project files answer. | `You talk · notes work` |
 | **Relationship collapse** | Text fits in context; **joins** don't — who knows what, which arc. | `Joins ≠ tokens` |
-| **Verify** | **Continuity check** with rule names and quotes. | `Fact-check` |
+| **Continuity check** | **Fact compare** with rule names, quotes, reference ID. | `Verify · not search` |
 | **Comparanda** | Other books' excerpts **only for craft compare** — never canon. | `Quarantined refs` |
 | **Reanchor** | After edits, **refresh** the index so line refs stay true. | `Re-index chapter` |
-| **Grounding pair** | **Map** + **Street View** — blocks generic fictional places. | `Map + ground view` |
+| **Grounding pair (4a)** | **Map** + **Street View** — blocks generic fictional places. | `Map + ground view` |
+| **Scenario sim (5b)** | Off-page runs → **constraints** filed — not manuscript dialogue in the index. | `Distill · not paste` |
+
+**Note for recording:** Skim: `docs/08-infrastructure-techniques.md` — *Kinds of lookup* skim box + *Design lock*; habits live in `docs/05-workflow-patterns.md` — *This doc vs `08`*.
 
 ---
 
@@ -33,7 +37,7 @@
 
 > Six alternatives govern output. Registered files govern what your project can cite — and you shouldn't need jargon to get there.
 
-**On-screen:** `RAG locates · Graphs verify · You apply`
+**On-screen:** `Search locates · checks verify · You apply`
 
 ---
 
@@ -51,7 +55,7 @@
 
 **Say:**
 
-> Quick search finds mentions — it does not prove continuity. Mature workflow uses different question types: quick locate, tagged passage search with canon and scene tags, continuity check for truth. One kind per question. Never merge quick search and tagged search in the same answer. Over months, **file typed editorial reports** — trope ledger, tone, continuity — and reload them; chat is not your archive.
+> Quick search finds mentions — it does not prove continuity. Mature workflow uses different question types: quick locate, tagged passage search with canon and scene tags, continuity check for truth. One kind per question. Never merge quick search and tagged search in the same answer. Over months, file typed editorial reports — trope ledger, tone, continuity — and reload them; chat is not your archive. Collapse failure: mixed lookup — see Ep. 06.
 
 **On-screen:** `Quick · tagged · continuity` · `report corpus`
 
@@ -81,9 +85,9 @@
 
 **Say:**
 
-> Travel edits: look up the route first — no route on file means stop, don't invent highways. Grounding indexes pair map and Street View per place — map alone fixes where; ground view fixes what it looks like. Example: Danish Cemetery near Coteau, ND — chapter three, collapse pickup; POV-blind — your character may not name the site. One line: add to grounding. Load the pair before roadside or corridor prose when registered — generic template cemetery means grounding failed. Don't use comparanda for continuity checks. Don't treat search hits as co-presence proof.
+> Travel edits: look up the route first — no route on file means stop, don't invent highways. Grounding indexes pair map and Street View per place — map alone fixes where; ground view fixes what it looks like. Example: Danish Cemetery near Coteau, ND — chapter three, collapse pickup; POV-blind — your character may not name the site. Scenario simulation is different: off-page runs distill constraints to character files — never index sandbox dialogue as canon. One line: add to grounding. Load the pair before roadside or corridor prose when registered — generic template cemetery means grounding failed. Don't use comparanda for continuity checks. Don't treat search hits as co-presence proof.
 
-**On-screen:** `Map + Street View` · `Visual gate` · `No generic cemetery`
+**On-screen:** `Map + Street View` · `5a ≠ 5b` · `No generic cemetery`
 
 ---
 
@@ -91,7 +95,7 @@
 
 **Say:**
 
-> Full doc in the repo.
+> Full doc in the repo. Spin-offs: **8a** lookup kinds, **8b** continuity reporting, **8c** comparanda — if you need depth beyond this overview.
 
 **On-screen:** Repo link
 
