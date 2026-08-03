@@ -22,8 +22,6 @@
 
 ---
 
-
-
 ## What this document is for
 
 **Audience:** Authors and adult students — especially skeptics — who want **context** before the craft ladder in `[01-spectrum-of-use.md](01-spectrum-of-use.md)`. You do not need a technical background.
@@ -40,8 +38,6 @@
 **Deep history** (telephone switching, Erlang, Gaines at Calgary): **[appendix](#appendix-optional-depth--telephone-switching-and-gaines)** — skip on first read.
 
 ---
-
-
 
 ## Lesson 1 — November 2022 did not invent AI
 
@@ -62,8 +58,6 @@ What changed in 2022 was mostly **access and visibility**. The underlying famili
 **Takeaway:** When a writer says *"I don't use AI,"* they usually mean *"I don't use ChatGPT."* Fair. They may still use autocomplete, grammar tools, map routing, live captions, or mobile check deposit. Every one of those is model-mediated. None required opening a chat window.
 
 ---
-
-
 
 ## Lesson 2 — Why chat tools sound confident when they are wrong
 
@@ -97,8 +91,6 @@ Locked habits: `[04-audit-and-governance.md](04-audit-and-governance.md)` — *A
 
 ---
 
-
-
 ## Lesson 3 — This is not the first craft panic
 
 Every major writing technology faced resistance:
@@ -115,8 +107,6 @@ While some fears had merit (homogenization, over-reliance), none have eliminated
 LLMs are the next layer. The relevant question is not "AI yes or no" but **which kind of help**, under **what governance**, with **how much human prose mass** remaining. *"Write me a bestseller"* is [level zero](01-spectrum-of-use.md#level-0--ghostwriting-on-demand). Serious practice starts higher — and looks nothing like the straw man.
 
 ---
-
-
 
 ## Lesson 4 — AI you already use (and don't call AI)
 
@@ -143,7 +133,7 @@ Modern engines keep a **context window** — a short memory of what you just sai
 
 Feed **white noise** into the same engine and it may **hallucinate complete sentences** — words nobody spoke. That is generation under uncertainty, not faithful recording.
 
-This is not ChatGPT ghostwriting your chapter. You spoke. You revise. You own the file. **That is prosthetic capture** — generative text in, **you** edit before it is yours. You already do this comfortably, without calling it AI. You are already following the prescription this methodology names: machine output lands first; **you** govern what stays on the page.
+This is not ChatGPT ghostwriting your chapter. You spoke. You revise. You own the file. **That is prosthetic capture** — generative text in, **you** edit before it is yours. You already do this comfortably, without calling it generative AI. You are already following the prescription this methodology names: when a machine output lands **you** govern what stays on the page.
 
 If you ever accept an autocomplete suggestion, you have already used the structural move behind the **six-alternative protocol** — at phone-keyboard scale.
 
@@ -183,8 +173,6 @@ If yes to any of these, you already practice **selection** from machine-generate
 
 ---
 
-
-
 ## Lesson 5 — Three words the news throws around
 
 Readers sometimes ask for plain definitions before the craft docs. Here they are:
@@ -200,8 +188,6 @@ Readers sometimes ask for plain definitions before the craft docs. Here they are
 This repository is about **governance** — retrieval vs substitution, audit vs ghostwrite, **you** apply last — not model worship.
 
 ---
-
-
 
 ## Who maintains this — and why listen
 
@@ -228,10 +214,8 @@ The prosthetic model is expert-systems discipline — explicit constraints, you 
 
 - **One long-term project** — LLMs across **[five domains](03-five-domains.md)** where the work required them: word help, developmental audit, continuity, grounding, production blueprinting
 - **Prototyped largely in frontier chat** — prosthetic and audit patterns **and initial PGMs** drafted there and saved by hand; indexed lookup followed when re-pasting canon stopped scaling (`[01](01-spectrum-of-use.md)` — *Frontier chat only*)
-- **Autistic** author — I use LLM as **vocabulary and continuity prosthetic**: external working memory under load, not voice replacement
+- **Autistic** author — I use LLM as **vocabulary and continuity prosthetic**: external working memory under load, not as a replacement for my voice
 - Documented **[failure modes](06-failure-modes.md)** and countermeasures from live sessions — ghostwrite drift, proverb dialogue, sycophantic audit, and how to fix them
-
-
 
 ### Day job
 
@@ -260,8 +244,6 @@ That combination — experienced practitioner, aspiring novelist with skin in th
 
 ---
 
-
-
 ## What to do with this
 
 1. **Separate UI from capability** — ChatGPT made models visible; it did not invent statistical assistance
@@ -274,8 +256,6 @@ If after reading this you still reject all AI in fiction — that is a valid **v
 **Next step:** `[01-spectrum-of-use.md](01-spectrum-of-use.md)` — the level ladder from ghostwriting to governed practice.
 
 ---
-
-
 
 ## Appendix: Optional depth — telephone switching and Gaines
 
@@ -303,8 +283,6 @@ In **1960s Britain**, the Post Office deployed electronic exchanges (**TXE4** 19
 | **2017–present**  | Transformers at scale                               | Still sample from a distribution each token |
 
 
-
-
 ### Gaines → Calgary → this repo
 
 
@@ -315,8 +293,6 @@ In **1960s Britain**, the Post Office deployed electronic exchanges (**TXE4** 19
 | **1980s**     | Calgary **Knowledge Science Institute** + **Mildred Shaw** | Expert systems, explicit graph state            |
 | **1980s**     | **David Johnson** under Gaines, Vickers, Shaw              | Bias and preference in knowledge representation |
 | **Present**   | Generalized in this repo                                   | PGMs + anchors + prosthetic gates               |
-
-
 
 
 ### What an LLM does, stripped of mystique
@@ -348,8 +324,6 @@ Speech recognition moved from classical models (HMMs) through neural nets to tod
 **Foundation ASR:** Modern speech-to-text (**Whisper**, **Chirp**, and vendor-specific stacks) is **generative** — audio in, probabilistic text out — with **context windows** that disambiguate nearby words; feed noise and it may hallucinate sentences never spoken. Separate weights and training from chat LLMs; often the same vendors. See [Lesson 4](#lesson-4--ai-you-already-use-and-dont-call-ai) for why dictation still counts when a writer says *I don't use generative AI*.
 
 ---
-
-
 
 ## Next
 
