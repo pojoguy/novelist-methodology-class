@@ -117,12 +117,12 @@ Many people reject "AI" in the abstract while depending on statistical and gener
 | Tool                                                | What you already do                | Same habit as serious LLM craft             |
 | --------------------------------------------------- | ---------------------------------- | ------------------------------------------- |
 | **Predictive text / autocomplete**                  | Accept or dismiss a suggested word | **You** choose from a machine retrieval set |
-| **Spell-check and grammar tools**                   | Accept or ignore a rewrite         | Critique → **you** apply                    |
+| **Modern spell-check and grammar tools**            | Accept or ignore a rewrite         | Critique → **you** apply                    |
 | **Dictation / live captions / meeting transcripts** | Speak; edit the text afterward     | Capture → **you** own the file              |
 | **Search and translation**                          | Use or distrust a snippet          | Trust-but-verify                            |
 
 
-**Speech-to-text deserves a straight talk:** Many authors speed first drafts with phone dictation, Word, Dragon, Otter, or voice notes pasted into Scrivener — and still say they never touch "generative AI." Much of that pipeline runs on foundation speech-to-text models (e.g. **Whisper** on the OpenAI stack, **Chirp** on the Google stack) — same vendor families as chat products, different task. You spoke; you revise; you own the file. That is **prosthetic capture**, not ChatGPT ghostwriting — but it is not "zero AI" either. The methodology question is **governance**: what you authorize after capture.
+**Speech-to-text deserves a straight talk:** Many authors speed first drafts with phone dictation, Word, Dragon, Otter, or voice notes pasted into Scrivener — and still say they never touch "generative AI." That pipeline is, on modern phones and current major products, usually **neural speech-to-text** — not ChatGPT drafting your chapter. **Apple, Microsoft (including Dragon), and many standalone apps use their own ASR stacks**; some Google services use **Chirp** (Google Cloud Speech); some apps call **Whisper** (OpenAI). Foundation ASR models have **separate weights and training** from chat LLMs. When you use **the same vendor** for chat and transcription — OpenAI for both, or Google for both — product boundaries are thinner than *"I don't use AI"* implies. You spoke; you revise; you own the file. That is **prosthetic capture**, not ghostwriting — but it is not "zero AI" either. The methodology question is **governance**: what you authorize after capture.
 
 Accept an autocomplete suggestion and you have already done the structural move behind the **six-alternative protocol** — at phone-keyboard scale.
 
@@ -135,7 +135,7 @@ Skeptics often draw a sharp line:
 | --------------------------------------------------------------------- | ------------------------- |
 | "Night mode **reconstructs** pixels; it doesn't **write** my chapter" | **Yes** — different task  |
 | "Noise suppression **classifies** speech vs clutter"                  | **Yes** — not composition |
-| "Therefore I use **no AI** like ChatGPT"                              | **No** — category error   |
+| "Therefore I use **no AI at all**"                                    | **No** — category error   |
 
 
 Your phone camera, video-call noise removal, and hearing-aid processing are mostly **reconstruction and classification**. They do not draft your chapter. Grant that.
@@ -144,14 +144,14 @@ The pivot for writers: you already **trust or reject probabilistic machine outpu
 
 ### Elsewhere in daily life (briefly)
 
-Mobile check deposit, fraud alerts, map ETAs, streaming recommendations, and feed ranking all use machine reading, classification, or prediction — usually with human override when the system is wrong. Paper checks feel analog; **commercial check processing is largely automated**. If you have deposited a check by phone, you have already depended on machine vision and fraud scoring in a regulated industry — high stakes, human review when the model errs, zero headline saying "AI banking."
+Mobile check deposit, fraud alerts, map ETAs, streaming recommendations, and feed ranking all use machine reading, classification, or prediction — usually with human override when the system is wrong. Paper checks feel analog; in the **US**, **commercial check processing is largely automated** (other countries vary). If you have deposited a check by phone, you have already depended on machine vision and fraud scoring in a regulated industry — high stakes, human review when the model errs, zero headline saying "AI banking."
 
 ### The honesty test
 
 Ask yourself:
 
 1. Have I accepted an autocomplete suggestion this week?
-2. Have I used a grammar or spell tool?
+2. Have I used a modern grammar or spell tool?
 3. Have I used dictation, live captions, or a meeting transcript?
 4. Have I followed a maps route or a streaming recommendation?
 5. Have I deposited a check by phone or relied on a phone camera night mode or portrait effect?
@@ -178,29 +178,35 @@ This repository is about **governance** — retrieval vs substitution, audit vs 
 
 ## Who maintains this — and why listen
 
-This repository is maintained by **David Johnson** — aspiring fiction writer, knowledge-systems practitioner, and long-form novelist using governed LLM workflows for years. The methodology here is not assembled from influencer threads. It is generalized from **decades of technical practice** and **live sessions on a real manuscript**.
+I'm **David Johnson**, and I maintain this repository. Before you trust what's here, you deserve two plain statements about who I am as a novelist and who I am as an AI practitioner.
 
-### The through-line (short version)
+**As a novelist, I'm aspiring.** I have one long-term speculative fiction project I've exercised these tools on for years — prosthetic passes, developmental audit, continuity notes, PGMs filed by hand, wherever the book actually needed them. Not demo prose; the manuscript. I'm not claiming a published career. I'm claiming **working-writer** habits tested under real load.
 
-In the 1980s, David worked with **Brian Gaines**, **Joan Vickers**, and **Mildred Shaw** at the University of Calgary on **knowledge-based systems** — encoding what experts know as explicit state, constraints, and rules people can audit. Gaines's own research ran back to **stochastic computing** in 1960s British telecom (optional depth in the [appendix](#appendix-optional-depth--telephone-switching-and-gaines)).
+**As an AI user and practitioner, I'm experienced** — decades in knowledge systems and governed production LLM work (below). This methodology is not assembled from influencer threads. It is generalized from that practice and from live sessions on the novel.
 
-That lineage matters for writers because serious LLM craft needs **both**:
+### Where this comes from
+
+The habits in this repo — file canon outside chat, run readonly checks, authorize every apply — are not influencer inventions. They come from **knowledge-systems** work that predates chat interfaces: encode what matters as **explicit state and rules a human can audit**, not private intuition in the thread.
+
+I learned that discipline in the 1980s, in academic and industrial research on how people actually use knowledge under load. The parallel statistical story — why models sample, why plausible ≠ true — is optional depth in the [appendix](#appendix-optional-depth--telephone-switching-and-gaines).
+
+For writers, that translates to **both**:
 
 - **Filed state** — PGMs, session anchors, locks (notes you reload, not chat memory)
-- **Governed sampling** — alternatives and critique under gates, not blind trust
+- **Governed alternatives and critique** — under gates, not blind trust
 
-The prosthetic model is **bounded search under explicit constraints** — expert-systems discipline updated for chat-scale generation.
+The prosthetic model is expert-systems discipline — explicit constraints, you choose — updated for chat-scale generation.
 
-### Creative practice
+### On the novel (creative practice)
 
-- Long-form speculative fiction using LLMs across **[five domains](03-five-domains.md)** — word help, developmental audit, continuity, grounding, production blueprinting
+- **One long-term project** — LLMs across **[five domains](03-five-domains.md)** where the work required them: word help, developmental audit, continuity, grounding, production blueprinting
 - **Prototyped largely in frontier chat** — prosthetic and audit patterns **and initial PGMs** drafted there and saved by hand; indexed lookup followed when re-pasting canon stopped scaling (`[01](01-spectrum-of-use.md)` — *Frontier chat only*)
-- **Autistic** author using LLM as **vocabulary and continuity prosthetic** — it's an external working memory under load, not a voice replacement
+- **Autistic** author — I use LLM as **vocabulary and continuity prosthetic**: external working memory under load, not voice replacement
 - Documented **[failure modes](06-failure-modes.md)** and countermeasures from live sessions — ghostwrite drift, proverb dialogue, sycophantic audit, and how to fix them
 
 ### Day job (one paragraph)
 
-David designs **governed LLM systems in production** — explicit state, checkpoints, human authorization before side effects. That professional habit informed keeping **methodology in this repo** and optional implementation in [novelist-plugin](https://github.com/pojoguy/novelist-plugin). You do **not** need that stack to learn Week 1 habits.
+I design **governed LLM systems in production** — explicit state, checkpoints, human authorization before side effects. That professional habit informed keeping **methodology in this repo** and optional implementation in [novelist-plugin](https://github.com/pojoguy/novelist-plugin). You do **not** need that stack to learn Week 1 habits.
 
 ### What this qualification is — and is not
 
@@ -209,11 +215,11 @@ David designs **governed LLM systems in production** — explicit state, checkpo
 | ----------------------------------------------- | -------------------------------- |
 | Craft-first methodology you can audit and adapt | "AI will replace all authors"    |
 | Honest reporting of where models break          | Prompt-pack bestseller shortcuts |
-| Habits tested on a novel-length project         | One true model or one true tool  |
+| Habits tested on a long-term manuscript project | One true model or one true tool  |
 | How to **constrain** tools in creative work     | Vendor marketing                 |
 
 
-David is qualified to discuss **governed creative use** because he has done it in both **production systems** and **personal craft** — and documented where it breaks.
+That combination — experienced practitioner, aspiring novelist with skin in the game — is why I'm qualified to discuss **governed creative use** and to document where it breaks.
 
 ---
 
@@ -288,13 +294,13 @@ Under the hood, most of that work is **weighted sums through enormous tables** �
 
 The model still **samples** text. The orchestration is what holds **relationship fidelity** and **apply discipline** at novel scale. Frontier chat can imitate pieces of this by re-pasting notes and fresh threads; registered tooling automates the reload and step order — optional, and usually **after** you have files worth indexing.
 
-Speech recognition (HMMs), codecs, and VoIP routing share this family tree with modern LLMs — which is why Whisper-on-a-video-call and GPT-in-a-doc are less alien than they look.
+Speech recognition moved from classical models (HMMs) through neural nets to today's transformer ASR — a statistical lineage modern LLMs share — which is why **closed captions or meeting transcripts** and GPT-in-a-doc feel less alien than they look, even when they are not the same product.
 
 ### Hidden AI — extended catalog (optional)
 
-**Phone cameras** run real-time inference — autofocus, HDR, night-mode denoising, portrait depth, sometimes generative zoom. **Video calls** use neural noise suppression. **Banking** uses machine reading and fraud classifiers. None require the user to say "I use AI." All require **trust or reject** — the same governance problem serious writers solve with apply gates and author locks.
+**Phone cameras** run real-time inference — autofocus, HDR, night-mode denoising, portrait depth, sometimes generative zoom. **Video calls** use neural noise suppression. **Banking** (especially US check clearing) uses machine reading and fraud classifiers. None require the user to say "I use AI." All require **trust or reject** — the same governance problem serious writers solve with apply gates and author locks.
 
-**Foundation ASR:** **Whisper** (OpenAI) and **Chirp** (Google) are widely embedded speech-to-text models — separate weights from chat LLMs, same vendor stacks. Precision matters for the writer argument: captions are not "ChatGPT wrote your novel," but vendor boundaries are thinner than *"I don't use AI"* implies.
+**Foundation ASR:** **Whisper** (OpenAI) and **Chirp** (Google Cloud Speech) are widely used foundation speech-to-text models — **separate weights and training** from chat LLMs. **Apple, Microsoft, and Dragon use their own stacks**; do not assume every dictation path hits Whisper or Chirp. **Closed captions and meeting transcripts** transcribe speech; they do not draft your novel. They are still **model-mediated** — the same trust-or-reject habit as autocomplete. When you use **the same vendor** for chat and transcription, product boundaries are thinner than *"I don't use AI"* implies.
 
 ---
 
