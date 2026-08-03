@@ -42,6 +42,7 @@ One-line definition (≤12 words)
 | Term | One-line card |
 |------|----------------|
 | **Prosthetic model** | AI expands retrieval; author selects and owns prose |
+| **Prosthetic capture** | Ingestion phase — machine output lands in your file before you revise |
 | **Apply gate** | No manuscript edit without explicit author instruction |
 | **Six-alternative protocol** | Six options as inspiration — pick, blend, reject, or own line |
 | **Thin solution space** | Bias function must return; emits triads, negation, comma-lists |
@@ -54,6 +55,7 @@ One-line definition (≤12 words)
 | **Drift** | Unwanted slide from baseline — name the kind |
 | **Gate** | Checkpoint rule — stop until condition is met |
 | **Lock** | Story law critique must not override |
+| **Orchestration** | Ordered steps with gates — Level 7; you still authorize apply |
 | **Session anchor** | Persisted continuity file — Section A/B/C |
 | **Author lock** | Rule you keep across sessions — naming, voice, calendar |
 | **Human signal** | Intentional voice the author protects on page |
@@ -76,6 +78,7 @@ One-line definition (≤12 words)
 
 | Date | Change |
 |------|--------|
+| 2026-08-03 | Add Orchestration and Workflow engine |
 | 2026-08-02 | PGM entry — frontier-chat drafting before registration |
 | 2026-08-02 | Add Context umbrella term |
 | 2026-08-02 | Add Gate umbrella term |

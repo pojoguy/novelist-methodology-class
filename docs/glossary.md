@@ -10,9 +10,9 @@ Terms used across this repository.
 
 | Doc | Glossary home for… |
 |-----|-------------------|
-| [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, Gaines/Calgary, maintainer context |
+| [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, prosthetic capture, Gaines/Calgary, maintainer context |
 | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | Levels 0–7, frontier chat, PGM drafting, lexical prosthetic, spectrum straw man |
-| [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, six alternatives, move types, nexus, gates, prosthetic gates |
+| [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, prosthetic capture, six alternatives, move types, nexus, gates, prosthetic gates |
 | [`03-five-domains.md`](03-five-domains.md) | Domains 1–5, 4a/4b, scope rules, canon workflow |
 | [`04-audit-and-governance.md`](04-audit-and-governance.md) | Audit, governance, Signs, locks, drift, gates, word contracts, apply gate |
 | [`05-workflow-patterns.md`](05-workflow-patterns.md) | Anchors, context, grounding capture, two-step, exploration vs canon |
@@ -154,13 +154,16 @@ Intentional idiosyncratic prose the author protects; may conflict with generic r
 AI expands vocabulary retrieval; author selects. Not voice replacement.
 
 **Levels (0–7)**  
-Spectrum of how much structure you add. **Level 0** = ghostwriting straw man (substantial model draft, little author revision). **Level 1** = pre-domain ideation / brainstorming — not rubric policing. **Levels 2–3** = lexical prosthetic + developmental audit. **Level 4** = continuity modeling. **5a** = grounding; **5b** = scenario simulation. **6** = production blueprinting. **7** = orchestration across domains. Domains map loosely but not 1:1. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — *Levels and domains*.
+Spectrum of how much structure you add. **Level 0** = ghostwriting straw man (substantial model draft, little author revision). **Level 1** = pre-domain ideation / brainstorming — not rubric policing. **Levels 2–3** = lexical prosthetic + developmental audit. **Level 4** = continuity modeling. **5a** = grounding; **5b** = scenario simulation. **6** = production blueprinting. **7** = **orchestration** across domains (see **Orchestration**). Domains map loosely but not 1:1. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — *Levels and domains*.
 
 **Lock**  
 Umbrella for **rules and registered facts critique must not override without your OK**. A lock is **story law**, not a Sign. **Author lock** — naming, calendar, voice, era habits you keep across sessions. **PGM lock** — fact frozen in project files; contradicting edits need explicit OK. **Design lock** — methodology doctrine lines (search locates, you apply). Six-alternative sets should respect locks; if none can without breaking canon, say so — malformed beat or reorder. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Author locks*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — PGM locks at the nexus.
 
 **Negation triangulation**  
 Collapse pattern: *Not X, not Y. Z.* (or comma-delimited *not X, not Y, but Z*) when retrieval bias stalls at a thin solution space and must emit anyway. Same as **NEGATION triangulation** in some failure-mode tables.
+
+**Orchestration**  
+Running **ordered steps with gates** — structure pass, continuity check, readonly audit, wait for your pick before apply — instead of one open-ended *fix my chapter* prompt. **Level 7** habit across domains. Not the model sampling text; the **discipline around** it: reload filed state, enforce step order, hold **relationship fidelity** and **apply discipline** at novel scale. Frontier chat can imitate pieces by hand (re-paste notes, fresh thread for audit); registered tooling automates reload and sequence. An **orchestrator** (often called a **workflow engine** in tooling docs) is what runs that sequence; **you** still authorize apply. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — *Level 7*; [`00-history-and-authority.md`](00-history-and-authority.md) — *What an LLM does, stripped of mystique*.
 
 **NON-CANONICAL**  
 Label for exploration or chat content not yet promoted to lore/PGMs. See **Exploration / sandbox**; **Promote**.
@@ -190,7 +193,10 @@ An **output-shape gate**: "fix" means audit + alternatives + stop — not chapte
 Bundle of methodology **output-shape gates**: **quote gate** (dialogue waits for speaker + situation), **tagline gate** (critique stays specific, not poster morals), **apply gate**, and **priority-fixes** meaning (critique + options, not paste-in rewrite). Kinds of **gate** (see above). See [`04-audit-and-governance.md`](04-audit-and-governance.md); habits: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*.
 
 **Prosthetic model**  
-AI as external aid for specific failures; human retains intent and final prose.
+AI as external aid for specific failures; human retains intent and final prose. **Ingestion** — what enters your working text before critique and apply — is **prosthetic capture** (see below).
+
+**Prosthetic capture**  
+The **ingestion phase** of the **prosthetic model**: probabilistic machine output lands in your file before you revise — speech-to-text, autocomplete taps, live captions, meeting transcripts. Capture, not substitution; **governance** is what you keep on the page after capture. Distinct from **grounding capture** (filing map + Street View for a site) and **ingest** (refreshing the passage index after edits). See [`00-history-and-authority.md`](00-history-and-authority.md) — Lesson 4; [`02-prosthetic-model.md`](02-prosthetic-model.md).
 
 **Proverb dialogue**  
 Generic wisdom lines without speaker/situation — structural failure mode.
@@ -308,6 +314,9 @@ Compressed moral summary (*A vs B; nature punishes…*) passed off as craft feed
 
 **Word contracts**  
 Governance for chat: the same English phrase must not mean "rewrite my chapter" in one session and "letter only" in the next. Fixed meanings for *review*, *priority fixes*, *use option 3*, *here's my take*, span counterfactuals, load grounding, etc. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *What your words mean*.
+
+**Workflow engine**  
+Tooling that **persists orchestration** — step order, gates, and filed rules across sessions — so you do not re-teach the pipeline every chat. Same two-step habit as prosthetic craft, automated at Level 7. See **Orchestration**; [`05-workflow-patterns.md`](05-workflow-patterns.md).
 
 **Theta bias function**  
 Knowledge-representation framework (1980s research lineage, Calgary) modeling how preference and bias select among candidates. Theoretical root of the six-alternative protocol: when bias stalls at thin edges, human author completes selection.

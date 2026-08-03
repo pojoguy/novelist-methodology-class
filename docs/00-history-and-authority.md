@@ -6,20 +6,23 @@
 **Full glossary:** `[glossary.md](glossary.md)`.
 
 
-| Term                             | Plain language                                                                                                                          |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **AI (artificial intelligence)** | Software that finds patterns, scores, or generates content — not a thinking person.                                                     |
-| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                          |
-| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                |
-| **Chat box**                     | A messaging-style screen (ChatGPT, Claude, Gemini) where you type prompts and get replies — what made AI visible to the public in 2022. |
-| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                     |
-| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                              |
-| **Apply gate**                   | **You** must explicitly approve before any suggested text is pasted into your draft.                                                    |
-| **Human prose mass**             | The bulk of **final wording is yours** after you choose, blend, and revise — not a paste-in from the model.                             |
-| **Governance**                   | The habits that keep you in charge — apply gate, word contracts, readonly audit, filed notes you reload.                                |
+| Term                             | Plain language                                                                                                                             |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **AI (artificial intelligence)** | Software that finds patterns, scores, or generates content — not a thinking person.                                                        |
+| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                             |
+| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                   |
+| **Chat box**                     | A messaging-style screen (ChatGPT, Claude, Gemini) where you type prompts and get replies — what made AI visible to the public in 2022.    |
+| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                        |
+| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                 |
+| **Prosthetic capture**           | The **ingestion** phase of the prosthetic model — machine output lands in your file (dictation, autocomplete, captions) before you revise. |
+| **Apply gate**                   | **You** must explicitly approve before any suggested text is pasted into your draft.                                                       |
+| **Human prose mass**             | The bulk of **final wording is yours** after you choose, blend, and revise — not a paste-in from the model.                                |
+| **Governance**                   | The habits that keep you in charge — apply gate, word contracts, readonly audit, filed notes you reload.                                   |
 
 
 ---
+
+
 
 ## What this document is for
 
@@ -37,6 +40,8 @@
 **Deep history** (telephone switching, Erlang, Gaines at Calgary): **[appendix](#appendix-optional-depth--telephone-switching-and-gaines)** — skip on first read.
 
 ---
+
+
 
 ## Lesson 1 — November 2022 did not invent AI
 
@@ -57,6 +62,8 @@ What changed in 2022 was mostly **access and visibility**. The underlying famili
 **Takeaway:** When a writer says *"I don't use AI,"* they usually mean *"I don't use ChatGPT."* Fair. They may still use autocomplete, grammar tools, map routing, live captions, or mobile check deposit. Every one of those is model-mediated. None required opening a chat window.
 
 ---
+
+
 
 ## Lesson 2 — Why chat tools sound confident when they are wrong
 
@@ -90,6 +97,8 @@ Locked habits: `[04-audit-and-governance.md](04-audit-and-governance.md)` — *A
 
 ---
 
+
+
 ## Lesson 3 — This is not the first craft panic
 
 Every major writing technology faced resistance:
@@ -107,6 +116,8 @@ LLMs are the next layer. The relevant question is not "AI yes or no" but **which
 
 ---
 
+
+
 ## Lesson 4 — AI you already use (and don't call AI)
 
 Many people reject "AI" in the abstract while depending on statistical and generative systems constantly. Naming them reduces mystique — and shows you already practice **human-in-the-loop** selection.
@@ -122,9 +133,21 @@ Many people reject "AI" in the abstract while depending on statistical and gener
 | **Search and translation**                          | Use or distrust a snippet          | Trust-but-verify                            |
 
 
-**Speech-to-text deserves a straight talk:** Many authors speed first drafts with phone dictation, Word, Dragon, Otter, or voice notes pasted into Scrivener — and still say they never touch "generative AI." That pipeline is, on modern phones and current major products, usually **neural speech-to-text** — not ChatGPT drafting your chapter. **Apple, Microsoft (including Dragon), and many standalone apps use their own ASR stacks**; some Google services use **Chirp** (Google Cloud Speech); some apps call **Whisper** (OpenAI). Foundation ASR models have **separate weights and training** from chat LLMs. When you use **the same vendor** for chat and transcription — OpenAI for both, or Google for both — product boundaries are thinner than *"I don't use AI"* implies. You spoke; you revise; you own the file. That is **prosthetic capture**, not ghostwriting — but it is not "zero AI" either. The methodology question is **governance**: what you authorize after capture.
+**Speech-to-text deserves a straight talk.**
 
-Accept an autocomplete suggestion and you have already done the structural move behind the **six-alternative protocol** — at phone-keyboard scale.
+Many authors speed first drafts with dictation — phone, Word, Dragon, Otter, voice notes into Scrivener — and still say, *I never use generative AI.*
+
+Those words did not come from your fingers. The engine takes a **mathematical average of your voice**, runs it through a **tuned model**, and makes a **probabilistic guess** at the words you meant. That is **generative AI**: not a lookup table, not a human stenographer — **generation** from what the model judges most likely.
+
+Modern engines keep a **context window** — a short memory of what you just said — so they can resolve ambiguities. Say *"I don't know whether the weather will be cold or hot"* and the model uses the surrounding words to pick **whether** not **weather**. The text on your screen was **generated**, then you edited it.
+
+Feed **white noise** into the same engine and it may **hallucinate complete sentences** — words nobody spoke. That is generation under uncertainty, not faithful recording.
+
+This is not ChatGPT ghostwriting your chapter. You spoke. You revise. You own the file. **That is prosthetic capture** — generative text in, **you** edit before it is yours. You already do this comfortably, without calling it AI. You are already following the prescription this methodology names: machine output lands first; **you** govern what stays on the page.
+
+If you ever accept an autocomplete suggestion, you have already used the structural move behind the **six-alternative protocol** — at phone-keyboard scale.
+
+The fight is not about purity. It is **governance**: what you allow on the page after capture.
 
 ### The fair objection — and the pivot
 
@@ -160,6 +183,8 @@ If yes to any of these, you already practice **selection** from machine-generate
 
 ---
 
+
+
 ## Lesson 5 — Three words the news throws around
 
 Readers sometimes ask for plain definitions before the craft docs. Here they are:
@@ -175,6 +200,8 @@ Readers sometimes ask for plain definitions before the craft docs. Here they are
 This repository is about **governance** — retrieval vs substitution, audit vs ghostwrite, **you** apply last — not model worship.
 
 ---
+
+
 
 ## Who maintains this — and why listen
 
@@ -204,9 +231,19 @@ The prosthetic model is expert-systems discipline — explicit constraints, you 
 - **Autistic** author — I use LLM as **vocabulary and continuity prosthetic**: external working memory under load, not voice replacement
 - Documented **[failure modes](06-failure-modes.md)** and countermeasures from live sessions — ghostwrite drift, proverb dialogue, sycophantic audit, and how to fix them
 
-### Day job (one paragraph)
 
-I design **governed LLM systems in production** — explicit state, checkpoints, human authorization before side effects. That professional habit informed keeping **methodology in this repo** and optional implementation in [novelist-plugin](https://github.com/pojoguy/novelist-plugin). You do **not** need that stack to learn Week 1 habits.
+
+### Day job
+
+I'm **primary architect** of an **enterprise data migration and governance platform**. It is multi-tenant SaaS: large customers run programs that last weeks or months, moving and transforming data across systems that were never designed to match each other.
+
+The habits that matter are **tenant isolation**, **append-only audit**, and **human authorization before anything changes**. A decision made today has to remain interpretable a year from now, during incident response or compliance review.
+
+The current work is **integrating LLM capabilities** into that stack. Suggestions and analysis must stay **reviewable, bounded, and separable from apply**: not chat loose on production data.
+
+That is the same instinct serious fiction work needs. What counts as true, who may change it, readonly pass before apply. Enterprise scale, same posture.
+
+This methodology lives in its own repo, separate from optional fiction tooling in [novelist-plugin](https://github.com/pojoguy/novelist-plugin). You do **not** need my day-job platform to learn Week 1 habits.
 
 ### What this qualification is — and is not
 
@@ -223,6 +260,8 @@ That combination — experienced practitioner, aspiring novelist with skin in th
 
 ---
 
+
+
 ## What to do with this
 
 1. **Separate UI from capability** — ChatGPT made models visible; it did not invent statistical assistance
@@ -235,6 +274,8 @@ If after reading this you still reject all AI in fiction — that is a valid **v
 **Next step:** `[01-spectrum-of-use.md](01-spectrum-of-use.md)` — the level ladder from ghostwriting to governed practice.
 
 ---
+
+
 
 ## Appendix: Optional depth — telephone switching and Gaines
 
@@ -262,6 +303,8 @@ In **1960s Britain**, the Post Office deployed electronic exchanges (**TXE4** 19
 | **2017–present**  | Transformers at scale                               | Still sample from a distribution each token |
 
 
+
+
 ### Gaines → Calgary → this repo
 
 
@@ -272,6 +315,8 @@ In **1960s Britain**, the Post Office deployed electronic exchanges (**TXE4** 19
 | **1980s**     | Calgary **Knowledge Science Institute** + **Mildred Shaw** | Expert systems, explicit graph state            |
 | **1980s**     | **David Johnson** under Gaines, Vickers, Shaw              | Bias and preference in knowledge representation |
 | **Present**   | Generalized in this repo                                   | PGMs + anchors + prosthetic gates               |
+
+
 
 
 ### What an LLM does, stripped of mystique
@@ -296,13 +341,15 @@ The model still **samples** text. The orchestration is what holds **relationship
 
 Speech recognition moved from classical models (HMMs) through neural nets to today's transformer ASR — a statistical lineage modern LLMs share — which is why **closed captions or meeting transcripts** and GPT-in-a-doc feel less alien than they look, even when they are not the same product.
 
-### Hidden AI — extended catalog (optional)
+### Hidden AI — extended catalog
 
-**Phone cameras** run real-time inference — autofocus, HDR, night-mode denoising, portrait depth, sometimes generative zoom. **Video calls** use neural noise suppression. **Banking** (especially US check clearing) uses machine reading and fraud classifiers. None require the user to say "I use AI." All require **trust or reject** — the same governance problem serious writers solve with apply gates and author locks.
+**Phone cameras** run real-time inference — autofocus, HDR, night-mode denoising, portrait depth, sometimes generative zoom. **Video calls** use neural noise suppression. **Banking** (especially US check clearing) uses machine reading and fraud classifiers. None require the user to say "I use AI." All require **trust or reject**, which is the same governance problem serious writers solve with apply gates and author locks.
 
-**Foundation ASR:** **Whisper** (OpenAI) and **Chirp** (Google Cloud Speech) are widely used foundation speech-to-text models — **separate weights and training** from chat LLMs. **Apple, Microsoft, and Dragon use their own stacks**; do not assume every dictation path hits Whisper or Chirp. **Closed captions and meeting transcripts** transcribe speech; they do not draft your novel. They are still **model-mediated** — the same trust-or-reject habit as autocomplete. When you use **the same vendor** for chat and transcription, product boundaries are thinner than *"I don't use AI"* implies.
+**Foundation ASR:** Modern speech-to-text (**Whisper**, **Chirp**, and vendor-specific stacks) is **generative** — audio in, probabilistic text out — with **context windows** that disambiguate nearby words; feed noise and it may hallucinate sentences never spoken. Separate weights and training from chat LLMs; often the same vendors. See [Lesson 4](#lesson-4--ai-you-already-use-and-dont-call-ai) for why dictation still counts when a writer says *I don't use generative AI*.
 
 ---
+
+
 
 ## Next
 
