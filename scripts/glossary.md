@@ -47,7 +47,7 @@ One-line definition (≤12 words)
 | **Thin solution space** | Bias function must return; emits triads, negation, comma-lists |
 | **Theta bias function** | 1980s framework; theoretical root of why six, not one |
 | **Stochastic system** | Outputs probability, not certainty |
-| **PGM** | Formalized **working notes** — queryable canon, not chat memory |
+| **PGM** | Working notes you file — often drafted in chat, then saved by you |
 | **Context** | What you work from — file it, load it, don't trust chat |
 | **Sparse-edge collapse** | Too many rules → generic "not A, not B, C" output |
 | **Ghostwrite drift** | "Fix" becomes substituted prose |
@@ -76,6 +76,7 @@ One-line definition (≤12 words)
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | PGM entry — frontier-chat drafting before registration |
 | 2026-08-02 | Add Context umbrella term |
 | 2026-08-02 | Add Gate umbrella term |
 | 2026-08-02 | Add Drift and Lock umbrella terms |

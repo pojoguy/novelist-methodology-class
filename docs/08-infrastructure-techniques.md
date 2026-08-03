@@ -52,7 +52,7 @@ Chat memory is not canon. Indexed state + audit events are.
 
 ### Origin — prototyped on frontier chat, hardened in graph + RAG
 
-This methodology was **largely prototyped on frontier LLMs** — long threads in ordinary chat before project files and indexed notes. Prosthetic gates, six-alternative retrieval, developmental audit shape, and apply discipline **emerged in that environment first**.
+This methodology was **largely prototyped on frontier LLMs** — long threads in ordinary chat. Prosthetic gates, six-alternative retrieval, developmental audit shape, apply discipline, and **first-pass PGM drafting** **emerged in that environment** — then were saved to files the author owns.
 
 **What broke:** Not mainly **how much text** fits in the window. Most frontier models today can hold the **word count of several full novels** in a single context. What collapses is **relationship fidelity in attention** — who is bound to whom, what each character knows when, which arc a beat belongs to, which facts are locked. Even on a **single page**, when multiple story arcs resolve together, attention vector space **compresses**: the model sounds confident while merging, dropping, or free-associating relationships. Across months of chat, the same failure looks like **context amnesia** — chapter 4 gear in chapter 12, wrong co-presence, improvised canon from recent tokens. That is not author error; it is asking one live conversation to hold a **relationship graph** it was never built to retain.
 

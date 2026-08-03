@@ -12,7 +12,7 @@
 | **Prosthetic (levels 2+)** | AI offers options or critique; **you** write, select, and own the final words. |
 | **Lexical prosthetic** | Help finding the **right word or phrase** when you know the beat but cannot retrieve the wording. |
 | **Developmental audit** | A structured editorial **critique** of your draft — not a rewrite unless you authorize it. |
-| **PGM** | A **project file** (often structured data) that records canon facts — character state, timeline, locks — not chat memory. |
+| **PGM** | **Organized working notes** — character state, timeline, locks — saved in a file you reload, not chat memory. |
 | **Canon** | What officially counts as **true in your story** for continuity purposes. |
 | **Grounding (Level 5a)** | **Spatial / material verify** — routes, period detail, biology — before facts enter canon. |
 | **Scenario simulation (Level 5b)** | **Play-pretend** off-page — run a character or institution through a beat; distill constraints, not manuscript prose. |
@@ -21,6 +21,8 @@
 | **Sign** | A **craft vocabulary** name for a generic or model-typical pattern in your draft — you decide what to do. See [`04-audit-and-governance.md`](04-audit-and-governance.md). |
 | **Session anchor** | An **end-of-session file** you write so the next session can reload continuity — beats, open questions, locks. Template: [`templates/session-close.md`](../templates/session-close.md). |
 | **Malformed beat** | A scene or paragraph **structured wrong** — six word options will not fix it; reorder or rewrite the beat. See [`02-prosthetic-model.md`](02-prosthetic-model.md). |
+| **Frontier chat** | A general-purpose LLM in a browser tab (ChatGPT, Claude, Gemini, etc.) — no project plugins or indexed lookup required. |
+| **Sycophantic audit** | Flattery-first critique that misses real problems — default frontier-chat habit when you ask for "feedback." See [`06-failure-modes.md`](06-failure-modes.md). |
 
 ---
 
@@ -74,7 +76,7 @@ When six options still will not land, the beat is often **malformed** (structure
 
 ## Level 3 — Developmental audit (read-only critique)
 
-**What it looks like:** Adversarial editorial pass on **human-written** draft. Output: verdict, what's working, numbered recommendations (what's wrong / why it matters / what to do). **No manuscript apply** unless you explicitly authorize.
+**What it looks like:** **Adversarial** editorial pass on **human-written** draft — readonly, objective, not a cheerleader. Output: verdict, what's working, numbered recommendations (what's wrong / why it matters / what to do). **No manuscript apply** unless you explicitly authorize.
 
 **Typical artifacts:** Rubric Signs (AI textual degradation), POV breaches, pacing, continuity flags.
 
@@ -158,7 +160,7 @@ Plus: **session anchors** (continuity re-entry), post-session meta-analysis (wha
 
 **Value:** Repeatable craft infrastructure across months of work and multiple model vendors — with indexed state, not chat memory.
 
-**How this layer emerged:** Levels 2–3 (prosthetic + audit) work in **any chat tool** with discipline. Levels 4–7 appear when a novel outgrows what you can hold in one thread — canon drifts, line numbers lie, and you need **filed state** (PGMs, anchors, continuity checks, passage lookup) you reload each session instead of trusting chat memory. Habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
+**How this layer emerged:** Levels 2–3 (prosthetic + audit) work in **any chat tool** with discipline. **Initial PGMs** were also drafted in frontier chat and saved to files. Levels 4–7 deepen when a novel outgrows what you can **reload from paste** each session — canon drifts, line numbers lie, and you need **registered lookup** (passage index, continuity checks) instead of trusting chat memory. Habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
 
 **This repository:** Primarily documents Levels 2–7.
 
@@ -209,28 +211,138 @@ When someone says "AI will replace authors," point to Levels 4–7: the human wo
 
 ---
 
-## Demonstrating the spectrum (Levels 0–7)
+## Frontier chat only (no tooling required)
 
-**Do not** use a governed IDE session (e.g. Cursor with project rules loaded) to demonstrate Level 0 — apply gates and prosthetic protocol are already active. That stack documents **Levels 2–7**.
+**Most of this methodology was prototyped in ordinary chat** — ChatGPT, Claude, Gemini, or any frontier LLM in a browser tab. Prosthetic habits, adversarial audit, and the **first PGMs** (character state, timelines, locks) were all built there — then **saved to files you control**. What came later was **registered lookup** (indexed search, continuity checks, MCP) when re-pasting canon every session stopped scaling — and, on long-form work, when **arc density** outgrew what one chat session could hold. You do **not** need novelist-plugin, Cursor, or a separate novel repo to practice the core contract: diagnose, branch, **you** pick, **you** apply — or to **draft** your first PGM sheets in chat and file them yourself.
 
-| Level | Demo script | Tool | Notes |
-|-------|-------------|------|-------|
-| **0** | [`01b-level-zero-demo.md`](../scripts/01b-level-zero-demo.md) | Blank **frontier** chat | ~5 min contrast; synthetic line only |
-| **1–7** | [`01c-spectrum-demos-index.md`](../scripts/01c-spectrum-demos-index.md) | Per-level (see index) | Level **5a** + **5b** are separate demos |
+### What you need
 
-**Level 0:** blank frontier chat UI (ChatGPT, Claude, Gemini, etc.) with **no** custom instructions.
+| You have | You do not need (yet) |
+|----------|------------------------|
+| A frontier chat UI | novelist-plugin or MCP |
+| Your manuscript (or a draft passage) | Passage index or RAG |
+| Optional: a notes file per session ([`templates/session-close.md`](../templates/session-close.md)) | Cursor rules or agent skills |
+| Optional: **adversarial audit discipline** + word contracts in custom instructions | Pre-built PGMs from a vendor |
+| A folder on your machine for **PGMs you save** (JSON, Markdown — drafted in chat, filed by you) | Registered lookup tiers (until re-paste hurts) |
 
-**Levels 1–2, 6:** frontier chat acceptable (explicit prompts in each script).
+Treat the chat thread as **conversation context** — useful for the last few turns, unreliable as canon. See [`glossary.md`](glossary.md) — *Context*.
 
-**Levels 3–5, 7:** Cursor + templates / fixtures / rules — same governed stack this series documents.
+### Turn off sales mode (keep adversarial discipline)
 
-**Disclosure (all demos):** staged on synthetic prose — not a real manuscript workflow.
+Frontier chat defaults to **please you** — enthusiastic openers, flattery, eager rewrites. That is [**sycophantic audit**](06-failure-modes.md#sycophantic-audit). The counterweight is not another performance; it is **adversarial discipline** you hold the model to: readonly critique, line-tied notes, no cheerleading, no substitute prose. That stance is how this methodology was **learned on frontier models** before any tooling existed.
+
+**Sales mode** is the gap between the label and the behavior:
+
+| Sounds rigorous | Still sales mode if… |
+|-----------------|----------------------|
+| *"Brutal but professional adversarial developmental editor"* in custom instructions | No **word contracts** (*priority fixes*, apply gate); model still rewrites or flatters |
+| Store-bought "tough love beta reader" GPT | No **letter shape**; poster morals and generic praise slip through |
+| Long thread that "remembers" your editor persona | Context noise; flattery momentum; no fresh readonly pass |
+
+**Adversarial discipline that works in frontier chat** pairs stance with structure:
+
+1. **Adversarial, not sycophantic** — objective pass on **your** draft; flag Signs and continuity holes; brief "what's working," then problems. Not *"Beautiful prose!"* then three nits.
+2. **Readonly + apply gate** — audit and alternatives; **you** revise. *Priority fixes* = finish the letter and branch options — not chapter substitution.
+3. **Letter shape every pass** — [`templates/editorial-recommendations.md`](../templates/editorial-recommendations.md): verdict, numbered line-tied notes, priority order, close stating whether the manuscript was unchanged.
+4. **Word contracts in custom instructions** — paste apply-gate and *priority fixes* meanings once; add adversarial / non-cheerleader stance. Starter block: [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md) (trim genre; keep discipline + gates).
+5. **Fresh thread for audit work** when you can — long chats soften critique even when the persona says "brutal."
+6. **If the model rewrites anyway**, stop and name [**ghostwrite drift**](06-failure-modes.md#ghostwrite-drift) — reset contracts; do not argue in character.
+
+Screen recordings of levels 0–7: [`01b-level-zero-demo.md`](../scripts/01b-level-zero-demo.md), [`01c-spectrum-demos-index.md`](../scripts/01c-spectrum-demos-index.md).
+
+### What works in chat alone
+
+| Level | In frontier chat? | Notes |
+|-------|-------------------|--------|
+| **1** Brainstorm | Yes | High discard; no rubric policing |
+| **2** Lexical prosthetic | Yes | Six alternatives; you pick or write your own → [`02-prosthetic-model.md`](02-prosthetic-model.md) |
+| **3** Developmental audit | Yes | Read-only letter; **apply gate** — nothing pasted into the manuscript without your OK → [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| **4** Continuity | Yes to **build**; partial to **hold** | Draft character sheets and who-knows-what in chat; **you** save the file and reload it each session. Chat will not reliably remember joins → [`06-failure-modes.md`](06-failure-modes.md) — *Context amnesia* |
+| **5a / 5b** Sandboxes | Partial | Map + Street View in a **folder you control**; chat verifies against what you paste or describe — not against a live index |
+| **6** Production | Yes | Blueprinting prompts; no manuscript apply |
+| **7** Agentic | No (honestly) | Multi-gate orchestration needs persisted rules and filed state → Level 7 demos use a governed IDE |
+
+**Week 1 honest goal:** Levels **2–3** with discipline — flag → six options or audit letter → you revise. That is already beyond ghostwriting. **Week 2+:** start **PGM files** in chat (distill from scenario work, continuity passes) — save them yourself; indexing can wait until re-paste or arc density hurts (often sooner than you expect on a braided novel).
+
+### How much fits in one frontier session
+
+Maintainer experience on long-form work — not a token-count rule:
+
+**About one chapter per sitting** is the practical ceiling for governed frontier work in a single session — prosthetic passes, adversarial audit, filing what you learned. A single flagged line or a brainstorm list can be much smaller. A full chapter audit with six-alternative branches is already a full session.
+
+**Arc density beats page count.** A **half-page vignette** that resolves **several long-running arcs at once** can bog down sooner than a whole chapter of single-arc material. The model holds words more easily than **joins** — who knows what, which arc owns the beat, which locks apply. That is [**relationship collapse**](glossary.md#relationship-collapse-attention) and [**context amnesia**](06-failure-modes.md#context-amnesia) in practice — not "you ran out of context window."
+
+**Tooling arrives sooner than the week table suggests** if you are writing a braided novel. Frontier chat is enough to **learn** the contract and **draft** your first PGM sheets. It is usually **not** enough to **carry** graph-scale continuity for months without registered files and lookup. For many authors that threshold is **weeks**, not years — especially once multiple arcs start landing on the same page.
+
+### Building PGMs in frontier chat
+
+A **PGM** here means **organized working notes** — who knows what, what gear someone carries, which facts are locked — saved in a file you own, not left in chat. The first ones in this project were **written in frontier chat** and saved by hand. No plugin supplied them.
+
+**Three ways that usually starts:**
+
+- **Character and chapter state** — Ask for a readonly pass on a passage: what is true about this character here? Turn the answer into a short structured note, edit it yourself, save it in your project folder (a `.json` or `.md` file — either is fine).
+- **Scenario simulation** — Play a beat off-page (caseworker, institution, "what does she know after three sessions?"). **Distill** what you learned into constraints and knowledge state; file that in your character notes after you review. Do not paste sandbox dialogue into the chapter.
+- **Session anchors** — Section A of your end-of-session file (where the story paused, open questions, locks) often holds facts that later move into a PGM when they stabilize.
+
+**The habit:** Chat helps you **shape** canon; the **file** is what you reload next month. The common mistake is not "I need novelist-plugin first" — it is never saving canon out of the thread. When copying those files back into every new session gets tedious, that is when registered lookup ([`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)) earns its keep — optional, and **after** you have sheets worth indexing.
+
+### Reading order (chat-only)
+
+1. This doc — spectrum and [*Frontier chat only*](#frontier-chat-only-no-tooling-required) (you are here)
+2. [`02-prosthetic-model.md`](02-prosthetic-model.md) — six alternatives, move types, malformed beat
+3. [`04-audit-and-governance.md`](04-audit-and-governance.md) — apply gate, word contracts, Signs, *When not to audit*
+4. [`06-failure-modes.md`](06-failure-modes.md) — name traps (ghostwrite drift, sycophantic audit, …)
+5. **Skim** [`05-workflow-patterns.md`](05-workflow-patterns.md) — session anchors and filing habits; you can use a plain markdown anchor file without any plugin
+6. **Defer** [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) until **registered lookup** would save you time — not Week 1
+
+[`03-five-domains.md`](03-five-domains.md) and [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) when you want scope and disclosure language; neither requires tooling to read.
+
+### Habits that transfer without infrastructure
+
+These are the same **gates** and **word contracts** whether you use a browser tab or a governed IDE:
+
+- **Apply gate** — "Priority fixes" means finish the audit and offer options, not rewrite my chapter.
+- **Six-alternative protocol** — inspiration set; pick, blend, reject, or own line.
+- **Quote gate** — name speaker and situation before dialogue alternatives.
+- **Adversarial audit discipline** — readonly, objective, not a cheerleader; pair with letter shape and word contracts ([*Turn off sales mode*](#turn-off-sales-mode-keep-adversarial-discipline) above).
+- **Session anchor** — end each session with a short file: where the story paused, open questions, locks. Reload it next time instead of "remember everything."
+- **PGM drafting** — shape canon in chat; **you** save the file and own what goes in it. Move facts up from sandbox or session notes when they are settled — never automatic from chat.
+
+Failure when you skip the anchor: [**context amnesia**](06-failure-modes.md#context-amnesia) — the model contradicts earlier chapter state because joins lived in chat attention, not in files you reload.
+
+### When chat stops being enough
+
+**Building** PGMs in chat and saving them to disk is normal frontier practice. **Registered lookup** (indexed search, continuity checks, query without re-paste) is what tooling adds. You are there when **scale** or **arc density** breaks the one-session habit — often before you feel "ready" for infrastructure:
+
+- A governed pass on **more than ~one chapter** per sitting starts to slip — or a **dense half-page** (multiple arcs resolving) fails before a full chapter would
+- You re-paste the same PGM chunks every session and edits drift between copies
+- Who-knows-what or timeline errors survive correction even when files exist
+- You cannot find "where did I say X?" without scrolling old chat threads or hunting through manuscript files one by one
+- Travel or grounding beats invent routes you already filed
+
+That is the graduation path to [`05-workflow-patterns.md`](05-workflow-patterns.md) and, when lookup tiers matter, [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md). Optional engine: [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) — not a prerequisite to **draft** PGMs in chat; often worth it **once arc density or re-paste cost** bites, which on long-form work can be early.
+
+**Origin story (short):** Governance, adversarial audit, and **initial PGM drafting** emerged in frontier chat; **registration and indexed lookup** followed when relationship fidelity, **arc density on the page**, and re-paste cost outgrew what one session could hold. Details: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Why files exist*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
+
+---
+
+## Video and screen demos
+
+Ep. **01** ([`scripts/01-spectrum-of-use.md`](../scripts/01-spectrum-of-use.md)) is the **author/student explainer** for this doc — framework and habits, not a recording checklist.
+
+| Recording | Script | What it covers |
+|-----------|--------|----------------|
+| Ep. 01 | [`01-spectrum-of-use.md`](../scripts/01-spectrum-of-use.md) | Spectrum, frontier chat path, adversarial discipline, PGM drafting, scale limits |
+| Ep. 01B | [`01b-level-zero-demo.md`](../scripts/01b-level-zero-demo.md) | Level **0** — blank frontier chat contrast (~5 min) |
+| Ep. 01C | [`01c-spectrum-demos-index.md`](../scripts/01c-spectrum-demos-index.md) | Levels **1–7** screen demos — env matrix, fixtures, per-level scripts |
+
+**Rule:** Do not use a governed IDE session to demonstrate Level 0 — apply gates are already active. **Disclosure (all demos):** staged on synthetic prose — not a real manuscript workflow.
 
 ---
 
 ## Where to start (by week)
 
-Same ramp as [`README.md`](../README.md#where-to-start-by-week) — summarized here:
+Same ramp as [`README.md`](../README.md#where-to-start-by-week) — summarized here. **Chat-only path:** see [*Frontier chat only*](#frontier-chat-only-no-tooling-required) for reading order and habits before the week table.
 
 ### How this repo relates to tooling
 
@@ -250,7 +362,7 @@ You do **not** need novelist-plugin or a governed IDE to practice prosthetic + a
 | **2** | Map + Street View in a folder; manual route notes before travel beats |
 | **3+** | Optional [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) when you want registered lookup |
 
-Levels 2–3 (prosthetic + audit) are achievable in Week 1 without Cursor or lookup tiers. Levels 4–7 grow as your project needs registered state.
+Levels 2–3 (prosthetic + audit) are achievable in Week 1 on a **passage or chapter** without Cursor or lookup tiers. Levels 4–7 — and registered lookup — tend to arrive **weeks** into a braided novel, not only when a calendar says "Week 3," especially when multiple arcs resolve on the same page.
 
 ---
 

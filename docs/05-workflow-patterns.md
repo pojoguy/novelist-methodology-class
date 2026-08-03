@@ -39,9 +39,9 @@ Repeatable infrastructure matters more than clever one-off prompts. These patter
 
 ### Why files exist — frontier chat hit a ceiling
 
-Governance (prosthetic model, apply gates, six alternatives) was **developed and tested largely on frontier LLMs** in ordinary long chat sessions. That was enough to prove the **contract** — diagnose, branch, author decides.
+Governance (prosthetic model, apply gates, six alternatives) was **developed and tested largely on frontier LLMs** in ordinary long chat sessions. That was enough to prove the **contract** — diagnose, branch, author decides. **Initial PGMs** were also **built in those same sessions** — structured character and continuity notes the author saved to project files.
 
-It was **not** enough to hold **relationship state** in live attention — even when the raw text of the project could fit in context. Models carry words more easily than **joins**: who knows what when, which arc owns a beat, which facts are locked. On dense pages where **multiple arcs resolve together**, relationship fidelity collapses in the attention layer before the author runs out of tokens. Across months, that becomes improvised continuity from recent chat.
+It was **not** enough to **hold relationship joins in live attention** — even when the raw text of the project (and your saved PGMs) could fit in context. Models carry words more easily than **joins**: who knows what when, which arc owns a beat, which facts are locked. On dense pages where **multiple arcs resolve together**, relationship fidelity collapses in the attention layer before the author runs out of tokens. Across months, that becomes improvised continuity from recent chat.
 
 Session anchors, PGMs, RAG/passage indexing, and structured queries are **external relationship memory** — the same notes you would keep in Scrivener or a wiki, **registered** so tooling can load or query them without stuffing the whole graph into every turn.
 

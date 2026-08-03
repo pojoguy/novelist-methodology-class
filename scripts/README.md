@@ -9,9 +9,9 @@ Short-form video scripts paired **one-to-one** with [`docs/`](../docs/). Same nu
 | Script | Paired doc | Suggested format |
 |--------|------------|------------------|
 | [`00-history-and-authority.md`](00-history-and-authority.md) | `docs/00-history-and-authority.md` | Series opener — **ready to record** (~5:15) |
-| [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | `docs/01-spectrum-of-use.md` | 60–90s Short or 3–5 min explainer |
+| [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | `docs/01-spectrum-of-use.md` | **~5:30 explainer** — author/student; paired doc depth |
 | [`01b-level-zero-demo.md`](01b-level-zero-demo.md) | `docs/01-spectrum-of-use.md` (Level 0) | **~5 min screen demo** — frontier chat only, not Cursor |
-| [`01c-spectrum-demos-index.md`](01c-spectrum-demos-index.md) | `docs/01-spectrum-of-use.md` (Levels 1–7) | **Index** — suite map, env matrix, shared fixtures |
+| [`01c-spectrum-demos-index.md`](01c-spectrum-demos-index.md) | `docs/01-spectrum-of-use.md` (Levels 1–7) | **Demo suite index** — env matrix, fixtures, record checklists |
 | [`01c-level-01-brainstorm.md`](01c-level-01-brainstorm.md) … [`01c-level-07-agentic.md`](01c-level-07-agentic.md) | `docs/01-spectrum-of-use.md` | **~2:30–3:30 each** — per-level screen demos |
 | [`02-prosthetic-model.md`](02-prosthetic-model.md) | `docs/02-prosthetic-model.md` | 3–5 min — core thesis video |
 | [`03-five-domains.md`](03-five-domains.md) | `docs/03-five-domains.md` | 3–5 min or 5× Short series |

@@ -87,7 +87,7 @@ You do **not** need novelist-plugin to learn Week 1 habits (prosthetic + audit) 
 2. Read [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — the landscape in ten minutes.
 3. Read [`docs/02-prosthetic-model.md`](docs/02-prosthetic-model.md) — the central operating model.
 4. Copy [`templates/session-close.md`](templates/session-close.md) when you close a writing session.
-5. When the book outgrows chat, add filing habits — [`docs/05-workflow-patterns.md`](docs/05-workflow-patterns.md) first; [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) when registered lookup starts to matter (not Week 1).
+5. When the book outgrows chat — often **weeks** into a braided novel, sometimes on a **dense half-page** before a full chapter breaks — add filing habits: [`docs/05-workflow-patterns.md`](docs/05-workflow-patterns.md) first; [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) when registered lookup starts to matter.
 
 ### Where to start (by week)
 
@@ -97,9 +97,11 @@ You do **not** need a governed IDE on day one. The path is **manual habits first
 |------|--------|-------|
 | **1** | Read spectrum + prosthetic model; close every session with a **session anchor** ([`templates/session-close.md`](templates/session-close.md)) | Any chat tool — ChatGPT, Claude, Gemini, etc. |
 | **2** | File **map + Street View** for one real site in a folder; keep **manual route notes** before travel prose | Same chat tool + folders on your machine |
-| **3+** | Optional: registered PGMs, search, continuity checks when the book grows | [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) — only if you want the maintainer's full stack |
+| **3+** | Optional: registered PGMs, search, continuity checks when **arc density or re-paste** hurts — often weeks in, not only when the calendar says so | [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) — only if you want the maintainer's full stack |
 
-**Week 1 goal:** More than *"make me a story"* — diagnose, six alternatives, you pick, you apply. No lookup tiers, no plugin required.
+**Week 1 goal:** More than *"make me a story"* — diagnose, six alternatives, you pick, you apply. No lookup tiers, no plugin required for **learning the contract** on a passage or chapter.
+
+**Scale note:** Maintainer experience — about **one governed chapter per frontier session**; a vignette that resolves **multiple long-running arcs** can bog down at **half a page**. See [`01`](docs/01-spectrum-of-use.md) — *How much fits in one frontier session*.
 
 **Reading order (docs):** [`01`](docs/01-spectrum-of-use.md) → [`02`](docs/02-prosthetic-model.md) → [`05`](docs/05-workflow-patterns.md) / [`06`](docs/06-failure-modes.md) for habits and failure modes; [`03`](docs/03-five-domains.md) + [`04`](docs/04-audit-and-governance.md) + [`07`](docs/07-ethics-and-transparency.md) for scope, audit, and ethics; **[`08`](docs/08-infrastructure-techniques.md) when registered lookup starts to matter** — not Week 1. Full three-repo map: [How this fits together](#how-this-fits-together) above; short pointer in [`01`](docs/01-spectrum-of-use.md) — *How this repo relates to tooling*.
 

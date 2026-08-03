@@ -5,6 +5,7 @@
 | Field | Value |
 |-------|-------|
 | **Paired doc** | `docs/01-spectrum-of-use.md` (Level 0 section) |
+| **Audience** | **Instructor / recorder** — screen demo; framework explainer is [`01-spectrum-of-use.md`](01-spectrum-of-use.md) |
 | **Format** | Screen-record demo + optional A-roll bookends (~5 min) |
 | **Series** | LLM Methodology — Ep. 01B (companion to Ep. 01) |
 | **Target length** | ~5:00 |

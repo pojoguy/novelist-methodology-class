@@ -297,7 +297,7 @@ Someone who builds governed data systems for a living is not guessing when they 
 ### Creative practice (multi-year)
 
 - Author of a long-form speculative fiction project using LLMs across **five domains** (lexical prosthetic, developmental audit, continuity modeling, grounding simulation, production blueprinting) — see `[03-five-domains.md](03-five-domains.md)`
-- **Prototyped largely on frontier LLMs** in long chat threads before indexed project files — prosthetic and audit patterns came first; **PGMs, search indexes, and structured lookup** followed when conversational context overwhelmed relationship and canon fidelity
+- **Prototyped largely on frontier LLMs** in long chat threads — prosthetic and audit patterns **and initial PGMs** (character state, timelines, locks) were drafted there and filed by hand; **indexed lookup and structured query** followed when conversational context could no longer reliably **reload** relationship fidelity across months
 - **Planned a custom editor shell**, then adopted a governed IDE when day-job use proved indexed notes beside the manuscript were enough — effort stayed on **gates, PGMs, and continuity habits** rather than a new app
 - **Autistic** author using LLM as **vocabulary and continuity prosthetic** — external working memory for lexical retrieval under load, not voice replacement
 - Documented **failure modes** (ghostwrite drift, proverb dialogue, negation triangulation) and **countermeasures** (two-step pipeline, six-alternative protocol) from live sessions — see `[06-failure-modes.md](06-failure-modes.md)`

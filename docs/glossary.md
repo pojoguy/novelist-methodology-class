@@ -11,7 +11,7 @@ Terms used across this repository.
 | Doc | Glossary home for… |
 |-----|-------------------|
 | [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, Gaines/Calgary, maintainer context |
-| [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | Levels 0–7, lexical prosthetic, spectrum straw man |
+| [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | Levels 0–7, frontier chat, PGM drafting, lexical prosthetic, spectrum straw man |
 | [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, six alternatives, move types, nexus, gates, prosthetic gates |
 | [`03-five-domains.md`](03-five-domains.md) | Domains 1–5, 4a/4b, scope rules, canon workflow |
 | [`04-audit-and-governance.md`](04-audit-and-governance.md) | Audit, governance, Signs, locks, drift, gates, word contracts, apply gate |
@@ -175,7 +175,7 @@ You ask in ordinary language (*"tell me about Dej"*, *"where did I mention the p
 You make a scratch fact **official** by moving it into registered lore files or PGMs — never automatic from chat or sandbox. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Exploration vs canon*; [`03-five-domains.md`](03-five-domains.md).
 
 **PGM (program guide / project graph module)**  
-Formalized **author working notes** — character, world, chapter state — registered for load/query (JSON, Cypher, Markdown, plain text, etc.). Not a separate species of thinking; organized **registered context** the tooling can cite.
+**Organized author working notes** — character, world, chapter state, locks, who-knows-what — saved in files you own (JSON, Markdown, plain text, etc.). Often **drafted in frontier chat** first (readonly passes, scenario distill, session-anchor facts), then **saved by hand**; **registration** for load/query (indexed lookup, tooling) comes when re-pasting every session stops scaling. Not a separate species of thinking; becomes **registered context** once filed for reload. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — *Building PGMs in frontier chat*; [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Knowledge state (PGMs)*.
 
 **PGM lock**  
 A fact **frozen in a PGM or lore file** — prose or critique that contradicts it needs your explicit OK. A kind of **lock**; same apply gate as author locks, with stronger memory at scale. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
