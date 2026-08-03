@@ -37,6 +37,8 @@ This document gives skeptics and newcomers three things at once:
 2. A **hidden-in-plain-sight map** — you already depend on generative and statistical AI daily, often without naming it
 3. **Author authority** — who maintains this repo and why their perspective is grounded in decades of practice, not a weekend prompt experiment
 
+**Reading path:** Parts 1–3 and 5 are the **main craft path**. Deep telephone-switching / Erlang / Gaines-at-STL lineage is **[optional](#appendix-optional-depth--telephone-switching-and-gaines)** — skip if you want straight to workflow docs.
+
 ---
 
 ## Part 1: AI is not new
@@ -73,41 +75,18 @@ LLMs feel like oracles. Under the hood they are **stochastic systems** — machi
 | **17th–18th c.**  | Probability theory (Pascal, Fermat, Laplace; later **Bayes**)                                                  | Framework for "how likely, given evidence?" — not "what is absolutely true?"                                                                                                                                                                         |
 | **19th c.**       | **Statistical mechanics** (Boltzmann, Gibbs)                                                                   | Macro behavior from huge numbers of random micro-events — order from uncertainty at scale                                                                                                                                                            |
 | **Early 1900s**   | **Markov chains** (Andrey Markov)                                                                              | Next state depends only on current state, with **transition probabilities** — memory as a probability table                                                                                                                                          |
-| **1909–1920s**    | **Telephone switching and queueing theory** (Agner Krarup **Erlang**, Copenhagen Telephone Co.)                | **First industrial-scale stochastic systems:** model call arrivals, trunk occupancy, and blocking as random processes; **Erlang formulas** still used in capacity planning. The phone network had to work under uncertainty before anyone said "AI." |
-| **1948**          | **Information theory** (Claude Shannon, **Bell Labs**)                                                         | Language modeled as a **stochastic process** — symbols with statistical regularity, not fixed rules. Shannon's employer built the telephone infrastructure Erlang's math described.                                                                  |
-| **1960s–80s**     | **Hidden Markov Models (HMMs)**                                                                                | Dominant speech-recognition paradigm: guess hidden word sequence from noisy audio via probability — direct descendant of telephone-era statistical signal work                                                                                       |
-| **1960s**         | **British electronic telephone switching** (UK Post Office **TXE** family — e.g. **TXE4** 1963, **TXE2** 1966) | Parallel to Bell Labs ESS: stored-program and electronic switching replace Strowger electromechanics; national network engineered for uncertain call load on finite trunks — Erlang's math made operational at scale                                 |
-| **1960s**         | **Stochastic computing** (**Brian R. Gaines**, **Standard Telephones and Cables Ltd. / STL**, Britain)         | Inside the same British telecom-industrial world: Gaines characterizes **stochastic computing** while developing processors capable of **learning** — probability-based computation as engineering, not metaphor                                     |
-| **1960s–80s**     | **Computerized telephone switching** (e.g. Bell Labs **ESS** — Electronic Switching System)                    | US parallel to TXE: routing and traffic management move to software                                                                                                                                                                                  |
+| **1909–1920s**    | **Telephone queueing theory** (Agner Krarup **Erlang**)                                                        | Industrial-scale stochastic systems before "AI" — [optional depth](#appendix-optional-depth--telephone-switching-and-gaines)                                                                                                                      |
+| **1948**          | **Information theory** (Claude Shannon, **Bell Labs**)                                                         | Language modeled as a **stochastic process** — symbols with statistical regularity, not fixed rules.                                                                                                                                                 |
+| **1960s–80s**     | **Hidden Markov Models (HMMs)**                                                                                | Speech recognition via probability — telecom lineage in [appendix](#appendix-optional-depth--telephone-switching-and-gaines)                                                                                                                       |
 | **1990s–2000s**   | **N-gram language models**                                                                                     | Direct ancestor of LLMs: probability of the next word given previous words, estimated from corpus counts                                                                                                                                             |
 | **1980s–present** | **Stochastic gradient descent (SGD)**                                                                          | How neural nets train: update weights from **random batches** of data — learning itself is a stochastic process                                                                                                                                      |
 | **2010s**         | Neural language models, word embeddings, RNNs/LSTMs                                                            | Same job as n-grams — predict next token — with learned distributed representations                                                                                                                                                                  |
 | **2017–present**  | **Transformers** (attention) at scale                                                                          | Still output a **probability distribution over the vocabulary** for each next token; "generation" is **sampling** from that distribution                                                                                                             |
 
 
-**Telephone switching — easy to miss, hard to overstate:** Long before chat interfaces, the public telephone network was one of the first infrastructures that **had** to be engineered with stochastic math. Calls arrive at random times. Trunks are finite. A switch must decide how to route traffic when demand is uncertain. Erlang treated that uncertainty formally; Shannon later treated **communication itself** as statistical.
+**Why governance matters:** Long before chat interfaces, engineers had to route uncertain demand through finite capacity — the same *plausible ≠ true* posture writers need at the keyboard. **Optional depth:** Erlang, TXE switching, Gaines at STL — [appendix](#appendix-optional-depth--telephone-switching-and-gaines).
 
-**Britain in the 1960s — where switching and stochastic computing meet:** While Bell Labs deployed ESS in the United States, the UK **General Post Office** (later British Telecom) rolled out its own electronic-exchange family — **TXE** — beginning with transistorised **TXE4** (1963, Leicester) and reed-electronic **TXE2** (from 1966). Same problem class: route unpredictable demand through finite capacity under real-time constraints.
-
-At **Standard Telephones and Cables (STL)** — a major British telecom-equipment firm in that same ecosystem — **Brian R. Gaines** was pioneering **stochastic computing**: using randomness and probability as a **computational primitive** to build processors that could learn. Gaines later published the definitive survey *Stochastic Computing Systems* (1969). The thread is direct: **telephone infrastructure forced stochastic thinking; Gaines turned it into a research program inside British telecom R&D.**
-
-**Where Gaines enters the picture for this repository:**
-
-
-| Period        | Gaines                                                                                                                                         | Link forward                                                                                          |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **1960s**     | STL, Britain — **stochastic computing**, learning processors                                                                                   | Foundations of probability-as-computation inside telecom industry                                     |
-| **1967–1975** | University of **Essex** — electrical engineering / computer engineering                                                                        | Bridges industrial R&D and academic systems research                                                  |
-| **1980s**     | University of **Calgary** — **Knowledge Science Institute**; knowledge-based systems with **Mildred Shaw**; Banff knowledge-acquisition school | Expert systems, repertory grids, automated knowledge elicitation — **explicit rules and graph state** |
-| **1980s**     | **David Johnson** studies under Gaines, **Joan Vickers**, and Shaw at Calgary                                                                  | First-hand knowledge engineering; early **theta bias functions** research                             |
-| **Present**   | Methodology generalized in this repo                                                                                                           | PGMs + session anchors (graph state) + prosthetic gates (governed stochastic sampling)                |
-
-
-Gaines is the **through-line** from 1960s British stochastic telecom R&D to 1980s knowledge engineering to today's governed LLM workflows. This repository is not namedropping a famous advisor — it is documenting methodology that inherits **both** sides of that arc: **explicit knowledge state** (expert-systems instinct) and **stochastic generation under constraint** (LLM reality).
-
-Speech recognition (HMMs), voice codecs, noise suppression on calls, and modern VoIP routing all sit on the same family tree — which is why Whisper-on-a-video-call and GPT-in-a-doc are less alien to each other than they look.
-
-None of this is a sidebar. It is the **continuous thread** from "what word probably comes next?" to GPT — by way of **what call probably comes next, which trunk is probably free, and which British lab was already building learning machines on probability in the 1960s.**
+**Gaines → Calgary → this repo (short):** Brian R. Gaines bridged stochastic telecom R&D and 1980s knowledge engineering at Calgary; David Johnson studied under Gaines, Vickers, and Shaw — **explicit graph state + governed sampling** is the through-line to PGMs, anchors, and prosthetic gates today.
 
 #### What an LLM does, stripped of mystique
 
@@ -303,7 +282,7 @@ This repository is maintained by **David Johnson** — would-be author, knowledg
 
 **Brian R. Gaines** is not a footnote in this story. He is the bridge between the [stochastic lineage](#the-stochastic-lineage--what-llms-are-actually-built-on) above and the methodology in this repository.
 
-- **1960s, Britain:** At **Standard Telephones and Cables (STL)** — inside the UK telecom-equipment world that was simultaneously deploying electronic exchanges (**TXE**) — Gaines pioneered **stochastic computing**: processors that learn using probability as a computational primitive. His survey *Stochastic Computing Systems* (1969) codified the field.
+- **1960s, Britain:** At **STL** — stochastic computing inside the UK telecom ecosystem. [Optional depth](#appendix-optional-depth--telephone-switching-and-gaines).
 - **1970s:** Professorship at the University of **Essex** (electrical / computer engineering) — academic continuation of systems and human-factors research.
 - **1980s, Calgary:** **Izaak Walton Killam Chair**, founder of the **Knowledge Science Institute**; with **Mildred Shaw**, developed knowledge-acquisition tools and expert-system methods (repertory grids, KSS tools) that influenced the international **Banff** knowledge-engineering school.
 
@@ -354,6 +333,26 @@ David is qualified to discuss **how to constrain LLMs in creative work** because
 4. **Judge methodology on structure** — gates, anchors, alternatives, human prose mass — not on whether the author used a chat box
 
 If after reading this you still reject all AI in fiction — that is a valid **values** position. This repository asks only that you argue against **what serious practitioners actually do**, not against a straw-man prompt.
+
+---
+
+## Appendix: Optional depth — telephone switching and Gaines
+
+Skip this section if you are here for **workflow docs** only.
+
+**Telephone switching:** Long before chat interfaces, the public telephone network was engineered with stochastic math — calls arrive at random times, trunks are finite, switches route under uncertainty. **Erlang** formalized that at Copenhagen Telephone Co.; **Shannon** later modeled communication itself as statistical at Bell Labs.
+
+**Britain in the 1960s:** UK **General Post Office** deployed electronic exchanges (**TXE4** 1963, **TXE2** 1966). At **Standard Telephones and Cables (STL)**, **Brian R. Gaines** pioneered **stochastic computing** (*Stochastic Computing Systems*, 1969) — probability as a computational primitive inside the same telecom-industrial world.
+
+| Period        | Gaines | Link forward |
+| ------------- | ------ | ------------ |
+| **1960s**     | STL — stochastic computing, learning processors | Probability-as-computation in telecom R&D |
+| **1967–1975** | University of **Essex** | Industrial R&D ↔ academic systems |
+| **1980s**     | Calgary **Knowledge Science Institute** + **Mildred Shaw** | Expert systems, explicit graph state |
+| **1980s**     | **David Johnson** under Gaines, Vickers, Shaw | Theta bias functions; methodology in this repo |
+| **Present**   | Generalized here | PGMs + anchors + prosthetic gates |
+
+Speech recognition (HMMs), codecs, and VoIP routing share this family tree with modern LLMs — which is why Whisper-on-a-video-call and GPT-in-a-doc are less alien than they look.
 
 ---
 

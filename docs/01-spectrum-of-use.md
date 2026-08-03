@@ -18,10 +18,15 @@
 | **Scenario simulation (Level 5b)** | **Play-pretend** off-page — run a character or institution through a beat; distill constraints, not manuscript prose. |
 | **Agentic workflow** | Multiple automated **steps with rules** (audit, then check, then wait for your pick) — not one "fix my chapter" prompt. |
 | **Apply gate** | Nothing changes in your manuscript until **you** explicitly say which option to use. |
+| **Sign** | A **craft vocabulary** name for a generic or model-typical pattern in your draft — you decide what to do. See [`04-audit-and-governance.md`](04-audit-and-governance.md). |
+| **Session anchor** | An **end-of-session file** you write so the next session can reload continuity — beats, open questions, locks. Template: [`templates/session-close.md`](../templates/session-close.md). |
+| **Malformed beat** | A scene or paragraph **structured wrong** — six word options will not fix it; reorder or rewrite the beat. See [`02-prosthetic-model.md`](02-prosthetic-model.md). |
 
 ---
 
 Public argument about AI and books often collapses to a single image: someone types *"write me a bestselling YA fantasy"* and publishes the result. That is one point on a spectrum. This document maps the rest.
+
+This doc names **levels** (how much structure you add); [`03-five-domains.md`](03-five-domains.md) names **domains** (which craft job you are doing) — same habits, different lens. See [*Levels and domains*](#levels-and-domains) after the comparison table.
 
 For historical context, hidden daily AI use, and maintainer qualification, see [`00-history-and-authority.md`](00-history-and-authority.md).
 
@@ -37,6 +42,8 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 **Methodology stance:** Not what this repository teaches. If you do this, you are not using a prosthetic — you are outsourcing authorship.
 
+The straw-man pattern at Level 0 is pure outsourcing — you may never ask for audit. The same substitution habit has a name once you adopt governed critique: [**ghostwrite drift**](06-failure-modes.md#ghostwrite-drift) — audit or help requested, substitution delivered. See also [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Failure shapes — quick recognition*.
+
 ---
 
 ## Level 1 — Brainstorming and ideation
@@ -46,6 +53,8 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 **Value:** Low risk; high discard rate. Good for unsticking a blank page.
 
 **Limit:** Ideas without grounding in your voice, research, or continuity are disposable. Do not confuse volume with craft.
+
+**Governance boundary:** Level 1 is **discovery** — not a Signs pass or developmental audit. First draft and *what if* brainstorming do not need rubric policing. The **apply gate** still applies: if anything could touch your manuscript, **you** authorize it. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *When not to audit*.
 
 ---
 
@@ -59,6 +68,8 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 **Why it matters:** This is how many neurodivergent authors use LLMs — external working memory for lexical access, not for plot or voice.
 
+When six options still will not land, the beat is often **malformed** (structure, not diction) — stop line-shopping. **Pick** vs **cluster + author take** are different move types. See [`02-prosthetic-model.md`](02-prosthetic-model.md#when-six-options-fail--the-beat-is-often-malformed) — *When six options fail*; [`02-prosthetic-model.md`](02-prosthetic-model.md#pick-vs-cluster--author-take--not-the-same-game) — *Pick vs cluster + author take*.
+
 ---
 
 ## Level 3 — Developmental audit (read-only critique)
@@ -67,7 +78,7 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 **Typical artifacts:** Rubric Signs (AI textual degradation), POV breaches, pacing, continuity flags.
 
-**Key rule:** "Do all priority fixes" means **complete the audit and branch alternatives** — not rewrite the chapter.
+**Key rule:** "Priority fixes" means **complete the audit and branch alternatives** — not rewrite the chapter. Full governance: [`04-audit-and-governance.md`](04-audit-and-governance.md) — apply gate, Signs, word contracts, *When not to audit*, *Failure shapes — quick recognition*. Named trap when critique becomes rewrite: [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*.
 
 ---
 
@@ -81,6 +92,8 @@ For historical context, hidden daily AI use, and maintainer qualification, see [
 
 **Key rule:** Canon lives in **registered state**, not in chat memory. Chat is ephemeral; PGMs persist.
 
+**Why Level 4 is not "Domain 4":** [`03-five-domains.md`](03-five-domains.md) **Domain 1** covers lexical help **and** light chapter state (anchors, small PGMs). **Level 4** is when **graph-scale** continuity — timeline, who-knows-what, multi-era arcs — becomes the main job; that maps to **Domain 3**. You still use the same registered files for word-finding (Domain 1) while continuity modeling deepens (Domain 3).
+
 ---
 
 ## Level 5 — Sandboxes (two kinds humans keep separate)
@@ -91,7 +104,9 @@ Level 5 is **not** one bucket. **Grounding** and **scenario simulation** share a
 
 **Question:** *Is this place, route, period detail, or material claim true or registered?*
 
-**What it looks like:** Highway routing, bearings, weather windows, period medical practice, biology, material culture — checked against sources or registered lore **before** prose locks.
+**What it looks like:** Highway routing, bearings, weather windows, period medical practice, biology, material culture — checked against sources or registered lore **before** prose locks. File **map and Street View together** during research so later sessions load one place, not a generic movie set.
+
+**POV-blind sites:** Your grounding files may hold coordinates the **character never names** — author knows the cemetery; the boy on the roadside does not. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Grounding capture*, *POV-blind grounding*; walkthrough: [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
 
 **Value:** Stops movie logic from becoming manuscript logic.
 
@@ -135,15 +150,15 @@ See also: [`03-five-domains.md`](03-five-domains.md) (Domain 4a / 4b), [`03b-sce
 
 **What it looks like:** Multi-step pipelines with explicit gates:
 
-1. **Structural / grounding** agent → beat sequence, PGM crosswalk, questions
-2. **Prosthetic audit** agent (readonly) → PASS/FAIL on quote gates, tagline gates, apply gates
+1. **Readonly structure + grounding pass** → beat sequence, PGM crosswalk, questions
+2. **Readonly prosthetic audit** → quote gates, tagline gates, apply gates
 3. **Author pick** → then apply
 
-Plus: session anchors (continuity re-entry), post-session meta-analysis (what worked / failed per LLM product), `.cursorrules` or equivalent agent constraints, **RAG/passage indexing**, **continuity verify reports**, **comparanda** craft comparison.
+Plus: **session anchors** (continuity re-entry), post-session meta-analysis (what worked / failed per product), a **project rules file** (e.g. Cursor rules), and indexed habits — passage lookup, continuity checks, comparanda — in [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
 
 **Value:** Repeatable craft infrastructure across months of work and multiple model vendors — with indexed state, not chat memory.
 
-**How this layer emerged:** Levels 2–3 (prosthetic + audit) were workable in **frontier chat** early on. Levels 4–7 became necessary when **relationship fidelity in attention** could no longer be trusted — even though raw text might still fit in context — for canon, joins, and citation fidelity across a full manuscript — leading to PGMs, RAG, passage graphs, and orchestrated multi-step agents. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
+**How this layer emerged:** Levels 2–3 (prosthetic + audit) work in **any chat tool** with discipline. Levels 4–7 appear when a novel outgrows what you can hold in one thread — canon drifts, line numbers lie, and you need **filed state** (PGMs, anchors, continuity checks, passage lookup) you reload each session instead of trusting chat memory. Habits: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) and [`05-workflow-patterns.md`](05-workflow-patterns.md).
 
 **This repository:** Primarily documents Levels 2–7.
 
@@ -161,7 +176,26 @@ Plus: session anchors (continuity re-entry), post-session meta-analysis (what wo
 | 5a Grounding | High | Spatial / material verify | Author promotes canon |
 | 5b Scenario sim | High | Play-pretend off-page | Author promotes PGM; writes scene |
 | 6 Production | N/A | Blueprint | Human crew |
-| 7 Agentic | High | Bounded agents | Multi-gate |
+| 7 Agentic | High | Multi-step readonly passes | Multi-gate workflow |
+
+---
+
+## Levels and domains
+
+Two maps, one methodology — **do not** assume Level N = Domain N.
+
+| Level | Rough domain map | Note |
+|-------|------------------|------|
+| **0** | — | Outside methodology (ghostwriting) |
+| **1** | — | Discovery / ideation; not rubric or governance policing |
+| **2** | Domain 1 (lexical) | Word-finding half of Domain 1 |
+| **3** | Domain 2 | Audit + governance → [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| **4** | Domain 3 (+ Domain 1 state) | Graph-scale continuity; lexical work still uses same PGMs |
+| **5a / 5b** | Domain 4a / 4b | Grounding vs scenario simulation — same split as [`03-five-domains.md`](03-five-domains.md) |
+| **6** | Domain 5 | Post-manuscript production |
+| **7** | All + infra | Orchestration across domains — [`05-workflow-patterns.md`](05-workflow-patterns.md), [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |
+
+Level 1 is **pre-domain ideation**: lists and *what if* branches before you are protecting draft prose under audit. Domain detail and maturity checklist: [`03-five-domains.md`](03-five-domains.md).
 
 ---
 
@@ -194,7 +228,38 @@ When someone says "AI will replace authors," point to Levels 4–7: the human wo
 
 ---
 
+## Where to start (by week)
+
+Same ramp as [`README.md`](../README.md#where-to-start-by-week) — summarized here:
+
+### How this repo relates to tooling
+
+**Two trees, one practice.** This repository (`novelist-methodology-class`) is **methodology** — how you work. [novelist-plugin](https://github.com/pojoguy/novelist-plugin) is **optional tooling** — MCP server, prompts, rubrics, continuity helpers. They are separate repositories; nothing in this tree is required to run novelist-plugin, and novelist-plugin is not required to learn Week 1 habits here.
+
+| What | Role for learners |
+|------|-------------------|
+| **This repo** | Methodology docs, templates, examples — **start here** |
+| **[novelist-plugin](https://github.com/pojoguy/novelist-plugin)** | Optional engine — [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md), registered lookup, continuity checks — **Week 3+** when capture hurts |
+| **Your manuscript repo** (e.g. maintainer's live novel via MCP) | Where prose and canon live — **not required** to learn Week 1 Levels 2–3 |
+
+You do **not** need novelist-plugin or a governed IDE to practice prosthetic + audit in any chat tool.
+
+| Week | Focus |
+|------|--------|
+| **1** | This spectrum + [`02-prosthetic-model.md`](02-prosthetic-model.md) + session anchor template — **any chat tool** |
+| **2** | Map + Street View in a folder; manual route notes before travel beats |
+| **3+** | Optional [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) when you want registered lookup |
+
+Levels 2–3 (prosthetic + audit) are achievable in Week 1 without Cursor or lookup tiers. Levels 4–7 grow as your project needs registered state.
+
+---
+
 ## Next
 
-- [`02-prosthetic-model.md`](02-prosthetic-model.md) — the central operating model
-- [`03-five-domains.md`](03-five-domains.md) — how domains map to long-form projects
+| Topic | Document |
+|-------|----------|
+| Prosthetic model, six alternatives, malformed beat | [`02-prosthetic-model.md`](02-prosthetic-model.md) — Levels 2+ |
+| Domains maturity checklist | [`03-five-domains.md`](03-five-domains.md) — pairs with [*Levels and domains*](#levels-and-domains) |
+| Audit + governance, Signs, apply gate | [`04-audit-and-governance.md`](04-audit-and-governance.md) — Level 3 |
+| Session anchors, two-step pipeline, grounding | [`05-workflow-patterns.md`](05-workflow-patterns.md) — Levels 5a, 7 habits |
+| Failure catalog (ghostwrite drift, treadmill, …) | [`06-failure-modes.md`](06-failure-modes.md) — Level 0+ traps |

@@ -150,13 +150,13 @@ You file maps and photos for a place the character never names on the page — a
 You write a stronger line than any numbered option; the six oriented your thinking.
 
 **Malformed beat**  
-Beat order or situation is wrong — especially when six alternatives fail after multiple passes. Fix structure, not diction.
+Beat order or situation is wrong — **especially when six alternatives fail after convergence rounds**. Exit: rewrite paragraph or reorder; do not run more wordings on the same shape. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options fail*.
+
+**Six-alternative treadmill**  
+Repeated six-option and convergence rounds that still don't land — **lead signal for malformed beat**, not weak vocabulary. Stop; restructure or reload grounding. See [`06-failure-modes.md`](06-failure-modes.md).
 
 **Span counterfactual**  
 *"What if X changed between L###–L###?"* — explore ripple effects before you rewrite.
-
-**Six-alternative treadmill**  
-Repeated six-option and convergence rounds that still don't land — often signals a malformed beat, not weak vocabulary.
 
 **Six-alternative protocol**  
 Exactly six full replaceable options for flagged prose. Widens thin solution space when retrieval bias cannot discriminate; author uses them as **inspiration** — pick, blend, reject, or write your own — before apply. Countermeasure to bias-function stall — see [`02-prosthetic-model.md`](02-prosthetic-model.md).

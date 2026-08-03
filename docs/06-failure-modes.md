@@ -136,11 +136,13 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 
 ## Six-alternative treadmill
 
+**Lead signal:** Six alternatives plus convergence rounds **still** do not land — stop asking for more wordings on the same beat. That pattern usually means a **malformed beat**, not weak vocabulary.
+
 **What happens:** You run six alternatives, then convergence rounds, and **still** nothing lands. You keep asking for more wordings on the same beat.
 
-**Why:** The beat is often **structured wrong** — wrong order, missing situation, POV or grounding mismatch — not a vocabulary problem. More line-level options on a broken shape shrinks the solution space further.
+**Why:** The beat is **structured wrong** — wrong order, missing situation, POV or grounding mismatch. More line-level options on a broken shape shrinks the solution space further.
 
-**Right fix:** Stop the treadmill. Rewrite the paragraph, reorder beats, or reload grounding. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options stop working*.
+**What you do:** Stop the treadmill. Rewrite the paragraph, reorder beats, or reload grounding. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options fail — the beat is often malformed*.
 
 ---
 

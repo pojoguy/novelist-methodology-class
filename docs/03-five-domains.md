@@ -14,7 +14,7 @@
 | **Grounding (Domain 4a)** | **Spatial / material verify** — routes, period detail, biology — before facts enter canon. |
 | **Scenario simulation (Domain 4b)** | **Play-pretend** off-page — character or institutional runs; distill constraints, not manuscript prose. |
 | **Production blueprinting (Domain 5)** | Planning **trailer, audio, or visual** production — for human crews, not prose generation. |
-| **PGM** | A structured file holding **official story facts** the tool must read before answering. |
+| **PGM** | A structured file holding **official story facts** you register for lookup — not chat memory. |
 | **Canon** | Story truth as **registered in your project files** — not whatever the chat said last session. |
 | **Exploration / sandbox** | Scratch work marked **not official** until you promote it to canon. |
 | **Domain collapse** | Mistake: using a **sandbox fact** or **craft comparison** as if it were story canon. |
@@ -38,7 +38,11 @@ Long-form creative projects rarely use AI in only one way. This framework separa
 
 **Status in mature projects:** Often the first domain implemented — small PGMs per chapter, anchor persistence.
 
-**What you should expect:** Offer alternatives; never substitute unless you pick.
+**What you do:** Flag a weak line → ask for six full alternatives → pick, blend, write your own, or reject — then authorize apply.
+
+**Common mistake:** Accepting one substituted line because it "sounds fine."
+
+**What you're doing instead:** Expanding your retrieval set; you keep creative intent.
 
 ---
 
@@ -50,7 +54,11 @@ Long-form creative projects rarely use AI in only one way. This framework separa
 
 **Output shape:** Verdict → what's working → numbered recommendations → priority order. No apply without instruction.
 
-**What you should expect:** Audit and report. Rewrite only when you explicitly request it after selection. Comparanda reports are diagnosis only — never paste reference prose.
+**What you do:** Request a readonly audit — verdict, what's working, numbered fixes. Revise yourself unless you explicitly ask for a named apply.
+
+**Common mistake:** Saying "priority fixes" and getting a rewritten chapter.
+
+**What you're doing instead:** Treating audit as a **letter from an editor**, not a paste buffer.
 
 See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Comparanda*.
 
@@ -62,7 +70,11 @@ See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Co
 
 **Typical tools:** Timeline markdown, world PGMs, character master + chapter slices, passage re-indexing after edits, **continuity check reports**, route and place lookup.
 
-**What you should expect:** Canon lives in your **registered files** — not chat memory. Cite report IDs from continuity checks when you need to prove a finding later.
+**What you do:** Keep timeline and character state in **registered files**; load before structural work; cite continuity report IDs when you need proof later.
+
+**Common mistake:** Trusting chat memory for who knows what when.
+
+**What you're doing instead:** External relationship memory — the same notes you'd keep in a bible, made loadable.
 
 **Value:** Prevents drift across 80k+ words and months of sessions.
 
@@ -80,11 +92,15 @@ Domain 4 splits into two modes humans already keep separate. Both use `explorati
 
 **Typical tools:** Grounding indexes, visual anchors, route and place lookup, explicit stop-and-ask when no route or place is on file.
 
-Authors capture **map and Street View together** during research (e.g. Danish Cemetery near Coteau, ND — chapter 3 collapse corridor, lines 62–end). One plain-language instruction to file them; your notes persist for later loads and for **looking back** after drafting. The pair blocks default **generic fictional** places. **POV-blind** sites may never appear in narrative when the character does not know the place — your files still hold the geography. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Grounding capture — map + Street View* and *POV-blind grounding*.
+Authors capture **map and Street View together** during research (e.g. Danish Cemetery near Coteau, ND — chapter 3, lines 62–end). One plain-language instruction to file them; your notes persist for later loads and for **looking back** after drafting. The pair blocks default **generic fictional** places. **POV-blind** sites may never appear in narrative when the character does not know the place — your files still hold the geography. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Grounding capture* and [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
 
 **Value:** Real-world spatial relations over movie logic.
 
-**What you should expect:** Never invent highways, bearings, or period facts. **No route on file** is a success state — stop and register before you write travel prose.
+**What you do:** File map + ground photos; load before revising the beat; stop when no route is registered — file route notes first.
+
+**Common mistake:** Searching the manuscript for a place name the POV never receives, then assuming research failed.
+
+**What you're doing instead:** Checking prose against **what you documented** (no walls, no trees, bald prairie) — author coordinates separate from character knowledge.
 
 **Promotes to:** `lore/routes/`, world PGMs, grounding registries.
 
@@ -98,7 +114,11 @@ Authors capture **map and Street View together** during research (e.g. Danish Ce
 
 **Value:** Discovers procedural intelligence, knowledge boundaries, and voice limits before on-page prose.
 
-**What you should expect:** Output **constraints and state registers** — not paste-ready dialogue. Promote to character PGM only after you review.
+**What you do:** Run off-page "what would they do?" sessions; distill **constraints and knowledge state**; promote to character files only after you review; **you** write the scene.
+
+**Common mistake:** Pasting sandbox dialogue into the manuscript.
+
+**What you're doing instead:** Play-pretend as research — maps answer *where*; this answers *who under pressure*.
 
 **Promotes to:** `lore/characters/*.json` (master + chapter slices).
 
@@ -116,7 +136,11 @@ See: [`03b-scenario-simulation.md`](../scripts/03b-scenario-simulation.md) (Ep. 
 
 **Status:** Often future work for prose-only novelists; relevant for transmedia.
 
-**What you should expect:** Out of scope until you open production workflow.
+**What you do:** Open production workflow only when the manuscript is far enough along; keep trailer/storyboard notes separate from chapter edits.
+
+**Common mistake:** Mixing production blueprints into live drafting sessions.
+
+**What you're doing instead:** Planning for human crews — not generating prose.
 
 ---
 

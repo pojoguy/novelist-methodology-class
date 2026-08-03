@@ -147,16 +147,16 @@ The six-alternative set supports **different moves**. Treat them as distinct —
 
 **Disclosure:** Pick and cluster+take are both honest prosthetic use; they are not the same labor or machine shape. See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) — *Pick vs cluster + author take*.
 
-#### Beyond line prosthetic — when six options stop working
+#### When six options fail — the beat is often malformed
 
-Six alternatives are the **default line-level** tool. In practice, authors rarely end on "pick option 3." More often you **supersede** the set with your own stronger line, or you discover the problem was never vocabulary.
+**Lead signal:** If six alternatives **still** do not land after one or more **convergence rounds**, the problem is usually **structure** — wrong order, missing situation, POV or grounding mismatch — not vocabulary. Another pass of wordings on the same beat shape makes thin solution space worse.
 
-**When six alternatives fail — even after convergence rounds — that is often the signal that the beat is structured wrong.** Another pass of six wordings on the same beat shape usually makes things worse (thin solution space). Step back and ask whether order, situation, or missing context is broken — then rewrite the paragraph or reorder the beat.
+Six alternatives are the **default line-level** tool. In practice you rarely end on "pick option 3." More often you **supersede** the set with your own stronger line, or you discover the problem was never diction.
 
-| What you notice | What to do |
+| What you notice | What you do |
 |-----------------|------------|
 | Six options orient you; **your line is stronger** | Write your line; ask for a **readonly audit** on it — don't default to the nearest numbered option |
-| **Two or more rounds** of six + convergence, still none land | Treat as **malformed beat** — restructure before more line shopping |
+| **Two or more rounds** of six + convergence, still none land | **Malformed beat** — rewrite the paragraph or reorder before more line shopping |
 | You need to see ripple effects | Ask a **span counterfactual**: *"What would changing X do between L111–L115?"* — think first, apply later |
 | Geography, period, or material fact was wrong | **Reload grounding** (map + Street View, route notes); keep alternate drafts until checks pass |
 
@@ -165,7 +165,7 @@ Six alternatives are the **default line-level** tool. In practice, authors rarel
 ```text
 Weak line → six options (often superseded, rarely picked)
         ↓
-Still failing after convergence? → beat is probably malformed → rewrite paragraph(s) or reorder
+Still failing after convergence? → malformed beat → rewrite paragraph(s) or reorder
         ↓
 If place/tech was wrong → reload grounding; span counterfactual if needed
         ↓
@@ -174,17 +174,18 @@ You authorize apply when the beat earns the line
 
 Cross-link: [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Two-step pipeline*; [`06-failure-modes.md`](06-failure-modes.md) — *Six-alternative treadmill* and *Generic place hallucination*.
 
-#### Operational rule
+Irreducible tool-contract rules (convergence, pick vs cluster+take): [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
 
-When you see negation triangulation, triads, or comma-list recovery in model output:
+#### When output collapses (negation triangulation)
 
-1. **Do not** add more rubric Signs (shrinks the feasible region further)
+When you see *Not A, not B. C.*, triads, or comma-list recovery:
+
+1. **Do not** add more rubric Signs — that shrinks the feasible region
 2. **Do not** accept the single collapsed line
-3. **Do** diagnose the thin-space breach
-4. **Do** offer six full alternatives of the correct beat type
-5. **Wait** for author decision — pick, blend, name a cluster for convergence (typically three alternatives), reject all six, or supply own line — before apply
+3. **Do** ask for six full alternatives of the correct beat type — or step back if you've already run the **six-alternative treadmill**
+4. **You** pick, blend, reject, or supply your own line before apply
 
-See [`06-failure-modes.md`](06-failure-modes.md) — *Thin solution space / retrieval bias stall* and *Sparse-edge collapse*.
+See [`06-failure-modes.md`](06-failure-modes.md) — *Thin solution space* and *Sparse-edge collapse*.
 
 ---
 
@@ -227,13 +228,11 @@ Step 1 — Structural / grounding
             → Apply to manuscript (if authorized)
 ```
 
-**Step 1 may output:** beat sequences, PGM crosswalks, breach diagnostics, situation options, explicit questions.
+**Step 1 produces:** beat sequences, PGM crosswalks, breach diagnostics, situation options, explicit questions — not manuscript substitution.
 
-**Step 1 may not output:** manuscript substitution, dialogue without speaker/situation, thesis taglines as voice.
+**Step 2 produces:** `PASS` or `FAIL` on gates — not a rewrite on FAIL.
 
-**Step 2 checks:** quote gate, tagline gate, PGM lock, apply gate, domain collapse (simulation treated as canon).
-
-**Output:** `PASS` or `FAIL` — no rewrite on FAIL.
+Tool-contract detail for governed editors: [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
 
 ---
 

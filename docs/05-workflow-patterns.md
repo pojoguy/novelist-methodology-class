@@ -201,37 +201,35 @@ When POV ignorance is intentional, you keep maps and Street View in your groundi
 
 **What you're doing:** Keeping author coordinates in files the character doesn't need to share.
 
-Cross-link: [`06-failure-modes.md`](06-failure-modes.md) — *Generic place hallucination*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options stop working*.
+Cross-link: [`06-failure-modes.md`](06-failure-modes.md) — *Generic place hallucination*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *When six options fail*; [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
 
 #### Governance overhead
 
-Once tooling is wired, capture and load are part of normal research — not a parallel knowledge-engineering project. Grounding capture (map + Street View, one instruction) is representative of **~zero marginal hours per 1,000 words** once tooling is in place — setup is front-loaded; capture is part of normal research.
+**Marginal capture** (map + Street View, one instruction per site) can approach **~zero extra hours per 1,000 words** once your filing habit is wired — because capture is part of normal research, not a parallel project.
+
+**Front-loaded cost:** Initial setup, discipline, re-index after edits, discourse tagging, continuity checks, and promotion habits are real labor. Do not confuse low marginal capture with zero total governance.
+
+Full-stack honesty: [novelist-plugin GAPS.md](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GAPS.md) — what the maintainer stack still costs in author time.
 
 ---
 
-## Grounding load protocol
+## Grounding load — what you do
 
 Before you revise a beat that uses real places:
 
 1. Ask to **load grounding** for that chapter and site.
-2. Use only the map and images you filed for that beat.
+2. Work only from the map and images you filed for that beat.
 3. If something is missing → **stop and ask** — do not invent detail.
 
-This keeps the tool from substituting a generic fictional location for what you documented.
+**Common mistake:** Revising roadside or cemetery prose from memory while generic training prior fills in walls, trees, and mood.
+
+**What you're doing instead:** Checking your line against **documented** anchors before you call the beat done.
 
 ---
 
 ## Project expectations
 
-Whether you use a governed editor or a long chat thread, **you** set the contract:
-
-- Persona: adversarial editor, not cheerleader
-- Default: diagnose, six alternatives, no apply
-- Cite line format (`CH## L##`)
-- Load order: rationale → gates → rubric → chapter PGM
-- Explicit domain scope (do not collapse audit + simulation)
-
-See [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md) for a starter checklist you can adapt.
+Whether you use a governed editor or a long chat thread, **you** set the contract — adversarial audit, six alternatives, apply only when you say so. Starter checklist: [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
 
 ---
 
@@ -270,35 +268,33 @@ Cross-session review of Section C entries is how methodology **evolves** without
 
 ## Retrospective meta-analysis
 
-**Section C** of your session anchor is subjective — what worked, what failed, which product you used tonight.
+**Section C** of your session anchor records **how the session felt** — what worked, what failed, which product you used.
 
-**Registered project notes** let you **look back objectively** months later: what place a span assumed, what photos and maps you filed, what the prose deliberately never says.
+**Registered notes** let you **reconstruct a span months later** without chat memory: what place you assumed, what photos you filed, what the prose deliberately never says.
 
-Good workflow is not only **forward-looking** (load grounding before you revise). It is **backward-looking** — you can reconstruct your own project after the fact instead of relying on chat memory.
-
-| While drafting | Months later |
-|----------------|--------------|
-| Load map + Street View before a beat | *"What place was I using at chapter 3, line 62?"* |
+| Forward (while drafting) | Backward (months later) |
+|--------------------------|-------------------------|
+| Load map + Street View before revising a beat | Open grounding folder: *"What site was chapter 3, line 62 using?"* |
 | File route notes before travel prose | *"Which stops did I register vs name on the page?"* |
-| Close with Section C | *"Turn what I learned into a case study or protocol tweak"* |
+| Close with Section C feelings | *"What did I learn — protocol tweak or teaching note?"* |
 
 **What to keep (beyond the manuscript):**
 
-- **Grounding files** — photos, maps, chapter headers listing what you captured
+- **Grounding files** — photos, maps, chapter headers (`ch03 L62–end · POV-blind · Danish Cemetery`)
 - **Route notes** — stops, rejected paths, line references
-- **Session anchors** — especially Section C across months
-- **Continuity check reports** — named reports you can cite later
+- **Session anchors** — Section C across months
+- **Continuity check reports** — reference IDs you can cite
 - **Promoted lore** — places the narrative may never label
 
-**Example (POV-blind site):**
-
-You drafted collapse and pickup with no cemetery on the page — correct for POV. Months later you open your grounding folder and route notes and remember: roadside beside Danish Cemetery. That retrospective pass can feed teaching material, catch drift between notes and revised prose, or help a collaborator understand **your** coordinates without rereading every chat.
+**Example (POV-blind site):** You drafted collapse and pickup with **no cemetery on the page** — correct for POV. Months later you open your grounding folder and remember: roadside beside Danish Cemetery near Coteau, ND. You reconcile revised prose against Street View (no walls, no trees, bald prairie) without breaking character knowledge.
 
 **Common mistake:** "The place name isn't in the manuscript, so the research didn't count."
 
-**What you're doing:** Separating **what you know** from **what the character knows** — and keeping files that prove the first without breaking the second.
+**What you're doing instead:** Separating **what you know** from **what the character knows** — and keeping files that prove the first without breaking the second.
 
-Cross-link: [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Other infrastructure patterns*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Session anchors*.
+Full walkthrough: [`examples/grounding-pov-blind-case-study.md`](../examples/grounding-pov-blind-case-study.md).
+
+Cross-link: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Session anchors*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Looking back at your notes*.
 
 ---
 

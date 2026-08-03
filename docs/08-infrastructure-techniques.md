@@ -366,7 +366,7 @@ Full pattern and example report types: [`04-audit-and-governance.md`](04-audit-a
 | Technique | Role | Domain |
 |-----------|------|--------|
 | **Session anchors** | Re-entry state; Section C methodology tuning | 1, cross-cutting |
-| **Retrospective meta-analysis** | Looking back at registered notes to reconstruct what a span assumed | cross-cutting |
+| **Looking back at your notes** | Reconstruct what a span assumed from grounding files, route notes, anchors — not chat memory | cross-cutting |
 | **PGMs / lore JSON** | Graph state for characters, world, chapter slices | 3 |
 | **Grounding indexes** | Visual anchor sets (map + ground-level per place), route maps, period facts | 4 |
 | **Author inline notes** | `CH## L##` keyed deferrals; promote to PGM | 1–2 |

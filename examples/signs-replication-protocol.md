@@ -29,15 +29,15 @@ This is a **methodology template**, not published empirical results. Adapt label
 
 2. **Size:** Small is honest — maintainer report is **n=1**. Label **≥20 passages per bucket** if you want any stable comparison; fewer is exploratory only.
 
-3. **Exclude:** exploration/ drafts, comparanda excerpts, grounding headers — L0/L1 noise.
+3. **Exclude:** exploration drafts, comparanda excerpts, grounding headers — scratch and non-manuscript material.
 
-4. **Document:** chapter, line span, bucket, **how labeled** (session log, author attestation, known paste source).
+4. **Document:** chapter, line span, bucket, **how you labeled it** (session log, your attestation, known paste source).
 
 ---
 
 ## Signs pass (explicit rubric)
 
-1. Fork project's Signs list (~18 items) or Wikipedia list adapted for fiction POV/voice.
+1. Fork a Signs list — [novelist-plugin `prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (separate tooling repo; ~18 items), your project's rubric, or Wikipedia adapted for fiction POV/voice.
 2. **Blind pass:** scorer (human) marks Sign hits per passage with **short cite** — no auto-fix.
 3. Record: Sign count, which Signs fired, **human signal override** when intentional voice conflicts.
 4. **Score proxy (optional):** weighted Sign density per 500 words — not for ranking authors, only bucket separation.

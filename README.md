@@ -56,18 +56,40 @@ Creative intent and final prose remain human. AI assists where human working mem
 | [`docs/JARGON-STANDARD.md`](docs/JARGON-STANDARD.md) | Contributor rule: Terms table at start of every doc/script |
 | [`scripts/`](scripts/) | YouTube video scripts — one-to-one paired with `docs/`; see [`scripts/production-setup.md`](scripts/production-setup.md) for record/edit workflow |
 | [`templates/`](templates/) | Starter templates for sessions and editorial feedback |
-| [`examples/`](examples/) | Walkthroughs of real workflow shapes (anonymized) |
+| [`examples/`](examples/) | Walkthroughs and case studies (anonymized) — see [`grounding-pov-blind-case-study.md`](examples/grounding-pov-blind-case-study.md) |
+
+### Related repository (optional tooling)
+
+**This tree is methodology and templates only** — docs, examples, session templates. It does **not** contain the MCP server, prompt packs, or reference rubric files.
+
+The maintainer's **optional implementation** lives in a **separate repository**: [novelist-plugin](https://github.com/pojoguy/novelist-plugin). There you will find [`prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) (18 Signs), continuity tooling, and [getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) for registered lookup.
+
+You do **not** need novelist-plugin to learn Week 1 habits (prosthetic + audit) from these docs alone.
 
 ---
 
 ## Quick start
 
 0. Skim **[`docs/JARGON-STANDARD.md`](docs/JARGON-STANDARD.md)** — every doc defines jargon at the top for non-technical readers.
-1. Read [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) if you are skeptical that AI is new, novel, or relevant to your existing workflow.
-2. Read [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) if you want the landscape in ten minutes.
-3. Read [`docs/02-prosthetic-model.md`](docs/02-prosthetic-model.md) if you want the central operating model.
-4. Read [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md) for indexed notes, continuity checks, and comparanda habits.
-5. Copy [`templates/session-close.md`](templates/session-close.md) when you close a writing session.
+1. **Optional:** [`docs/00-history-and-authority.md`](docs/00-history-and-authority.md) — if you are skeptical that AI is new or want the hidden-AI map and maintainer context.
+2. Read [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — the landscape in ten minutes.
+3. Read [`docs/02-prosthetic-model.md`](docs/02-prosthetic-model.md) — the central operating model.
+4. Copy [`templates/session-close.md`](templates/session-close.md) when you close a writing session.
+5. Add indexed notes and continuity habits when your project outgrows chat — [`docs/08-infrastructure-techniques.md`](docs/08-infrastructure-techniques.md).
+
+### Where to start (by week)
+
+You do **not** need a governed IDE on day one. The path is **manual habits first**, optional tooling when capture and lookup start to hurt.
+
+| Week | You do | Tools |
+|------|--------|-------|
+| **1** | Read spectrum + prosthetic model; close every session with a **session anchor** ([`templates/session-close.md`](templates/session-close.md)) | Any chat tool — ChatGPT, Claude, Gemini, etc. |
+| **2** | File **map + Street View** for one real site in a folder; keep **manual route notes** before travel prose | Same chat tool + folders on your machine |
+| **3+** | Optional: registered PGMs, search, continuity checks when the book grows | [novelist-plugin getting started](https://github.com/pojoguy/novelist-plugin/blob/main/docs/GETTING-STARTED.md) — only if you want the maintainer's full stack |
+
+**Week 1 goal:** More than *"make me a story"* — diagnose, six alternatives, you pick, you apply. No lookup tiers, no plugin required.
+
+Cross-link: [`docs/01-spectrum-of-use.md`](docs/01-spectrum-of-use.md) — *Where to start (by week)*.
 
 ---
 

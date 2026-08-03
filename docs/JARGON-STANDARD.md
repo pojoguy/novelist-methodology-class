@@ -73,8 +73,9 @@ Master reference. Docs and scripts link here; they do not replace per-document t
 | Do | Don't |
 |----|-------|
 | Second person (**you**): what to keep, ask, file, refuse | Imperatives to the model ("do not generate", "agent default") |
-| Plain outcomes: search, continuity check, route lookup | MCP tool names, API identifiers, plugin references |
+| Plain outcomes: search, continuity check, route lookup | MCP tool names, API identifiers, implementation detail from tooling repos |
+| Optional link to [novelist-plugin](https://github.com/pojoguy/novelist-plugin) when pointing at rubrics or getting-started | Embedding plugin architecture or agent config in methodology docs |
 | "Tell your editor…" / "Ask…" / "Hold the tool to…" | "Agent rules", "Skill pattern", "Model does" |
 | What **you** experience when files are wired | How to implement tiers, hosts, or protocols |
 
-**Tooling** (editors, plugins, hosts) lives outside this repo. These docs describe **your workflow and judgment** — the same notes you'd keep in a binder, made queryable.
+**Tooling** (editors, plugins, hosts) lives in **separate repositories** — e.g. [novelist-plugin](https://github.com/pojoguy/novelist-plugin) for the maintainer's optional stack. These docs describe **your workflow and judgment** — the same notes you'd keep in a binder, made queryable.
