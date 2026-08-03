@@ -90,7 +90,7 @@ When six options still will not land, the beat is often **malformed** (structure
 
 **Value:** Humans forget; graphs do not. Reduces "wait, didn't she lose that knife in chapter 4?" errors.
 
-**Tooling:** JSON lore files, structured fact lookup, session anchors with continuity blocks.
+**Tooling:** PGM files — usually a **mix of Markdown** (richer narrative notes), **JSON** (precise fact blocks), and **Cypher** (relationship joins: who-knows-what, arc links); structured fact lookup; session anchors with continuity blocks.
 
 **Key rule:** Canon lives in **registered state**, not in chat memory. Chat is ephemeral; PGMs persist.
 
@@ -223,7 +223,7 @@ When someone says "AI will replace authors," point to Levels 4–7: the human wo
 | Your manuscript (or a draft passage) | Passage index or RAG |
 | Optional: a notes file per session ([`templates/session-close.md`](../templates/session-close.md)) | Cursor rules or agent skills |
 | Optional: **adversarial audit discipline** + word contracts in custom instructions | Pre-built PGMs from a vendor |
-| A folder on your machine for **PGMs you save** (JSON, Markdown — drafted in chat, filed by you) | Registered lookup tiers (until re-paste hurts) |
+| A folder on your machine for **PGMs you save** (Markdown, JSON, Cypher — mix by job; drafted in chat, filed by you) | Registered lookup tiers (until re-paste hurts) |
 
 Treat the chat thread as **conversation context** — useful for the last few turns, unreliable as canon. See [`glossary.md`](glossary.md) — *Context*.
 
@@ -283,6 +283,8 @@ A **PGM** here means **organized working notes** — who knows what, what gear s
 - **Character and chapter state** — Ask for a readonly pass on a passage: what is true about this character here? Turn the answer into a short structured note, edit it yourself, save it in your project folder (a `.json` or `.md` file — either is fine).
 - **Scenario simulation** — Play a beat off-page (caseworker, institution, "what does she know after three sessions?"). **Distill** what you learned into constraints and knowledge state; file that in your character notes after you review. Do not paste sandbox dialogue into the chapter.
 - **Session anchors** — Section A of your end-of-session file (where the story paused, open questions, locks) often holds facts that later move into a PGM when they stabilize.
+
+**Format mix (maintainer practice):** **Markdown** for rich character or scene notes; **JSON** for locks, gear state, and other fields that need to stay exact; **Cypher** when the hard problem is **relationships** — who knows what, which arc owns a beat. One novel may use all three. Start with whatever you will actually reload.
 
 **The habit:** Chat helps you **shape** canon; the **file** is what you reload next month. The common mistake is not "I need novelist-plugin first" — it is never saving canon out of the thread. When copying those files back into every new session gets tedious, that is when registered lookup ([`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)) earns its keep — optional, and **after** you have sheets worth indexing.
 
