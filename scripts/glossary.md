@@ -43,6 +43,8 @@ One-line definition (≤12 words)
 |------|----------------|
 | **Prosthetic model** | AI expands retrieval; author selects and owns prose |
 | **Prosthetic capture** | Ingestion phase — machine output lands in your file before you revise |
+| **Readonly audit** | Diagnostic pass — report only until you authorize a manuscript change |
+| **Statistical reporting** | Engine reports on prose or version diff; voice, trope, timeline, geography, version |
 | **Apply gate** | No manuscript edit without explicit author instruction |
 | **Six-alternative protocol** | Six options as inspiration — pick, blend, reject, or own line |
 | **Thin solution space** | Bias function must return; emits triads, negation, comma-lists |

@@ -10,7 +10,7 @@ Terms used across this repository.
 
 | Doc | Glossary home for… |
 |-----|-------------------|
-| [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, prosthetic capture, Gaines/Calgary, maintainer context |
+| [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, prosthetic capture, statistical reporting, Gaines/Calgary, maintainer context |
 | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | Levels 0–7, frontier chat, PGM drafting, lexical prosthetic, spectrum straw man |
 | [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, prosthetic capture, six alternatives, move types, nexus, gates, prosthetic gates |
 | [`03-five-domains.md`](03-five-domains.md) | Domains 1–5, 4a/4b, scope rules, canon workflow |
@@ -32,6 +32,12 @@ Rule blocking manuscript edits until apply authorization is present — the core
 
 **Audit**  
 Diagnostic pass on existing prose — what works, what fails, what to try next — without rewriting your voice. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
+
+**Readonly audit**  
+A diagnostic pass that **does not** edit your manuscript. See **statistical reporting** (below). You read the output and decide what to change. Distinct from **prosthetic capture**, where machine text lands in the file before you revise. See [`00-history-and-authority.md`](00-history-and-authority.md) — Lesson 4; [`04-audit-and-governance.md`](04-audit-and-governance.md).
+
+**Statistical reporting**  
+Pointing the stochastic engine at prose you already wrote (or at **change over time**, e.g. a git diff) and asking it to **report**: voice, trope, timeline, geography, version, and other readonly passes. The engine **extrapolates** patterns, including effects you did not spell out in advance. Output stays in the thread or a filed report until you accept or reject it. Not prosthetic capture. See [`00-history-and-authority.md`](00-history-and-authority.md) — Lesson 4, *Statistical reporting*; craft detail in [`02-prosthetic-model.md`](02-prosthetic-model.md), [`03-five-domains.md`](03-five-domains.md).
 
 **Governance**  
 Authorization layer — **gates**, locks, word contracts; nothing touches the manuscript until you say so. Distinct from having a rubric. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Audit vs governance*.
@@ -196,7 +202,7 @@ Bundle of methodology **output-shape gates**: **quote gate** (dialogue waits for
 AI as external aid for specific failures; human retains intent and final prose. **Ingestion** — what enters your working text before critique and apply — is **prosthetic capture** (see below).
 
 **Prosthetic capture**  
-The **ingestion phase** of the **prosthetic model**: probabilistic machine output lands in your file before you revise — speech-to-text, autocomplete taps, live captions, meeting transcripts. Capture, not substitution; **governance** is what you keep on the page after capture. Distinct from **grounding capture** (filing map + Street View for a site) and **ingest** (refreshing the passage index after edits). See [`00-history-and-authority.md`](00-history-and-authority.md) — Lesson 4; [`02-prosthetic-model.md`](02-prosthetic-model.md).
+The **ingestion phase** of the **prosthetic model**: probabilistic machine output lands in your file before you revise — speech-to-text, autocomplete taps, live captions, meeting transcripts. Capture, not substitution; **governance** is what you keep on the page after capture. Distinct from **grounding capture** (filing map + Street View for a site), **ingest** (refreshing the passage index after edits), and **readonly audit** (diagnostic answers that do not enter the manuscript until you authorize). See [`00-history-and-authority.md`](00-history-and-authority.md) — Lesson 4; [`02-prosthetic-model.md`](02-prosthetic-model.md).
 
 **Proverb dialogue**  
 Generic wisdom lines without speaker/situation — structural failure mode.

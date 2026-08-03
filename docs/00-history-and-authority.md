@@ -6,18 +6,19 @@
 **Full glossary:** `[glossary.md](glossary.md)`.
 
 
-| Term                             | Plain language                                                                                                                             |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **AI (artificial intelligence)** | Software that finds patterns, scores, or generates content — not a thinking person.                                                        |
-| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                             |
-| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                   |
-| **Chat box**                     | A messaging-style screen (ChatGPT, Claude, Gemini) where you type prompts and get replies — what made AI visible to the public in 2022.    |
-| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                        |
-| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                 |
-| **Prosthetic capture**           | The **ingestion** phase of the prosthetic model — machine output lands in your file (dictation, autocomplete, captions) before you revise. |
-| **Apply gate**                   | **You** must explicitly approve before any suggested text is pasted into your draft.                                                       |
-| **Human prose mass**             | The bulk of **final wording is yours** after you choose, blend, and revise — not a paste-in from the model.                                |
-| **Governance**                   | The habits that keep you in charge — apply gate, word contracts, readonly audit, filed notes you reload.                                   |
+| Term                             | Plain language                                                                                                                                                    |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI (artificial intelligence)** | Software that finds patterns, scores, or generates content — not a thinking person.                                                                               |
+| **LLM (large language model)**   | A text system trained on huge amounts of writing to guess the next word; powers most chat-style writing tools.                                                    |
+| **Generative AI**                | AI that **creates** new content (words, pictures, sound) from a prompt — not just spell-check or search.                                                          |
+| **Chat box**                     | A messaging-style screen (ChatGPT, Claude, Gemini) where you type prompts and get replies — what made AI visible to the public in 2022.                           |
+| **Stochastic**                   | Based on **probability and chance** — the system picks likely outputs, not guaranteed correct ones.                                                               |
+| **Prosthetic model**             | Using AI like **glasses or a thesaurus** — it helps you retrieve or check; **you** still write and choose.                                                        |
+| **Prosthetic capture**           | The **ingestion** phase of the prosthetic model — machine output lands in your file (dictation, autocomplete, captions) before you revise.                        |
+| **Readonly audit**               | A **diagnostic pass** on prose or on **change between versions**. The engine extrapolates patterns it infers; nothing pastes into your draft until you authorize. |
+| **Apply gate**                   | **You** must explicitly approve before any suggested text is pasted into your draft.                                                                              |
+| **Human prose mass**             | The bulk of **final wording is yours** after you choose, blend, and revise — not a paste-in from the model.                                                       |
+| **Governance**                   | The habits that keep you in charge — apply gate, word contracts, readonly audit, filed notes you reload.                                                          |
 
 
 ---
@@ -32,6 +33,7 @@
 2. **Why chat tools sound right when they are wrong** — and why that matters for your manuscript
 3. **Where AI already sits in your daily life** — including tools many writers use and still call "not AI"
 4. **Who wrote this methodology** — and what kind of authority that is (and is not)
+5. **Why your habits may already match this methodology** — when machine output lands: capture, edit, govern — before you call it generative AI
 
 **Optional Ep. 0** in the series. This doc does **not** teach the prosthetic protocol, five domains, or audit mechanics — those start at `[01](01-spectrum-of-use.md)` → `[02-prosthetic-model.md](02-prosthetic-model.md)`. **Skip to** `01` if you want craft immediately.
 
@@ -78,7 +80,7 @@ Large language models feel like oracles. They are not. They are **stochastic sys
 
 The model does not "retrieve a fact," like a database does. It **samples** likely continuations. That is why unconstrained *"fix my chapter"* produces generic prose. That is why **[Signs](04-audit-and-governance.md)** exist in craft rubrics — names for patterns that look fine until you compare them to **your** voice.
 
-**The prosthetic model exists because the engine is stochastic.** You do not trust the model; you **constrain** it, **audit** its output, widen your options when wording is stuck, and **select** what lands on the page — the same move as tapping one of three autocomplete suggestions and editing it.
+**The prosthetic model exists because the engine is stochastic.** You do not trust the model; you **constrain** it, **audit** its output, widen your options when wording is stuck, and **select** what lands on the page — the same move as tapping one of three autocomplete suggestions and editing it. Point the same sampler at filed prose or a git diff and you get **statistical reporting**: extrapolation about what is on the page or what changed, including patterns you did not list in advance. You still read the analysis and decide what to change. See [Lesson 4](#lesson-4--ai-you-already-use-and-dont-call-ai).
 
 Serious writing methodology combines two old instincts:
 
@@ -108,19 +110,20 @@ LLMs are the next layer. The relevant question is not "AI yes or no" but **which
 
 ---
 
-## Lesson 4 — AI you already use (and don't call AI)
+## Lesson 4 — AI you already use (and don't call it AI)
 
 Many people reject "AI" in the abstract while depending on statistical and generative systems constantly. Naming them reduces mystique — and shows you already practice **human-in-the-loop** selection.
 
 ### Closest to your writing desk
 
 
-| Tool                                                | What you already do                | Same habit as serious LLM craft             |
-| --------------------------------------------------- | ---------------------------------- | ------------------------------------------- |
-| **Predictive text / autocomplete**                  | Accept or dismiss a suggested word | **You** choose from a machine retrieval set |
-| **Modern spell-check and grammar tools**            | Accept or ignore a rewrite         | Critique → **you** apply                    |
-| **Dictation / live captions / meeting transcripts** | Speak; edit the text afterward     | Capture → **you** own the file              |
-| **Search and translation**                          | Use or distrust a snippet          | Trust-but-verify                            |
+| Tool                                                | What you already do                                          | Same habit as serious LLM craft             |
+| --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| **Predictive text / autocomplete**                  | Accept or dismiss a suggested word                           | **You** choose from a machine retrieval set |
+| **Modern spell-check and grammar tools**            | Accept or ignore a rewrite                                   | Critique → **you** apply                    |
+| **Dictation / live captions / meeting transcripts** | Speak; edit the text afterward                               | Capture → **you** own the file              |
+| **Statistical reporting (readonly audit)**          | Ask for voice, trope, timeline, geography, or version passes | Report → **you** revise                     |
+| **Search and translation**                          | Use or distrust a snippet                                    | Trust-but-verify                            |
 
 
 **Speech-to-text deserves a straight talk.**
@@ -137,21 +140,42 @@ This is not ChatGPT ghostwriting your chapter. You spoke. You revise. You own th
 
 If you ever accept an autocomplete suggestion, you have already used the structural move behind the **six-alternative protocol** — at phone-keyboard scale.
 
-The fight is not about purity. It is **governance**: what you allow on the page after capture.
+The fight is not about purity. It is **governance**: what you allow on the page after capture, and what you treat as advice only until you revise the file yourself.
+
+### Statistical reporting
+
+Not every use of a language model puts words in your manuscript. Often you point the same stochastic engine at prose you already wrote and ask it to **report**. It extrapolates patterns in what you show it, including effects you did not spell out in the prompt. The analysis stays in the thread until you accept or reject it. Your file does not change until you edit it yourself. That is **readonly audit**. It is not prosthetic capture.
+
+The passes below are one family of habit. The engine samples; you govern what you do with the report.
+
+
+| Audit         | What you are asking the engine to report                                 |
+| ------------- | ------------------------------------------------------------------------ |
+| **Voice**     | Whether the passage still sounds like you, or an edit smoothed you flat  |
+| **Trope**     | Which genre habits showed up and which look like intentional subversion  |
+| **Timeline**  | Whether dates, sequence, and who-knows-what still line up                |
+| **Geography** | Whether the place on the page matches what you filed for the site        |
+| **Version**   | What changed between two drafts in git, and what deserves attention next |
+
+
+**Version audit** is one member of that family. Keep two saved versions and ask what shifted between them. Readability drift and voice tension can surface from the delta alone, without a rubric you wrote out in advance.
+
+Deeper passes on voice, trope, timeline, and geography are spelled out in the craft ladder: `[02-prosthetic-model.md](02-prosthetic-model.md)` (voice, developmental audit), `[03-five-domains.md](03-five-domains.md)` (continuity, grounding). Ep. 0 names the habit. The later docs teach the passes.
 
 ### The fair objection — and the pivot
 
 Skeptics often draw a sharp line:
 
 
-| Claim                                                                 | Fair?                     |
-| --------------------------------------------------------------------- | ------------------------- |
-| "Night mode **reconstructs** pixels; it doesn't **write** my chapter" | **Yes** — different task  |
-| "Noise suppression **classifies** speech vs clutter"                  | **Yes** — not composition |
-| "Therefore I use **no AI at all**"                                    | **No** — category error   |
+| Claim                                                                 | Fair?                                                                          |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| "Night mode **reconstructs** pixels; it doesn't **write** my chapter" | **Yes** — different task                                                       |
+| "Noise suppression **classifies** speech vs clutter"                  | **Yes** — not composition                                                      |
+| "I **handwrite** my first draft"                                      | **Yes** — human capture; prosthetic capture only when machine text lands later |
+| "Therefore I use **no AI at all**"                                    | **No** — category error                                                        |
 
 
-Your phone camera, video-call noise removal, and hearing-aid processing are mostly **reconstruction and classification**. They do not draft your chapter. Grant that.
+Your phone camera, video-call noise removal, and hearing-aid processing are mostly **reconstruction and classification**. They do not draft your chapter. Grant that. **Handwrite** and your draft is human capture at the page — prosthetic capture enters when machine text lands later (typing, OCR, spell-check, publisher tools).
 
 The pivot for writers: you already **trust or reject probabilistic machine outputs** every day — delete a bad night photo, dismiss a wrong caption, accept an autocomplete tap. **2022 made the same posture visible for text.** Serious methodology asks **governance** questions (who selects, what is canon, what requires authorization), not whether probability entered your workflow.
 

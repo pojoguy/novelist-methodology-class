@@ -9,6 +9,7 @@
 |------|----------------|
 | **Prosthetic model** | AI as a **helper tool** (like glasses) — expands what you can reach; does not replace your voice or decisions. |
 | **Prosthetic capture** | The **ingestion** phase — machine output lands in your file (dictation, autocomplete, captions) before you revise. |
+| **Readonly audit** | A **diagnostic pass** on prose or on change between versions; extrapolation, not paste-in. |
 | **Ghostwriting** | Letting the model **draft for you** and accepting the output as finished prose. |
 | **Six-alternative protocol** | Flag a problem → get **six complete wordings** → **you** use them as **inspiration** (pick, blend, reject, or write your own) → only then apply. |
 | **Apply gate / apply authorization** | A hard rule: **no text enters your manuscript** without your explicit instruction. |
