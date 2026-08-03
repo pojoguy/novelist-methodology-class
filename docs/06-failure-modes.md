@@ -49,7 +49,7 @@ Sophisticated methodology still fails. Naming failures helps skeptics see that p
 1. Recognize thin-space stall (not "bad style" — structural retrieval failure)
 2. Offer **exactly six** full replaceable alternatives — widens solution space deliberately
 3. Author applies the final bias (pick, blend, reject, or own line inspired by the set) — human decision is the missing step
-4. See [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Why six — theta bias rationale*
+4. See [`02-prosthetic-model.md`](02-prosthetic-model.md#why-six--and-why-not-one-theta-bias-rationale) — *Why six — and why not one (theta bias rationale)*
 
 **Research lineage:** Theta bias functions (1980s knowledge-representation work) model how bias and preference select among candidates; thin-solution-space collapse is the LLM-era expression of the same class of failure.
 

@@ -19,10 +19,14 @@
 | **Negation triangulation** | Failure pattern: *Not X, not Y. Z.* — sounds deep but means the tool stalled. |
 | **Two-step pipeline** | First pass: structure and facts only; second pass: **read-only check**; then you pick; then apply. |
 | **Human signal** | Intentional, idiosyncratic prose **you** want to protect — not something for the tool to "smooth away." |
-| **Sign** | A checklist flag for **generic or AI-sounding** prose patterns — cite, don't auto-fix. |
+| **Sign** | A checklist flag for **generic or AI-sounding** prose patterns — cite, don't auto-fix. See [`04-audit-and-governance.md`](04-audit-and-governance.md). |
+| **Quote gate** | Dialogue help waits until **who is speaking** and **the situation** are clear. |
+| **Tagline gate** | Craft feedback stays specific — not a movie-poster moral (*duty vs freedom…*). See [`04-audit-and-governance.md`](04-audit-and-governance.md). |
 | **Session anchor** | A **saved end-of-session file** with continuity notes so you can resume without relying on chat history. |
 | **PGM** | Structured **canon state file** for characters, world, or chapter facts. |
 | **Pick** | Author **selects** one numbered alternative (with or without light edit) and authorizes apply. |
+| **Blend** | Merge pieces from named options (e.g. "lead with 3, verb from 5") — you specify the splice; apply only when you authorize. |
+| **Own line** | You write the final wording without picking a number — optional readonly audit on **your** line; apply only when you authorize. |
 | **Cluster + author take** | Author names near-miss options, supplies **own draft**, asks for **orientation** — not applying the closest number by default. |
 | **Convergence round** | Follow-up set (often **three** alternatives) **anchored on a cluster**, still on the nexus. |
 | **Supersede** | You write a stronger line than any numbered option; use the six as orientation, then audit **your** line. |
@@ -34,13 +38,15 @@
 
 **Core claim:** A large language model can function as a **prosthetic** — an external aid for specific cognitive or workflow failures — without becoming the author.
 
+**Where this doc sits:** [`01-spectrum-of-use.md`](01-spectrum-of-use.md) **Levels 2–3** (lexical prosthetic + developmental audit) run on this contract; **Levels 4–7** add filed state on top. [`03-five-domains.md`](03-five-domains.md) **Domain 1** (lexical) and **Domain 2** (audit) are the domain lens on the same habits. **Governance** — apply gate, phrase contracts, when not to audit — is spelled out in [`04-audit-and-governance.md`](04-audit-and-governance.md); this doc is the **operating model**, not the full audit playbook.
+
 This is the same distinction as:
 
 - Glasses vs someone else reading for you
 - A thesaurus vs someone else writing your sentences
 - A spell-checker vs auto-accepting every suggestion
 
-The prosthetic model only works with **governance**: explicit rules about what the model may output, and what requires human selection before anything touches the manuscript.
+The prosthetic model only works with **governance**: explicit rules about what may touch your manuscript and what requires your selection first. Walkthrough: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Apply gate in practice*, *What your words mean*.
 
 ---
 
@@ -52,7 +58,7 @@ The prosthetic model only works with **governance**: explicit rules about what t
 | **Default output** | Diagnostics, alternatives, questions | Finished paragraphs |
 | **Who chooses** | Author picks, blends, rejects | Model or user accepts |
 | **Voice** | Author's; model never "smooths" without flag | Often generic LLM register |
-| **Failure mode** | Too many constraints → sparse collapse (see failure-modes doc) | Plausible mediocrity |
+| **Failure mode** | Too many constraints → sparse collapse ([`06-failure-modes.md`](06-failure-modes.md) — *Thin solution space*) | Plausible mediocrity; [**ghostwrite drift**](06-failure-modes.md#ghostwrite-drift) once you expected critique |
 
 ---
 
@@ -71,12 +77,12 @@ When prose is flagged (weak word, Sign breach, imprecise phrase):
 |-----------|----------------------|------|
 | Prose phrase | Six wording variants | Six plot reconstructions |
 | Scene structure | Six order/cut shapes | Six dialogue lines |
-| Dialogue | Six lines **after** speaker + situation are set | Six proverb lines from generic voice |
+| Dialogue | Six lines **after** speaker + situation are set (**quote gate**) | Six proverb lines from generic voice — [**proverb dialogue**](06-failure-modes.md#proverb-dialogue) when the gate is skipped |
 | Unknown grounding | Six questions or situations | Six fabricated facts |
 
 ---
 
-### Why six — and why not one
+### Why six — and why not one (theta bias rationale)
 
 Six is not a magic number picked for symmetry. It is a **pragmatic default**: expand the answer space enough to break single-line collapse, without leaving the **nexus** where retrieval stalled. The failure mode — retrieval bias under constraint — was first characterized in **theta bias function** research (1980s knowledge-representation work; see [`00-history-and-authority.md`](00-history-and-authority.md) Part 4). Six is the countermeasure that survived contact with real sessions: repeatable, local, and bounded.
 
@@ -119,6 +125,8 @@ Offering **exactly six** full replaceable options widens the solution space **lo
 
 **Design intent (one line):** Six is the smallest branch count that breaks single-line collapse while keeping every alternative tethered to the constraint knot that caused the stall.
 
+**For video / skim readers:** Retrieval stalls at a **nexus** (constraint knot) → **six alternatives branch locally** on that knot → **you** apply the final choice (pick, blend, cluster + author take, reject, or own line). The subsections below are the full theory; Ep. 02 can teach from this box plus the pick/cluster and malformed-beat sections.
+
 #### Convergence rounds (when no single option wins)
 
 Round one is not always enough. When two or three options cluster near the target but none is final — e.g. "#3 and #4 are closest" — run a **convergence round**:
@@ -133,7 +141,7 @@ This is **refinement inside the nexus**, not a new search. Shrinking to three re
 
 #### Pick vs cluster + author take — not the same game
 
-The six-alternative set supports **different moves**. Treat them as distinct — and tell the tool to do the same.
+The six-alternative set supports **different moves**. Treat them as distinct — and hold the session to the same contracts ([`04-audit-and-governance.md`](04-audit-and-governance.md) — *What your words mean*).
 
 | Move | You say (examples) | What should happen |
 |------|------------------------|--------------|
@@ -157,7 +165,7 @@ Six alternatives are the **default line-level** tool. In practice you rarely end
 |-----------------|------------|
 | Six options orient you; **your line is stronger** | Write your line; ask for a **readonly audit** on it — don't default to the nearest numbered option |
 | **Two or more rounds** of six + convergence, still none land | **Malformed beat** — rewrite the paragraph or reorder before more line shopping |
-| You need to see ripple effects | Ask a **span counterfactual**: *"What would changing X do between L111–L115?"* — think first, apply later |
+| You need to see ripple effects | Ask a **span counterfactual**: *"What would changing X do between CH## L###–L###?"* — readonly ripple discussion; see [`04-audit-and-governance.md`](04-audit-and-governance.md) — *What your words mean* |
 | Geography, period, or material fact was wrong | **Reload grounding** (map + Street View, route notes); keep alternate drafts until checks pass |
 
 **Typical flow:**
@@ -199,7 +207,7 @@ Under the prosthetic model, that means:
 2. Branch six-alternative sets where needed
 3. **Stop**
 
-It does **not** mean rewrite the chapter. Author authorization to "fix" does not override the apply gate.
+It does **not** mean rewrite the chapter. Author authorization to "fix" does not override the apply gate. Phrase contracts: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *What your words mean*; failure shape: [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*.
 
 **Exception:** Author names a specific line and fix ("line 47: add period") — apply only that named change.
 
@@ -207,11 +215,11 @@ It does **not** mean rewrite the chapter. Author authorization to "fix" does not
 
 ## Vocabulary prosthetic (neurological context)
 
-Some authors use LLMs specifically for **lexical retrieval** under load — when phenomenological experience is intact but the word will not surface. In that case:
+Some authors use LLMs specifically for **lexical retrieval** under load — when the felt experience is clear but the word will not surface. In that case:
 
 - Unexpected word choices may be **retrieval failures**, not style choices — flag and offer alternatives
 - Do not "smooth" emotional processing toward neurotypical expression unless author directs
-- Session re-entry anchors help hippocampal recall boundaries between writing sessions
+- Session re-entry anchors help **memory boundaries between writing sessions** — what you were doing when you stopped
 
 This is not universal. It is one documented use case that explains why "just write it yourself" is not always neurologically accurate.
 
@@ -222,15 +230,15 @@ This is not universal. It is one documented use case that explains why "just wri
 For grounding-heavy beats, dialogue prosthetics, and developmental edits with action items:
 
 ```text
-Step 1 — Structural / grounding
+Step 1 — Structure + grounding (readonly)
     → Step 2 — Prosthetic audit (readonly)
-        → Author pick or explicit line fix
-            → Apply to manuscript (if authorized)
+        → You pick, cluster + author take, or name a line fix
+            → Apply to manuscript (only if you authorized)
 ```
 
-**Step 1 produces:** beat sequences, PGM crosswalks, breach diagnostics, situation options, explicit questions — not manuscript substitution.
+**Step 1 produces:** beat sequences, fact crosswalks, breach notes, situation options, explicit questions — not manuscript substitution.
 
-**Step 2 produces:** `PASS` or `FAIL` on gates — not a rewrite on FAIL.
+**Step 2 produces:** developmental letter; names **quote gate** failures (dialogue before speaker/situation), **tagline gate** failures (poster morals instead of craft direction), and **apply gate** violations (rewrite when you asked for critique); six options where needed — not a paste-in rewrite on "priority fixes." Gate vocabulary: [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 Tool-contract detail for governed editors: [`templates/agent-instructions-starter.md`](../templates/agent-instructions-starter.md).
 
@@ -238,7 +246,7 @@ Tool-contract detail for governed editors: [`templates/agent-instructions-starte
 
 ## Human Signals vs rubric Signs
 
-A good rubric flags **AI textual degradation** (sterile cadence, goldilocks words, hedging, etc.).
+A good rubric flags **AI textual degradation** (sterile cadence, goldilocks words, hedging, etc.). Starter categories and governance: [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Signs*. **Optional** maintainer catalog (BYO Signs policy same as `04`): [novelist-plugin `prompts/rubric.md`](https://github.com/pojoguy/novelist-plugin/blob/main/prompts/rubric.md) §1 and §3 — not required to practice the prosthetic model.
 
 But dense, asymmetric, idiosyncratic prose on the page may be **human signal** — intentional voice the author protects.
 
@@ -285,6 +293,12 @@ If someone shows you a workflow with gates, anchors, and six-alternative retriev
 
 ## Next
 
-- [`03-five-domains.md`](03-five-domains.md) — five domains in a novel-length project
-- [`04-audit-and-governance.md`](04-audit-and-governance.md) — rubrics and locks
-- [`06-failure-modes.md`](06-failure-modes.md) — when constraints break the model
+| Topic | Document |
+|-------|----------|
+| Level ladder, Levels ↔ domains | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — Levels 2–3 |
+| Five domains maturity | [`03-five-domains.md`](03-five-domains.md) — Domains 1–2 |
+| Audit, apply gate, Signs, phrase contracts | [`04-audit-and-governance.md`](04-audit-and-governance.md) |
+| Two-step pipeline, grounding, session anchors | [`05-workflow-patterns.md`](05-workflow-patterns.md) |
+| Thin solution space, treadmill, ghostwrite drift | [`06-failure-modes.md`](06-failure-modes.md) |
+| Pick vs cluster disclosure | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) |
+| Indexed lookup, continuity checks | [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) |

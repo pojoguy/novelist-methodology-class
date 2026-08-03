@@ -61,7 +61,7 @@
 
 **On-screen:** `Nexus stall` / `6 = local branch` / `3 = convergence` / `Pick ≠ here's my take` / `Six fail → fix beat`
 
-**Note for recording:** See `docs/02-prosthetic-model.md` — *Why six — nexus and convergence* for full technical depth.
+**Note for recording:** See `docs/02-prosthetic-model.md` — *Why six — and why not one (theta bias rationale)*; *Pick vs cluster + author take*; *When six options fail — the beat is often malformed*.
 
 ---
 
