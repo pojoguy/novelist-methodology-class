@@ -12,13 +12,13 @@ Terms used across this repository.
 |-----|-------------------|
 | [`00-history-and-authority.md`](00-history-and-authority.md) | Stochastic lineage (optional depth), hidden AI, Gaines/Calgary, maintainer context |
 | [`01-spectrum-of-use.md`](01-spectrum-of-use.md) | Levels 0–7, lexical prosthetic, spectrum straw man |
-| [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, six alternatives, move types, nexus, gates |
+| [`02-prosthetic-model.md`](02-prosthetic-model.md) | Prosthetic model, six alternatives, move types, nexus, gates, prosthetic gates |
 | [`03-five-domains.md`](03-five-domains.md) | Domains 1–5, 4a/4b, scope rules, canon workflow |
-| [`04-audit-and-governance.md`](04-audit-and-governance.md) | Audit, governance, Signs, word contracts, apply gate |
-| [`05-workflow-patterns.md`](05-workflow-patterns.md) | Anchors, grounding capture, two-step, exploration vs canon |
-| [`06-failure-modes.md`](06-failure-modes.md) | Failure modes catalog, thin space, ghostwrite drift |
+| [`04-audit-and-governance.md`](04-audit-and-governance.md) | Audit, governance, Signs, locks, drift, gates, word contracts, apply gate |
+| [`05-workflow-patterns.md`](05-workflow-patterns.md) | Anchors, context, grounding capture, two-step, exploration vs canon |
+| [`06-failure-modes.md`](06-failure-modes.md) | Failure modes catalog, drift, context amnesia, thin space, ghostwrite drift |
 | [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md) | Disclosure, detectors, human prose mass |
-| [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) | Lookup kinds, RAG, continuity reports, comparanda |
+| [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) | Context, lookup kinds, RAG, continuity reports, comparanda |
 
 ---
 
@@ -28,13 +28,13 @@ Terms used across this repository.
 Explicit author instruction before any text changes the manuscript — pick alternative #, name line fix, or direct substitute. "Priority fixes" alone is not authorization.
 
 **Apply gate**  
-Rule blocking manuscript edits until apply authorization is present. Search and continuity checks are **diagnose only** — same gate.
+Rule blocking manuscript edits until apply authorization is present — the core **authorization gate** in this methodology. Search and continuity checks are **diagnose only** under the same rule. See **gate** (below); [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Apply gate in practice*.
 
 **Audit**  
 Diagnostic pass on existing prose — what works, what fails, what to try next — without rewriting your voice. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 **Governance**  
-Authorization layer — apply gate, locks, word contracts; nothing touches the manuscript until you say so. Distinct from having a rubric. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Audit vs governance*.
+Authorization layer — **gates**, locks, word contracts; nothing touches the manuscript until you say so. Distinct from having a rubric. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Audit vs governance*.
 
 **Blend (prosthetic move)**  
 Merge pieces from named numbered alternatives per your specification (e.g. "lead with 3, verb from 5"); apply only when you authorize. See [`02-prosthetic-model.md`](02-prosthetic-model.md).
@@ -43,10 +43,10 @@ Merge pieces from named numbered alternatives per your specification (e.g. "lead
 How you point at a line in revision — chapter and line number (e.g. CH07 L63). Line numbers drift after edits; reanchor or cite a short quoted snippet. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Pointing at lines in revision*.
 
 **Anchor (session anchor)**  
-Persisted end-of-session file with continuity state (Section A), revision notes (B), methodology meta-analysis (C).
+Persisted end-of-session file with continuity state (Section A), revision notes (B), methodology meta-analysis (C). Core **registered context** for re-entry across sessions. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Session anchors*.
 
 **Author lock**  
-Persistent rule overriding model prior; stored in rationale docs or PGMs.
+A **rule you set and keep** (naming, calendar, voice) that outranks generic tool habits — governance that outlasts one session. A kind of **lock** (see below). See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Author locks*.
 
 **Author's notes**  
 Maps, timelines, character sheets, location photos — material you **already** gather while drafting. When **registered** for load/query, same habit as PGMs and grounding docs. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Author's notes, formalized*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Artifacts = author's notes*.
@@ -75,11 +75,14 @@ Cross-checking timeline, who-knows-what, and character state across a long book 
 **Continuity report**  
 Structured check producing a **reference ID**, rule name, and compared quotes — proves or disproves claims; does not retrieve prose. One report type in the editorial corpus. **Developmental** reports are letters you act on — different job, same apply gate. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Report types you might accumulate*.
 
+**Context**  
+What the model and you are **working from** in a given turn — the central problem this methodology manages by **filing state outside chat** and loading it on demand. Name the layer when you use the word. **Window context:** tokens in the model's **context window** this turn — prose, pasted notes, recent chat. Large windows hold **text** but not reliable **relationship joins** (who knows what, arc, locks) — see **relationship collapse**. **Conversation context:** what the **rolling chat thread** retains about relationships — not a canon store; see **conversation context** (below). **Registered context:** **PGMs**, **session anchors**, passage index, grounding files, continuity reports — **author-owned state** you load or query instead of hoping chat remembers. **Situational context:** speaker + situation before dialogue (**quote gate**); beat/scene framing for retrieval. **Retrieval context:** which **lookup kind** and sources answer this question — one kind per query; comparanda isolated from canon. Failure when registered context is skipped: **context amnesia**. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Origin*; [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Relationship state vs text in context*.
+
 **Context amnesia**  
-Model contradicts earlier chapter state because relationship joins lived in chat attention, not registered files. See [`06-failure-modes.md`](06-failure-modes.md); fix: session anchors, PGMs, indexed lookup — [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
+A **context** failure: model contradicts earlier chapter state because relationship joins lived in chat attention, not registered files. See [`06-failure-modes.md`](06-failure-modes.md); fix: session anchors, PGMs, indexed lookup — [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
 
 **Conversation context**  
-What the **chat thread** retains about **relationships** — unreliable even when raw text fits in the window; use registered notes and queries instead. See [`05-workflow-patterns.md`](05-workflow-patterns.md); [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
+A kind of **context** (unreliable): what the **chat thread** retains about **relationships** — unstable even when raw text fits in the window; use **registered context** (notes and queries) instead. See [`05-workflow-patterns.md`](05-workflow-patterns.md); [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Origin*.
 
 **Exploration / sandbox**  
 Scratch folders (`exploration/`, comparanda, scenario sandboxes) — **not official story truth** until you promote. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Exploration vs canon*.
@@ -99,6 +102,9 @@ Scope of AI use: lexical, audit, continuity, sandbox (grounding + scenario sim),
 **Developmental audit (Level 3 / Domain 2)**  
 Structured editorial critique of draft prose — flags problems; you revise. Readonly until you authorize a specific change. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
+**Design lock**  
+Short **doctrine line** carried across docs so behavior stays consistent — e.g. *RAG locates; graphs verify; you apply* ([`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)); *governance is procedural honesty, not a score* ([`07-ethics-and-transparency.md`](07-ethics-and-transparency.md)). **Methodology** lock, not story canon — distinct from **author lock** and **PGM lock**.
+
 **Disclosure**  
 Honest description of **how** you used AI — specific domains, move types, process artifacts — not a detector badge. See [`07-ethics-and-transparency.md`](07-ethics-and-transparency.md).
 
@@ -108,11 +114,14 @@ Tag on a passage for how text works in the story — scene, memory, dream, fores
 **Domain collapse**  
 Treating **sandbox, comparanda, reference, or chat** output as official story canon without promotion. See [`06-failure-modes.md`](06-failure-modes.md); scope: [`03-five-domains.md`](03-five-domains.md) — *Scope rules*.
 
-**Ghostwrite drift**  
-You asked for **audit** or **priority fixes**; the tool **rewrote prose** anyway — apply-gate violation. Same when you said *"here's my take…"* and the tool applied the **nearest numbered option** instead of working on **your** line. Fix: word contracts, apply gate, pick ≠ cluster + author take. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Apply gate in practice*, *What your words mean*; [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*; straw man: [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 0.
+**Drift**  
+Unwanted **movement away from an agreed baseline** — the word means different things by context; name the kind when you use it. **Governance drift:** **ghostwrite drift** — you asked for critique; prose was substituted anyway. **Index drift:** **stale passage index** — passage IDs, search rows, or `CH## L##` pointers no longer match the draft after edits; optional tooling may report **`DRIFT`** on index-hygiene checks ([`08-infrastructure-techniques.md`](08-infrastructure-techniques.md)). **Canon / voice drift (informal):** facts, tone, or reference voice sliding over months without registered state — mitigated by PGMs, anchors, reanchor ([`01-spectrum-of-use.md`](01-spectrum-of-use.md); comparanda bleed in [`06-failure-modes.md`](06-failure-modes.md)). **Retrieval drift:** six-alternatives that leave the **nexus** (off-nexus options on the wrong beat). **Line drift:** line numbers shift after edits — reanchor, or cite a short quoted snippet ([`04-audit-and-governance.md`](04-audit-and-governance.md) — *Pointing at lines in revision*).
 
 **Generic place hallucination**  
 Stock cemetery, main street, or highway — not the site you researched; often **genre gravity** (walls, trees, Gothic mood on a bald prairie site). Fix: **map + Street View** filed together; check prose against **what you documented**, not whether the character named the place (**POV-blind** sites are valid). See [`06-failure-modes.md`](06-failure-modes.md); [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Grounding capture*, *POV-blind grounding*.
+
+**Ghostwrite drift**  
+A kind of **drift** (governance): you asked for **audit** or **priority fixes**; the tool **rewrote prose** anyway — apply-gate violation. Same when you said *"here's my take…"* and the tool applied the **nearest numbered option** instead of working on **your** line. Fix: word contracts, apply gate, pick ≠ cluster + author take. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Apply gate in practice*, *What your words mean*; [`06-failure-modes.md`](06-failure-modes.md) — *Ghostwrite drift*; straw man: [`01-spectrum-of-use.md`](01-spectrum-of-use.md) Level 0.
 
 **Grounding capture**  
 File **map + Street View** (or equivalent ground-level image) for one site — one plain-language instruction per place. See [`05-workflow-patterns.md`](05-workflow-patterns.md); [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Artifacts = author's notes*.
@@ -122,6 +131,9 @@ Flattery-first critique that misses Signs and continuity holes — default chat 
 
 **Goldilocks words**  
 High-probability literary adjectives (shimmer, tapestry, luminous, etc.) common in LLM prose.
+
+**Gate**  
+A **checkpoint rule** — work stops until a condition is met. In general AI talk, *gate* often means model **guardrails** or safety refusals; here it means **your workflow checkpoints** so the tool does not skip steps or edit the manuscript without authorization. Not a **Sign** (craft diagnosis on existing prose); not a **lock** (registered story law the tool must not contradict). **Authorization gate:** **apply gate** — no manuscript edit without explicit OK. **Precondition gates:** **quote gate** (speaker + situation before dialogue alternatives); **geography gate** — no verified route on file → stop travel prose ([`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Geography gate*). **Output-shape gates:** **tagline gate** (specific critique, not poster morals); **priority fixes gate** (audit + options, not rewrite). **Prosthetic gates** bundles the output-shape set for the two-step pipeline. See [`04-audit-and-governance.md`](04-audit-and-governance.md); [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*.
 
 **Grounding (Domain 4a / Level 5a)**  
 Spatial and material verify — routes, period detail, biology — against sources or registered lore before prose locks. Distinct from scenario simulation.
@@ -144,6 +156,9 @@ AI expands vocabulary retrieval; author selects. Not voice replacement.
 **Levels (0–7)**  
 Spectrum of how much structure you add. **Level 0** = ghostwriting straw man (substantial model draft, little author revision). **Level 1** = pre-domain ideation / brainstorming — not rubric policing. **Levels 2–3** = lexical prosthetic + developmental audit. **Level 4** = continuity modeling. **5a** = grounding; **5b** = scenario simulation. **6** = production blueprinting. **7** = orchestration across domains. Domains map loosely but not 1:1. See [`01-spectrum-of-use.md`](01-spectrum-of-use.md) — *Levels and domains*.
 
+**Lock**  
+Umbrella for **rules and registered facts critique must not override without your OK**. A lock is **story law**, not a Sign. **Author lock** — naming, calendar, voice, era habits you keep across sessions. **PGM lock** — fact frozen in project files; contradicting edits need explicit OK. **Design lock** — methodology doctrine lines (search locates, you apply). Six-alternative sets should respect locks; if none can without breaking canon, say so — malformed beat or reorder. See [`04-audit-and-governance.md`](04-audit-and-governance.md) — *Author locks*; [`02-prosthetic-model.md`](02-prosthetic-model.md) — PGM locks at the nexus.
+
 **Negation triangulation**  
 Collapse pattern: *Not X, not Y. Z.* (or comma-delimited *not X, not Y, but Z*) when retrieval bias stalls at a thin solution space and must emit anyway. Same as **NEGATION triangulation** in some failure-mode tables.
 
@@ -160,16 +175,19 @@ You ask in ordinary language (*"tell me about Dej"*, *"where did I mention the p
 You make a scratch fact **official** by moving it into registered lore files or PGMs — never automatic from chat or sandbox. See [`05-workflow-patterns.md`](05-workflow-patterns.md) — *Exploration vs canon*; [`03-five-domains.md`](03-five-domains.md).
 
 **PGM (program guide / project graph module)**  
-Formalized **author working notes** — character, world, chapter state — registered for load/query (JSON, Cypher, Markdown, plain text, etc.). Not a separate species of thinking; organized canon the tooling can cite.
+Formalized **author working notes** — character, world, chapter state — registered for load/query (JSON, Cypher, Markdown, plain text, etc.). Not a separate species of thinking; organized **registered context** the tooling can cite.
+
+**PGM lock**  
+A fact **frozen in a PGM or lore file** — prose or critique that contradicts it needs your explicit OK. A kind of **lock**; same apply gate as author locks, with stronger memory at scale. See [`04-audit-and-governance.md`](04-audit-and-governance.md).
 
 **Relationship collapse (attention)**  
-Loss of stable joins (who knows what, arc, locks) in the model's active attention despite sufficient raw text in context; infrastructure unloads relationship state to PGMs, indexes, and verify.
+Loss of stable joins (who knows what, arc, locks) in the model's active attention despite sufficient raw text in **window context**; infrastructure unloads relationship state to **registered context** — PGMs, indexes, and verify.
 
 **Priority fixes gate**  
-"Fix" means audit + alternatives + stop — not chapter rewrite.
+An **output-shape gate**: "fix" means audit + alternatives + stop — not chapter rewrite. Kind of **gate**; see **prosthetic gates**.
 
 **Prosthetic gates**  
-Umbrella for methodology **output-shape** rules: **quote gate** (dialogue waits for speaker + situation), **tagline gate** (critique stays specific, not poster morals), **apply gate**, and **priority-fixes** meaning (critique + options, not paste-in rewrite). See [`04-audit-and-governance.md`](04-audit-and-governance.md); habits: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*.
+Bundle of methodology **output-shape gates**: **quote gate** (dialogue waits for speaker + situation), **tagline gate** (critique stays specific, not poster morals), **apply gate**, and **priority-fixes** meaning (critique + options, not paste-in rewrite). Kinds of **gate** (see above). See [`04-audit-and-governance.md`](04-audit-and-governance.md); habits: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Two-step pipeline*.
 
 **Prosthetic model**  
 AI as external aid for specific failures; human retains intent and final prose.
@@ -178,7 +196,7 @@ AI as external aid for specific failures; human retains intent and final prose.
 Generic wisdom lines without speaker/situation — structural failure mode.
 
 **Quote gate**  
-No full dialogue alternatives without **speaker + situation** established first.
+A **precondition gate**: no full dialogue alternatives without **situational context** — **speaker + situation** — established first. Kind of **gate**; see **prosthetic gates**.
 
 **Lookup kinds**  
 Different question types for indexed projects — **one kind per question**. Plain names: **quick search** (fuzzy locate); **tagged passage** (prose + scene/memory tags); **character / facts / route lookup**; **continuity check** (truth, not search); **filed report** (reload prior diagnostics). Optional tooling shorthand: **L0** scratch excluded · **L1** quick search · **L2** tagged passage · **L3** continuity check. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md).
@@ -187,7 +205,7 @@ Different question types for indexed projects — **one kind per question**. Pla
 Quick search and tagged passage search merged in one answer — flashback treated as co-present, exploration as canon. See [`06-failure-modes.md`](06-failure-modes.md).
 
 **No route on file**  
-No verified route registered in your project — stop travel prose; file and promote route notes first. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Geography gate*.
+A **geography gate** failure: no verified route registered in your project — stop travel prose; file and promote route notes first. See [`08-infrastructure-techniques.md`](08-infrastructure-techniques.md) — *Geography gate*.
 
 **Over-smoothing voice**  
 Generic rubric pressure flattening intentional voice you meant to keep. See [`06-failure-modes.md`](06-failure-modes.md); craft: [`02-prosthetic-model.md`](02-prosthetic-model.md) — *Human Signals vs rubric Signs*.
@@ -280,10 +298,10 @@ Structural pass (facts, order, grounding) → readonly audit pass → **you** pi
 Separate lore facts or timeline epochs merged in one answer — who-knows-what or injury state collapsed. Fix: one lookup kind per question; load PGMs before structural work. See [`06-failure-modes.md`](06-failure-modes.md).
 
 **Stale passage index**  
-Passage IDs or search rows outdated after prose edits — continuity checks cite wrong spans. Fix: reanchor/re-index before verify on edited chapters. See [`06-failure-modes.md`](06-failure-modes.md).
+A kind of **drift** (index): passage IDs or search rows outdated after prose edits — continuity checks cite wrong spans. Fix: reanchor/re-index before verify on edited chapters. See [`06-failure-modes.md`](06-failure-modes.md).
 
 **Tagline gate**  
-Block poster-thesis editor summaries masquerading as craft feedback.
+An **output-shape gate**: block poster-thesis editor summaries masquerading as craft feedback. Kind of **gate**; see **prosthetic gates**.
 
 **Thesis tagline** (also **thesis tagline compression**)  
 Compressed moral summary (*A vs B; nature punishes…*) passed off as craft feedback — failure mode, not on-page voice. See [`06-failure-modes.md`](06-failure-modes.md) — *Thesis tagline compression*; gate: **Tagline gate**.

@@ -48,10 +48,14 @@ One-line definition (≤12 words)
 | **Theta bias function** | 1980s framework; theoretical root of why six, not one |
 | **Stochastic system** | Outputs probability, not certainty |
 | **PGM** | Formalized **working notes** — queryable canon, not chat memory |
+| **Context** | What you work from — file it, load it, don't trust chat |
 | **Sparse-edge collapse** | Too many rules → generic "not A, not B, C" output |
 | **Ghostwrite drift** | "Fix" becomes substituted prose |
+| **Drift** | Unwanted slide from baseline — name the kind |
+| **Gate** | Checkpoint rule — stop until condition is met |
+| **Lock** | Story law critique must not override |
 | **Session anchor** | Persisted continuity file — Section A/B/C |
-| **Author lock** | Persistent rule that overrides model prior |
+| **Author lock** | Rule you keep across sessions — naming, voice, calendar |
 | **Human signal** | Intentional voice the author protects on page |
 
 ---
@@ -72,4 +76,7 @@ One-line definition (≤12 words)
 
 | Date | Change |
 |------|--------|
+| 2026-08-02 | Add Context umbrella term |
+| 2026-08-02 | Add Gate umbrella term |
+| 2026-08-02 | Add Drift and Lock umbrella terms |
 | 2026-08-02 | Initial term list |
