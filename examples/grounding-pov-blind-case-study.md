@@ -16,7 +16,7 @@ A **real workflow arc** from a long-form project — not a synthetic demo fixtur
 | [`danish-cemetery-dylan-collapse.jpg`](grounding-pov-blind-fixtures/danish-cemetery-dylan-collapse.jpg) — mowed patch, **no walls**, **no trees**, bald prairie | *What it looks like* — blocks generic Gothic cemetery |
 | Chapter header: `ch03 L62–end · collapse pickup · Danish Cemetery (POV-blind)` | Retrospective hook months later |
 
-**Grounding index:** [`grounding-pov-blind-fixtures/README.md`](grounding-pov-blind-fixtures/README.md) — map + Street View rows, constraint table.
+**Grounding index:** [`grounding-pov-blind-fixtures/README.md`](grounding-pov-blind-fixtures/README.md) — open the map and Street View here; plain-language notes on what each image proves.
 
 **One-line capture (representative):**  
 *"Add this map and these Street View images to grounding for chapter 3 — Danish Cemetery near Coteau."*
